@@ -4,24 +4,23 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdArrowDropright } from "react-icons/io";
 import { FiPlus } from "react-icons/fi";
 import { MdOutlineArrowRight } from "react-icons/md";
-import logo from "../assets/logo.jpeg";
-// import whatsapp from "../assets/whatsaap.png";
-// import skype from "../assets/skype.png";
-// import mail from "../assets/email.png";
-// import phone from "../assets/phone.png";
-// import bg from "../assets/bg.png";
+import logo from "../assets/logo.png";
+import whatsapp from "../assets/whatsaap.png";
+import skype from "../assets/skype.png";
+import mail from "../assets/email.png";
+import phone from "../assets/phone.png";
+import { FiMinus } from "react-icons/fi";
+import bg from "../assets/bg.png";
+import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleMouseEnter = (index) => {
-    setActiveDropdown(index);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -71,27 +70,27 @@ const Navbar = () => {
           heading: "FOR SALES INQUIRY",
           items: [
             {
-              icon: <img src={""} alt="Phone" width={20} />,
+              icon: <Image src={phone} alt="Phone" width={20} />,
               label: "+91-92140-01234",
               link: "#",
             },
             {
-              icon: <img src={""} alt="Phone" width={20} />,
+              icon: <Image src={phone} alt="Phone" width={20} />,
               label: "+91-97729-77271",
               link: "#",
             },
             {
-              icon: <img src={""} alt="Phone" width={20} />,
+              icon: <Image src={phone} alt="Phone" width={20} />,
               label: "+91-99833-88855",
               link: "#",
             },
             {
-              icon: <img src={"mail"} alt="Mail" width={20} />,
+              icon: <Image src={mail} alt="Mail" width={20} />,
               label: "info@dakshinfo.com",
               link: "#",
             },
             {
-              icon: <img src={"skype"} alt="Skype" width={20} />,
+              icon: <Image src={skype} alt="Skype" width={20} />,
               label: "Skype",
               link: "#",
             },
@@ -104,10 +103,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed sticky top-0 z-50 shadow-sm bg-white">
+    <nav className="fixed top-0 z-50 shadow-sm bg-white w-full">
       <div className="max-w-screen-2xl relative mx-auto flex justify-between items-center py-3 px-6 md:px-14">
         <a href="/" className="flex items-center">
-          <img src={logo} alt="Logo" className="h-14" />
+          <Image src={logo} alt="Logo" className="h-14 w-60" />
         </a>
 
         <button
@@ -115,40 +114,45 @@ const Navbar = () => {
           onClick={toggleMobileMenu}
         >
           {isMobileMenuOpen ? (
-            <IoClose className="text-blue-900 text-4xl" />
+            <IoClose className="text-green-900 text-4xl" />
           ) : (
-            <TiThMenu className="text-blue-900 text-4xl" />
+            <TiThMenu className="text-green-900 text-4xl" />
           )}
         </button>
 
         <div className="hidden md:flex space-x-6 items-center">
           {navbarData.map((menu, index) => (
-            <div
-              key={index}
-              className="group inline-block"
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="flex items-center text-center cursor-pointer">
-                <span className="text-black  no-underline px-2 font-semibold text-[15px] hover:text-blue-800 transition-colors">
+            <div key={index} className="group inline-block">
+              <div
+                className="flex items-center cursor-pointer"
+                onClick={() => toggleDropdown(index)}
+              >
+                <span className="text-black no-underline px-2 font-semibold text-[15px] hover:text-green-800 transition-colors">
                   {menu.label}
                 </span>
-                {menu.dropdown && <FiPlus className="font-[900] text-[16px]" />}
+                {menu.dropdown && (
+                  <>
+                    {activeDropdown === index ? (
+                      <FiMinus className="font-[900] text-[16px]" />
+                    ) : (
+                      <FiPlus className="font-[900] text-[16px]" />
+                    )}
+                  </>
+                )}
               </div>
 
               {menu.dropdown && activeDropdown === index && (
                 <div
                   className={`absolute max-w-screen-xl top-20 backdrop-blur-lg bg-white/30 text-black rounded-xl shadow-sm z-50 w-screen left-20 pt-4`}
-
                 >
-                  <div className="max-w-screen-lg mx-auto">
+                  <div className="max-w-screen-xl mx-auto">
                     <div className="grid grid-cols-5">
                       {menu.dropdown.map((dropdownItem, idx) => (
                         <div key={idx} className="text-left gap-2 items-center">
-                          <h3 className="font-semibold text-[17px] pb-2 border-b-2 border-gray-400">
+                          <h3 className="font-semibold text-[16px] pb-2 border-b-2 border-gray-400">
                             {dropdownItem.heading}
                           </h3>
-                          <ul className="space-y-4 pl-0 pt-3 opacity-100">
+                          <ul className="space-y-5 pl-0 py-3 opacity-100">
                             {dropdownItem.items.map((item, i) => (
                               <li
                                 key={i}
@@ -157,7 +161,7 @@ const Navbar = () => {
                                 <span>{item.icon}</span>
                                 <a
                                   href={item.link}
-                                  className="hover:text-teal-900 text-black font-[600] no-underline text-[14px] block items-center space-x-2"
+                                  className="hover:text-teal-900 text-black font-[500] no-underline text-[14px] block items-center space-x-2"
                                 >
                                   {item.label}
                                 </a>
@@ -192,27 +196,29 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="hover:bg-teal-900 hover:py-2 rounded-full transition-all duration-300 ease-in-out text-center">
-            {" "}
-            <a
-              href=""
-              className="relative px-12 py-[4px] rounded-full bg-teal-900 hover:blur-none transition-all duration-300 ease-in-out group"
-              style={{ filter: "blur(7px)" }}
-            >
-              &nbsp;
-            </a>
-            <p
-              className="absolute text-[15px] text-white font-semibold bottom-[20px] right-[75px] transition-all duration-300 ease-in-out"
-              style={{ textShadow: "0 2px 6px rgba(0, 0, 0, 0.5)" }}
-            >
-              Contact us
-            </p>
-          </div>
+          <Link href="/contactUs">
+            <div className="hover:bg-green-900 hover:py-2 rounded-full transition-all duration-300 ease-in-out text-center">
+              <div
+                
+                className="relative px-14 py-[10px] rounded-full bg-teal-900 hover:blur-none transition-all duration-300 ease-in-out group"
+                style={{ filter: "blur(7px)" }}
+              ></div>
+              <p
+                className="absolute text-[15px] text-white font-semibold bottom-[30px] right-[70px] transition-all duration-300 ease-in-out"
+                style={{ textShadow: "0 2px 6px rgba(0, 0, 0, 0.7)" }}
+              >
+                Contact us
+              </p>
+            </div>
+          </Link>
+
+
+
         </div>
       </div>
 
       <div
-        className={`absolute top-0 left-0 h-96 pt-8 w-full backdrop-blur-lg bg-white/30 shadow-lg overflow-hidden transform transition-transform duration-700 ${
+        className={`absolute top-0 left-0 h-96 pt-8 w-full bg-blue-100 shadow-lg overflow-hidden transform transition-transform duration-700 ${
           isMobileMenuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
@@ -241,12 +247,17 @@ const Navbar = () => {
               </div>
             </li>
           ))}
-          {/* <li className="pt-16 flex gap-4 items-center">
-            <img src={phone} alt="Phone" height={30} width={30} />
-            <img src={mail} alt="Mail" height={30} width={30} />
-            <img src={skype} alt="Skype" height={30} width={30} />
-            <img src={whatsapp} alt="WhatsApp" height={30} width={30} />
-          </li> */}
+          <li className="pt-16 flex gap-4 items-center">
+            <Image src="/assets/phone.png" alt="Phone" height={30} width={30} />
+            <Image src="/assets/email.png" alt="Mail" height={30} width={30} />
+            <Image src="/assets/skype.png" alt="Skype" height={30} width={30} />
+            <Image
+              src="/assets/whatsaap.png"
+              alt="WhatsApp"
+              height={30}
+              width={30}
+            />
+          </li>
         </ul>
       </div>
     </nav>
