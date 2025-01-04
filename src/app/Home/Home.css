@@ -1,0 +1,80 @@
+.home2 {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color:rgb(123, 148, 128);
+  }
+  
+  .normaldiv {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: teal;
+  }
+  
+  .cabecera {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  
+  .container{
+    height: 100vh; /* Set the height of the container */
+    display: flex;
+    width: 300vh;
+   
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 40px; /* Add spacing between items */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    scroll-snap-type: x mandatory; /* Smooth horizontal scrolling */
+    align-items: flex-end; /* Align the panels to the bottom of the container */
+    position: relative; /* Relative positioning for consistent layout */
+    overflow: hidden;
+  }
+  
+  .panel, .panel2 {
+    
+    flex: 0 0 calc(100% / 4); /* Ensure 6 items fit in one row */
+    height: 40%; /* Adjust panel height */
+    margin-bottom: 80px; /* Add gap between the bottom of the container and panels */
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: start;
+    background-color: white;
+    scroll-snap-align: start; /* Align items during horizontal scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+    
+    border-radius: 13%;
+  }
+  
+  @media (max-width: 1200px) {
+    .panel, .panel2 {
+      flex: 0 0 calc(100% / 3); /* Adjust to fit 3 items per row */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .panel, .panel2 {
+      flex: 0 0 calc(100% / 2); /* Adjust to fit 2 items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .panel, .panel2 {
+      flex: 0 0 100%; /* Stack items vertically */
+      margin-bottom: 20px; /* Add space between stacked items */
+    }
+  }
+  
