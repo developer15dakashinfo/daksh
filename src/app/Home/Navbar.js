@@ -4,7 +4,9 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdArrowDropright } from "react-icons/io";
 import { FiPlus } from "react-icons/fi";
 import { MdOutlineArrowRight } from "react-icons/md";
-import logo from "../assets/logo.png";
+import Logo from 'next/image'; // Import Image component from next/image
+import logoPath from "../assets/logo.svg"; // Import your SVG file like a path
+
 import whatsapp from "../assets/whatsaap.png";
 import skype from "../assets/skype.png";
 import mail from "../assets/email.png";
@@ -105,9 +107,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 z-50 shadow-sm bg-white w-full">
       <div className="max-w-screen-2xl relative mx-auto flex justify-between items-center py-3 px-6 md:px-14">
-        <a href="/" className="flex items-center">
-          <Image src={logo} alt="Logo" className="h-14 w-60" />
-        </a>
+      <a href="/" className="flex items-center">
+  <Image src={logoPath} alt="Logo" className="h-14 w-60" />
+</a>
+
 
         <button
           className="md:hidden text-2xl focus:outline-none"
