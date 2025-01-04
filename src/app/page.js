@@ -6,7 +6,9 @@ import Home3 from "./Home/Home3";
 import Home4 from "./Home/Home4";
 import Home5 from "./Home/Home5";
 import Navbar from "./Home/Navbar";
+import ContactUs from "./Home/ContactUs";
 import Home6 from "./Home/Home6";
+import Footer from "./Home/Footer/Footer";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -90,7 +92,10 @@ export default function Home() {
     </div>
      <Home3/>
      <Home4/>
+     <ContactUs/>
      
+
+     <Footer/>
   </div>
   </>
   );
