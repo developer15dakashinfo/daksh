@@ -7,7 +7,6 @@ const Contact = () => {
   const handleFocus = (fieldName) => {
     setActiveField(fieldName); 
   };
-
   const handleBlur = () => {
     setActiveField(""); 
   };
