@@ -105,7 +105,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 z-50 shadow-sm bg-white w-full">
+    <nav className="fixed top-0 z-50  w-full">
       <div className="max-w-screen-2xl relative mx-auto flex justify-between items-center py-3 px-6 md:px-14">
       <a href="/" className="flex items-center">
   <Image src={logoPath} alt="Logo" className="h-14 w-60" />
