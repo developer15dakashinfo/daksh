@@ -1,228 +1,354 @@
-"use client";
 
-import { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./Home.css";
-import Home3 from "./Home3";
+import { useState, useEffect, useRef } from "react";
+import node from "../assets/node.svg"
 
-function Home2() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
-    const sections = gsap.utils.toArray(".panel");
-    //const sections2 = gsap.utils.toArray(".panel2");
+const BALL_COUNT = 20;
+const BALL_RADIUS = 135;
+const BLUE_BALL_POSITION = { x: window.innerWidth / 2, y: window.innerHeight / 3 };
+const BLUE_BALL_RADIUS = 289;
+const REPULSION_FORCE = 0.1; // Control the strength of repulsion
+const GRAVITY = 0.5;
+const FRICTION = 0.95;
 
-    // Horizontal scroll animation for the first container
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1), // Adjust for six panels in one row
-      scrollTrigger: {
-        trigger: ".container",
-        pin: true,
-        scrub: 0.7,
-        end: "+=3000", // Adjust end based on container width
-      },
+const ballImages = [
+  "https://cdn1.iconfinder.com/data/icons/soleicons-solid-vol-1/64/reactjs_javascript_library_atom_atomic_react-512.png",
+  "https://icon2.cleanpng.com/20180519/ago/kisspng-php-development-tools-software-development-softwar-5b00d8a2007696.9490122915267821140019.jpg",
+  "https://w7.pngwing.com/pngs/784/624/png-transparent-js-logo-node-logos-and-brands-icon.png",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZwy15zQ0RCtIzVpoHcj6_ou23J5QsA9Bxw&s",
+];
+
+const Home2 = () => {
+  const [balls, setBalls] = useState(
+    Array.from({ length: BALL_COUNT }, (_, i) => ({
+      id: i,
+      x: Math.random() * (window.innerWidth - BALL_RADIUS * 2),
+      y: -Math.random() * 900, // Start above the viewport
+      vx: Math.random() * 4 - 2,
+      vy: Math.random() * 2,
+      isDragging: false,
+      offset: { x: 0, y: 0 },
+      image: ballImages[i % ballImages.length],
+    }))
+  );
+
+ 
+
+
+  
+
+  const handleMouseDown = (id, event) => {
+    setBalls((prevBalls) =>
+      prevBalls.map((ball) =>
+        ball.id === id
+          ? { ...ball, isDragging: true, offset: { x: event.clientX - ball.x, y: event.clientY - ball.y } }
+          : ball
+      )
+    );
+  };
+
+  const handleMouseMove = (event) => {
+    setBalls((prevBalls) =>
+      prevBalls.map((ball) => {
+        if (!ball.isDragging) return ball;
+
+        const newX = event.clientX - ball.offset.x;
+        const newY = event.clientY - ball.offset.y;
+
+        const dx = newX - BLUE_BALL_POSITION.x;
+        const dy = newY - BLUE_BALL_POSITION.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < BLUE_BALL_RADIUS + BALL_RADIUS) {
+          const angle = Math.atan2(dy, dx);
+          return {
+            ...ball,
+            x: BLUE_BALL_POSITION.x + Math.cos(angle) * (BLUE_BALL_RADIUS + BALL_RADIUS),
+            y: BLUE_BALL_POSITION.y + Math.sin(angle) * (BLUE_BALL_RADIUS + BALL_RADIUS),
+          };
+        }
+
+        return { ...ball, x: newX, y: newY };
+      })
+    );
+  };
+
+  const handleMouseUp = () => {
+    setBalls((prevBalls) => prevBalls.map((ball) => ({ ...ball, isDragging: false })));
+  };
+
+  const applyPhysics = () => {
+    setBalls((prevBalls) => {
+      const updatedBalls = [...prevBalls];
+
+      // Apply pairwise repulsion
+      for (let i = 0; i < updatedBalls.length; i++) {
+        for (let j = i + 1; j < updatedBalls.length; j++) {
+          const ballA = updatedBalls[i];
+          const ballB = updatedBalls[j];
+
+          const dx = ballB.x - ballA.x;
+          const dy = ballB.y - ballA.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < BALL_RADIUS * 2) {
+            const overlap = BALL_RADIUS * 2 - distance;
+            const angle = Math.atan2(dy, dx);
+
+            // Calculate force and push the balls apart
+            const force = REPULSION_FORCE * overlap;
+            const fx = Math.cos(angle) * force;
+            const fy = Math.sin(angle) * force;
+
+            ballA.vx -= fx;
+            ballA.vy -= fy;
+            ballB.vx += fx;
+            ballB.vy += fy;
+          }
+        }
+      }
+
+      // Apply gravity, friction, and movement
+      updatedBalls.forEach((ball) => {
+        if (!ball.isDragging) {
+          ball.vy += GRAVITY;
+          ball.vx *= FRICTION;
+          ball.vy *= FRICTION;
+
+          ball.x += ball.vx;
+          ball.y += ball.vy;
+
+          // Prevent overlap with blue ball
+          const dxToBlue = ball.x - BLUE_BALL_POSITION.x;
+          const dyToBlue = ball.y - BLUE_BALL_POSITION.y;
+          const distanceToBlue = Math.sqrt(dxToBlue * dxToBlue + dyToBlue * dyToBlue);
+
+          if (distanceToBlue < BLUE_BALL_RADIUS + BALL_RADIUS) {
+            const angle = Math.atan2(dyToBlue, dxToBlue);
+            ball.x = BLUE_BALL_POSITION.x + Math.cos(angle) * (BLUE_BALL_RADIUS + BALL_RADIUS);
+            ball.y = BLUE_BALL_POSITION.y + Math.sin(angle) * (BLUE_BALL_RADIUS + BALL_RADIUS);
+            ball.vx = 0;
+            ball.vy = 0;
+          }
+
+          // Bounce on floor
+          if (ball.y > window.innerHeight - BALL_RADIUS) {
+            ball.y = window.innerHeight - BALL_RADIUS;
+            ball.vy *= -0.6; // Invert velocity for bounce
+          }
+
+          // Keep within horizontal bounds
+          if (ball.x < BALL_RADIUS) ball.x = BALL_RADIUS;
+          if (ball.x > window.innerWidth - BALL_RADIUS) ball.x = window.innerWidth - BALL_RADIUS;
+        }
+      });
+
+      return updatedBalls;
     });
-    
-    // gsap.to(sections2, {
-    //   xPercent: 100 * (sections2.length - 1),
-    //   scrollTrigger: {
-    //     trigger: ".container2",
-    //     pin: true,
-    //     scrub: 0.7,
-    //     end: "+=3000",
-    //   },
-    // });
-    
+  };
+
+  useEffect(() => {
+    const animate = () => {
+      applyPhysics();
+      requestAnimationFrame(animate);
+    };
+    animate();
   }, []);
 
   return (
-    <div className="home2 p-5">
-      {/* Fixed Header */}
-     
+    <div
+      className="overflow-hidden mt-5"
+      style={{
+        width: "100vw",
+        height: "100vh",
+        position: "relative",
+        backgroundColor: "white",
+        overflow: "hidden",
+        cursor: "grab",
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+    >
+      <div
+        className="shadow-xl relative border-3"
+        style={{
+          width: `${BLUE_BALL_RADIUS * 2}px`,
+          height: `${BLUE_BALL_RADIUS * 2}px`,
+          backgroundColor: "#FFEC89",
+          borderRadius: "50%",
+          position: "absolute",
+          left: `50%`,
+          top: `33%`,
+          transform: "translate(-50%, -50%)",
+        }}
+      >
 
-      {/* First Horizontal Scroll Section */}
-      <div className="container w-full  overflow-x-auto">
-      <div className="text-7xl fixed font-bold pb-96 mb-60 text-white leading-40">SERVICES <br/> WE<br/> PROVIDE</div>
-        <div className="panel border rounded-3xl  shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-          <div className=" ">
-            <div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-              <div className="mx-auto mb-7 inline-block">
-                <img
-                  src="https://www.dakshinfo.com/images/servicehover1.png"
-                  className="text-black"
-                />
-              </div>
-              <div>
-                <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                  Web desginning
-                </h3>
-                <p className="text-base font-medium text-body-color">
-                  To make your business stand apart, we provide UX/UI design for
-                  web & mobile app that looks appealing and interactive.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="panel border rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-          <div className=" ">
-            <div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-              <div className="mx-auto mb-7 inline-block">
-                <img
-                  src="https://www.dakshinfo.com/images/servicehover2.svg"
-                  className="text-black"
-                />
-              </div>
-              <div>
-                <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                  Mobile App Development
-                </h3>
-                <p className="text-base font-medium text-body-color">
-                Apps are redefining the way we interact with services
-                 and empowering businesses to engage with their customers.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="panel border rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-          <div className=" ">
-            <div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-              <div className="mx-auto mb-7 inline-block">
-                <img
-                  src="https://www.dakshinfo.com/images/servicehover3.png"
-                  className="text-black"
-                />
-              </div>
-              <div>
-                <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-                E-Commerce Solutions
-                </h3>
-                <p className="text-base font-medium text-body-color">
-                eCommerce web development has indeed become a necessity instead of a means to drive greater traffic.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="panel border rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-        <div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-      <div className="mx-auto mb-7 inline-block">
-        <img
-          src="https://www.dakshinfo.com/images/servicehover4.png"
-          className="text-black"
-        />
-      </div>
-      <div>
-        <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-        Voice mail
-        </h3>
-        <p className="text-base font-medium text-body-color">
-        Make your impact more than words, send pre-recorded messages in your voice and make it more reachable to your valuable profits.
-        </p>
-      </div>
-    </div>
-        </div>
-        <div className="panel border rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-        <div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-      <div className="mx-auto mb-7 inline-block">
-        <img
-          src="https://www.dakshinfo.com/images/servicehover5.png"
-          className="text-black"
-        />
-      </div>
-      <div>
-        <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-        Bulk SMS
-        </h3>
-        <p className="text-base font-medium text-body-color">
-        Bulk SMS in India | Bulk SMS Service Provider India - Short Message Service or simply the SMS is a revolution of mobile phone industry.
-        </p>
-      </div>
-    </div>
-        </div>
-        <div className="panel border rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-        <div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-      <div className="mx-auto mb-7 inline-block">
-        <img
-          src="https://www.dakshinfo.com/images/servicehover6.png"
-          className="text-black"
-        />
-      </div>
-      <div>
-        <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-        (SEO) services
-        </h3>
-        <p className="text-base font-medium text-body-color">
-        We provide Search Engine Optimization (SEO) services to boost your online presence and connect with more customers.
-        </p>
-      </div>
-      </div>
-        </div>
-        
+
+
       </div>
 
-      
+      {balls.map((ball) => (
+        <div
+          key={ball.id}
+          className="shadow-xl lg:flex hidden"
+          style={{
+            backgroundImage: `url(${ball.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            width: `${BALL_RADIUS * 2}px`,
+            height: `${BALL_RADIUS * 2}px`,
+            borderRadius: "50%",
+            position: "absolute",
+            backgroundColor: "#F3F3F3",
+            left: `${ball.x}px`,
+            top: `${ball.y}px`,
+            transform: "translate(-50%, -50%)",
+          }}
+          onMouseDown={(e) => handleMouseDown(ball.id, e)}
+        ></div>
+      ))}
     </div>
   );
-}
+};
 
 export default Home2;
 
 
 
-{/* <div className="panel2 rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-<div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-      <div className="mx-auto mb-7 inline-block">
-        <img
-          src="https://www.dakshinfo.com/images/servicehover4.png"
-          className="text-black"
-        />
-      </div>
-      <div>
-        <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-        Voice mail
-        </h3>
-        <p className="text-base font-medium text-body-color">
-        Make your impact more than words, send pre-recorded messages in your voice and make it more reachable to your valuable profits.
-        </p>
-      </div>
-    </div>
-</div>
-<div className="panel2 rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-<div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-      <div className="mx-auto mb-7 inline-block">
-        <img
-          src="https://www.dakshinfo.com/images/servicehover5.png"
-          className="text-black"
-        />
-      </div>
-      <div>
-        <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-        Bulk SMS
-        </h3>
-        <p className="text-base font-medium text-body-color">
-        Bulk SMS in India | Bulk SMS Service Provider India - Short Message Service or simply the SMS is a revolution of mobile phone industry.
-        </p>
-      </div>
-    </div>
-</div>
-<div className="panel2 rounded-xl shadow-xl transition-all hover:shadow-lg hover:bg-blue-100">
-<div className="mb-9 rounded-xl py-8 px-7  transition-all  sm:p-9 lg:px-6 xl:px-9">
-      <div className="mx-auto mb-7 inline-block">
-        <img
-          src="https://www.dakshinfo.com/images/servicehover6.png"
-          className="text-black"
-        />
-      </div>
-      <div>
-        <h3 className="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">
-        (SEO) services
-        </h3>
-        <p className="text-base font-medium text-body-color">
-        We provide Search Engine Optimization (SEO) services to boost your online presence and connect with more customers.
-        </p>
-      </div>
-    </div>
-</div> */}
+
+// "use client";
+
+// import React, { useEffect, useRef, useState } from 'react'
+
+// const Home2 = () => {
+//   const sectionRef = useRef(null);
+//   const [animateLetters, setAnimateLetters] = useState(false);
+//   const [counts, setCounts] = useState({ agents: 0, artists: 0, shows: 0 });
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           setAnimateLetters(true);
+//         }
+//       },
+//       { threshold: 0.5 }
+//     );
+
+//     if (sectionRef.current) {
+//       observer.observe(sectionRef.current);
+//     }
+
+//     return () => {
+//       if (sectionRef.current) {
+//         observer.unobserve(sectionRef.current);
+//       }
+//     };
+//   }, []);
+
+//   const animateCounter = (key, start, end, duration) => {
+//     const increment = (end - start) / (duration / 50);
+//     const interval = setInterval(() => {
+//       setCounts((prev) => {
+//         if (prev[key] < end) {
+//           return { ...prev, [key]: Math.min(prev[key] + increment, end) };
+//         }
+//         clearInterval(interval);
+//         return prev;
+//       });
+//     }, 50);
+//   };
+
+//   useEffect(() => {
+//     if (animateLetters) {
+//       animateCounter("agents", 0, 2, 1000);
+//       animateCounter("artists", 0, 6, 1000); 
+//       animateCounter("shows", 0, 1.9, 1000); 
+//     }
+//   }, [animateLetters]);
+
+//   const splitDigits = (num, key) => {
+//     const formattedNum = Math.floor(num); 
+   
+
+      
+//     return { staticPart: null, lastDigit: formattedNum };
+//   };
+
+//   const counters = [
+//     {
+//       key: "agents",
+//       suffix: "K",
+//       heading: "AGENTS",
+//       paragraph: "use SystemOne on a daily basis.",
+//       bgColor: "bg-blue-400",
+//     },
+//     {
+//       key: "artists",
+//       suffix: "K",
+//       heading: "ARTISTS",
+//       paragraph: "stay in the loop with the SystemOne app.",
+//       bgColor: "bg-teal-300",
+//     },
+//     {
+//       key: "shows",
+//       suffix: "M",
+//       heading: "SHOWS",
+//       paragraph: "are managed on our platform.",
+//       bgColor: "bg-violet-400",
+//     },
+//   ];
+
+//   return (
+//     <div
+//       ref={sectionRef}
+//       className="grid grid-cols-1 md:grid-cols-3 gap-10 px-14 py-20"
+//     >
+//       {counters.map((data, idx) => {
+//         const { staticPart, lastDigit } = splitDigits(counts[data.key], data.key);
+
+//         return (
+//           <div
+//             key={idx}
+//             className={`col-span-1 p-8 rounded-xl ${data.bgColor}`}
+//           >
+//             <h1 className="text-5xl text-black font-extrabold">
+//               <div className="flex">
+//                 {staticPart !== null && (
+//                   <span className="text-black">{staticPart}</span>
+//                 )}
+//                 <div className="overflow-hidden flex">
+//                   <div className="flex flex-col justify-center items-center h-[55px] w-[40px] relative overflow-hidden">
+//                     {[...Array(10).keys()].map((num) => (
+//                       <span
+//                         key={num}
+//                         className="absolute text-center text-black font-extrabold"
+//                         style={{
+//                           top: `${num * 54}px`,
+//                           transform: `translateY(${
+//                             isNaN(lastDigit) ? 0 : -lastDigit * 54
+//                           }px)`,
+//                           transition: "transform 0.6s ease-out",
+//                         }}
+//                       >
+//                         {num}
+//                       </span>
+//                     ))}
+//                   </div>
+//                 </div>
+//                 <div className="ml-2">{data.suffix}</div>
+//               </div>
+//             </h1>
+//             <h2 className="text-5xl text-black font-extrabold">
+//               {data.heading}
+//             </h2>
+//             <p className="text-[16px] text-black pt-16">{data.paragraph}</p>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// };
+
+// export default Home2
