@@ -247,6 +247,7 @@ const Home3 = () => {
           <div className="flex justify-center items-center">
             <Image
               src={img1}
+              alt="img1"
               className="w-[90%] md:w-[80%] h-auto rounded-lg"
             />
           </div>
@@ -308,6 +309,7 @@ const Home3 = () => {
             <Image
               src={img1}
               className="w-[90%] md:w-[80%] h-auto rounded-lg"
+              alt="img2"
             />
           </div>
         </div>
@@ -319,6 +321,7 @@ const Home3 = () => {
             <Image
               src={img1}
               className="w-[90%] md:w-[80%] h-auto rounded-lg"
+              alt="img3"
             />
           </div>
 
