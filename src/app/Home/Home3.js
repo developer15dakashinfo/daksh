@@ -54,6 +54,7 @@ const Home3 = () => {
 
             gsap.to(panel, { scaleX: scale, duration: 0.1 });
           },
+          
         },
       });
     });
@@ -61,11 +62,11 @@ const Home3 = () => {
   }, []);
 
   return (
-    <div className=" bg-black py-10">
+    <div className=" bg-black py-10 ">
       
 
-      <div className="px-16">
-      <section className="panel flex items-center justify-center h-96 bg-black py-10">
+      <div className="px-16 mt-20">
+      <section className="panel flex items-center justify-center h-96 bg-black py-10 mb-10 ">
         <div className="text-center px-52 py-20">
           <h1 className="text-5xl text-white font-extrabold pb-5">
             WELCOME TO DAKSH INFOSOFT
@@ -78,7 +79,7 @@ const Home3 = () => {
         </div>
       </section>
 
-        <section className="panel bg-yellow-200 flex items-center justify-center h-[600px] rounded-3xl relative pt-20 ">
+        <section className="panel bg-yellow-200 flex items-center justify-center h-[600px] rounded-3xl mb-10 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10">
             <div className="flex justify-center items-center">
               <Image
@@ -116,7 +117,7 @@ const Home3 = () => {
           </div>
         </section>
 
-        <section className="panel bg-teal-400 flex items-center justify-center h-[600px] rounded-3xl pt-20">
+        <section className="panel bg-teal-400 flex items-center justify-center h-[600px] rounded-3xl mb-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10">
             <div className="flex flex-col justify-center pl-20">
               <h2 className="text-3xl font-extrabold mb-4">Sell more shows</h2>
@@ -151,7 +152,7 @@ const Home3 = () => {
           </div>
         </section>
 
-        <section className="panel bg-blue-400 flex items-center justify-center h-[600px] rounded-3xl pt-20">
+        <section className="panel bg-blue-400 flex items-center justify-center h-[600px] rounded-3xl mb-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-10">
             <div className="flex justify-center items-center">
               <Image
