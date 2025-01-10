@@ -239,10 +239,6 @@ const Navbar = () => {
 
   useEffect(() => {
     let lastScrollY = 0; 
-
-    const handleUpScroll = ()=>{
-      
-    }
   
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -319,9 +315,9 @@ const Navbar = () => {
           ? "my-2 mx-4 rounded-lg w-[97.7%]  "
           : " rounded-none"
       }`}
-      style={{ transform: isScrolled ? "translateY(0)" : "translateY(-10px)",
+      // style={{ transform: isScrolled ? "translateY(0)" : "translateY(-10px)",
         
-       }}
+      //  }}
     >
       
       <div className="text-2xl font-bold">
@@ -430,3 +426,4 @@ const Navbar = () => {
 
 export default Navbar;
 
+ 
