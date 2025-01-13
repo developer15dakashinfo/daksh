@@ -13,7 +13,6 @@ const Footer = () => {
     return () => clearInterval(interval);
   }, [words.length]);
 
-
   const usefulLinks = [
     "About Us",
     "Blogs",
@@ -91,28 +90,39 @@ const Footer = () => {
               </div>
             </div> */}
 
-<div className="flex justify-center items-center py-8">
-            <div className="relative text-center">
-              <h1 className="text-6xl font-bold text-white">
-                <span
-                  className={`inline-block transition-transform duration-1000 ${
-                    currentIndex === 0 ? "translate-x-0" : "translate-x-full"
-                  }`}
-                >
-                  Be
-                </span>{" "}
-                {words.map((word, index) => (
+            <div className="flex justify-center items-center py-8">
+              <div className="text-center">
+                <div className=" flex flex-row gap-3">
+
+                <div className="flex flex-col">
                   <span
-                    key={index}
-                    className={`inline-block mx-2 text-white transition-all duration-1000 ease-in-out ${
-                      index === currentIndex ? "text-purple-400" : "text-gray-500"
+                    className={`inline-block transition-transform duration-1000 text-6xl font-bold text-white ${
+                      currentIndex === 0 ? "translate-y-0" : "translate-y-full"
                     }`}
                   >
-                    {word}
+                    Be
                   </span>
-                ))}
-              </h1>
-            </div>
+                  </div>
+                  <div className="flex flex-col  items-start">
+                    {words.map((word, index) => (
+                      <span
+                        key={index}
+                        className={`mx-2 text-6xl font-bold text-white transition-all duration-1000 ease-in-out ${
+                          index === currentIndex
+                            ? "text-purple-400"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        {word}
+                      </span>
+                    ))}
+                  </div>
+
+                </div>
+                
+                  
+                
+              </div>
             </div>
 
             <div className="px-4 my-4">
@@ -196,6 +206,7 @@ const Footer = () => {
           <p className="text-[14px] text-center pt-3">
             © 2025 Daksh Infosoft Pvt. Ltd. | All Rights Reserved
           </p>
+          <span>Aditi</span>
         </div>
       </footer>
     </>

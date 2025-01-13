@@ -1,4 +1,22 @@
 
+footer {
+  .text-6xl {
+    position: relative;
+  }
+
+  span {
+    transition: transform 1s, color 1s;
+  }
+
+  .text-purple-400 {
+    color: #a855f7 !important; 
+  }
+
+  .text-gray-500 {
+    color: #6b7280;
+  }
+}
+
   
   .scrolling-words-container {
     display: flex;
