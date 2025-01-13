@@ -318,7 +318,7 @@ const StackingCards = () => {
                 }`}
                 style={{
                   backgroundColor: card.backgroundColor,
-                  height: index === 0 ? "600px" : "600px",
+                  height: index === 0 ? "100vh" : "600px",
 
                 }}
               >
