@@ -13,126 +13,7 @@ const cards = [
     backText: "Learn more",
     backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
   },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
-  {
-    frontTitle: "Real Estate",
-    frontText: "Discover Strategies",
-    frontImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-    backTitle: "STRATEGY DETAILS",
-    backText: "Learn more",
-    backImage: "https://marketplace.canva.com/EAF6nmbUlhg/1/0/1600w/canva-black-and-gold-flat-illustrative-real-estate-logo-Jj0rP4nw9ug.jpg",
-  },
+
 ];
 
 function Home4() {
@@ -153,7 +34,7 @@ function Home4() {
 
   return (
     <><br/><br/>
-      <div className="text-center font-bold text-4xl border-b p-5 border-green-800 mx-80">
+      <div className="text-center font-bold text-4xl border-b p-5  mx-80">
       OUR INDUSTRY WISE Solutions
       </div>
       <br/><br/>
@@ -182,8 +63,7 @@ function Home4() {
           </div>
         ))}
       </div>
-      <br/><br/><br/><br/>
-      <Home5/>
+     
     </>
   );
 }

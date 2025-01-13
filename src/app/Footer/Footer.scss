@@ -1,0 +1,44 @@
+
+  
+  .scrolling-words-container {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    height: 6rem;
+  }
+  
+  .scrolling-words-box {
+    height: 4rem;
+  
+    overflow: hidden;
+    align-items: center;
+  
+    ul {
+      margin: 0 0.625rem;
+      padding: 0;
+      animation: scrollUp 6s infinite;
+      align-items: center;
+      
+  
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 4rem;
+        list-style: none;
+      }
+    }
+  }
+  
+  // Variables
+  $item-count: 5;
+  
+  @keyframes scrollUp {
+    @for $i from 1 through ($item-count - 1) {
+      #{($i * 25) - 10%}, #{$i * 25%} {
+        transform: translateY((-100% / $item-count) * $i);
+      }
+    }
+  }
+  

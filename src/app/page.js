@@ -4,15 +4,16 @@ import Home2 from "./Home/Home2";
 import Home3 from "./Home/Home3";
 import Home4 from "./Home/Home4";
 import ContactUs from "./Home/ContactUs";
-import Footer from "./Home/Footer/Footer";
+import Footer from "./Footer/Footer";
 import Image from "next/image";
-import D from "./assets/d.svg";
-import A from "./assets/A.svg";
-import K from "./assets/k.svg";
-import S from "./assets/s.svg";
-import H from "./assets/h.svg";
+import D from "./assets/d-word.svg";
+import A from "./assets/A-word.svg";
+import K from "./assets/k-word.svg";
+import S from "./assets/s-word.svg";
+import H from "./assets/h-word.svg";
 import Home7 from "./Home/Home7";
 import Navbar from "./Home/Navbar";
+import Home5 from "./Home/Home5";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -38,7 +39,7 @@ export default function Home() {
    <Navbar/>
       <div
         className="relative h-[200vh] w-full"
-        style={{ background: "white" }} // Gradient background
+        style={{ background: "black" }} // Gradient background
       >
         {/* Background Images */}
         <div
@@ -50,7 +51,7 @@ export default function Home() {
               key={index}
               src={image}
               alt={`Background image ${index + 1}`}
-              className="w-[20rem] h-[20rem] object-cover rounded-xl "
+              className="w-[10rem] h-[10rem] object-cover "
               style={{
                 transform: `translateX(${index < 1 ? -scrollY / 1.2 : scrollY / 1.2}px)
                             translateX(${index < 2 ? -scrollY / 2.2 : scrollY / 2.2}px)
@@ -69,24 +70,15 @@ export default function Home() {
         <div className="relative mt-[100vh] ">
           <Home2 />
         </div>
-        {/* <Home3 />
-        <Home4 /> */}
-        {/* <ContactUs /> */}
-        {/* <Footer /> */}
+        <Home3/>
+        <Home4/>
+        <Home5/>
+        <br/>
+        <Footer/>
       </div>
+   
     
-    {/* Content
-    <div className="relative mt-[100vh] ">
-     <Home2 />
-    
-    </div> */}
-     <Home3/>
-     {/* <Home4/>
-     <ContactUs/>
-     <Home7/> */}
-     
- 
-  
+
   </>
   );
 }

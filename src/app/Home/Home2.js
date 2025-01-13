@@ -1,10 +1,10 @@
 
 import { useState, useEffect, useRef } from "react";
-import node from "../assets/node.svg"
+import node from "../assets/icon (1).jpeg"
 
 
-const BALL_COUNT = 20;
-const BALL_RADIUS = 135;
+const BALL_COUNT = 25;
+const BALL_RADIUS = 125;
 const BLUE_BALL_POSITION = { x: window.innerWidth / 2, y: window.innerHeight / 3 };
 const BLUE_BALL_RADIUS = 289;
 const REPULSION_FORCE = 0.1; // Control the strength of repulsion
@@ -12,10 +12,9 @@ const GRAVITY = 0.5;
 const FRICTION = 0.95;
 
 const ballImages = [
-  "https://cdn1.iconfinder.com/data/icons/soleicons-solid-vol-1/64/reactjs_javascript_library_atom_atomic_react-512.png",
-  "https://icon2.cleanpng.com/20180519/ago/kisspng-php-development-tools-software-development-softwar-5b00d8a2007696.9490122915267821140019.jpg",
-  "https://w7.pngwing.com/pngs/784/624/png-transparent-js-logo-node-logos-and-brands-icon.png",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZwy15zQ0RCtIzVpoHcj6_ou23J5QsA9Bxw&s",
+  "../assets/icon (1).jpeg",
+  "../assets/icon (1).jpeg",
+  "../assets/icon (1).jpeg",
 ];
 
 const Home2 = () => {
@@ -35,7 +34,83 @@ const Home2 = () => {
  
 
 
-  
+  const sectionRef = useRef(null);
+  const [animateLetters, setAnimateLetters] = useState(false);
+  const [counts, setCounts] = useState({ agents: 0, artists: 0, shows: 0 });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimateLetters(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const animateCounter = (key, start, end, duration) => {
+    const increment = (end - start) / (duration / 50);
+    const interval = setInterval(() => {
+      setCounts((prev) => {
+        if (prev[key] < end) {
+          return { ...prev, [key]: Math.min(prev[key] + increment, end) };
+        }
+        clearInterval(interval);
+        return prev;
+      });
+    }, 50);
+  };
+
+  useEffect(() => {
+    if (animateLetters) {
+      animateCounter("agents", 0, 2, 1000);
+      animateCounter("artists", 0, 6, 1000); 
+      animateCounter("shows", 0, 1.9, 1000); 
+    }
+  }, [animateLetters]);
+
+  const splitDigits = (num, key) => {
+    const formattedNum = Math.floor(num); 
+   
+
+      
+    return { staticPart: null, lastDigit: formattedNum };
+  };
+
+  const counters = [
+    {
+      key: "agents",
+      suffix: "K",
+      heading: "AGENTS",
+      paragraph: "use SystemOne on a daily basis.",
+      bgColor: "bg-blue-400",
+    },
+    {
+      key: "artists",
+      suffix: "K",
+      heading: "ARTISTS",
+      paragraph: "stay in the loop with the SystemOne app.",
+      bgColor: "bg-teal-300",
+    },
+    {
+      key: "shows",
+      suffix: "M",
+      heading: "SHOWS",
+      paragraph: "are managed on our platform.",
+      bgColor: "bg-violet-400",
+    },
+  ];
 
   const handleMouseDown = (id, event) => {
     setBalls((prevBalls) =>
@@ -156,8 +231,61 @@ const Home2 = () => {
   }, []);
 
   return (
-    <div
-      className="overflow-hidden mt-5"
+   <>
+   <div
+      ref={sectionRef}
+      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-14 py-20"
+      style={{
+        backgroundColor: "white",
+      }}
+    >
+      {counters.map((data, idx) => {
+        const { staticPart, lastDigit } = splitDigits(counts[data.key], data.key);
+
+        return (
+          <div
+            key={idx}
+            className={`col-span-1 p-8 h-[370px] rounded-xl ${data.bgColor}`}
+          >
+            <h1 className="text-5xl text-black font-extrabold">
+              <div className="flex">
+                {staticPart !== null && (
+                  <span className="text-black">{staticPart}</span>
+                )}
+                <div className="overflow-hidden flex">
+                  <div className="flex flex-col justify-center items-center h-[55px] w-[40px] relative overflow-hidden">
+                    {[...Array(10).keys()].map((num) => (
+                      <span
+                        key={num}
+                        className="absolute text-center text-black font-extrabold"
+                        style={{
+                          top: `${num * 54}px`,
+                          transform: `translateY(${
+                            isNaN(lastDigit) ? 0 : -lastDigit * 54
+                          }px)`,
+                          transition: "transform 0.6s ease-out",
+                        }}
+                      >
+                        {num}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="ml-2">{data.suffix}</div>
+              </div>
+            </h1>
+            <h2 className="text-5xl text-black font-extrabold">
+              {data.heading}
+            </h2>
+            <p className="text-[16px] text-black pt-16">{data.paragraph}</p>
+          </div>
+        );
+      })}
+    </div>
+
+   
+   <div
+      className="overflow-hidden m"
       style={{
         width: "100vw",
         height: "100vh",
@@ -170,6 +298,10 @@ const Home2 = () => {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
+
+
+
+
       <div
         className="shadow-xl relative border-3"
         style={{
@@ -209,146 +341,10 @@ const Home2 = () => {
         ></div>
       ))}
     </div>
+   </>
   );
 };
 
 export default Home2;
 
 
-
-
-// "use client";
-
-// import React, { useEffect, useRef, useState } from 'react'
-
-// const Home2 = () => {
-//   const sectionRef = useRef(null);
-//   const [animateLetters, setAnimateLetters] = useState(false);
-//   const [counts, setCounts] = useState({ agents: 0, artists: 0, shows: 0 });
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setAnimateLetters(true);
-//         }
-//       },
-//       { threshold: 0.5 }
-//     );
-
-//     if (sectionRef.current) {
-//       observer.observe(sectionRef.current);
-//     }
-
-//     return () => {
-//       if (sectionRef.current) {
-//         observer.unobserve(sectionRef.current);
-//       }
-//     };
-//   }, []);
-
-//   const animateCounter = (key, start, end, duration) => {
-//     const increment = (end - start) / (duration / 50);
-//     const interval = setInterval(() => {
-//       setCounts((prev) => {
-//         if (prev[key] < end) {
-//           return { ...prev, [key]: Math.min(prev[key] + increment, end) };
-//         }
-//         clearInterval(interval);
-//         return prev;
-//       });
-//     }, 50);
-//   };
-
-//   useEffect(() => {
-//     if (animateLetters) {
-//       animateCounter("agents", 0, 2, 1000);
-//       animateCounter("artists", 0, 6, 1000); 
-//       animateCounter("shows", 0, 1.9, 1000); 
-//     }
-//   }, [animateLetters]);
-
-//   const splitDigits = (num, key) => {
-//     const formattedNum = Math.floor(num); 
-   
-
-      
-//     return { staticPart: null, lastDigit: formattedNum };
-//   };
-
-//   const counters = [
-//     {
-//       key: "agents",
-//       suffix: "K",
-//       heading: "AGENTS",
-//       paragraph: "use SystemOne on a daily basis.",
-//       bgColor: "bg-blue-400",
-//     },
-//     {
-//       key: "artists",
-//       suffix: "K",
-//       heading: "ARTISTS",
-//       paragraph: "stay in the loop with the SystemOne app.",
-//       bgColor: "bg-teal-300",
-//     },
-//     {
-//       key: "shows",
-//       suffix: "M",
-//       heading: "SHOWS",
-//       paragraph: "are managed on our platform.",
-//       bgColor: "bg-violet-400",
-//     },
-//   ];
-
-//   return (
-//     <div
-//       ref={sectionRef}
-//       className="grid grid-cols-1 md:grid-cols-3 gap-10 px-14 py-20"
-//     >
-//       {counters.map((data, idx) => {
-//         const { staticPart, lastDigit } = splitDigits(counts[data.key], data.key);
-
-//         return (
-//           <div
-//             key={idx}
-//             className={`col-span-1 p-8 rounded-xl ${data.bgColor}`}
-//           >
-//             <h1 className="text-5xl text-black font-extrabold">
-//               <div className="flex">
-//                 {staticPart !== null && (
-//                   <span className="text-black">{staticPart}</span>
-//                 )}
-//                 <div className="overflow-hidden flex">
-//                   <div className="flex flex-col justify-center items-center h-[55px] w-[40px] relative overflow-hidden">
-//                     {[...Array(10).keys()].map((num) => (
-//                       <span
-//                         key={num}
-//                         className="absolute text-center text-black font-extrabold"
-//                         style={{
-//                           top: `${num * 54}px`,
-//                           transform: `translateY(${
-//                             isNaN(lastDigit) ? 0 : -lastDigit * 54
-//                           }px)`,
-//                           transition: "transform 0.6s ease-out",
-//                         }}
-//                       >
-//                         {num}
-//                       </span>
-//                     ))}
-//                   </div>
-//                 </div>
-//                 <div className="ml-2">{data.suffix}</div>
-//               </div>
-//             </h1>
-//             <h2 className="text-5xl text-black font-extrabold">
-//               {data.heading}
-//             </h2>
-//             <p className="text-[16px] text-black pt-16">{data.paragraph}</p>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// };
-
-// export default Home2
