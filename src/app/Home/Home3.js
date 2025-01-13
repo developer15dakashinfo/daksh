@@ -12,27 +12,6 @@ const Home3 = () => {
   useEffect(() => {
     const panels = document.querySelectorAll(".panel");
 
-  
-
-    // panels.forEach((panel, index) => {
-    //   const scaleFactor = 0.8 + index * 0.1; 
-
-    //   gsap.to(panel, {
-    //     duration: 0.3,
-    //     scaleX: scaleFactor, 
-    //     transformOrigin: "center", 
-    //     scrollTrigger: {
-    //       trigger: panel,
-    //       start: "top center",
-    //       end: "bottom center",
-    //       scrub: 1.5,
-    //       markers: false,
-    //       trigger: panel,
-    //        pinSpacing: false,
-    //     },
-    //   });
-    // });
-
     panels.forEach((panel, index) => {
       const scaleFactor = 0.8 + index * 0.1; 
 
@@ -187,3 +166,5 @@ const Home3 = () => {
 };
 
 export default Home3;
+
+

@@ -26,3 +26,14 @@ body {
     animation-play-state: paused;
   }
 }
+
+@keyframes sliceDown {
+  0% {
+    opacity: 0;
+    transform: translate(-39%, -5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-39%, 0);
+  }
+}
