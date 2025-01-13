@@ -234,7 +234,7 @@ const Home2 = () => {
    <>
    <div
       ref={sectionRef}
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 "
+      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 pt-4 "
       style={{
         backgroundColor: "white",
       }}
@@ -245,7 +245,7 @@ const Home2 = () => {
         return (
           <div
             key={idx}
-            className={`w-full h-[370px] rounded-xl ${data.bgColor}`}
+            className={`col-span-1 p-8 h-[370px] rounded-xl ${data.bgColor}`}
           >
             <h1 className="text-5xl text-black font-extrabold">
               <div className="flex">
@@ -287,7 +287,7 @@ const Home2 = () => {
    <div
       className="overflow-hidden m"
       style={{
-        
+       
         height: "100vh",
         position: "relative",
         backgroundColor: "white",
