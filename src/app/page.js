@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import Home2 from "./Home/Home2/Home2";
 import Home3 from "./Home/Home3/Home3";
-import Home4 from "./Home/Home4";
-import ContactUs from "./Home/ContactUs";
+import Home4 from "./Home/Home4/Home4";
+
 import Footer from "./Footer/Footer";
 import Image from "next/image";
 import D from "./assets/d-word.svg";
@@ -11,9 +11,9 @@ import A from "./assets/A-word.svg";
 import K from "./assets/k-word.svg";
 import S from "./assets/s-word.svg";
 import H from "./assets/h-word.svg";
-import Home7 from "./Home/Home7";
+
 import Navbar from "./Navbar/Navbar";
-import Home5 from "./Home/Home5";
+import Home5 from "./Home/Home5/Home5";
 import Home6 from "./Home/Home6/Home6";
 
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
           <Home2 />
         </div>
         <Home3/>
-        <Home4/>
+        {/* <Home4/> */}
         <Home5/>
         <Home6/>
    

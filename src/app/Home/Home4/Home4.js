@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import "./Home4.css";
-import Home5 from "./Home5";
+import Home5 from "../Home5/Home5";
 
 const cards = [
   {
