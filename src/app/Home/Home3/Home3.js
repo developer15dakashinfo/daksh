@@ -318,12 +318,12 @@ const StackingCards = () => {
                 }`}
                 style={{
                   backgroundColor: card.backgroundColor,
-                  height: index === 0 ? "400px" : "600px",
+                  height: index === 0 ? "600px" : "600px",
 
                 }}
               >
                 {index === 0 ? (
-                  <div className="pt-20 px-14 text-center items-center">
+                  <div className="pt-64 px-14 text-center items-center">
                     <h1 className="text-6xl text-white font-extrabold pb-5">
                       {card.title}
                     </h1>
