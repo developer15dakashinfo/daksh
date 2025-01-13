@@ -8,6 +8,7 @@ import {
 import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
+import Logo from "@/app/logo/logo";
 
 export const Home1 = () => {
   return (
@@ -68,18 +69,23 @@ const CenterImage = () => {
   );
 
   return (
-    <motion.div
-      className="sticky top-0 h-screen w-full"
-      style={{
-        clipPath,
-        backgroundSize,
-        opacity,
-        backgroundImage:
-          "url(https://assets.newatlas.com/dims4/default/a9d3814/2147483647/strip/true/crop/3600x2700+0+0/resize/2880x2160!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fneuromorphic_chips.jpg)",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    />
+<>
+  <motion.div
+    className="sticky top-0 h-screen w-full flex items-center justify-center"
+    style={{
+      clipPath,
+      backgroundSize,
+      opacity,
+      backgroundImage:
+        "url(https://assets.newatlas.com/dims4/default/a9d3814/2147483647/strip/true/crop/3600x2700+0+0/resize/2880x2160!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fneuromorphic_chips.jpg)",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
+    <Logo />
+  </motion.div>
+</>
+
   );
 };
 
@@ -157,7 +163,7 @@ const Schedule = () => {
       >
       
       </motion.h1>
-      
+    
     </section>
   );
 };

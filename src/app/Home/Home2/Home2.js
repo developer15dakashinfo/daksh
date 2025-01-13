@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-
+import icon1 from "../../assets/icon (1).jpeg";
 
 const BALL_COUNT = 25;
 const BALL_RADIUS = 125;
@@ -11,10 +11,11 @@ const REPULSION_FORCE = 0.1; // Control the strength of repulsion
 const GRAVITY = 0.5;
 const FRICTION = 0.95;
 
+
 const ballImages = [
-  "../assets/icon (1).jpeg",
-  "../assets/icon (1).jpeg",
-  "../assets/icon (1).jpeg",
+  "https://via.placeholder.com/150",
+  "https://via.placeholder.com/150",
+  "https://via.placeholder.com/150",
 ];
 
 const Home2 = () => {
@@ -37,6 +38,27 @@ const Home2 = () => {
   const sectionRef = useRef(null);
   const [animateLetters, setAnimateLetters] = useState(false);
   const [counts, setCounts] = useState({ agents: 0, artists: 0, shows: 0 });
+
+  useEffect(() => {
+    const btnContact = document.querySelectorAll("#contact_btn");
+
+    btnContact.forEach((btnText) => {
+      const text = btnText.querySelector("p");
+
+      if (text) {
+        text.innerHTML = text.innerHTML
+          .split("")
+          .map(
+            (character, index) =>
+              `<span class="absolute origin-[0.3rem_5rem]" style="transform: rotate(${
+                index * 12
+              }deg)">${character}</span>`
+          )
+          .join("");
+      }
+    });
+  }, []);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -230,6 +252,40 @@ const Home2 = () => {
     animate();
   }, []);
 
+
+  useEffect(() => {
+    const targets = [
+      { id: "starsCount", count: 850, suffix: "+" },
+      { id: "downloadsCount", count: 80000, suffix: "+" },
+      { id: "sponsorsCount", count: 100, suffix: "+" },
+    ];
+
+    const maxCount = Math.max(...targets.map((target) => target.count));
+
+    // Function to animate count-up effect
+    const animateCountUp = (target, duration) => {
+      let currentCount = 0;
+      const increment = Math.ceil(target.count / (duration / 10));
+      const element = document.getElementById(target.id);
+
+      const interval = setInterval(() => {
+        currentCount += increment;
+        if (currentCount >= target.count) {
+          clearInterval(interval);
+          currentCount = target.count;
+          element.textContent = currentCount + target.suffix;
+        } else {
+          element.textContent = currentCount;
+        }
+      }, 10);
+    };
+
+    // Animate count-up for each target with adjusted duration
+    targets.forEach((target) => {
+      animateCountUp(target, maxCount / 100); // Adjust duration based on max count
+    });
+  }, []);
+
   return (
    <>
    <div
@@ -315,9 +371,36 @@ const Home2 = () => {
           transform: "translate(-50%, -50%)",
         }}
       >
+  <div className="flex flex-col p-6 text-center border-b mt-40 border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
+                    <dt
+                      className="order-2 mt-2 text-xl font-medium leading-6 text-gray-500 dark:text-gray-400"
+                      id="item-1"
+                    >
+                     Complete Projects, Let's Discuss Your Project
+                    </dt>
+                    <dd
+                      className="order-1 text-7xl font-semibold leading-none text-black dark:text-black"
+                      id="starsCount"
+                    >
+                      0
+                    </dd>
+                  </div>
 
+                  <div className="w-full flex  justify-center">
+     
 
-
+      {/* Bottom Button */}
+      <a
+        href=""
+        id="contact_btn"
+        className="w-[10rem] h-[10rem] rounded-full text-[#000e17] grid place-items-center absolute lg:right-[50%] sm:right-[40%] xs:right-[30%] bottom-[5%] bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer transition-all duration-400 ease-in-out hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] hover:text-[#000e17]"
+      >
+        <i className="uil uil-arrow-up-right absolute text-[3.5rem]"></i>
+        <p className="text-[#000e17] font-semibold w-[10rem] h-[10rem] flex justify-center animate-spinText">
+          CONTACT - SEND US AN EMAIL
+        </p>
+      </a>
+    </div>
       </div>
 
       {balls.map((ball) => (
@@ -332,7 +415,7 @@ const Home2 = () => {
             height: `${BALL_RADIUS * 2}px`,
             borderRadius: "50%",
             position: "absolute",
-            backgroundColor: "#F3F3F3",
+            backgroundColor: "white",
             left: `${ball.x}px`,
             top: `${ball.y}px`,
             transform: "translate(-50%, -50%)",
@@ -340,6 +423,68 @@ const Home2 = () => {
           onMouseDown={(e) => handleMouseDown(ball.id, e)}
         ></div>
       ))}
+    </div>
+    {}
+    <div className="h-screen dark:bg-gray-900 hidden">
+      <div className="pt-12 bg-gray-50 dark:bg-gray-900 sm:pt-20">
+        <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold leading-9 text-gray-900 dark:text-white sm:text-4xl sm:leading-10">
+              Trusted by developers
+            </h2>
+            <p className="mt-3 text-xl leading-7 text-gray-600 dark:text-gray-400 sm:mt-4">
+              This package powers many production applications on many different hosting platforms.
+            </p>
+          </div>
+        </div>
+        <div className="pb-12 mt-10 bg-gray-50 dark:bg-gray-900 sm:pb-16">
+          <div className="relative">
+            <div className="absolute inset-0 h-1/2 bg-gray-50 dark:bg-gray-900"></div>
+            <div className="relative max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+              <div className="max-w-4xl mx-auto">
+                <dl className="bg-white dark:bg-gray-800 rounded-lg shadow-lg sm:grid sm:grid-cols-3">
+                  <div className="flex flex-col p-6 text-center border-b border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
+                    <dt
+                      className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500 dark:text-gray-400"
+                      id="item-1"
+                    >
+                      Stars on GitHub
+                    </dt>
+                    <dd
+                      className="order-1 text-5xl font-extrabold leading-none text-indigo-600 dark:text-indigo-100"
+                      id="starsCount"
+                    >
+                      0
+                    </dd>
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-b border-gray-100 dark:border-gray-700 sm:border-0 sm:border-l sm:border-r">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      Downloads
+                    </dt>
+                    <dd
+                      className="order-1 text-5xl font-extrabold leading-none text-indigo-600 dark:text-indigo-100"
+                      id="downloadsCount"
+                    >
+                      0
+                    </dd>
+                  </div>
+                  <div className="flex flex-col p-6 text-center border-t border-gray-100 dark:border-gray-700 sm:border-0 sm:border-l">
+                    <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      Sponsors
+                    </dt>
+                    <dd
+                      className="order-1 text-5xl font-extrabold leading-none text-indigo-600 dark:text-indigo-100"
+                      id="sponsorsCount"
+                    >
+                      0
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
    </>
   );

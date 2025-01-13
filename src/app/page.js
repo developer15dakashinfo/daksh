@@ -16,6 +16,7 @@ import Navbar from "./Navbar/Navbar";
 import Home5 from "./Home/Home5/Home5";
 import Home6 from "./Home/Home6/Home6";
 import { Home1 } from "./Home/Home1/Home1";
+import Logo from "./logo/logo";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -36,15 +37,17 @@ export default function Home() {
    D,A,K,S,H
   ];
 
+  
   return (
     <>
    <Navbar/>
+   
       <div
         className="relative h-[200vh] w-full"
         style={{ background: "black" }} // Gradient background
       >
         {/* Background Images */}
-        <div
+        {/* <div
           className="fixed top-52 left-1/2 transform -translate-x-1/2 z-[-50] flex -space-x-6"
           
         >
@@ -66,7 +69,7 @@ export default function Home() {
          
             />
           ))}
-        </div>
+        </div> */}
 <Home1/>
       
     

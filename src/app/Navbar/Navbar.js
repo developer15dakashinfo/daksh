@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import logoPath from "../assets/logo.svg";
+import Logo from "../logo/logo";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -95,6 +96,7 @@ const Navbar = () => {
       <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
           {/* <Image src={logoPath} alt="Logo" className="h-14 w-60" /> */}
+          <Logo/>
         </a>
       </div>
 
