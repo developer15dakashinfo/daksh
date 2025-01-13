@@ -2,6 +2,16 @@
 import { useState, useEffect, useRef } from "react";
 
 import icon1 from "../../assets/icon (1).jpeg";
+import icon2 from "../../assets/icon (2).jpeg";
+import icon3 from "../../assets/icon (3).jpeg";
+import icon4 from "../../assets/icon (4).jpeg";
+import icon5 from "../../assets/icon (5).jpeg";
+import icon6 from "../../assets/icon (6).jpeg";
+import icon7 from "../../assets/icon (7).jpeg";
+import icon8 from "../../assets/icon (8).jpeg";
+import icon9 from "../../assets/icon (9).jpeg";
+import Image from "next/image";
+import ReadMoreButton from "@/app/readmore/ReadMoreButton";
 
 const BALL_COUNT = 25;
 const BALL_RADIUS = 125;
@@ -12,11 +22,7 @@ const GRAVITY = 0.5;
 const FRICTION = 0.95;
 
 
-const ballImages = [
-  "https://via.placeholder.com/150",
-  "https://via.placeholder.com/150",
-  "https://via.placeholder.com/150",
-];
+const ballImages = [ icon1, icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9];
 
 const Home2 = () => {
   const [balls, setBalls] = useState(
@@ -386,45 +392,40 @@ const Home2 = () => {
                     </dd>
                   </div>
 
-                  <div className="w-full flex  justify-center">
-     
-
-      {/* Bottom Button */}
-      <a
-        href=""
-        id="contact_btn"
-        className="w-[10rem] h-[10rem] rounded-full text-[#000e17] grid place-items-center absolute lg:right-[50%] sm:right-[40%] xs:right-[30%] bottom-[5%] bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer transition-all duration-400 ease-in-out hover:shadow-2xl hover:shadow-gray-900 hover:-translate-y-[1rem] hover:text-[#000e17]"
-      >
-        <i className="uil uil-arrow-up-right absolute text-[3.5rem]"></i>
-        <p className="text-[#000e17] font-semibold w-[10rem] h-[10rem] flex justify-center animate-spinText">
-          CONTACT - SEND US AN EMAIL
-        </p>
-      </a>
-    </div>
+              <div className="flex justify-center mt-10">
+              <ReadMoreButton/>
+              </div>
       </div>
 
       {balls.map((ball) => (
-        <div
-          key={ball.id}
-          className="shadow-xl lg:flex hidden"
-          style={{
-            backgroundImage: `url(${ball.image})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: `${BALL_RADIUS * 2}px`,
-            height: `${BALL_RADIUS * 2}px`,
-            borderRadius: "50%",
-            position: "absolute",
-            backgroundColor: "white",
-            left: `${ball.x}px`,
-            top: `${ball.y}px`,
-            transform: "translate(-50%, -50%)",
-          }}
-          onMouseDown={(e) => handleMouseDown(ball.id, e)}
-        ></div>
-      ))}
+  <div
+    key={ball.id}
+    className="shadow-xl lg:flex hidden"
+    style={{
+      width: `${BALL_RADIUS * 2}px`,
+      height: `${BALL_RADIUS * 2}px`,
+      borderRadius: "50%",
+      position: "absolute",
+      left: `${ball.x}px`,
+      top: `${ball.y}px`,
+      transform: "translate(-50%, -50%)",
+    }}
+    onMouseDown={(e) => handleMouseDown(ball.id, e)}
+  >
+    <Image
+      src={ball.image}
+      alt={`Ball ${ball.id}`}
+      width={BALL_RADIUS * 2}
+      height={BALL_RADIUS * 2}
+      style={{
+        borderRadius: "50%",
+        objectFit: "cover",
+      }}
+    />
+  </div>
+))}
     </div>
-    {}
+    
     <div className="h-screen dark:bg-gray-900 hidden">
       <div className="pt-12 bg-gray-50 dark:bg-gray-900 sm:pt-20">
         <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
