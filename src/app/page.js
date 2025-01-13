@@ -1,7 +1,7 @@
 "use client"; // Ensure this is a client component
 import { useEffect, useState } from "react";
-import Home2 from "./Home/Home2";
-import Home3 from "./Home/Home3";
+import Home2 from "./Home/Home2/Home2";
+import Home3 from "./Home/Home3/Home3";
 import Home4 from "./Home/Home4";
 import ContactUs from "./Home/ContactUs";
 import Footer from "./Footer/Footer";
@@ -12,8 +12,9 @@ import K from "./assets/k-word.svg";
 import S from "./assets/s-word.svg";
 import H from "./assets/h-word.svg";
 import Home7 from "./Home/Home7";
-import Navbar from "./Home/Navbar";
+import Navbar from "./Navbar/Navbar";
 import Home5 from "./Home/Home5";
+import Home6 from "./Home/Home6/Home6";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -73,7 +74,8 @@ export default function Home() {
         <Home3/>
         <Home4/>
         <Home5/>
-        <br/>
+        <Home6/>
+   
         <Footer/>
       </div>
    

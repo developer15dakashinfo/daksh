@@ -54,11 +54,7 @@ function Home4() {
                 <p className="title">{card.frontTitle}</p>
               
               </div>
-              <div className="flip-card-back">
-               <p className="text-white text-sm text-center mb-3">{card.backTitle}</p>
-               
-                <button className="border border-white px-2 text-white">{card.backText}</button>
-              </div>
+             
             </div>
           </div>
         ))}

@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from "react";
-import node from "../assets/icon (1).jpeg"
+
 
 
 const BALL_COUNT = 25;
@@ -234,7 +234,7 @@ const Home2 = () => {
    <>
    <div
       ref={sectionRef}
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-14 py-20"
+      className="grid grid-cols-1 md:grid-cols-3 gap-10 "
       style={{
         backgroundColor: "white",
       }}
