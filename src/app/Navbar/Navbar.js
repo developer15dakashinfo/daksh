@@ -88,12 +88,13 @@ const Navbar = () => {
   console.log(activeDropdown);
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-        activeDropdown == 1 ? "pb-[250px] transition  duration-900" : null
-      } bg-black text-white shadow-md transition-transform duration-500 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${isScrolled ? "my-2 mx-3 rounded-lg w-[98%]" : "rounded-none"} `}
-    >
+  className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
+    activeDropdown === 1 ? "pb-[250px] transition duration-900" : ""
+  } bg-black text-white shadow-md transition-transform duration-500 ${
+    isVisible ? "translate-y-0" : "-translate-y-full"
+  } ${isScrolled ? "my-2 mx-3 rounded-lg w-full max-w-[98.2%]" : "rounded-none"}`}
+>
+
       <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
           {/* <Image src={logoPath} alt="Logo" className="h-14 w-60" /> */}

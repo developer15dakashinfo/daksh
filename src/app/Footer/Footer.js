@@ -92,7 +92,7 @@ const Footer = () => {
                   </div>
 
                   
-                  <div className="flex flex-col items-start">
+                  {/* <div className="flex flex-col items-start">
                     {words.map((word, index) => (
                       <span
                         key={index}
@@ -105,7 +105,27 @@ const Footer = () => {
                         {word}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
+                  <div className="flex flex-col items-start">
+        {words.map((word, index) => {
+          
+          const colors = ["text-purple-400", "text-red-400", "text-blue-400", "text-green-400", "text-yellow-400"];
+          
+          
+          const colorClass = colors[index % colors.length];
+          
+          return (
+            <span
+              key={index}
+              className={`text-5xl font-bold transition-all duration-800 ${
+                index === currentIndex ? colorClass : "text-gray-500"
+              }`}
+            >
+              {word}
+            </span>
+          );
+        })}
+      </div>
                 </div>
               </div>
             </div>
