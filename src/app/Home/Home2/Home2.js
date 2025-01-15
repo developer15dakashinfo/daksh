@@ -298,7 +298,7 @@ const Home2 = () => {
 
  <div
       ref={sectionRef}
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 pt-4 absolute -top-96 w-full "
+      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 pt-4 absolute -top-36 w-full "
     
     >
       {counters.map((data, idx) => {
@@ -307,7 +307,7 @@ const Home2 = () => {
         return (
           <div
             key={idx}
-            className={`col-span-1 p-8 h-[350px] rounded-xl ${data.bgColor}`}
+            className={`col-span-1 p-8 h-[350px] rounded-2xl ${data.bgColor}`}
           >
             <h1 className="text-5xl text-black font-extrabold">
               <div className="flex">
@@ -348,12 +348,12 @@ const Home2 = () => {
 
    
    <div
-      className="overflow-hidden m"
+      className="overflow-hidden relative mt-60"
       style={{
        
         height: "100vh",
         position: "relative",
-        backgroundColor: "white",
+      
         overflow: "hidden",
         cursor: "grab",
       }}
@@ -427,7 +427,7 @@ const Home2 = () => {
 ))}
     </div>
     
-    <div className="h-screen dark:bg-gray-900 hidden">
+    <div className="dark:bg-gray-900 hidden">
       <div className="pt-12 bg-gray-50 dark:bg-gray-900 sm:pt-20">
         <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
