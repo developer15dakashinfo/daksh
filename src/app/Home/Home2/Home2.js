@@ -294,12 +294,12 @@ const Home2 = () => {
 
   return (
    <>
-   <div
+ <div className="relative ">
+
+ <div
       ref={sectionRef}
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 pt-4 "
-      style={{
-        backgroundColor: "white",
-      }}
+      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 pt-4 absolute -top-96 w-full "
+    
     >
       {counters.map((data, idx) => {
         const { staticPart, lastDigit } = splitDigits(counts[data.key], data.key);
@@ -307,7 +307,7 @@ const Home2 = () => {
         return (
           <div
             key={idx}
-            className={`col-span-1 p-8 h-[370px] rounded-xl ${data.bgColor}`}
+            className={`col-span-1 p-8 h-[350px] rounded-xl ${data.bgColor}`}
           >
             <h1 className="text-5xl text-black font-extrabold">
               <div className="flex">
@@ -344,6 +344,7 @@ const Home2 = () => {
         );
       })}
     </div>
+ </div>
 
    
    <div

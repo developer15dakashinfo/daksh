@@ -43,8 +43,8 @@ export default function Home() {
    <Navbar/>
    
       <div
-        className="relative h-[200vh] w-full"
-        style={{ background: "black" }} // Gradient background
+        // className="relative h-[200vh] w-full"
+        // style={{ background: "black" }} // Gradient background
       >
         {/* Background Images */}
         {/* <div

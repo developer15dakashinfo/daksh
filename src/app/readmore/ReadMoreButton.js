@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import './ReadMoreButton.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const ReadMoreButton = () => {
   useEffect(() => {
     const link = document.querySelector(".link");
@@ -40,8 +42,9 @@ const ReadMoreButton = () => {
     <div className="wrapper">
       <a className="link" href="#" target="_blank">
         <div className="color"></div>
-        <span>READ MORE</span>
-        <i className="fa-solid fa-arrow-right"></i>
+        <span className="">Read More     <FontAwesomeIcon icon={faArrowRight} className='text-white text-xl ms-2 mb-1 align-center'/></span>
+    
+       
       </a>
     </div>
   );
