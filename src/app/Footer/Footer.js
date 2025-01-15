@@ -2,17 +2,32 @@ import React, { useEffect, useState } from "react";
 import "./Footer.scss";
 
 const Footer = () => {
+
   const words = ["Fast", "Smart", "Diligent", "Focused"];
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [isMovingDown, setIsMovingDown] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+      setCurrentIndex((prevIndex) => {
+        if (isMovingDown) {
+          if (prevIndex + 1 === words.length) {
+            setIsMovingDown(false); 
+            return prevIndex - 1;
+          }
+          return prevIndex + 1; 
+        } else {
+          if (prevIndex === 0) {
+            setIsMovingDown(true); 
+            return prevIndex + 1;
+          }
+          return prevIndex - 1; 
+        }
+      });
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [words.length]);
+  }, [isMovingDown, words.length]);
 
   const usefulLinks = [
     "About Us",
@@ -58,77 +73,51 @@ const Footer = () => {
       <footer className="bg-black py-4 text-gray-400">
         <div className="container px-4 mx-auto">
           <div className="-mx-4 flex flex-wrap justify-between">
-            {/* <div className="px-4 my-4">
-              <div className="scrolling-words-container">
-                <div className="scrolling-words-box">
-                  <ul className="align-center">
-                    <li className="text-red-500">Code</li>
-                    <li className="text-blue-500">Build</li>
-                    <li className="text-green-500">Create</li>
-                    <li className="text-yellow-500">Design</li>
-                    <li className="text-red-500">Code</li>
-                  </ul>
-                </div>
-                <div className="text-gray-400">
-                  <p className="pb-[1]">for</p> 
-                  <p>everyone</p>
-                </div>
-              </div>
-            </div> */}
             
-            <div className="flex justify-center items-center py-5">
-              <div className="text-center relative">
-               
-                <div className=" flex flex-row gap-20">
-                  <div className="flex flex-col">
-                    <div
-                      className="absolute transition-all duration-800 transform text-5xl font-bold text-white"
-                      style={{
-                        top: `${currentIndex * 48}px`, 
-                      }}
-                    >
-                      Be
-                    </div>
-                  </div>
 
-                  
-                  {/* <div className="flex flex-col items-start">
-                    {words.map((word, index) => (
-                      <span
-                        key={index}
-                        className={`text-5xl font-bold transition-all duration-800 ${
-                          index === currentIndex
-                            ? "text-purple-400"
-                            : "text-gray-500"
-                        }`}
-                      >
-                        {word}
-                      </span>
-                    ))}
-                  </div> */}
-                  <div className="flex flex-col items-start">
-        {words.map((word, index) => {
+<div className="flex justify-center items-center py-5">
+      <div className="text-center relative">
+        <div className="flex flex-row gap-20">
           
-          const colors = ["text-purple-400", "text-red-400", "text-blue-400", "text-green-400", "text-yellow-400"];
-          
-          
-          const colorClass = colors[index % colors.length];
-          
-          return (
-            <span
-              key={index}
-              className={`text-5xl font-bold transition-all duration-800 ${
-                index === currentIndex ? colorClass : "text-gray-500"
-              }`}
+          <div className="flex flex-col relative">
+            <div
+              className="absolute transition-all duration-800 transform text-5xl font-bold text-white"
+              style={{
+                top: `${currentIndex * 48}px`, 
+              }}
             >
-              {word}
-            </span>
-          );
-        })}
-      </div>
-                </div>
-              </div>
+              Be
             </div>
+          </div>
+
+          
+          <div className="flex flex-col items-start">
+            {words.map((word, index) => {
+              const colors = [
+                "text-purple-400",
+                "text-red-400",
+                "text-blue-400",
+                "text-green-400",
+                "text-yellow-400",
+              ];
+
+              const colorClass = colors[index % colors.length];
+
+              return (
+                <span
+                  key={index}
+                  className={`text-5xl font-bold transition-all duration-800 ${
+                    index === currentIndex ? colorClass : "text-gray-500"
+                  }`}
+                >
+                  {word}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
 
             <div className="px-4 my-4">
               <h2 className="inline-block text-[14px] font-semibold text-white pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
@@ -211,7 +200,6 @@ const Footer = () => {
           <p className="text-[14px] text-center pt-3">
             © 2025 Daksh Infosoft Pvt. Ltd. | All Rights Reserved
           </p>
-          
         </div>
       </footer>
     </>
