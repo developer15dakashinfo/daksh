@@ -57,7 +57,7 @@ const StackingCards = () => {
 
   return (
     <div className="bg-black text-white text-center font-sans">
-      <main className="w-[88%] mx-auto my-16 pb-20 relative">
+      <main className="w-[90%] mx-auto my-16 pb-20 relative">
         <ul className="relative">
           {cardsData.map((card, index) => (
             <li

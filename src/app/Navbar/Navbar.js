@@ -6,6 +6,7 @@ import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import logoPath from "../assets/logo.svg";
 import Logo from "../logo/logo";
+// import Logo from "../logo/logo";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -91,7 +92,7 @@ const Navbar = () => {
         activeDropdown == 1 ? "pb-[250px] transition  duration-900" : null
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
-      } ${isScrolled ? "my-2 ml-8 rounded-lg max-w-screen-2xl" : "rounded-none"} `}
+      } ${isScrolled ? "my-2 mx-3 rounded-lg w-[98%]" : "rounded-none"} `}
     >
       <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">

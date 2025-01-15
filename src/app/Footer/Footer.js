@@ -5,6 +5,7 @@ const Footer = () => {
   const words = ["Fast", "Smart", "Diligent", "Focused"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -74,40 +75,28 @@ const Footer = () => {
                 </div>
               </div>
             </div> */}
-            {/* <div className="flex items-center justify-center">
-              <div className="text-center">
-                <h1 className="text-6xl font-bold text-white">
-                  <span className="text-white transition-transform duration-500">
-                    Be
-                  </span>
-                  <span
-                    className="text-purple-400 transition-all duration-1000 ease-in-out"
-                    key={currentIndex}
-                  >
-                    {words[currentIndex]}
-                  </span>
-                </h1>
-              </div>
-            </div> */}
-
-            <div className="flex justify-center items-center py-8">
-              <div className="text-center">
-                <div className=" flex flex-row gap-3">
-
-                <div className="flex flex-col">
-                  <span
-                    className={`inline-block transition-transform duration-1000 text-6xl font-bold text-white ${
-                      currentIndex === 0 ? "translate-y-0" : "translate-y-full"
-                    }`}
-                  >
-                    Be
-                  </span>
+            
+            <div className="flex justify-center items-center py-5">
+              <div className="text-center relative">
+               
+                <div className=" flex flex-row gap-20">
+                  <div className="flex flex-col">
+                    <div
+                      className="absolute transition-all duration-800 transform text-5xl font-bold text-white"
+                      style={{
+                        top: `${currentIndex * 48}px`, 
+                      }}
+                    >
+                      Be
+                    </div>
                   </div>
-                  <div className="flex flex-col  items-start">
+
+                  
+                  <div className="flex flex-col items-start">
                     {words.map((word, index) => (
                       <span
                         key={index}
-                        className={`mx-2 text-6xl font-bold text-white transition-all duration-1000 ease-in-out ${
+                        className={`text-5xl font-bold transition-all duration-800 ${
                           index === currentIndex
                             ? "text-purple-400"
                             : "text-gray-500"
@@ -117,11 +106,7 @@ const Footer = () => {
                       </span>
                     ))}
                   </div>
-
                 </div>
-                
-                  
-                
               </div>
             </div>
 
@@ -206,7 +191,7 @@ const Footer = () => {
           <p className="text-[14px] text-center pt-3">
             © 2025 Daksh Infosoft Pvt. Ltd. | All Rights Reserved
           </p>
-          <span>Aditi</span>
+          
         </div>
       </footer>
     </>
