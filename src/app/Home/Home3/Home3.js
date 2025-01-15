@@ -65,7 +65,7 @@ const StackingCards = () => {
               data-index={index}
               className={`card sticky top-3 transition-transform duration-1000 ease-in-out transform ${
                 visibleCard === index
-                  ? "translate-y-0 z-50 scale-100"
+                  ? "translate-y-0 scale-100"
                   : `translate-y-[${index * 60}px] z-${60 - index} scale-90`
               }`}
               style={{
