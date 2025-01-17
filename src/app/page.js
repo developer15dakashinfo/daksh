@@ -1,82 +1,3 @@
-// "use client"; // Ensure this is a client component
-// import { useEffect, useState } from "react";
-// import Home2 from "./Home/Home2/Home2";
-// import Home3 from "./Home/Home3/Home3";
-// import Home4 from "./Home/Home4/Home4";
-// import Footer from "./Footer/Footer";
-// import Navbar from "./Navbar/Navbar";
-// import Home5 from "./Home/Home5/Home5";
-// import Home6 from "./Home/Home6/Home6";
-// import { Home1 } from "./Home/Home1/Home1";
-
-// export default function Home() {
-//   const [scrollY, setScrollY] = useState(0);
-//   const [showSplash, setShowSplash] = useState(true); // Splash screen state
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrollY(window.scrollY);
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-
-//     // Hide splash screen after 3 seconds
-//     const splashTimeout = setTimeout(() => {
-//       setShowSplash(false);
-//     }, 5000);
-
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//       clearTimeout(splashTimeout); // Clean up timeout
-//     };
-//   }, []);
-
-//   return (
-//     <>
-//       {showSplash ? (
-//         // Splash screen content
-//         <div
-//           style={{
-//             display: "flex",
-//             alignItems: "center",
-//             justifyContent: "center",
-//             height: "100vh",
-//             backgroundColor: "#000",
-//             color: "#fff",
-//             fontSize: "2rem",
-//             fontFamily: "Arial, sans-serif",
-//           }}
-//         >
-//           <div>
-//             <div className="wrapperr">
-//               {[...Array(10)].map((_, i) => (
-//                 <span className="spann" key={i} style={{ animationDelay: `${i * 0.1}s` }}>
-//                   <span className="bubble" />
-//                 </span>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       ) : (
-//         // Main content
-//         <>
-//           <Navbar />
-//           <div>
-//             <Home1 />
-//             <Home2 />
-//             <Home3 />
-//             {/* <Home4/> */}
-//             <Home5 />
-//             <Home6 />
-//             <Footer />
-//           </div>
-//         </>
-//       )}
-//     </>
-//   );
-// }
-
-
 
 
 "use client"; // Ensure this is a client component
@@ -93,6 +14,8 @@ import Home7 from "./Home/Home7/Home7";
 import Marquee from "./component/Marquee/Marquee";
 
 export default function Home() {
+
+  
   const [scrollY, setScrollY] = useState(0);
   const [showSplash, setShowSplash] = useState(true); // Splash screen state
 
@@ -176,14 +99,13 @@ export default function Home() {
             <Home1 />
             <Home2 />
             <Home3 />
-            {/* <Marquee/> */}
-            {/* <Home4/> */}
+           
             <Home5 />
         
-            {/* <Home7/> */}
+          
             <Home6 />
          
-
+            <Home7/>
             <Footer />
           </div>
         </>

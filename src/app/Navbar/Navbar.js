@@ -1,3 +1,5 @@
+"use client"; // Ensure this is a client component
+
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -39,7 +41,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", link: "#home" },
+    { label: "Home", link: "/" },
     {
       label: "Our Services",
       link: "#services",
@@ -80,7 +82,7 @@ const Navbar = () => {
         },
       ],
     },
-    { label: "About Us", link: "#about" },
+    { label: "About Us", link: "/about" },
     { label: "Career", link: "#career" },
     { label: "Contact Us", link: "#contact" },
     { label: "Pricing", link: "/pricing" },
