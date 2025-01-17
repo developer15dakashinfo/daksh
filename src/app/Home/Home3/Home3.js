@@ -22,7 +22,7 @@ const StackingCards = () => {
       text: "We provide you with the Best Solutions. Creative, modern & simple Design Cutting Edge Services & Features Designing, Web Development, software development, Web application development and mobile application development.",
       image:
         "https://www.open.edu.au/-/media/blog/2022/10-october/software-developer-vs-engineer_edited.jpg?h=402&iar=0&w=715&rev=22dc593363e74d4285cb4042c8401af0&hash=A719998C2F009EC9F76F63BFCDFBD24A",
-      backgroundColor: "#46a0fa",
+      backgroundColor: "#46a0fa",     
     },
     {
       title: "Future-Ready Technology",

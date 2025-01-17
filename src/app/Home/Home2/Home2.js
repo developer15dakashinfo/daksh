@@ -1,28 +1,27 @@
 
 import { useState, useEffect, useRef } from "react";
 
-import icon1 from "../../assets/icon (1).jpeg";
-import icon2 from "../../assets/icon (2).jpeg";
-import icon3 from "../../assets/icon (3).jpeg";
-import icon4 from "../../assets/icon (4).jpeg";
-import icon5 from "../../assets/icon (5).jpeg";
-import icon6 from "../../assets/icon (6).jpeg";
-import icon7 from "../../assets/icon (7).jpeg";
-import icon8 from "../../assets/icon (8).jpeg";
-import icon9 from "../../assets/icon (9).jpeg";
+import icon1 from "../../assets/css.svg";
+import icon2 from "../../assets/react.svg";
+import icon3 from "../../assets/node.svg";
+import icon4 from "../../assets/php.svg";
+import icon5 from "../../assets/nextjs.svg";
+import icon6 from "../../assets/wordpress.svg";
+import icon7 from "../../assets/laravel.svg";
+import icon8 from "../../assets/flutter.svg";
 import Image from "next/image";
 import ReadMoreButton from "@/app/readmore/ReadMoreButton";
 
-const BALL_COUNT = 25;
-const BALL_RADIUS = 125;
+const BALL_COUNT = 20;
+const BALL_RADIUS = 135;
 const BLUE_BALL_POSITION = { x: window.innerWidth / 2, y: window.innerHeight / 3 };
 const BLUE_BALL_RADIUS = 289;
 const REPULSION_FORCE = 0.1; // Control the strength of repulsion
-const GRAVITY = 0.5;
+const GRAVITY = 0.3;
 const FRICTION = 0.95;
 
 
-const ballImages = [ icon1, icon2,icon3,icon4,icon5,icon6,icon7,icon8,icon9];
+const ballImages = [ icon1, icon2,icon3,icon4,icon5,icon6,icon7,icon8];
 
 const Home2 = () => {
   const [balls, setBalls] = useState(
@@ -37,9 +36,6 @@ const Home2 = () => {
       image: ballImages[i % ballImages.length],
     }))
   );
-
- 
-
 
   const sectionRef = useRef(null);
   const [animateLetters, setAnimateLetters] = useState(false);
@@ -67,25 +63,31 @@ const Home2 = () => {
 
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimateLetters(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setAnimateLetters(true);
+      }
+    }, { threshold: 0.5 });
+  
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
+  
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
+  
+  useEffect(() => {
+    if (animateLetters) {
+      const animate = () => {
+        applyPhysics();
+        requestAnimationFrame(animate);
+      };
+      animate();
+    }
+  }, [animateLetters]);
+  
 
   const animateCounter = (key, start, end, duration) => {
     const increment = (end - start) / (duration / 50);
@@ -180,6 +182,7 @@ const Home2 = () => {
     setBalls((prevBalls) => prevBalls.map((ball) => ({ ...ball, isDragging: false })));
   };
 
+  
   const applyPhysics = () => {
     setBalls((prevBalls) => {
       const updatedBalls = [...prevBalls];
@@ -237,7 +240,7 @@ const Home2 = () => {
           // Bounce on floor
           if (ball.y > window.innerHeight - BALL_RADIUS) {
             ball.y = window.innerHeight - BALL_RADIUS;
-            ball.vy *= -0.6; // Invert velocity for bounce
+            ball.vy *= -0.9; // Invert velocity for bounce
           }
 
           // Keep within horizontal bounds
@@ -250,14 +253,8 @@ const Home2 = () => {
     });
   };
 
-  useEffect(() => {
-    const animate = () => {
-      applyPhysics();
-      requestAnimationFrame(animate);
-    };
-    animate();
-  }, []);
 
+  
 
   useEffect(() => {
     const targets = [
@@ -288,7 +285,7 @@ const Home2 = () => {
 
     // Animate count-up for each target with adjusted duration
     targets.forEach((target) => {
-      animateCountUp(target, maxCount / 100); // Adjust duration based on max count
+      animateCountUp(target, maxCount / 50); // Adjust duration based on max count
     });
   }, []);
 
@@ -307,18 +304,18 @@ const Home2 = () => {
         return (
           <div
             key={idx}
-            className={`col-span-1 p-8 h-[350px] rounded-2xl ${data.bgColor}`}
+            className={`col-span-1 p-8  rounded-2xl ${data.bgColor}`}
           >
-            <h1 className="text-5xl text-black font-extrabold">
+            <h1 className="text-6xl text-black font-extrabold">
               <div className="flex">
                 {staticPart !== null && (
                   <span className="text-black">{staticPart}</span>
                 )}
                 <div className="overflow-hidden flex">
-                  <div className="flex flex-col justify-center items-center h-[55px] w-[40px] relative overflow-hidden">
+                  <div className="flex flex-col justify-center items-center h-[60px] w-[40px] relative overflow-hidden">
                     {[...Array(10).keys()].map((num) => (
                       <span
-                        key={num}
+                        key={num} 
                         className="absolute text-center text-black font-extrabold"
                         style={{
                           top: `${num * 54}px`,
@@ -336,10 +333,10 @@ const Home2 = () => {
                 <div className="ml-2">{data.suffix}</div>
               </div>
             </h1>
-            <h2 className="text-5xl text-black font-extrabold">
+            <h2 className="text-7xl text-black font-extrabold">
               {data.heading}
             </h2>
-            <p className="text-[16px] text-black pt-16">{data.paragraph}</p>
+            <p className="text-2xl text-black font-extrabold pt-16">{data.paragraph}</p>
           </div>
         );
       })}
@@ -380,7 +377,7 @@ const Home2 = () => {
       >
   <div className="flex flex-col p-6 text-center border-b mt-40 border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
                     <dt
-                      className="order-2 mt-2 text-xl font-medium leading-6 text-gray-500 dark:text-gray-400"
+                      className="order-2 mt-2 text-xl  leading-6 text-gray-500 dark:text-gray-400"
                       id="item-1"
                     >
                      Complete Projects, Let's Discuss Your Project
@@ -393,7 +390,7 @@ const Home2 = () => {
                     </dd>
                   </div>
 
-              <div className="flex justify-center mt-10">
+              <div className="flex justify-center ">
               <ReadMoreButton/>
               </div>
       </div>
@@ -422,6 +419,7 @@ const Home2 = () => {
         borderRadius: "50%",
         objectFit: "cover",
       }}
+      onDragStart={(e) => e.preventDefault()}
     />
   </div>
 ))}
