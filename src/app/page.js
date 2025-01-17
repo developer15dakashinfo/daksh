@@ -33,18 +33,15 @@ export default function Home() {
     };
   }, []);
 
-  const images = [
-   D,A,K,S,H
-  ];
+  const images = [D, A, K, S, H];
 
-  
   return (
     <>
-   <Navbar/>
-   
+      <Navbar />
+
       <div
-        // className="relative h-[200vh] w-full"
-        // style={{ background: "black" }} // Gradient background
+      // className="relative h-[200vh] w-full"
+      // style={{ background: "black" }} // Gradient background
       >
         {/* Background Images */}
         {/* <div
@@ -70,21 +67,17 @@ export default function Home() {
             />
           ))}
         </div> */}
-<Home1/>
-      
-    
-          <Home2 />
-       
-        <Home3/>
-        {/* <Home4/> */}
-        <Home5/>
-        <Home6/>
-   
-        <Footer/>
-      </div>
-   
-    
+        <Home1 />
 
-  </>
+        <Home2 />
+
+        <Home3 />
+        {/* <Home4/> */}
+        <Home5 />
+        <Home6 />
+
+        <Footer />
+      </div>
+    </>
   );
 }
