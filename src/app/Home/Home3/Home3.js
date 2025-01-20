@@ -1,4 +1,7 @@
+import Button from "@/app/Button/Button";
+import ReadMoreButton from "@/app/readmore/ReadMoreButton";
 import React, { useEffect, useState } from "react";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const StackingCards = () => {
   const cardsData = [
@@ -9,7 +12,7 @@ const StackingCards = () => {
       backgroundColor: "#fffff",
     },
     {
-      title: "Grow With Us",
+      title: "SELL MORE SHOWs",
       text: "Get a grip on your operations and workflows. Managing your agency becomes painless.",
       descreption:
         "Daksh Infosoft Pvt. Ltd. is incorporated under the Companies Act which states that the company is entitled to be a Private Limited Company with a handfull of industry professionals, having in-depth experience of technology and organizational development.",
@@ -23,7 +26,7 @@ const StackingCards = () => {
       backgroundColor: "#ffec89",
     },
     {
-      title: "Creative Solutions",
+      title: "CREATIVE SOLUTIONS",
       text: "Transform how your agency prepares for shows and tours. Makes the hard work of organization easy.",
       descreption:
         "We provide you with the Best Solutions. Creative, modern & simple Design Cutting Edge Services & Features Designing, Web Development, software development, Web application development and mobile application development.",
@@ -37,7 +40,7 @@ const StackingCards = () => {
       backgroundColor: "#46a0fa",
     },
     {
-      title: "Future-Ready Technology",
+      title: "FUTURE READY TECHNOLOGY",
       text: "Book more shows. In less time, with less effort. Turn opportunities into profit.",
       descreption:
         " Daksh Infosoft Pvt. Ltd. has turned up into a renowned integrated Infotech service provider offering you cost-effective and quality solutions in Web Design, Web Development, eCommerce Website Development, and more.",
@@ -76,7 +79,7 @@ const StackingCards = () => {
 
   return (
     <div className="bg-black text-white text-center font-sans">
-      <main className="w-[90%] mx-auto  pb-20 relative">
+      <main className="w-[95%] mx-auto  pb-20 relative">
         <ul className="relative">
           {cardsData.map((card, index) => (
             <li
@@ -108,62 +111,90 @@ const StackingCards = () => {
                 ) : (
                   <>
                     <div className="py-20 px-20 flex w-full gap-10">
-                      <div className="w-4/12">
+                      <div className="w-4/12 px-5">
                         <figure className="overflow-hidden rounded-lg">
                           <img
                             src={card.image}
                             alt={card.title}
-                            className="object-cover h-full w-full"
+                            className="object-cover h-96 w-full"
                           />
                         </figure>
                       </div>
 
-                      <div className=" flex-col w-8/12">
-                        <div className="py-10 flex gap-4 border-b-2">
-                          <h2 className="text-4xl font-extrabold py-8">
+                      <div className=" flex-col w-8/12 px-10">
+                        <div className=" grid grid-cols-2 gap-10 border-black">
+                          <h2 className="text-5xl font-extrabold text-start">
                             {card.title}
                           </h2>
-                          <p className="mt-4 text-lg leading-relaxed text-left">
+                          <p className="text-lg leading-relaxed text-left">
                             {card.text}
                           </p>
                         </div>
-                        <div className="py-10 flex gap-4 ">
-                          <h2 className="text-4xl font-extrabold py-8">
+                        <hr className="border-t-1 border-black my-12"/>
+                        <div className="grid grid-cols-2 gap-10 ">
+                          <h2 className="text-[15px] font-medium text-start">
                             {card.descreption}
                           </h2>
                           <div>
-                            <ul>
+                            <ul className=" list-none">
                               <li>
-                                <p className="mt-4 text-lg leading-relaxed text-left">
+                                <div className=" flex items-center gap-2">
+                                <FaCircleCheck />
+                                <p className=" text-[19px] font-semibold leading-relaxed text-left">
                                   {card.list1}
                                 </p>
+                                </div>
                               </li>
                               <li>
-                                <p className="mt-4 text-lg leading-relaxed text-left">
+                              <div className=" flex items-center gap-2">
+                              <FaCircleCheck />
+                                <p className=" text-[19px] font-semibold leading-relaxed text-left">
                                   {card.list2}
                                 </p>
+                                </div>
                               </li>
                               <li>
-                                <p className="mt-4 text-lg leading-relaxed text-left">
+                              <div className=" flex items-center gap-2">
+                              <FaCircleCheck />
+                                <p className=" text-[19px] font-semibold leading-relaxed text-left">
                                   {card.list3}
                                 </p>
+                                </div>
                               </li>
                             </ul>
                           </div>
                         </div>
-                        <div className="py-10 ">
-                          <h2 className="text-4xl font-extrabold py-8">
-                            {card.t1}
-                          </h2>
-                          <p className="mt-4 text-lg leading-relaxed text-left">
-                            {card.t2}
-                          </p>
-                          <a
-                            href="#top"
-                            className="inline-block mt-4 bg-white text-black px-4 py-2 rounded-md"
-                          >
-                            Explore more 
-                          </a>
+
+                        <div className="grid grid-cols-2 gap-10 py-12">
+                          <div className="flex gap-3">
+                          <div>
+                          <figure className="overflow-hidden rounded-full">
+                          <img
+                            src={card.image}
+                            alt={card.title}
+                            className="object-cover h-10 w-10"
+                          />
+                        </figure>
+                          </div>
+                            <div>
+                            <h2 className="text-[14px] font-extrabold text-start">
+                              {card.t1}
+                            </h2>
+                            <p className="text-[14px] leading-relaxed text-left">
+                              {card.t2}
+                            </p>
+                            </div>
+                          </div>
+                          <div>
+                            {/* <a
+                              href="#top"
+                              className="inline-block bg-white text-black px-4 py-2 rounded-md"
+                            >
+                              Explore more
+                            </a> */}
+                            <Button text="Explore More"  href="/learn-more" />
+
+                          </div>
                         </div>
                       </div>
                     </div>
