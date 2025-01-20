@@ -1,9 +1,10 @@
 
+"use client"; 
 
 export default function About3() {
     return (
-        <div className="relative overflow-hidden bg-black pt-16 pb-32 space-y-24 ">
-        <div className="relative">
+        <div className=" overflow-hidden bg-black pt-16 pb-32 space-y-24 ">
+        <div className="">
           <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
             <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
               <div>

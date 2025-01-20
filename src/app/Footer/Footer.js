@@ -79,13 +79,13 @@ const Footer = () => {
 
 <div className="flex justify-center items-center py-5">
       <div className="text-center relative">
-        <div className="flex flex-row gap-20">
+        <div className="flex flex-row gap-10">
           
           <div className="flex flex-col relative">
             <div
-              className="absolute transition-all duration-800 transform text-5xl font-bold text-white"
+              className="absolute transition-all duration-800 transform text-6xl font-bold text-white"
               style={{
-                top: `${currentIndex * 48}px`, 
+                top: `${currentIndex * 60}px`, 
               }}
             >
               Be
@@ -108,7 +108,7 @@ const Footer = () => {
               return (
                 <span
                   key={index}
-                  className={`text-5xl font-bold transition-all duration-800 ${
+                  className={`text-6xl font-bold transition-all duration-800 ${
                     index === currentIndex ? colorClass : "text-gray-500"
                   }`}
                 >
@@ -121,7 +121,8 @@ const Footer = () => {
       </div>
     </div>
 
-            <div className="px-4 my-4">
+           <div className="grid grid-cols-4 border border-white">
+           <div className="px-4 my-4">
               <h2 className="inline-block text-[14px] font-semibold text-white pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
                 Useful Links
               </h2>
@@ -130,7 +131,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="flex flex-col">
+          
               <div className="px-4 my-4">
                 <h2 className="inline-block text-[14px] font-semibold text-white pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
                   Web Development
@@ -148,9 +149,9 @@ const Footer = () => {
                   {renderLinks(digitalMarketing)}
                 </ul>
               </div>
-            </div>
+          
 
-            <div className="">
+         
               <div className="px-4 my-4">
                 <h2 className="inline-block text-[14px] font-semibold text-white pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
                   App Development
@@ -168,9 +169,9 @@ const Footer = () => {
                   {renderLinks(mobileMarketing)}
                 </ul>
               </div>
-            </div>
+          
 
-            <div className="px-4 my-4 xl:w-1/5">
+            <div className="px-4 my-4 ">
               <h2 className="inline-block text-[14px] font-semibold text-white pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
                 Connect With Us
               </h2>
@@ -195,6 +196,7 @@ const Footer = () => {
                 </p>
               </address>
             </div>
+           </div>
           </div>
         </div>
         <div className="px-8">
