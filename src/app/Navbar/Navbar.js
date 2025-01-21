@@ -1,12 +1,14 @@
+"use client"; // Ensure this is a client component
+
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import logoPath from "../assets/logo.svg";
 import Logo from "../logo/logo";
-// import Logo from "../logo/logo";
+import Button from "../Button/Button";
+import SlidingButton from "../SlidingButton/SlidingButton";
+
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -39,7 +41,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", link: "#home" },
+    { label: "Home", link: "/" },
     {
       label: "Our Services",
       link: "#services",
@@ -59,6 +61,7 @@ const Navbar = () => {
             { label: "Android App Development", link: "#" },
             { label: "Hybrid App Development", link: "#" },
             { label: "iOS App Development", link: "#" },
+            { label: "Flutter App Development", link: "#" },
           ],
         },
         {
@@ -76,29 +79,32 @@ const Navbar = () => {
             { label: "Voice Call", link: "#" },
             { label: "IVR", link: "#" },
             { label: "Short/Long Code", link: "#" },
+            { label: "SMS Service", link: "#" },
           ],
         },
       ],
     },
-    { label: "About Us", link: "#about" },
-    { label: "Career", link: "#career" },
+    { label: "About Us", link: "/about" },
+    { label: "Career", link: "/careerSection" },
     { label: "Contact Us", link: "#contact" },
     { label: "Pricing", link: "/pricing" },
   ];
   console.log(activeDropdown);
   return (
     <nav
-  className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-    activeDropdown === 1 ? "pb-[250px] transition duration-900" : ""
-  } bg-black text-white shadow-md transition-transform duration-500 ${
-    isVisible ? "translate-y-0" : "-translate-y-full"
-  } ${isScrolled ? "my-2 mx-3 rounded-lg w-full max-w-[98.2%]" : "rounded-none"}`}
->
-
+      className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
+        activeDropdown === 1 ? "pb-[250px] transition duration-500" : ""
+      } bg-black text-white shadow-md transition-transform duration-500 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${
+        isScrolled
+          ? "my-2 mx-3 rounded-lg w-full max-w-[98.2%]"
+          : "rounded-none"
+      }`}
+    >
       <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
-          {/* <Image src={logoPath} alt="Logo" className="h-14 w-60" /> */}
-          <Logo/>
+          <Logo />
         </a>
       </div>
 
@@ -144,7 +150,7 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute  mx-7 w-[99vw] z-50 transition-opacity duration-2000`}
+                className={`absolute mx-7 w-[99vw] z-50 transition-opacity duration-500`}
                 style={{
                   marginTop: "2px",
                   animation: "sliceDown 1s ease-in-out forwards",
@@ -152,8 +158,8 @@ const Navbar = () => {
               >
                 <div className="container items-center justify-center rounded-lg mx-auto grid grid-cols-4 w-[97.7%]  gap-8 text-sm px-10 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
-                    <div key={i} className="space-y-4 mt-4 text-center">
-                      <h3 className="font-medium text-white pt-4">
+                    <div key={i} className="space-y-4 mt-14 text-center">
+                      <h3 className="font-medium text-white ">
                         {dropdownItem.heading}
                       </h3>
                       <ul>
@@ -175,14 +181,8 @@ const Navbar = () => {
         ))}
       </ul>
 
-     
-
       <div className="hidden md:block">
-        <Link href="/contactUs">
-          <div className="text-[15px] bg-white text-black font-medium px-8 rounded-full py-2">
-            Contact us
-          </div>
-        </Link>
+        <SlidingButton text="Contact Us"/>
       </div>
     </nav>
   );

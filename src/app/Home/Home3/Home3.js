@@ -95,7 +95,7 @@ const StackingCards = () => {
               }}
             >
               <div
-                className="shadow-xl text-[#0A0507] rounded-lg overflow-hidden  "
+                className="shadow-xl text-[#0A0507] rounded-3xl overflow-hidden  "
                 style={{
                   backgroundColor: card.backgroundColor,
                   height: index === 0 ? "100vh" : "600px",

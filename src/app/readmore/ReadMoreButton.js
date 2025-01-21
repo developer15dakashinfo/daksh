@@ -39,10 +39,10 @@ const ReadMoreButton = () => {
   }, []);
 
   return (
-    <div className="wrapper">
+    <div className="wrapper mt-20">
       <a className="link" href="#" target="_blank">
         <div className="color"></div>
-        <span className=" text-lg">Read More     <FontAwesomeIcon icon={faArrowRight} className='text-white text-xl ms-2 align-center'/></span>
+        <span className="">Read More     <FontAwesomeIcon icon={faArrowRight} className='text-white text-xl ms-2 align-center'/></span>
     
        
       </a>

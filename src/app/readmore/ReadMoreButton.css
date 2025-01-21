@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
   --white: #eee;
@@ -36,53 +36,6 @@
   background-color: var(--color);
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: -0.55em;
-} */
-
-/* Button.css */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-:root {
-  --white: #eee;
-  --black: #000;
-  --color: #000;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.button-wrapper {
-  display: inline-block;
-}
-
-.button-link {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-.button-link span,
-.button-link i {
-  position: relative;
-}
-
-.button-color {
-  width: 2em;
-  height: 1.5em;
-  border-radius: 2em;
-  background-color: var(--color);
-  position: absolute;
   transform: translateY(-50%);
   left: -0.55em;
 }
