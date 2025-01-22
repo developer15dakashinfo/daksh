@@ -91,7 +91,7 @@ const Footer = () => {
       <footer className="bg-[#0a0a0a] py-4 text-gray-400">
         <div className="container mx-auto my-14 flex items-start gap-28">
           <div className="flex justify-center items-center w-4/12">
-            <div className="text-center relative pt-20">
+            <div className="text-center relative pt-14">
               <div className="flex flex-row gap-24">
                 <div className="flex flex-col relative">
                   <div
@@ -134,7 +134,7 @@ const Footer = () => {
 
           <div className=" w-8/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
             <div className="px-4">
-              <h2 className="inline-block text-[16px] font-semibold text-gray-300 pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
+              <h2 className="inline-block text-[16px] font-[500] text-gray-300 pb-1 mb-2 relative before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:rounded-md">
                 Useful Links
               </h2>
               <ul className="leading-7 text-[16px] text-gray-500">

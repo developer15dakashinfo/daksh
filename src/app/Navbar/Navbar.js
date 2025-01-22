@@ -93,7 +93,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-        activeDropdown === 1 ? "pb-[250px] transition duration-500" : ""
+        activeDropdown === 1 ? "pb-[300px] transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
@@ -152,7 +152,7 @@ const Navbar = () => {
               <div
                 className={`absolute mx-7 w-[99vw] z-50 transition-opacity duration-500`}
                 style={{
-                  marginTop: "2px",
+                  marginTop: "50px",
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
