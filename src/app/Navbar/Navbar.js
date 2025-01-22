@@ -86,7 +86,7 @@ const Navbar = () => {
     },
     { label: "About Us", link: "/about" },
     { label: "Career", link: "/careerSection" },
-    { label: "Contact Us", link: "#contact" },
+    { label: "Contact Us", link: "/contact" },
     { label: "Pricing", link: "/pricing" },
   ];
   console.log(activeDropdown);
