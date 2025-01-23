@@ -2,15 +2,15 @@
 
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import HeroVisual from "./HeroVisual";
 import OurWebDesign from "./OurWebDesign/OurWebDesign";
-import WebsiteDesign from "./WebsiteDesign";
 
 export default function websiteDesign() {
   return (
     <div>
       <Navbar />
 
-      <WebsiteDesign />
+      <HeroVisual/>
       <OurWebDesign/>
 
       <Footer />
