@@ -49,7 +49,7 @@ const Navbar = () => {
         {
           heading: "WEB DEVELOPMENT",
           items: [
-            { label: "Web Designing & Development", link: "#" },
+            { label: "Web Designing & Development", link: "/websiteDesign" },
             { label: "E-commerce Website Design", link: "#" },
             { label: "Graphic Design Service", link: "#" },
             { label: "WordPress Development Service", link: "#" },
@@ -150,9 +150,9 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute mx-7 w-[99vw] z-50 transition-opacity duration-500`}
+                className={`absolute pt-14 mx-7 w-[99vw] z-50 transition-opacity duration-500`}
                 style={{
-                  marginTop: "50px",
+                  marginTop: "2px",
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
