@@ -1,13 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "./Contact1.css";
+import "./Contact.scss";
 
 export default function Contact1() {
 
 
   return (
     <div>
-    {/* component */}
-    <div className="flex justify-center items-center  h-screen bg-white mt-40">
+
+<div className="hero">
+  <div className="diagonal-hero-bg">
+     <div className="stars">
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-5xl text-white font-bold">Contact Us</h1>
+          <h1 className="text-7xl text-white font-bold">DAKSH INFOSFT</h1>
+          
+        </div>
+        <div className="small"></div>
+        <div className="medium"></div>
+        <div className="big"></div>
+      </div>
+   </div>
+</div>
+
+    <div className="flex justify-center items-center  h-screen bg-white ">
       {/* COMPONENT CODE */}
       <div className="container mx-auto my-4 px-4 lg:px-20">
         <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40  rounded-2xl shadow-2xl">

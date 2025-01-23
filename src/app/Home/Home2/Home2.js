@@ -52,7 +52,7 @@ const Home2 = () => {
           .split("")
           .map(
             (character, index) =>
-              `<span class="absolute origin-[0.3rem_5rem]" style="transform: rotate(${
+              `<span className="absolute origin-[0.3rem_5rem]" style="transform: rotate(${
                 index * 12
               }deg)">${character}</span>`
           )

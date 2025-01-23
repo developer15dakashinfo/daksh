@@ -19,7 +19,7 @@
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-
+  --dark-color: #000000;
   min-height: 50vh;
   display: grid;
   place-items: center;
@@ -43,6 +43,7 @@
   --button-color: #333333;
   --transition: 0.5s ease-in-out;
 border: #837575 1px solid;
+border-radius: 10%;
   font-family: inherit;
   height: 350px;
   width: 300px;
@@ -62,7 +63,7 @@ border: #837575 1px solid;
 }
 .card__bx::before {
   inset: -10px 50px;
-  border-top: 4px solid var(--clr);
+ 
   transform: skewY(15deg);
   border-bottom: 4px solid var(--clr);
 }
@@ -72,7 +73,7 @@ border: #837575 1px solid;
 }
 .card__bx::after {
   inset: 60px -10px;
-  border-left: 4px solid var(--clr);
+ 
   transform: skew(15deg);
   border-right: 4px solid var(--clr);
 }
@@ -91,6 +92,7 @@ border: #837575 1px solid;
   padding: 0 20px;
   height: 100%;
   width: 100%;
+  border-radius: 10%;
   overflow: hidden;
 }
 .card__bx .card__data .card__icon {
@@ -145,6 +147,7 @@ border: #837575 1px solid;
   padding: 8px 15px;
   text-decoration: none;
   font-weight: 500;
+  
   margin-top: 10px;
   border: 2px solid var(--clr);
   color: var(--dark-color);

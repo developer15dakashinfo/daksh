@@ -75,7 +75,7 @@ const Pricing1 = () => {
   }, []);
 
   return (
-    <section className="iq-features  float-left ">
+    <section className="iq-features  float-left ps-14">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-3 col-md-12"></div>
@@ -101,7 +101,7 @@ const Pricing1 = () => {
                   </span>
                 ))}
               </div>
-              <div className="contentCircle">
+              <div className="contentCircle rounded-3xl">
                 {[
                   { tab: 1, title: 'Automate', content: ' Automate', icon: 'fa-clock-o' },
                   { tab: 2, title: 'Chat', content: ' Chat', icon: 'fa-comments' },

@@ -89,7 +89,7 @@ const Navbar = () => {
     { label: "Contact Us", link: "/contact" },
     { label: "Pricing", link: "/pricing" },
   ];
-  console.log(activeDropdown);
+ 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${

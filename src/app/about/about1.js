@@ -1,21 +1,26 @@
 import Navbar from "../Navbar/Navbar";
+import "./Pricing.scss";
 
 export default function About1() {
     return (
       <div>
   
-  <div className="relative h-[500px] w-full">
-        <img src alt="Background Image" className="absolute inset-0 w-full h-full object-cover filter blur-sm" />
-        <div className="absolute inset-0 bg-black " />
-        <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-8xl text-white font-bold">ABOUT</h1>
-          <h1 className="text-8xl text-white font-bold">DAKSH INFOSFT</h1>
-          <div style={{backgroundColor:"#FFEC89"}} class="absolute right-96 me-20 top-40 w-40 h-40  text-center  font-bold align-center rounded-full uppercase text-black text-xl pt-10">this is <br/>
+  <div className="hero">
+  <div className="diagonal-hero-bg">
+     <div className="stars">
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+      <h1 className="text-7xl text-white font-bold">ABOUT</h1>
+      <h1 className="text-7xl text-white font-bold">DAKSH INFOSFT</h1>
+          <div style={{backgroundColor:"#FFEC89"}} className="absolute right-96 rotate-160 me-20 top-40 w-40 h-40  text-center  font-bold align-center rounded-full uppercase text-black text-xl pt-10">this is <br/>
 who we <br/>
 are!</div>
         </div>
-      
+        <div className="small"></div>
+        <div className="medium"></div>
+        <div className="big"></div>
       </div>
+   </div>
+</div>
       <div className="bg-white dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
