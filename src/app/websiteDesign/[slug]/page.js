@@ -7,7 +7,7 @@ import HeroVisual from "../HeroVisual";
 // import HeroVisual from "../HeroVisual";
 import OurWebDesign from "../OurWebDesign/OurWebDesign";
 import Benefits from "../Benefits/Benefits";
-
+import Testimonials from "../testimonials/Testimonials";
 
 export default function WebsiteDesign({ params }) {
   const [slug, setSlug] = useState("");
@@ -33,7 +33,7 @@ export default function WebsiteDesign({ params }) {
 
       <Cardsection/>
       <Benefits/>
-      
+      <Testimonials/>
       <OurWebDesign title={pageData.title} content={pageData.content} />
       
       
