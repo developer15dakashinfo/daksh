@@ -24,7 +24,7 @@
   }
   
   .orange {
-    color: #f7934d;
+    color: #95235B;
   }
   
   svg.banner-img {
@@ -53,7 +53,7 @@
   .benifits-content {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-self: flex-start;
     justify-content: center;
     width: 50%;
     height: 100%;
@@ -66,6 +66,7 @@
     font-size: var(--content-size);
     line-height: 40px;
     width: 80%;
+    align-items: flex-start;
   }
   
   .benifits-section {
@@ -82,12 +83,13 @@
   }
   
   .btn1 {
+    margin-top: 10px;
     font-family: var(--content-font);
     font-size: var(--content-size);
     min-width: 150px;
     padding: 10px 20px;
     color: white;
-    background-color: #4fb4f7;
+    background-color: black;
     border: none;
     border-radius: 12px;
   }
@@ -184,28 +186,7 @@
   }
   
   /***********************************Partner Section********************************/
-  .partner-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2vw;
-    padding: 2% 0px;
-  }
   
-  .partner a {
-    width: 15vw;
-    height: 20vh;
-    min-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0px 7px 15px rgb(0 92 213 / 25%);
-    display: flex;
-    justify-content: center;
-  }
-  
-  .partner img {
-    object-fit: contain;
-    width: 60%;
-  }
   
   /*************************************Technical Partner*************************/
   .tech-partner-section {

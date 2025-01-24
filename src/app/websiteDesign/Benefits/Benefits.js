@@ -1,31 +1,61 @@
-import React from 'react'
+
+
+import React, { useState, useEffect } from "react";
+import "../Benefits/Benefits.scss";
 
 const Benefits = () => {
+  const [activeTab, setActiveTab] = useState("all");
+
+  useEffect(() => {
+    // Set focus to the "all-tab" button on component mount
+    const allTab = document.getElementById("all-tab");
+    if (allTab) {
+      allTab.focus({ preventScroll: true });
+    }
+  }, []);
+
+  const tabChanged = (id) => {
+    setActiveTab(id); // Update the active tab state
+
+    let key;
+    if (id === "all-tab") {
+      // Show all partners
+      const showList = document.querySelectorAll(".partner");
+      showList.forEach((item) => (item.style.display = "flex"));
+    } else {
+      // Determine the key based on the tab ID
+      if (id === "APAC-tab") key = "APAC";
+      else if (id === "EMEA-tab") key = "EMEA";
+      else if (id === "AME-tab") key = "America";
+      else key = "";
+
+      // Hide and show relevant partners based on the key
+      const hideList = document.querySelectorAll(`.partner:not(.${key})`);
+      hideList.forEach((item) => (item.style.display = "none"));
+
+      const showList = document.querySelectorAll(`.${key}`);
+      showList.forEach((item) => (item.style.display = "flex"));
+    }
+  };
+
   return (
     <>
-  <section className="banner-section">
-    <div className="banner-content">
-      <h1 className="banner-heading">
-        Become a mini
-        <img
-          src="https://www.miniorange.com/atlassian/wp-content/uploads/sites/14/2021/03/mo_logo.webp"
-          style={{ width: "1em" }}
-          alt="miniOrange Logo"
-          width="1em"
-        />
-        range <span className="orange">Partner</span>
-      </h1>
-      <p className="banner-subheading">
-        Join our trusted community of Atlassian partners. Our program provides
-        exclusive benefits and updates which help you to serve your clients to
-        grow their business.
-      </p>
-      <a href="https://miniorange.atlassian.net/servicedesk/customer/portal/2">
-        <button className="btn1">Become a Partner/Reseller</button>
-      </a>
-    </div>
-    <div className="banner-images">
-      <svg
+      <section className="banner-section">
+        <div className="banner-content">
+          <h1 className="banner-heading">
+            Become a mini orange <span className="orange">Partner</span>
+          </h1>
+          <p className="banner-subheading">
+            Join our trusted community of Atlassian partners. Our program
+            provides exclusive benefits and updates which help you to serve your
+            clients to grow their business.
+          </p>
+          <a href="https://miniorange.atlassian.net/servicedesk/customer/portal/2">
+            <button className="btn1">Read More</button>
+          </a>
+        </div>
+        <div className="banner-images">
+        <svg
         className="banner-img"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -234,7 +264,7 @@ const Benefits = () => {
               id="MiniO_SVG"
               data-name="MiniO SVG"
               transform="translate(-302.241 -337.284)"
-              fill="#f7934d"
+              fill="#F1909A"
             >
               <path
                 d="M 604.9532470703125 844.46728515625 L 602.0445556640625 844.4594116210938 C 572.6194458007812 844.459228515625 562.4016723632812 843.3888549804688 544.4356079101562 838.4312133789062 C 436.3973083496094 810.2527465820312 361.2406311035156 714.5568237304688 361.4979248046875 605.67041015625 C 361.7589416503906 542.9527587890625 381.8984680175781 491.0723876953125 423.0673828125 447.0870666503906 C 470.1746215820312 396.6693115234375 519.9501342773438 372.4907836914062 589.51171875 366.2320861816406 C 592.858154296875 365.9587707519531 596.7620849609375 365.8322448730469 600.924072265625 365.8322448730469 C 626.30517578125 365.8322448730469 653.1173706054688 370.1265563964844 658.8070678710938 373.0215454101562 C 664.734130859375 376.0452270507812 668.2797241210938 382.0750122070312 668.2797241210938 389.1451721191406 C 668.2797241210938 392.2404479980469 668.279296875 393.5780334472656 662.9815063476562 398.9209594726562 C 662.1148681640625 399.5390319824219 659.0677490234375 401.5668029785156 655.09423828125 402.4700012207031 C 652.702880859375 403.0136108398438 649.2418212890625 403.31298828125 645.3482055664062 403.31298828125 C 642.5037841796875 403.31298828125 640.4146118164062 403.1567077636719 640.2199096679688 403.1411437988281 C 629.204833984375 402.0045471191406 618.2562866210938 401.4158630371094 607.943359375 401.4158630371094 C 559.955078125 401.4158630371094 520.0223388671875 413.8291625976562 482.2726135253906 440.4812316894531 C 430.7288513183594 476.9324645996094 400.5831604003906 532.1995239257812 397.380859375 596.1073608398438 C 391.8616943359375 698.8392333984375 465.4657592773438 789.835693359375 568.5925903320312 807.7279052734375 C 576.8289184570312 809.1599731445312 589.3641357421875 810.015380859375 602.1197509765625 810.015380859375 C 607.7216796875 810.015380859375 613.39892578125 809.8528442382812 618.8099975585938 809.5059204101562 C 711.8331298828125 804.9011840820312 788.1241455078125 740.112060546875 808.46875 648.296875 C 812.6214599609375 629.4354858398438 813.3817749023438 616.8841552734375 812.0096435546875 589.8895263671875 L 811.9692993164062 589.0962524414062 L 811.8259887695312 588.29833984375 C 811.2264404296875 584.9600219726562 809.9296875 574.7888793945312 811.1134643554688 567.90576171875 C 812.1267700195312 562.0150146484375 815.239501953125 557.4993896484375 816.1627197265625 556.2625732421875 C 820.013427734375 552.5849609375 823.7903442382812 550.7212524414062 827.3970336914062 550.7212524414062 C 831.1451416015625 550.7212524414062 835.1398315429688 552.716796875 839.2701416015625 556.6522827148438 C 845.3770751953125 562.3412475585938 845.3770751953125 562.3412475585938 847.9953002929688 582.6723022460938 C 855.4688720703125 646.4323120117188 831.8380737304688 716.4619750976562 786.307373046875 765.2916259765625 C 762.4561767578125 790.789306640625 743.6622924804688 805.2992553710938 716.9781494140625 818.8135986328125 C 677.4183349609375 838.4632568359375 651.2239379882812 844.46728515625 604.9532470703125 844.46728515625 Z"
@@ -243,7 +273,7 @@ const Benefits = () => {
               <path
                 d="M 604.9525756835938 831.9673461914062 C 649.512451171875 831.9673461914062 673.4119262695312 826.4961547851562 711.3303833007812 807.662353515625 C 736.5775756835938 794.875732421875 754.4279174804688 781.0737915039062 777.1650390625 756.7669677734375 C 820.261474609375 710.548095703125 842.6383056640625 644.342529296875 835.59765625 584.2688598632812 C 834.98583984375 579.5180053710938 833.883544921875 570.9586181640625 833.0462036132812 567.9872436523438 C 832.4342651367188 567.3281860351562 831.6635131835938 566.6502075195312 830.6472778320312 565.7019653320312 C 828.7469482421875 563.8912353515625 827.4489135742188 563.2786254882812 827.7413940429688 563.185546875 C 827.4927368164062 563.2546997070312 826.6991577148438 563.6430053710938 825.5301513671875 564.6397705078125 C 824.9845581054688 565.5668334960938 823.8255004882812 567.7401123046875 823.4325561523438 570.0243530273438 C 822.7122192382812 574.2135009765625 823.4241943359375 582.09716796875 824.1205444335938 586.0413208007812 L 824.4111938476562 587.6360473632812 L 824.4934692382812 589.2548828125 C 825.9327392578125 617.5681762695312 825.113037109375 630.8336181640625 820.6727294921875 651.0010375976562 C 799.0943603515625 748.3841552734375 718.1474609375 817.1038208007812 619.6097412109375 821.9804077148438 C 613.9392700195312 822.3438720703125 607.9906005859375 822.5154418945312 602.1201782226562 822.5154418945312 C 588.4884643554688 822.5154418945312 575.4860229492188 821.6140747070312 566.4557495117188 820.0439453125 C 457.0915832519531 801.0695190429688 379.0401306152344 704.4900512695312 384.8965759277344 595.481689453125 C 388.2950134277344 527.6592407226562 420.3111267089844 468.9898986816406 475.0631103515625 430.2698974609375 C 515.0242919921875 402.0564270019531 557.2479248046875 388.9158935546875 607.9434814453125 388.9158935546875 C 618.68212890625 388.9158935546875 630.061279296875 389.5267028808594 641.1978149414062 390.679443359375 C 641.5086669921875 390.7033386230469 643.1533813476562 390.8130798339844 645.3482055664062 390.8130798339844 C 648.7653198242188 390.8130798339844 651.19140625 390.5382385253906 652.32373046875 390.2808837890625 C 653.3909912109375 390.0382690429688 654.4296264648438 389.525146484375 654.9148559570312 389.2837219238281 C 655.2522583007812 388.9278259277344 655.5257568359375 388.6279602050781 655.7463989257812 388.3782958984375 C 655.6130981445312 386.8595886230469 655.0480346679688 385.1346740722656 653.4976806640625 384.333251953125 C 648.4254150390625 382.2176208496094 624.6123046875 378.3323364257812 600.9241333007812 378.3323364257812 C 597.1306762695312 378.3323364257812 593.5721435546875 378.4421691894531 590.6318359375 378.681884765625 C 524.4027709960938 384.6407165527344 477.0238342285156 407.6481628417969 432.1935729980469 455.6288757324219 C 393.2810363769531 497.2035217285156 374.2450256347656 546.306884765625 373.9978332519531 605.699951171875 C 373.7541198730469 708.8860473632812 445.0677490234375 799.595947265625 547.7605590820312 826.3815307617188 C 564.5735473632812 831.02099609375 573.6942138671875 831.959228515625 602.1113891601562 831.9595947265625 L 604.9525756835938 831.9673461914062 M 604.95263671875 856.96728515625 C 603.96728515625 856.96728515625 602.980224609375 856.964599609375 601.9776611328125 856.959228515625 C 572.3596801757812 856.959228515625 560.675048828125 855.8795166015625 541.110595703125 850.4808959960938 C 427.2561950683594 820.786865234375 348.7262878417969 720.6373291015625 348.9979248046875 605.640869140625 C 349.2697448730469 540.314453125 370.7363891601562 484.7057800292969 413.9411926269531 438.5452575683594 C 463.1242065429688 385.9057922363281 516.3829956054688 360.2612609863281 588.3916015625 353.7824401855469 C 611.4881591796875 351.892822265625 653.3347778320312 356.2120666503906 664.4757690429688 361.8807983398438 C 674.5294189453125 367.0096130371094 680.7796630859375 377.2675170898438 680.7796630859375 389.1451721191406 C 680.7796630859375 396.70361328125 678.60546875 401.0227966308594 671.2689208984375 408.3115234375 C 671.2689208984375 408.3115234375 665.880859375 412.8370666503906 657.86474609375 414.6590576171875 C 649.8490600585938 416.4814453125 639.2052001953125 415.5998840332031 639.2051391601562 415.5998840332031 C 578.8809204101562 409.3908996582031 532.6873168945312 420.1889953613281 489.4821166992188 450.6926879882812 C 441.3859252929688 484.7057800292969 412.8545837402344 537.074951171875 409.8652038574219 596.73291015625 C 404.702392578125 692.8329467773438 474.2651977539062 778.6755981445312 570.7293701171875 795.4119873046875 C 581.5983276367188 797.3016967773438 601.1625366210938 798.111572265625 618.0103149414062 797.0316162109375 C 705.2350463867188 792.7125244140625 777.24365234375 731.4348754882812 796.2647705078125 645.5927124023438 C 800.0684814453125 628.3163452148438 800.8842163085938 617.2483520507812 799.5257568359375 590.5240478515625 C 799.5257568359375 590.5240478515625 796.9605712890625 576.449951171875 798.7943115234375 565.7871704101562 C 800.6286010742188 555.124267578125 806.8623046875 547.872802734375 806.8623046875 547.872802734375 C 819.6331176757812 535.185302734375 834.578125 534.91552734375 847.8931274414062 547.602783203125 C 856.5883178710938 555.7010498046875 857.4033203125 557.860595703125 860.3929443359375 581.0758056640625 C 868.2724609375 648.2921752929688 843.27392578125 722.52685546875 795.4495849609375 773.8162231445312 C 770.4505615234375 800.5410766601562 750.3424072265625 815.9277954101562 722.6258544921875 829.965087890625 C 681.6097412109375 850.33837890625 653.639404296875 856.96728515625 604.95263671875 856.96728515625 Z"
                 stroke="none"
-                fill="#f7934d"
+                fill="#F1909A"
               />
             </g>
             <g
@@ -1132,13 +1162,14 @@ const Benefits = () => {
           </g>
         </g>
       </svg>
-    </div>
-  </section>
-  <div className="features-row">
-    <div className="icon-container">
-      <div className="key-icon">
-        <div className="circle-icon">
-          <svg
+        </div>
+      </section>
+
+      <div className="features-row">
+        <div className="icon-container">
+          <div className="key-icon">
+            <div className="circle-icon">
+            <svg
             xmlns="http://www.w3.org/2000/svg"
             width={45}
             height={40}
@@ -1152,15 +1183,15 @@ const Benefits = () => {
               fill="#4FB4F7"
             />
           </svg>
+            </div>
+          </div>
+          <h4>Project Training & Webinars</h4>
+          <p>Get personalized training of the products and its features we have.</p>
         </div>
-      </div>
-      <h4>Project Training &amp; Webinars</h4>
-      <p>Get personalized training of the products and its features we have.</p>
-    </div>
-    <div className="icon-container">
-      <div className="key-icon">
-        <div className="circle-icon">
-          <svg
+        <div className="icon-container">
+          <div className="key-icon">
+            <div className="circle-icon">
+            <svg
             xmlns="http://www.w3.org/2000/svg"
             width={50}
             height={50}
@@ -1173,22 +1204,22 @@ const Benefits = () => {
               fill="#4FB4F7"
             />
           </svg>
+            </div>
+          </div>
+          <h4>Reseller Program Discount</h4>
+          <p>
+            Get an additional{" "}
+            <strong>
+              <span className="orange">30%</span>
+            </strong>{" "}
+            promotional discount on every sale you make. Contact us for details
+            on the discount.
+          </p>
         </div>
-      </div>
-      <h4>Reseller Program Discount</h4>
-      <p>
-        Get an additional{" "}
-        <strong>
-          <span className="orange">30%</span>
-        </strong>{" "}
-        promotional discount on every sell you do. Contact us for details on
-        discount.
-      </p>
-    </div>
-    <div className="icon-container">
-      <div className="key-icon">
-        <div className="circle-icon">
-          <svg
+        <div className="icon-container">
+          <div className="key-icon">
+            <div className="circle-icon">
+            <svg
             xmlns="http://www.w3.org/2000/svg"
             width={35}
             height={45}
@@ -1200,18 +1231,18 @@ const Benefits = () => {
               fill="#4FB4F7"
             />
           </svg>
+            </div>
+          </div>
+          <h4>Free Product License</h4>
+          <p>
+            Get a free product license for client demos to make your customers
+            understand it better.
+          </p>
         </div>
-      </div>
-      <h4>Free Product License</h4>
-      <p>
-        Get a free product license for client demo to make your customers
-        understand it better.
-      </p>
-    </div>
-    <div className="icon-container">
-      <div className="key-icon">
-        <div className="circle-icon">
-          <svg
+        <div className="icon-container">
+          <div className="key-icon">
+            <div className="circle-icon">
+            <svg
             xmlns="http://www.w3.org/2000/svg"
             width={45}
             height={45}
@@ -1225,25 +1256,28 @@ const Benefits = () => {
               fill="#4FB4F7"
             />
           </svg>
+            </div>
+          </div>
+          <h4>Expert Support</h4>
+          <p>
+            Active support of our experts for your client’s use case & sales.
+          </p>
         </div>
       </div>
-      <h4>Expert Support</h4>
-      <p>
-        Active support of our experts for your client’s use case &amp; sales.
-      </p>
-    </div>
-  </div>
-  <section className="benifits-section">
-    <div className="benifits-content">
-      <h1 className="benifits-heading">Exclusive Benefits our Partners get</h1>
-      <p className="benifits-subheading">
-        Join the fastest-growing security company to unlock unlimited
-        possibilities and benefits for growth. Partners get access to unique
-        features and premium support
-      </p>
-    </div>
-    <div className="benifits-images">
-      <svg
+
+      <section className="benifits-section">
+        <div className="benifits-content">
+          <h1 className="benifits-heading">
+            Exclusive Benefits our Partners get
+          </h1>
+          <p className="benifits-subheading">
+            Join the fastest-growing security company to unlock unlimited
+            possibilities and benefits for growth. Partners get access to unique
+            features and premium support
+          </p>
+        </div>
+        <div className="benifits-images">
+        <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 875 699"
@@ -1595,358 +1629,12 @@ const Benefits = () => {
           </g>
         </g>
       </svg>
-    </div>
-  </section>
-  <section className="parntner-section">
-    <div className="tab-container">
-      <button className="tab-btn" id="all-tab" onclick="tabchanged(this.id);">
-        All
-      </button>
-      <button className="tab-btn" id="APAC-tab" onclick="tabchanged(this.id);">
-        Asia Pacific
-      </button>
-      <button className="tab-btn" id="EMEA-tab" onclick="tabchanged(this.id);">
-        EMEA
-      </button>
-      <button className="tab-btn" id="AME-tab" onclick="tabchanged(this.id);">
-        America
-      </button>
-    </div>
-    <div className="partner-container">
-      <div className="partner APAC">
-        <a href="https://di.net.au/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/06/design-industries.png"
-            alt="Design Industries"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://www.addteq.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/02/Addteq-logo.png"
-            alt="Addteq"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://www.servilo.in/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/04/Servilo.webp"
-            alt="Servilo"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://www.amrutsoftware.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/11/Amrut-Software.webp"
-            alt="Amrut Software"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://www.akeles.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/10/Akeles.webp"
-            alt="Akeles"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://www.igsl-group.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/11/Integrated-Global-Solutions-Limited-1.webp"
-            alt="IGS"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="http://www.bisende.com.cn/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2022/01/Bisende_logo.webp"
-            alt="Bisende"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://knowbusiness.com.au/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/04/know-business-1.png"
-            alt="Know Business"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://www.jingxianginfo.com/" target="_blank">
-          <img
-            src="https://www.miniorange.com/atlassian/wp-content/uploads/sites/14/2022/05/jingxiang.webp"
-            alt="Know Business"
-          />
-        </a>
-      </div>
-      <div className="partner APAC">
-        <a href="https://twinit.ge/" target="_blank">
-          <img
-            src="https://www.miniorange.com/atlassian/wp-content/uploads/sites/14/2022/05/twinit-logo-large.webp"
-            alt="Know Business"
-          />
-        </a>
-      </div>
-      <div className="partner America">
-        <a
-          href="https://consulting.e-core.com/en/?utm_source=Referral&utm_medium=Partner&utm_campaign=MiniOrange"
-          target="_blank"
-        >
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/03/e-Core.png"
-            alt="E-Core Consulting"
-          />
-        </a>
-      </div>
-      <div className="partner America">
-        <a href="https://www.brain2.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/02/Brain-2.webp"
-            alt="Brain2"
-          />
-        </a>
-      </div>
-      <div className="partner America">
-        <a href="https://www.cprime.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/04/Cprime-Logo.webp"
-            alt="Cprime"
-          />
-        </a>
-      </div>
-      <div className="partner America">
-        <a href="https://tecnofor.es/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/02/tecnofor-logo.webp"
-            alt="Technofor"
-          />
-        </a>
-      </div>
-      <div className="partner America">
-        <a href="https://www.elite-it.me/?lang=en" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/08/Elite-consulting-logo.png"
-            alt="Elite Consulting"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://kreuzwerker.de/en" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/01/kreuzwerker-logo_RGB.png"
-            alt="kreuzwerker"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.arcticgroup.se/atlassian/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/01/arcticgroup.png"
-            alt="Artic Group"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://scolution.de/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/01/scolution.png"
-            alt="Scolution"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.lifeincodes.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/01/life-in-codes.png"
-            alt="Life in Codes"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.twybee.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/04/logo-twybee.png"
-            alt="Twybee"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.aca-it.be/en/services/atlassian/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/04/aca-it-solutions.png"
-            alt="ACA IT Solutions"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://yiraphic.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/04/yirafic.png"
-            alt="Yiraphic"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.pixsoftware.de/en-home" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2020/11/pix-logo-transparent-1.png"
-            alt="Pix Software"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a
-          href="https://www.globallogic.com/services/offerings/atlassian/"
-          target="_blank"
-        >
-          <img
-            src="https://www.miniorange.com/atlassian/wp-content/uploads/sites/14/2022/05/global-login-logo.webp"
-            alt="Meelogic"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.linkyard.ch/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/03/Linkyard-1.webp"
-            alt="LinkYard"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://deviniti.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/03/Deviniti.webp"
-            alt="Devinti"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.deiser.com/?hsLang=en" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/03/Deiser.webp"
-            alt="Deiser"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.ovyka.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/04/Ovyka-logo.webp"
-            alt="Ovyka"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://seibert-media.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/07/SM_Logo_RGB-2.jpg"
-            alt="Seibert Media"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.netic.dk/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2021/07/bluelogo-netic-trifork-_-1280px.png"
-            alt="Netic"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://infosysta.com/" target="_blank">
-          <img
-            src="http://plugins.miniorange.com/wp-content/uploads/2021/10/infosysta.webp"
-            alt="Infosysta"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.keepbit.de/b3s-krankenhaus/" target="_blank">
-          <img
-            src="http://plugins.miniorange.com/wp-content/uploads/2021/11/Logo_keepbit_IT-SOLUTIONS_400px.webp"
-            alt="Keepbit Solutions"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://aptis-solutions.com/" target="_blank">
-          <img
-            src="http://plugins.miniorange.com/wp-content/uploads/2021/12/Aptis-partner-logo.webp"
-            alt="Aptis"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a
-          href="https://spectrumgroupe.fr/partenaire-atlassian/"
-          target="_blank"
-        >
-          <img
-            src="http://plugins.miniorange.com/wp-content/uploads/2021/12/logo-spectrum-groupe-sombre.webp"
-            alt="Spectrum"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://atlassian.twn.ee/" target="_blank">
-          <img
-            src="http://plugins.miniorange.com/wp-content/uploads/2021/12/trinidad-wiseman-logo.webp"
-            alt="Trinidad Wiseman"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.eficode.com/solutions/atlassian" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2022/02/Eficode_Logo-1.webp"
-            alt="Eficode"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://infodesign.pl/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2022/02/Infodesign.webp"
-            alt="Info Design"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.radbee.com/" target="_blank">
-          <img
-            src="https://plugins.miniorange.com/wp-content/uploads/2022/02/RadBee.png"
-            alt="Radbee"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.smartis.si/" target="_blank">
-          <img
-            src="https://www.miniorange.com/atlassian/wp-content/uploads/sites/14/2022/05/smartis-logo.webp"
-            alt="Radbee"
-          />
-        </a>
-      </div>
-      <div className="partner EMEA">
-        <a href="https://www.nowconsultians.at/en/" target="_blank">
-          <img
-            src="https://www.miniorange.com/atlassian/wp-content/uploads/sites/14/2022/05/nc-logo.ohne_.webp"
-            alt="Radbee"
-          />
-        </a>
-      </div>
-    </div>
-  </section>
-</>
+        </div>
+      </section>
 
-  )
-}
+     
+    </>
+  );
+};
 
-export default Benefits
+export default Benefits;
