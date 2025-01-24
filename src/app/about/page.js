@@ -16,7 +16,7 @@ export default function About() {
 
       <About3 />
 
-      <About2 />
+  
       <ContainerScroll />
       <Footer />
     </div>
