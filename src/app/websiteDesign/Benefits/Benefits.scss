@@ -1,0 +1,371 @@
+:root {
+    --heading-font: "Poppins";
+    --content-font: "Nunito";
+    --heading-size: 50px;
+    --content-size: 20px;
+    --heading-line-height: 75px;
+    --heading-color: #494949;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  .mkdf-title-holder {
+    display: none;
+  }
+  
+  .mkdf-container-inner {
+    padding: 0px !important;
+  }
+  
+  body {
+    margin: 0px;
+  }
+  
+  .orange {
+    color: #f7934d;
+  }
+  
+  svg.banner-img {
+    width: 39.06vw;
+  }
+  
+  .banner-section,
+  .benifits-section {
+    background-color: #f7f7f9;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .banner-heading,
+  .benifits-heading {
+    font-family: var(--heading-font);
+    font-size: var(--heading-size);
+    line-height: var(--heading-line-height);
+    font-weight: 500;
+    color: var(--heading-color);
+    margin: 0px;
+  }
+  
+  .banner-content,
+  .benifits-content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding-left: 7.2vw;
+  }
+  
+  .banner-subheading,
+  .benifits-subheading {
+    font-family: var(--content-font);
+    font-size: var(--content-size);
+    line-height: 40px;
+    width: 80%;
+  }
+  
+  .benifits-section {
+    background-color: white;
+  }
+  
+  .benifits-content {
+    width: 40%;
+  }
+  
+  .benifits-images svg {
+    width: 700px;
+    height: 750px;
+  }
+  
+  .btn1 {
+    font-family: var(--content-font);
+    font-size: var(--content-size);
+    min-width: 150px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4fb4f7;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  /***************************** 4 Blocks Sections *****************************/
+  .features-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    padding: 0px 4%;
+    margin-top: -5%;
+  }
+  
+  .key-icon {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    margin-bottom: 2%;
+  }
+  
+  .circle-icon {
+    padding: 20px;
+  }
+  
+  .key-icon img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .icon-container {
+    text-align: justify;
+    position: relative;
+    padding: 15px 10px;
+    z-index: 100 !important;
+    background: white;
+    margin: 2% 0px;
+    width: 20%;
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: rgb(0 92 213 / 25%) 0px 2px 8px;
+    transition: 1s;
+  }
+  
+  .icon-container h4 {
+    text-align: center;
+    height: 25%;
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  
+  .icon-container p {
+    font-family: var(--content-font);
+    padding: 0px 25px;
+    text-align: center;
+  }
+  
+  .four-banner-features {
+    margin-top: -10%;
+  }
+  
+  /********************************Tab Content********************************/
+  .tab-container {
+    width: 85%;
+    margin: 5% auto;
+    border-radius: 8px;
+    box-shadow: 0px 7px 15px rgb(0 92 213 / 25%);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .tab-btn {
+    font-family: var(--heading-font);
+    font-size: var(--content-size);
+    color: #a5b7cd;
+    padding-bottom: 1.5vh;
+    border: none;
+    background: none;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .tab-btn:focus {
+    color: #f7934d !important;
+    border-bottom: 3px solid #f7934d;
+    outline: none;
+  }
+  
+  .tab-btn:focus .tab {
+    color: #f7934d !important;
+  }
+  
+  /***********************************Partner Section********************************/
+  .partner-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 2% 0px;
+  }
+  
+  .partner a {
+    width: 15vw;
+    height: 20vh;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0px 7px 15px rgb(0 92 213 / 25%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .partner img {
+    object-fit: contain;
+    width: 60%;
+  }
+  
+  /*************************************Technical Partner*************************/
+  .tech-partner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f9;
+    padding: 5vh 0px;
+  }
+  
+  .tech-partner-section img {
+    width: 10%;
+    margin-top: 1.5%;
+  }
+  
+  /**************************Floating Animation********************************/
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-20px);
+    }
+  
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  }
+  
+  @keyframes second-float {
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes third-float {
+    50% {
+      transform: translate(434px, 780px);
+    }
+  }
+  
+  @keyframes fourth-float {
+    50% {
+      transform: translate(661.26px, -200px);
+    }
+  }
+  
+  @keyframes fifth-float {
+    50% {
+      transform: translate(854.67px, -20px);
+    }
+  }
+  
+  @-webkit-keyframes fourth-float {
+    50% {
+      -webkit-transform: translate(661.26px, -200px);
+    }
+  }
+  
+  @-moz-keyframes moz-fourth-float {
+    100% {
+      display: block;
+    }
+  }
+  
+  #smlogo-1,
+  #smlogo-4,
+  #smlogo-6 {
+    animation: second-float 4s ease-in-out infinite;
+    -moz-animation: moz-fourth-float 4s ease-in-out infinite;
+  }
+  
+  #smlogo-5 {
+    animation: third-float 4s ease-in-out infinite;
+    -moz-animation: moz-fourth-float 4s ease-in-out infinite;
+  }
+  
+  #smlogo-2 {
+    animation: fourth-float 4s ease-in-out infinite;
+    -moz-animation: moz-fourth-float 4s ease-in-out infinite;
+  }
+  
+  #smlogo-3 {
+    animation: fifth-float 4s ease-in-out infinite;
+    -moz-animation: moz-fourth-float 4s ease-in-out infinite;
+  }
+  
+  /*************************************@Media Queries****************************************/
+  @media only screen and (max-width: 769px) {
+    :root {
+      --heading-size: 30px;
+      --content-size: 15px;
+      --heading-line-height: 40px;
+    }
+  
+    svg.banner-img {
+      width: 100%;
+    }
+  
+    .banner-section {
+      flex-direction: column-reverse;
+      height: auto !important;
+    }
+  
+    .banner-content,
+    .benifits-content {
+      width: 100%;
+    }
+  
+    .banner-content {
+      padding-bottom: 10vh;
+    }
+  
+    .benifits-section {
+      height: auto !important;
+      flex-direction: column;
+      width: auto !important;
+      align-items: center;
+    }
+  
+    .benifits-content {
+      width: 100%;
+    }
+  
+    .banner-heading,
+    .benifits-heading {
+      margin: 2vh auto;
+    }
+  
+    .banner-subheading,
+    .benifits-subheading {
+      line-height: 30px;
+    }
+  
+    .tab-container {
+      width: 100%;
+    }
+  
+    .benifits-images svg {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  
+    .tech-partner-section h3 {
+      text-align: center;
+    }
+  
+    .tech-partner-section img {
+      width: 20%;
+    }
+  
+    .icon-container p {
+      padding: 0px 25px 20px 25px;
+    }
+  
+    .icon-container h4 {
+      height: 20%;
+    }
+  }

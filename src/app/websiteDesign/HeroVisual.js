@@ -272,7 +272,7 @@ const HeroVisual = () => {
       iteration++;
 
       cx.globalCompositeOperation = "screen";
-      cx.fillStyle = "hsla(220, 90%, 50%)";
+      cx.fillStyle = "#FDF0F6";
       cx.save();
       cx.scale(window.devicePixelRatio, window.devicePixelRatio);
       cx.translate(cx.canvas.width / 2, cx.canvas.height / 2);
