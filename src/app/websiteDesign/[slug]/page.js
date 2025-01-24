@@ -7,7 +7,7 @@ import OurWebDesign from "../OurWebDesign/OurWebDesign";
 
 
 export default function WebsiteDesign({ params }) {
-  const { slug } = params; 
+  const  slug  = params; 
 
   const data = {
     appdevelopment: { title: "App Developement", content: "This is content for Page 1." },
@@ -20,7 +20,7 @@ export default function WebsiteDesign({ params }) {
   return (
     <div>
       <Navbar />
-      <HeroVisual/>
+      <HeroVisual title={pageData.title} content={pageData.content} />
      
       <OurWebDesign title={pageData.title} content={pageData.content} />
       
