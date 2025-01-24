@@ -1,11 +1,4 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: #000;
-}
+
 
 .content--canvas {
   position: absolute;

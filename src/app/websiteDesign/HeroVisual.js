@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState }  from 'react';
-import "./HeroVisual.js";
+import "./HeroVisual.css";
 
-const HeroVisual = () => {
+const HeroVisual = ({ title, content }) => {
   const [isMouseOnCanvas, setIsMouseOnCanvas] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const canvasContainerRef = useRef(null);
@@ -196,6 +196,7 @@ const HeroVisual = () => {
     <div>
       <div className="content--canvas" ref={canvasContainerRef}></div>
       <section className="hero">
+        {title} <br />  {content}
         <h1>Transform Your Ideas into Reality with AI-Powered Solutions</h1>
         <a href="https://sohrabzia.github.io/" target="_blank" rel="noopener noreferrer">
           SOHARAB ZIA

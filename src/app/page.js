@@ -15,33 +15,8 @@ import Marquee from "./component/Marquee/Marquee";
 import { Provider, useDispatch } from "react-redux";
 import { setContent } from "@/store/store";
 
-export default function Page({ Component, pageProps , title, content }) {
+export default function Page({ Component, pageProps }) {
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        // Set the content in the Redux store
-        dispatch(setContent({ title, content }));
-    }, [dispatch, title, content]);
-
-    // return <Template />;
-};
-
-export async function getStaticPaths() {
-    const paths = [
-        { params: { slug: 'page1' } },
-        { params: { slug: 'page2' } },
-        { params: { slug: 'page3' } },
-    ];
-    return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
-    const data = {
-        page1: { title: 'Page 1', content: 'This is content for Page 1.' },
-        page2: { title: 'Page 2', content: 'This is content for Page 2.' },
-        page3: { title: 'Page 3', content: 'This is content for Page 3.' },
-    };
 
 
   
@@ -125,8 +100,7 @@ export async function getStaticProps({ params }) {
       ) : (
         // Main content
         <>
-         <Provider store={store}>
-            <Component {...pageProps} />
+     
      
 
           <Navbar />
@@ -143,10 +117,8 @@ export async function getStaticProps({ params }) {
             <Home7/>
             <Footer />
           </div>
-          </Provider>
-          {
-        props: data[params.slug] // Pass data as props
-    }
+      
+          
         </>
       )}
     </>
