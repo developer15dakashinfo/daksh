@@ -17,6 +17,16 @@ const FAQ = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",
     },
     {
+        question: "How to do something?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",
+      },
+      {
+        question: "How to do something?",
+        answer:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",
+      },
+    {
       question: "How to do something?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",

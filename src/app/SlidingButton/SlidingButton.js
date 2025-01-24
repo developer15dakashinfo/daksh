@@ -6,7 +6,7 @@ const SlidingButton = ({
   arrowPosition = "-40px",
 }) => {
   return (
-    <div className="flex bg-black">
+    <div className="flex">
     <div className="relative group w-44 h-12 overflow-hidden">
      
       <div className="absolute inset-0 flex items-center transition-transform duration-1000 group-hover:translate-x-full z-10">
