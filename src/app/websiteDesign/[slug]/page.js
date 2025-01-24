@@ -40,7 +40,7 @@ export default function WebsiteDesign({ params }) {
   return (
     <div>
       <Navbar />
-      <HeroVisual/>
+      <HeroVisual title={pageData.title} content={pageData.content} />
 
       <Cardsection/>
       <Benefits/>
