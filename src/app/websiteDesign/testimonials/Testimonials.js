@@ -89,10 +89,7 @@ const Testimonials = ({ title, content }) => {
             </div>
           </div>
         </div>
-        <div className="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a><br />
-          Coded by <a href="https://www.instagram.com/developer_sah/" target="_blank">Rahul Sah</a>.
-        </div>
+       
       </div>
   );
 };

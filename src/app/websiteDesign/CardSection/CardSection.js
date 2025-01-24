@@ -39,9 +39,7 @@ const CardSection = () => {
 
   return (
     <main className="wrapper">
-      <div className="page-title">
-        <h1> Our Services</h1>
-      </div>
+    
       <div className="icon-wrap">
         {/*Front End Development*/}
         <div className="card">

@@ -157,7 +157,7 @@
 
 
 import React, { useEffect, useRef } from "react";
-
+import "./herosection.css";
 const HeroVisual = () => {
   const canvasRef = useRef(null);
 
@@ -301,13 +301,29 @@ const HeroVisual = () => {
   }, []);
 
   return (
-    <canvas
+  <>
+  
+  <canvas
       ref={canvasRef}
       style={{
         width: "100vw",
         height: "50vh",
       }}
-    ></canvas>
+    >
+
+
+
+    </canvas>
+
+<div className= "hello-container">
+<h1 className="hello">Hello</h1>
+</div>
+
+<div className= "world-container">
+<h1 className="world">World!</h1>
+</div>
+  </>
+
   );
 };
 
