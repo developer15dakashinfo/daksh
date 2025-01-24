@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+/* Rainbow Coloring by https://codepen.io/jackiebackwards/pen/zmpgs */
+@-moz-keyframes colors {
+  5.26316% {
+    color: #f55c3d;
+  }
+
+  10.52632% {
+    color: #f5993d;
+  }
+
+  15.78947% {
+    color: #f5d63d;
+  }
+
+  21.05263% {
+    color: #d6f53d;
+  }
+
+  26.31579% {
+    color: #99f53d;
+  }
+
+  31.57895% {
+    color: #5cf53d;
+  }
+
+  36.84211% {
+    color: #3df55c;
+  }
+
+  42.10526% {
+    color: #3df599;
+  }
+
+  47.36842% {
+    color: #3df5d6;
+  }
+
+  52.63158% {
+    color: #3dd6f5;
+  }
+
+  57.89474% {
+    color: #3d99f5;
+  }
+
+  63.15789% {
+    color: #3d5cf5;
+  }
+
+  68.42105% {
+    color: #5c3df5;
+  }
+
+  73.68421% {
+    color: #993df5;
+  }
+
+  78.94737% {
+    color: #d63df5;
+  }
+
+  84.21053% {
+    color: #f53dd6;
+  }
+
+  89.47368% {
+    color: #f53d99;
+  }
+
+  94.73684% {
+    color: #f53d5c;
+  }
+
+  /* if we're moving on to the last step, reset the color to be the same as the starter color so that the loop is smooth */
+  100% {
+    color: #f55c3d;
+  }
+}
+
+@-webkit-keyframes colors {
+  5.26316% {
+    color: #f55c3d;
+  }
+
+  10.52632% {
+    color: #f5993d;
+  }
+
+  15.78947% {
+    color: #f5d63d;
+  }
+
+  21.05263% {
+    color: #d6f53d;
+  }
+
+  26.31579% {
+    color: #99f53d;
+  }
+
+  31.57895% {
+    color: #5cf53d;
+  }
+
+  36.84211% {
+    color: #3df55c;
+  }
+
+  42.10526% {
+    color: #3df599;
+  }
+
+  47.36842% {
+    color: #3df5d6;
+  }
+
+  52.63158% {
+    color: #3dd6f5;
+  }
+
+  57.89474% {
+    color: #3d99f5;
+  }
+
+  63.15789% {
+    color: #3d5cf5;
+  }
+
+  68.42105% {
+    color: #5c3df5;
+  }
+
+  73.68421% {
+    color: #993df5;
+  }
+
+  78.94737% {
+    color: #d63df5;
+  }
+
+  84.21053% {
+    color: #f53dd6;
+  }
+
+  89.47368% {
+    color: #f53d99;
+  }
+
+  94.73684% {
+    color: #f53d5c;
+  }
+
+  /* if we're moving on to the last step, reset the color to be the same as the starter color so that the loop is smooth */
+  100% {
+    color: #f55c3d;
+  }
+}
+
+
+
+.box {
+  text-align: center;
+  width: 1050px;
+  height:200px;
+  margin: 0 auto;
+  border: 1px solid #363636;
+  background-color: #272727;
+  box-shadow: 1px 1px 5px #000;
+  padding: 15px 0 15px 70px;
+}
+
+.hello {
+  display: inline;
+  color: #a3a3a3;
+  text-transform: lowercase;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content {
+  color: #e6e6e6;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  position: relative;
+  line-height: .9;
+  font-family: 'Righteous', cursive;
+  font-size: 185px;
+  display: inline;
+  /* default text color to the animation's first color */
+  color: #f55c3d;
+  -webkit-animation: colors 19s linear infinite;
+  -moz-animation: colors 19s linear infinite;
+  animation: colors 19s linear infinite;
+  text-shadow: 0 -1px 0 #858585, 0 1px 10px rgba(0, 0, 0, 0.6), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 7px 10px rgba(0, 0, 0, 0.25), 0 15px 10px rgba(0, 0, 0, 0.2), 0 25px 15px rgba(0, 0, 0, 0.15);
+}
+
+.name {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #363636;
+  line-height: 1;
+  color: #666;
+  font-size: 13px;
+  max-width: 420px;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+span {
+  background: #1c1c1c;
+  position: relative;
+  top: 8px;
+  padding: 0 15px;
+  color: #a3a3a3;
+}
