@@ -1,68 +1,76 @@
 import React, { useState } from "react";
-import "./FAQ.css"; // Assuming you place your CSS styles in this file
+import { IoMdArrowDropdown } from "react-icons/io";
+import "../FAQ/FAQ.scss"; 
 
 const FAQ = () => {
+  
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+  const toggleFAQ = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   const faqData = [
-    { question: "Collapsible Group Item #1", answer: "Some placeholder content for the first accordion panel. This panel is shown by default." },
-    { question: "Collapsible Group Item #2", answer: "Some placeholder content for the second accordion panel. This panel is hidden by default." },
-    { question: "Collapsible Group Item #3", answer: "Some placeholder content for the third accordion panel. This panel is hidden by default." },
-    { question: "Collapsible Group Item #4", answer: "Some placeholder content for the fourth accordion panel. This panel is hidden by default." },
+    {
+      question: "How to do something?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",
+    },
+    {
+      question: "How to do something?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",
+    },
+    {
+      question: "How to do something?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae. Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae.",
+    },
   ];
 
   return (
-    <section id="full-faq">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-8">
-            <div className="section-heading text-center">
-              <h6>Frequently Asked Questions</h6>
-              {/* <h2>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,</h2> */}
-            </div>
-          </div>
-        </div>
-        <div className="row justify-content-center">
-          <div className="col-md-10">
-            <div className="accordion faq-area" id="accordionExample">
-              {faqData.map((item, index) => (
-                <div className="card" key={index}>
-                  <div
-                    className={`card-header ${activeIndex === index ? "active" : ""}`}
-                    id={`heading${index + 1}`}
-                    onClick={() => toggleAccordion(index)}
-                  >
-                    <h2 className="mb-0">
-                      <button
-                        className="btn btn-link btn-block text-left"
-                        type="button"
-                      >
-                        {item.question}
-                        <span
-                          className={`fa ${
-                            activeIndex === index ? "fa-caret-up" : "fa-caret-down"
-                          }`}
-                        ></span>
-                      </button>
-                    </h2>
-                  </div>
-                  <div
-                    id={`collapse${index + 1}`}
-                    className={`collapse ${activeIndex === index ? "show" : ""}`}
-                  >
-                    <div className="card-body">{item.answer}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div className="faq">
+      <div className="global-label">
+        <div className="global-label-text">Frequently Asked Questions</div>
       </div>
-    </section>
+
+      {faqData.map((item, index) => (
+        <div className="faq-container" key={index}>
+          <div
+            className="faq-label"
+            onClick={() => toggleFAQ(index)}
+          >
+            <div className="faq-label-text">{item.question}</div>
+            <div className="faq-label-icon">
+              <span
+                className={`material-icons ${
+                  activeIndex === index ? "rotate" : ""
+                }`}
+              >
+                <IoMdArrowDropdown className=" text-[25px]" />
+              </span>
+            </div>
+          </div>
+          <div
+            className={`faq-answer ${
+              activeIndex === index ? "active" : ""
+            }`}
+          >
+            <div className="faq-answer-content">{item.answer}</div>
+          </div>
+        </div>
+      ))}
+
+      <div className="about-me">
+        <a
+          href="https://www.linkedin.com/in/nikola-mrsic-58a4a71b6"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Find me on: LinkedIn
+        </a>
+      </div>
+    </div>
   );
 };
 
