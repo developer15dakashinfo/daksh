@@ -151,7 +151,7 @@ const HeroVisual = () => {
       ref={canvasRef}
       style={{
         width: "100vw",
-        height: "50vh",
+        height: "70vh",
       }}
     >
 
@@ -159,13 +159,6 @@ const HeroVisual = () => {
 
     </canvas>
 
-<div className= "hello-container">
-<h1 className="hello">Hello</h1>
-</div>
-
-<div className= "world-container">
-<h1 className="world">World!</h1>
-</div>
   </>
 
   );
