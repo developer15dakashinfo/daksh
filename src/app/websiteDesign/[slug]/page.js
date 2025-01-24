@@ -36,6 +36,7 @@ export default function WebsiteDesign({ params }) {
       <Benefits/>
       <Testimonials/>
       <FAQ/>
+      <FAQ/>
       <OurWebDesign title={pageData.title} content={pageData.content} />
       
       
