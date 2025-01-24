@@ -7,6 +7,7 @@ import HeroVisual from "../HeroVisual";
 // import HeroVisual from "../HeroVisual";
 import OurWebDesign from "../OurWebDesign/OurWebDesign";
 import Benefits from "../Benefits/Benefits";
+import FAQ from "../FAQ/FAQ";
 
 
 export default function WebsiteDesign({ params }) {
@@ -34,8 +35,10 @@ export default function WebsiteDesign({ params }) {
       <Cardsection/>
       <Benefits/>
       
-      <OurWebDesign title={pageData.title} content={pageData.content} />
-      
+      {/* <OurWebDesign title={pageData.title} content={pageData.content} />
+       */}
+
+       <FAQ/>
       
       <Footer />
     </div>
