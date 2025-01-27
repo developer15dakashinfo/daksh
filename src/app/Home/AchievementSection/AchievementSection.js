@@ -1,4 +1,7 @@
+
+
 import React from "react";
+
 
 const AchievementSection = () => {
   return (
@@ -12,92 +15,94 @@ const AchievementSection = () => {
         </h1>
         <h1 className="text-sm sm:text-lg md:text-xl text-center mb-10 mt-4 text-black">
           With a history of excellence and innovation, we've been honored with
-          several significant awards a  nd partnered with leading technologies.
+          several significant awards and partnered with leading technologies.
         </h1>
       </div>
 
       <div className="pb-20 px-8 sm:px-8 md:px-20 lg:px-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-full mx-auto">
+        <div className="flex gap-20 max-w-full mx-auto">
           {/* Left Column */}
-          <div className="grid grid-cols-2 gap-4 border-b sm:border-b-0 sm:border-r border-gray-300 pl-4 sm:pl-8 md:pl-20 pb-4">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
-              alt="Forbes 2024 Official Member"
-              className="h-20 object-contain"
-            />
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXsKqSLGl5f5ecOWOaDq3Buknmfwj9iQJT3A&s"
-              alt="Clutch Champion Spring 2024"
-              className="h-20 object-contain"
-            />
-            <img
-              src="https://www.perfecto.io/sites/default/files/image/2021-05/image-blog-flutter-framework.jpg"
-              alt="Clutch 1000 2023"
-              className="h-20 object-contain"
-            />
-            <img
-              src="https://www.thelogocreative.co.uk/wp-content/uploads/Mobilunity-Logo-Design-min.jpg"
-              alt="Ecommerce Awards 2022"
-              className="h-20 object-contain"
-            />
+          <div className="w-5/12 border-b sm:border-b-0 sm:border-r border-gray-300 pl-4 sm:pl-8 md:pl-20 pb-4">
+            <div className="grid grid-cols-2 gap-8 pr-20">
+              <img
+                src="https://attentioninsight.com/wp-content/uploads/2023/04/Image-of-React-JS.png"
+                alt="Forbes 2024 Official Member"
+                className="h-36 object-contain"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+                alt="Clutch Champion Spring 2024"
+                className="h-36 object-contain"
+              />
+              <img
+                src="https://www.websitemagazine.com/hubfs/Imported_Blog_Media/WordPress-Logo-1.png"
+                alt="Clutch 1000 2023"
+                className="h-36 object-contain"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png"
+                alt="Ecommerce Awards 2022"
+                className="h-36 object-contain"
+              />
+            </div>
           </div>
 
           {/* Right Column */}
-          <div className="grid grid-cols-4 sm:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
+          <div className="w-8/12 grid grid-cols-4 sm:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
             <img
               src="https://cms.digitalpolygon.com/sites/default/files/styles/wide/public/2022-07/Digital-marketing-banner.jpg?itok=JXkj5WxY"
               alt="Microsoft Gold Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXsKqSLGl5f5ecOWOaDq3Buknmfwj9iQJT3A&s"
+              src="https://attentioninsight.com/wp-content/uploads/2023/04/Image-of-React-JS.png"
               alt="Adobe Solution Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://cdn.logojoy.com/wp-content/uploads/20230717150559/Chanel-iconic-logo-600x319.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ9ihFKLqTqaxXH7OEYuTi5Bu-a8YINk436g&s"
               alt="BigCommerce Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://cdn.logojoy.com/wp-content/uploads/20230717150559/Chanel-iconic-logo-600x319.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzD0toQpglUeP9RtPckNOT52BA7H3ojPziiA&s"
               alt="Keyfactor Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://www.thelogocreative.co.uk/wp-content/uploads/Mobilunity-Logo-Design-min.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png"
               alt="Salesforce Platinum Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://e7.pngegg.com/pngimages/438/630/png-clipart-mobile-app-development-android-software-development-android-logo-grass-thumbnail.png"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0LxanITK6wU8l_nJZBNN4-aRNBPcP_WqELQ&s"
               alt="Google Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://www.perfecto.io/sites/default/files/image/2021-05/image-blog-flutter-framework.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzD0toQpglUeP9RtPckNOT52BA7H3ojPziiA&s"
               alt="AWS Advanced Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
               alt="Shopify Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
               alt="HubSpot Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+              src="https://attentioninsight.com/wp-content/uploads/2023/04/Image-of-React-JS.png"
               alt="Zoho Advanced Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
             <img
-              src="https://www.thelogocreative.co.uk/wp-content/uploads/Mobilunity-Logo-Design-min.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png"
               alt="Pantheon Partner"
-              className="h-12 object-contain"
+              className="h-16 object-contain"
             />
           </div>
         </div>
