@@ -59,7 +59,7 @@ const SolutionForAllSection = () => {
     </p>
   </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10  sm:px-8 lg:px-40">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10  sm:px-8 lg:px-40">
     {cardsData2.map((card, index) => (
       <div
         key={index}
