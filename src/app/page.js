@@ -10,6 +10,8 @@ import Home6 from "./Home/Home6/Home6";
 import { Home1 } from "./Home/Home1/Home1";
 import Home7 from "./Home/Home7/Home7";
 import HomeAbout from "./Home/HomeAbout/HomeAbout";
+import AchievementSection from "./Home/AchievementSection/AchievementSection";
+import SolutionForAllSection from "./Home/SolutionForAllSection/SolutionForAllSection";
 // import Marquee from "./component/Marquee/Marquee";
 // import { Provider, useDispatch } from "react-redux";
 // import { setContent } from "@/store/store";
@@ -115,16 +117,20 @@ export default function Page({ Component, pageProps }) {
             <Home2 />
             <Home3 />
             <HomeAbout/>
+            <AchievementSection/>
 
             <Home5 />
+            
 
             <Home6 />
+            <SolutionForAllSection/>
 
             <Home7 />
             <Footer />
           </div>
         </>
       )}
+      
     </>
   );
 }
