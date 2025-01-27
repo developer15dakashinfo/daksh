@@ -42,7 +42,6 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Home", link: "/" },
-    { label: "About Us", link: "/about" },
     {
       label: "Our Services",
       link: "#",
@@ -88,44 +87,36 @@ const Navbar = () => {
       link: "#",
       dropdownItems: [
         {
-          heading: "WEB DEVELOPMENT",
+          heading: "MOBILE APP Development",
           items: [
-            { label: "Web Designing ", link: "/websiteDesign/appdevelopment" },
-            { label: "Web Development", link: "/websiteDesign/webdevelopment" },
+            { label: "Android ", link: "/websiteDesign/appdevelopment" },
+            { label: "IOS", link: "/websiteDesign/webdevelopment" },
+            { label: "Flutter", link: "/websiteDesign/webdevelopment" },
             
           ],
         },
         {
-          heading: " MOBILE APP DEVELOPMENT",
+          heading: "WEB DEVELOPMENT",
           items: [
-            { label: "Android App Development", link: "/websiteDesign/android_app_development"},
-            { label: "iOS App Development", link: "/websiteDesign/ios_app_development" },
-            { label: "Flutter App Development", link: "/websiteDesign/flutter_app_development" },
+            { label: "React js", link: "/websiteDesign/android_app_development"},
+            { label: "Wordpress", link: "/websiteDesign/ios_app_development" },
+            { label: "Laravel", link: "/websiteDesign/flutter_app_development" },
+            { label: "Node js", link: "/websiteDesign/flutter_app_development" },
           ],
         },
         {
-          heading: "DIGITAL MARKETING",
+          heading: "CUSTOM DEVELOPMENTS",
           items: [
-            { label: "Digital Marketing",link: "/websiteDesign/digitalmarketing" },
-            { label: "SEO Service", link: "/websiteDesign/seomarketing" },
-            { label: "SMO Services", link: "/websiteDesign/smomarketing" },
-            { label: "Email Marketing", link: "/websiteDesign/emailmarketing" },
+            { label: "Php",link: "/websiteDesign/digitalmarketing" },
+            { label: "Java", link: "/websiteDesign/seomarketing" },
+            { label: "Figma", link: "/websiteDesign/smomarketing" },
+            { label: "Angular js", link: "/websiteDesign/emailmarketing" },
           ],
         },
-        {
-          heading: "MOBILE",
-          items: [
-            { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
-            { label: "RCS", link: "/websiteDesign/rcs" },
-            { label: "Official Whatsapp API", link: "/websiteDesign/api" },
-            { label: "IVR", link: "/websiteDesign/api" },
-            { label: "Voice Call", link: "/websiteDesign/api" },
-
-          ],
-        },
+        
       ],
     },
-    
+    { label: "About Us", link: "/about" },
     { label: "Career", link: "/careerSection" },
     { label: "Contact Us", link: "/contact" },
     { label: "Pricing", link: "/pricing" },
@@ -134,7 +125,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-        activeDropdown === 1 ? " transition duration-500" : ""
+        activeDropdown === 1 ? "pb-[300px] transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
@@ -163,7 +154,7 @@ const Navbar = () => {
       <ul
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } md:flex space-x-8 md:space-x-8`}
+        } md:flex space-x-8 md:space-x-12`}
       >
         {navItems.map((item, index) => (
           <li
@@ -193,12 +184,12 @@ const Navbar = () => {
               <div
                 className={`absolute w-[98.2vw] ml-2 z-50 transition-opacity duration-500`}
                 style={{
-                  marginTop: "30px",
+                  marginTop: "25px",
                   backgroundColor: "black",
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
-                <div className="container justify-center mb-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-20">
+                <div className="container justify-center my-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-14 text-center">
                       <h3 className="font-semibold aligin-top text-white ">
