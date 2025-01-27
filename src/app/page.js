@@ -12,9 +12,7 @@ import Home7 from "./Home/Home7/Home7";
 import HomeAbout from "./Home/HomeAbout/HomeAbout";
 import AchievementSection from "./Home/AchievementSection/AchievementSection";
 import SolutionForAllSection from "./Home/SolutionForAllSection/SolutionForAllSection";
-// import Marquee from "./component/Marquee/Marquee";
-// import { Provider, useDispatch } from "react-redux";
-// import { setContent } from "@/store/store";
+
 
 export default function Page({ Component, pageProps }) {
   const [scrollY, setScrollY] = useState(0);
@@ -30,7 +28,7 @@ export default function Page({ Component, pageProps }) {
     // Hide splash screen after 3 seconds
     const splashTimeout = setTimeout(() => {
       setShowSplash(false);
-    }, 1);
+    }, 3000);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
