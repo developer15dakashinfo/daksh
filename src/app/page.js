@@ -9,6 +9,7 @@ import Home5 from "./Home/Home5/Home5";
 import Home6 from "./Home/Home6/Home6";
 import { Home1 } from "./Home/Home1/Home1";
 import Home7 from "./Home/Home7/Home7";
+import HomeAbout from "./Home/HomeAbout/HomeAbout";
 // import Marquee from "./component/Marquee/Marquee";
 // import { Provider, useDispatch } from "react-redux";
 // import { setContent } from "@/store/store";
@@ -113,6 +114,7 @@ export default function Page({ Component, pageProps }) {
             <Home1 />
             <Home2 />
             <Home3 />
+            <HomeAbout/>
 
             <Home5 />
 

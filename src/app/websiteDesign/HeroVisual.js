@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import SlidingButton from "../SlidingButton/SlidingButton";
 
-const HeroVisual = () => {
+const HeroVisual = ({title, content}) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -163,12 +163,12 @@ const HeroVisual = () => {
       }}
     >
       <h1 className="text-5xl font-bold text-white text-start">
-        Android App Development Company in Jaipur
+     {title}
       </h1>
       <p className="text-lg text-white text-start mt-4">
-        We guarantee a seamless and sustainable experience. The expert team at Daksh always emphasizes targeting native, hybrid, and cross-platform Android Developments.
+       {content}
       </p>
-      <SlidingButton text="Contact Us"  className=" my-5"/>
+      <SlidingButton text="Contact Us"  className=" my-5 pt-10"/>
     </div>
   </>
   

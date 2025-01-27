@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./FAQ.scss"; // Assuming you place your CSS styles in this file
 import { IoMdArrowDropdown } from "react-icons/io";
+import "../FAQ/FAQ.scss"; 
 
 const FAQ = () => {
   

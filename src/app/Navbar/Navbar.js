@@ -44,42 +44,42 @@ const Navbar = () => {
     { label: "Home", link: "/" },
     {
       label: "Our Services",
-      link: "#services",
+      link: "#",
       dropdownItems: [
         {
           heading: "WEB DEVELOPMENT",
           items: [
-            { label: "Web Designing & Development", link: "/websiteDesign/" },
-            { label: "E-commerce Website Design", link: "#" },
-            { label: "Graphic Design Service", link: "#" },
-            { label: "WordPress Development Service", link: "#" },
+            { label: "Web Designing ", link: "/websiteDesign/appdevelopment" },
+            { label: "Web Development", link: "/websiteDesign/webdevelopment" },
+            
           ],
         },
         {
           heading: "APP DEVELOPMENT",
           items: [
-            { label: "Android App Development", link: "#" },
-            { label: "Hybrid App Development", link: "#" },
-            { label: "iOS App Development", link: "#" },
-            { label: "Flutter App Development", link: "#" },
+            { label: "Android App Development", link: "/websiteDesign/android_app_development"},
+            { label: "iOS App Development", link: "/websiteDesign/ios_app_development" },
+            { label: "Flutter App Development", link: "/websiteDesign/flutter_app_development" },
           ],
         },
         {
           heading: "DIGITAL MARKETING",
           items: [
-            { label: "Digital Marketing", link: "#" },
-            { label: "SEO Service", link: "#" },
-            { label: "SMO Services", link: "#" },
-            { label: "Email Marketing", link: "#" },
+            { label: "Digital Marketing",link: "/websiteDesign/digitalmarketing" },
+            { label: "SEO Service", link: "/websiteDesign/seomarketing" },
+            { label: "SMO Services", link: "/websiteDesign/smomarketing" },
+            { label: "Email Marketing", link: "/websiteDesign/emailmarketing" },
           ],
         },
         {
           heading: "MOBILE",
           items: [
-            { label: "Voice Call", link: "#" },
-            { label: "IVR", link: "#" },
-            { label: "Short/Long Code", link: "#" },
-            { label: "SMS Service", link: "#" },
+            { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
+            { label: "RCS", link: "/websiteDesign/rcs" },
+            { label: "Official Whatsapp API", link: "/websiteDesign/api" },
+            { label: "IVR", link: "/websiteDesign/api" },
+            { label: "Voice Call", link: "/websiteDesign/api" },
+
           ],
         },
       ],
@@ -150,16 +150,16 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute pt-14 mx-7 w-[99vw] z-50 transition-opacity duration-500`}
+                className={`absolute mx-7 w-[99vw] z-50 transition-opacity duration-500`}
                 style={{
                   marginTop: "2px",
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
-                <div className="container items-center justify-center rounded-lg mx-auto grid grid-cols-4 w-[97.7%]  gap-8 text-sm px-10 md:px-40">
+                <div className="container justify-center mt-10 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%]  gap-8 text-sm px-10 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-14 text-center">
-                      <h3 className="font-medium text-white ">
+                      <h3 className="font-semibold aligin-top text-white ">
                         {dropdownItem.heading}
                       </h3>
                       <ul>
