@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         
-        <Script src="/countup.min.js" strategy="beforeInteractive" />
+       
         {children}
       </body>
     </html>
