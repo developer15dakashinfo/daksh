@@ -48,7 +48,7 @@ const SolutionForAllSection = () => {
   return (
     <div className="w-full bg-white pb-20">
   <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-    <h1 className="text-blue-400 font-medium text-lg text-center">
+    <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600 font-medium text-lg text-center">
       SOLUTIONS FOR ALL
     </h1>
     <h1 className="text-4xl font-bold text-center mt-3 text-black">
@@ -65,9 +65,9 @@ const SolutionForAllSection = () => {
         key={index}
         className="relative h-full overflow-hidden border border-gray-500 rounded-lg hover:shadow-lg transition duration-300"
       >
-        <div className="p-6 sm:p-8 lg:p-8">
+        <div className="px-10 sm:px-8 lg:px-10 py-14 sm:py-10 lg:py-14 ">
           <div className="flex items-center gap-4">
-            <div className="text-3xl text-blue-400">{card.icon}</div>
+            <div className="text-4xl text-blue-500">{card.icon}</div>
             <h3 className="text-lg sm:text-xl font-bold text-black">{card.title}</h3>
           </div>
 
@@ -80,7 +80,7 @@ const SolutionForAllSection = () => {
                   key={listIndex}
                   className="flex items-center gap-2 text-[13px] sm:text-sm text-gray-500 py-1 text-justify"
                 >
-                  <IoIosArrowForward className="text-blue-400 text-xl" />
+                  <IoIosArrowForward className="text-blue-500 text-xl" />
                   {listItem}
                 </li>
               ))}

@@ -122,7 +122,7 @@ export default function HomeAbout() {
         </div>
 
         <div className=" mt-28">
-          <h6 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-sm font-medium font-manrope leading-normal text-center ">
+          <h6 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-lg font-medium font-manrope leading-normal text-center ">
             WORK-LIFE
           </h6>
           <h1 className="text-4xl text-center">Life at Daksh Infosoft</h1>
