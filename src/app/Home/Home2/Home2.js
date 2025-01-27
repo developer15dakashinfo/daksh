@@ -11,6 +11,7 @@ import icon7 from "../../assets/laravel.svg";
 import icon8 from "../../assets/flutter.svg";
 import Image from "next/image";
 import ReadMoreButton from "@/app/readmore/ReadMoreButton";
+import SlidingButton from "@/app/SlidingButton/SlidingButton";
 
 const BALL_COUNT = 20;
 const BALL_RADIUS = 135;
@@ -39,7 +40,7 @@ const Home2 = () => {
 
   const sectionRef = useRef(null);
   const [animateLetters, setAnimateLetters] = useState(false);
-  const [counts, setCounts] = useState({ agents: 0, artists: 0, shows: 0 });
+  const [counts, setCounts] = useState({ agents: 0, artists: 0, shows: 0 ,support:0});
 
   useEffect(() => {
     const btnContact = document.querySelectorAll("#contact_btn");
@@ -104,9 +105,10 @@ const Home2 = () => {
 
   useEffect(() => {
     if (animateLetters) {
-      animateCounter("agents", 0, 2, 1000);
-      animateCounter("artists", 0, 6, 1000); 
-      animateCounter("shows", 0, 1.9, 1000); 
+      animateCounter("agents", 0, 1, 1000);
+      animateCounter("artists", 0, 2, 1000); 
+      animateCounter("shows", 0, 3, 1000); 
+      animateCounter("support", 0, 4, 1000); 
     }
   }, [animateLetters]);
 
@@ -121,24 +123,31 @@ const Home2 = () => {
   const counters = [
     {
       key: "agents",
-      suffix: "K",
-      heading: "AGENTS",
-      paragraph: "use SystemOne on a daily basis.",
+      suffix: "STEP:",
+      heading: "ANALYSIS",
+      paragraph: "The process of gathering, examining, and interpreting requirements to understand the problem that needs to be solved.",
       bgColor: "bg-blue-400",
     },
     {
       key: "artists",
-      suffix: "K",
-      heading: "ARTISTS",
-      paragraph: "stay in the loop with the SystemOne app.",
+      suffix: "STEP:",
+      heading: "DESIGN",
+      paragraph: "Translating the requirements gathered during analysis into a detailed plan or blueprint for building the solution.",
       bgColor: "bg-teal-300",
     },
     {
       key: "shows",
-      suffix: "M",
-      heading: "SHOWS",
-      paragraph: "are managed on our platform.",
+      suffix: "STEP:",
+      heading: "DEVELOPMENT",
+      paragraph: "The actual creation of the product or system based on the design specifications.",
       bgColor: "bg-violet-400",
+    },
+    {
+      key: "support",
+      suffix: "STEP:",
+      heading: "SUPPORT",
+      paragraph: "Ongoing maintenance and assistance provided to ensure the solution operates effectively after deployment.",
+      bgColor: "bg-orange-400",
     },
   ];
 
@@ -295,7 +304,7 @@ const Home2 = () => {
 
  <div
       ref={sectionRef}
-      className="grid grid-cols-1 md:grid-cols-3 gap-10 px-8 pt-4 absolute -top-36 w-full "
+      className="grid grid-cols-1 md:grid-cols-4 gap-10 px-8 pt-4 absolute -top-36 w-full "
     
     >
       {counters.map((data, idx) => {
@@ -306,17 +315,18 @@ const Home2 = () => {
             key={idx}
             className={`col-span-1 p-8  rounded-2xl ${data.bgColor}`}
           >
-            <h1 className="text-6xl text-black font-extrabold">
+            <h1 className="text-3xl text-black font-extrabold">
               <div className="flex">
                 {staticPart !== null && (
                   <span className="text-black">{staticPart}</span>
                 )}
                 <div className="overflow-hidden flex">
+                <div className="me-2 text-white">{data.suffix}</div>
                   <div className="flex flex-col justify-center items-center h-[60px] w-[40px] relative overflow-hidden">
                     {[...Array(10).keys()].map((num) => (
                       <span
                         key={num} 
-                        className="absolute text-center text-black font-extrabold"
+                        className="absolute text-center text-white font-extrabold"
                         style={{
                           top: `${num * 54}px`,
                           transform: `translateY(${
@@ -330,13 +340,13 @@ const Home2 = () => {
                     ))}
                   </div>
                 </div>
-                <div className="ml-2">{data.suffix}</div>
+               
               </div>
             </h1>
-            <h2 className="text-7xl text-black font-extrabold">
+            <h2 className="text-3xl text-black font-extrabold">
               {data.heading}
             </h2>
-            <p className="text-2xl text-black font-extrabold pt-16">{data.paragraph}</p>
+            <p className="text-xl text-black font-bold pt-10">{data.paragraph}</p>
           </div>
         );
       })}
@@ -391,7 +401,7 @@ const Home2 = () => {
                   </div>
 
               <div className="flex justify-center ">
-              <ReadMoreButton/>
+              <SlidingButton text="Read More" bgColor="bg-black" textcolor="text-white"/>
               </div>
       </div>
 
