@@ -50,7 +50,7 @@ const AchievementSection = () => {
           {/* Right Column */}
           <div className="w-8/12 grid grid-cols-4 sm:grid-cols-3 lg:grid-cols-4 gap-8 items-start">
             <img
-              src="https://cms.digitalpolygon.com/sites/default/files/styles/wide/public/2022-07/Digital-marketing-banner.jpg?itok=JXkj5WxY"
+              src="https://nomadicsoft.io/wp-content/uploads/2022/11/laravel9-1646792144.jpg"
               alt="Microsoft Gold Partner"
               className="h-16 object-contain"
             />
@@ -60,7 +60,7 @@ const AchievementSection = () => {
               className="h-16 object-contain"
             />
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ9ihFKLqTqaxXH7OEYuTi5Bu-a8YINk436g&s"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYgCDqdY6ElR_jjAla7PGLbN4NyhpUSVZ30Q&s"
               alt="BigCommerce Partner"
               className="h-16 object-contain"
             />
@@ -75,12 +75,12 @@ const AchievementSection = () => {
               className="h-16 object-contain"
             />
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0LxanITK6wU8l_nJZBNN4-aRNBPcP_WqELQ&s"
+              src="https://www.websitemagazine.com/hubfs/Imported_Blog_Media/WordPress-Logo-1.png"
               alt="Google Partner"
               className="h-16 object-contain"
             />
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzD0toQpglUeP9RtPckNOT52BA7H3ojPziiA&s"
+              src="https://dac.digital/wp-content/uploads/2023/05/angular-logo-1-optimized.png"
               alt="AWS Advanced Partner"
               className="h-16 object-contain"
             />
@@ -90,17 +90,17 @@ const AchievementSection = () => {
               className="h-16 object-contain"
             />
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+              src="https://d1uxiwmpc9j4yg.cloudfront.net/images/all/71302-express.js-chrome-javascript-system-node.js-v8-runtime_1687631713.png"
               alt="HubSpot Partner"
               className="h-16 object-contain"
             />
             <img
-              src="https://attentioninsight.com/wp-content/uploads/2023/04/Image-of-React-JS.png"
+              src="https://www.webopedia.com/wp-content/uploads/2021/09/figma-logo-e1632519236382.png"
               alt="Zoho Advanced Partner"
               className="h-16 object-contain"
             />
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png"
+              src="https://logos-world.net/wp-content/uploads/2022/07/Java-Symbol.png"
               alt="Pantheon Partner"
               className="h-16 object-contain"
             />
