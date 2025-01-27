@@ -40,7 +40,7 @@ export default function Page({ Component, pageProps }) {
 
   return (
     <>
-      {/* {showSplash ? (
+      {showSplash ? (
         <div
           style={{
             display: "flex",
@@ -129,9 +129,8 @@ export default function Page({ Component, pageProps }) {
             <Footer />
           </div>
         </>
-      )} */}
+      )}
 
-<AchievementSection/>
      
 
       
