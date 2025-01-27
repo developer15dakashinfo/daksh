@@ -77,8 +77,46 @@ const Navbar = () => {
             { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
             { label: "RCS", link: "/websiteDesign/rcs" },
             { label: "Official Whatsapp API", link: "/websiteDesign/api" },
-            { label: "IVR", link: "/websiteDesign/api" },
-            { label: "Voice Call", link: "/websiteDesign/api" },
+
+          ],
+        },
+      ],
+    },
+    {
+      label: "Technologies",
+      link: "#",
+      dropdownItems: [
+        {
+          heading: "WEB DEVELOPMENT",
+          items: [
+            { label: "Web Designing ", link: "/websiteDesign/appdevelopment" },
+            { label: "Web Development", link: "/websiteDesign/webdevelopment" },
+            
+          ],
+        },
+        {
+          heading: "APP DEVELOPMENT",
+          items: [
+            { label: "Android App Development", link: "/websiteDesign/android_app_development"},
+            { label: "iOS App Development", link: "/websiteDesign/ios_app_development" },
+            { label: "Flutter App Development", link: "/websiteDesign/flutter_app_development" },
+          ],
+        },
+        {
+          heading: "DIGITAL MARKETING",
+          items: [
+            { label: "Digital Marketing",link: "/websiteDesign/digitalmarketing" },
+            { label: "SEO Service", link: "/websiteDesign/seomarketing" },
+            { label: "SMO Services", link: "/websiteDesign/smomarketing" },
+            { label: "Email Marketing", link: "/websiteDesign/emailmarketing" },
+          ],
+        },
+        {
+          heading: "MOBILE",
+          items: [
+            { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
+            { label: "RCS", link: "/websiteDesign/rcs" },
+            { label: "Official Whatsapp API", link: "/websiteDesign/api" },
 
           ],
         },
@@ -98,7 +136,7 @@ const Navbar = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
         isScrolled
-          ? "my-2 mx-3 rounded-lg w-full max-w-[98.2%]"
+          ? "my-2 mx-3 rounded-lg w-full max-w-[98.4%]"
           : "rounded-none"
       }`}
     >
@@ -150,13 +188,14 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute mx-7 w-[99vw] z-50 transition-opacity duration-500`}
+                className={`absolute w-[98.2vw] ml-2 z-50 transition-opacity duration-500`}
                 style={{
-                  marginTop: "2px",
+                  marginTop: "30px",
+                  backgroundColor: "black",
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
-                <div className="container justify-center mt-10 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%]  gap-8 text-sm px-10 md:px-40">
+                <div className="container items-center justify-center my-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-14 text-center">
                       <h3 className="font-semibold aligin-top text-white ">

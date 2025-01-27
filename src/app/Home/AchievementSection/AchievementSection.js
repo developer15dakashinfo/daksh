@@ -27,22 +27,22 @@ const AchievementSection = () => {
               <img
                 src="https://attentioninsight.com/wp-content/uploads/2023/04/Image-of-React-JS.png"
                 alt="Forbes 2024 Official Member"
-                className="h-36 object-contain"
+                className="h-28 object-contain"
               />
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+                src="https://cdn.iconscout.com/icon/free/png-256/free-php-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-freebies-pack-logos-icons-1175127.png?f=webp&w=256"
                 alt="Clutch Champion Spring 2024"
-                className="h-36 object-contain"
+                className="h-28 object-contain"
               />
               <img
                 src="https://www.websitemagazine.com/hubfs/Imported_Blog_Media/WordPress-Logo-1.png"
                 alt="Clutch 1000 2023"
-                className="h-36 object-contain"
+                className="h-28 object-contain"
               />
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Google-flutter-logo.svg/2560px-Google-flutter-logo.svg.png"
                 alt="Ecommerce Awards 2022"
-                className="h-36 object-contain"
+                className="h-28 object-contain"
               />
             </div>
           </div>
@@ -85,7 +85,7 @@ const AchievementSection = () => {
               className="h-16 object-contain"
             />
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+              src="https://cdn.iconscout.com/icon/free/png-256/free-php-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-freebies-pack-logos-icons-1175127.png?f=webp&w=256"
               alt="Shopify Partner"
               className="h-16 object-contain"
             />
