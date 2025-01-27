@@ -96,7 +96,7 @@ const Navbar = () => {
           ],
         },
         {
-          heading: "APP DEVELOPMENT",
+          heading: " MOBILE APP DEVELOPMENT",
           items: [
             { label: "Android App Development", link: "/websiteDesign/android_app_development"},
             { label: "iOS App Development", link: "/websiteDesign/ios_app_development" },
@@ -118,6 +118,8 @@ const Navbar = () => {
             { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
             { label: "RCS", link: "/websiteDesign/rcs" },
             { label: "Official Whatsapp API", link: "/websiteDesign/api" },
+            { label: "IVR", link: "/websiteDesign/api" },
+            { label: "Voice Call", link: "/websiteDesign/api" },
 
           ],
         },
@@ -132,7 +134,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-        activeDropdown === 1 ? "pb-[300px] transition duration-500" : ""
+        activeDropdown === 1 ? " transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
@@ -196,7 +198,7 @@ const Navbar = () => {
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
-                <div className="container items-center justify-center mb-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-20">
+                <div className="container justify-center mb-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-20">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-14 text-center">
                       <h3 className="font-semibold aligin-top text-white ">
