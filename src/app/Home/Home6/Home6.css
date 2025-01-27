@@ -11,7 +11,7 @@
 
 
 .animation{
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-image: linear-gradient(to top, #000000 0%, #a6c1ee 100%);
     position: relative;
     height: 100vh;
     overflow: hidden;

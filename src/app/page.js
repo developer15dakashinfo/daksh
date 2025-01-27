@@ -30,7 +30,7 @@ export default function Page({ Component, pageProps }) {
     // Hide splash screen after 3 seconds
     const splashTimeout = setTimeout(() => {
       setShowSplash(false);
-    }, 3000);
+    }, 1);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -116,7 +116,7 @@ export default function Page({ Component, pageProps }) {
             <Home1 />
             <Home2 />
             <Home3 />
-            <HomeAbout/>
+            <HomeAbout/> 
             <AchievementSection/>
 
             <Home5 />
