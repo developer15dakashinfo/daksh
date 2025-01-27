@@ -3,19 +3,21 @@ import React from "react";
 const SlidingButton = ({
   text = "Default Text",
   onClick,
+  textcolor = "text-black",
   arrowPosition = "-40px",
+  bgColor = "bg-white",
 }) => {
   return (
-    <div className="flex">
+    <div className="flex" >
     <div className="relative group w-44 h-12 overflow-hidden">
      
       <div className="absolute inset-0 flex items-center transition-transform duration-1000 group-hover:translate-x-full z-10">
         
         <button
-          className="h-12 w-32 mr-2 bg-white text-black font-medium rounded-full flex items-center justify-center"
+          className={`h-12 w-32 mr-2 text-black font-medium rounded-full flex items-center justify-center  ${bgColor}`}
           onClick={onClick}
         >
-         <p className=" font-medium text-[14px]"> {text}</p>
+         <p className={` font-bold text-[14px]  ${textcolor}`}> {text}</p>
         </button>
         
         <div className="h-12 w-12 rounded-full border-2 border-white bg-white flex items-center justify-center text-black font-bold">
@@ -29,10 +31,10 @@ const SlidingButton = ({
           →
         </div>
         <button
-          className="h-12 w-32 bg-white text-black font-medium rounded-full flex items-center justify-center"
+           className={`h-12 w-32 mr-2 text-black font-medium rounded-full flex items-center justify-center  ${bgColor}`}
           onClick={onClick}
         >
-          {text}
+        <p className={` font-bold text-[14px]  ${textcolor}`}> {text}</p>
         </button>
         
       </div>

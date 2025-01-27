@@ -7,7 +7,8 @@ const StackingCards = () => {
   const cardsData = [
     {
       title: "WELCOME TO DAKSH INFOSOFT",
-      text: "Amongst best software companies, our offshore software development services are geared to deliver results that you expect from an Indian IT outsourcing company.",
+      title2:"SERVICES WE PROVIDE",
+      text: "Our offshore IT consulting services along with the AI-powered core helps top companies stay competitive, win new markets and increase shareholder value. Choose from a wide range of custom software development services.",
 
       backgroundColor: "#fffff",
     },
@@ -152,8 +153,11 @@ const StackingCards = () => {
               >
                 {index === 0 ? (
                   <div className="pt-64 px-14 text-center items-center">
-                    <h1 className="text-6xl text-white font-extrabold pb-5">
+                    {/* <h1 className="text-6xl text-white font-extrabold pb-5">
                       {card.title}
+                    </h1> */}
+                    <h1 className="text-7xl text-white font-extrabold py-5">
+                      {card.title2}
                     </h1>
                     <p className="text-white">{card.text}</p>
                   </div>
