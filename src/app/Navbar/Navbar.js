@@ -42,6 +42,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Home", link: "/" },
+    { label: "About Us", link: "/about" },
     {
       label: "Our Services",
       link: "#",
@@ -122,7 +123,7 @@ const Navbar = () => {
         },
       ],
     },
-    { label: "About Us", link: "/about" },
+    
     { label: "Career", link: "/careerSection" },
     { label: "Contact Us", link: "/contact" },
     { label: "Pricing", link: "/pricing" },
@@ -160,7 +161,7 @@ const Navbar = () => {
       <ul
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } md:flex space-x-8 md:space-x-12`}
+        } md:flex space-x-8 md:space-x-8`}
       >
         {navItems.map((item, index) => (
           <li
@@ -195,7 +196,7 @@ const Navbar = () => {
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
-                <div className="container items-center justify-center my-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-40">
+                <div className="container items-center justify-center mb-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-20">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-14 text-center">
                       <h3 className="font-semibold aligin-top text-white ">
