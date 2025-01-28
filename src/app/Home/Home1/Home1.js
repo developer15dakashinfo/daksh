@@ -8,7 +8,7 @@ import {
 import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
-import Logo from "@/app/logo/logo";
+import Logo from "../../logo/Logoname.js";
 
 export const Home1 = () => {
   return (

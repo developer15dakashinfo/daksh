@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
-import Cardsection from "../CardSection/Cardsection";
+import CardSectionname from "../CardSection/CardSectionname.js";
 import HeroVisual from "../HeroVisual";
 // import HeroVisual from "../HeroVisual";
 import OurWebDesign from "../OurWebDesign/OurWebDesign";
@@ -42,7 +42,7 @@ export default function WebsiteDesign({ params }) {
       <Navbar />
       <HeroVisual title={pageData.title} content={pageData.content} />
 
-      <Cardsection/>
+      <CardSectionname/>
       <Benefits/>
       <Testimonials/>
       <FAQ/>

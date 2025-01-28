@@ -5,7 +5,7 @@ import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import Logo from "../logo/logo";
+import Logoname from "../logo/Logoname.js";
 import Button from "../Button/Button";
 import SlidingButton from "../SlidingButton/SlidingButton";
 
@@ -136,7 +136,7 @@ const Navbar = () => {
     >
       <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
-          <Logo />
+          <Logoname />
         </a>
       </div>
 

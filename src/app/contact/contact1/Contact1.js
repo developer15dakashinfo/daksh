@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Contact1.css";
 import "./Contact.scss";
 
-export default function Contact1() {
+export default function Contactname() {
 
 
   return (

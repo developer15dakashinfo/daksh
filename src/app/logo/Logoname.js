@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Logo.css";
 
-const Logo = () => {
+const Logoname = () => {
     const [color, setColor] = useState('black'); // Initial color
 
     const changeColor = () => {
@@ -15,4 +15,4 @@ const Logo = () => {
       </div>
     );
   }
-export default Logo;
+export default Logoname;
