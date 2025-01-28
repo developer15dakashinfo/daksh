@@ -95,32 +95,7 @@ export function VerticalTabsWithIcon() {
                     </h6>
                   </div>
                 </div>
-                <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex text-center">
-                  <div className="flex-col justify-start items-start inline-flex text-center">
-                    <h3 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-4xl font-bold font-manrope leading-normal text-center">
-                      33+
-                    </h3>
-                    <h6 className="text-base font-normal leading-relaxed text-center">
-                      Years of Experience
-                    </h6>
-                  </div>
-                  <div className="flex-col justify-start items-start inline-flex">
-                    <h4 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-4xl font-bold font-manrope leading-normal">
-                      125+
-                    </h4>
-                    <h6 className="text-base font-normal leading-relaxed">
-                      Successful Projects
-                    </h6>
-                  </div>
-                  <div className="flex-col justify-start items-start inline-flex">
-                    <h4 className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 text-4xl font-bold font-manrope leading-normal">
-                      52+
-                    </h4>
-                    <h6 className="text-base font-normal leading-relaxed">
-                      Happy Clients
-                    </h6>
-                  </div>
-                </div>
+               
               </div>
             </div>
               </div>

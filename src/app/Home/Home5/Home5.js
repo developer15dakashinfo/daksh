@@ -3,8 +3,20 @@
 import React, { useState, useEffect } from 'react';
 import Home6 from '../Home6/Home6';
 import './Home5.scss'
+import { FaFileCode } from 'react-icons/fa6';
 const Home5 = () => {
- 
+  const cards = [
+    {
+      title: "App Development",
+      description:
+        "Transforming client needs into software solutions that leverage the latest technologies for exceptional performance and functionality.",
+      image:
+        "https://www.optimalvirtualemployee.com/wp-content/uploads/2022/12/Web-Developer-skill.jpg",
+      icon: <FaFileCode />,
+    },
+    
+    
+  ];
   return (
     <>
    
@@ -37,7 +49,26 @@ const Home5 = () => {
             </svg>
           </div>
           <div className="canvas_img-wrapper">
-            <img className="canvas_img" src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" alt="" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="rounded-xl overflow-hidden shadow-lg flex flex-col relative group"
+            >
+              <img className="w-full group-hover:blur-sm" src={card.image} alt={card.title} />
+              <div className="absolute inset-0 bg-gray-900 bg-opacity-25 group-hover:bg-opacity-50 transition duration-300"></div>
+              <div className="absolute top-20 left-4 text-lg font-bold flex items-center gap-2 text-white transition-transform duration-500 group-hover:-translate-y-6">
+                {card.icon} {card.title}
+              </div>
+              <div className="absolute top-28 left-4 text-sm font-semibold text-white transition-transform duration-500 group-hover:-translate-y-6">
+                {card.description}
+              </div>
+              <div className="absolute bottom-[-30px] left-4 text-lg flex items-center gap-2 text-blue-600 transition-transform duration-500 group-hover:translate-y-[-50px]">
+                Learn More 
+              </div>
+            </div>
+          ))}
+        </div>
           </div>
           <div className="canvas_copy canvas_copy--left">
             <span className="canvas_copy_subtitle">Heading</span>
