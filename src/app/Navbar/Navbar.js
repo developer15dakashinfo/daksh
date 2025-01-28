@@ -177,7 +177,7 @@ const Navbar = () => {
           >
             <a
               href={item.link}
-              className="text-white font-medium text-[16px]  sm:text:12px  hover:text-gray-400 transition-colors relative group flex items-center"
+              className="text-white font-[500] text-[17px] sm:text:12px hover:text-gray-400 transition-colors relative group flex items-center"
             >
               {item.label}
               {item.dropdownItems && (

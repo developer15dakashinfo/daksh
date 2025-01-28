@@ -20,7 +20,7 @@ export default function WebsiteDesign({ params }) {
   }, [params]);
 
   const data = {
-    appdevelopment: { title: "App Developement", content: "This is content for Page 1." },
+    appdevelopment: { title: "App ", content: "Developement"  },
     webdevelopement: { title: "Web Developement ", content: "This is content for Page 2." },
     marketing: { title: "Marketing ", content: "This is content for Page 3." },
     android_app_development: { title: "Android App Development", content: "This is content for Page 1." },
@@ -40,10 +40,11 @@ export default function WebsiteDesign({ params }) {
   return (
     <div>
       <Navbar />
-      <HeroVisual title={pageData.title} content={pageData.content} />
+      <Benefits  title={pageData.title} content={pageData.content} />
+      {/* <HeroVisual title={pageData.title} content={pageData.content} /> */}
 
       <CardSectionname/>
-      <Benefits/>
+     
       <Testimonials/>
       <FAQ/>
       {/* <OurWebDesign title={pageData.title} content={pageData.content} /> */}

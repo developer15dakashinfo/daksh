@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "../Benefits/Benefits.scss";
 
-const Benefits = () => {
+const Benefits = ({title, content}) => {
   const [activeTab, setActiveTab] = useState("all");
 
   useEffect(() => {
@@ -43,16 +43,16 @@ const Benefits = () => {
       <section className="banner-section">
         <div className="banner-content">
           <h1 className="banner-heading" style={{ textAlign: "start" }}>
-            Become a mini orange <span className="orange">Partner</span>
+           {title} <span className="orange">{content}</span>
           </h1>
           <p className="banner-subheading" style={{ textAlign: "start" }}>
             Join our trusted community of Atlassian partners. Our program
             provides exclusive benefits and updates which help you to serve your
             clients to grow their business.
           </p>
-          <a href="https://miniorange.atlassian.net/servicedesk/customer/portal/2">
+          {/* <a href="https://miniorange.atlassian.net/servicedesk/customer/portal/2">
             <button className="btn1">Read More</button>
-          </a>
+          </a> */}
         </div>
         <div className="banner-images">
         <svg
@@ -1265,18 +1265,77 @@ const Benefits = () => {
         </div>
       </div>
 
-      <section className="benifits-section">
-      <div className="benifits-content" >
-
-          <h1 className="benifits-heading" style={{ textAlign: "start" }}>
-            Exclusive Benefits our Partners get
-          </h1>
-          <p className="benifits-subheading" style={{ textAlign: "start" }} >
-            Join the fastest-growing security company to unlock unlimited
-            possibilities and benefits for growth. Partners get access to unique
-            features and premium support
-          </p>
+      <div>
+    
+        <div className="container">
+          <div className="toast info h-40">
+            <div className="toast-status">
+              <i className="bi bi-info-circle-fill" />
+            </div>
+            <seection className="toast-content">
+              <h3 className="toast-content-title">
+                Did you know?
+              </h3>
+              <p className="toast-content-subtitle">
+                There is something that you ming like know.
+              </p>
+            </seection>
+            <div className="toast-close">
+              <i className="bi bi-x" />
+            </div>
+          </div>
+          {/* <div className="toast warning">
+            <div className="toast-status">
+              <i className="bi bi-exclamation-circle-fill" />
+            </div>
+            <seection className="toast-content">
+              <h3 className="toast-content-title">
+                Warning
+              </h3>
+              <p className="toast-content-subtitle">
+                Your password will expired today. Please update your password in the settings page.
+              </p>
+            </seection>
+            <div className="toast-close">
+              <i className="bi bi-x" />
+            </div>
+          </div>
+          <div className="toast success">
+            <div className="toast-status">
+              <i className="bi bi-check-circle-fill" />
+            </div>
+            <seection className="toast-content">
+              <h3 className="toast-content-title">
+                Success
+              </h3>
+              <p className="toast-content-subtitle">
+                New user was added successfully.
+              </p>
+            </seection>
+            <div className="toast-close">
+              <i className="bi bi-x" />
+            </div>
+          </div>
+          <div className="toast error">
+            <div className="toast-status">
+              <i className="bi bi-x-circle-fill" />
+            </div>
+            <seection className="toast-content">
+              <h3 className="toast-content-title">
+                404
+              </h3>
+              <p className="toast-content-subtitle">
+                Page not found.
+              </p>
+            </seection>
+            <div className="toast-close">
+              <i className="bi bi-x" />
+            </div>
+          </div> */}
         </div>
+      </div>
+      <section className="benifits-section">
+     
         <div className="benifits-images">
         <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -1631,6 +1690,31 @@ const Benefits = () => {
         </g>
       </svg>
         </div>
+
+        <div className="benifits-conten ms-5" >
+
+<h1 className="benifits-heading  pt-20 " style={{ textAlign: "start" }}>
+ 
+Web Development  at Its Best
+</h1>
+<p className="benifits-subheading" style={{ textAlign: "start" }} >
+Web 3 gaming, a classic alternative to traditional gaming powered by blockchain technology that introduces 
+the concept of decentralization instead of using localized servers, promotes ownership of digital assets to
+ users through NFTs & crypto and provides an unregulated marketplace for trading them.
+</p>
+<br/>
+<p className="benifits-subheading" style={{ textAlign: "start" }} >
+As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
+ to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
+  to uncover the true potentia
+  As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
+ to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
+  to uncover the true potentia
+  As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
+ to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
+  to uncover the true potentia
+</p>
+</div>
       </section>
 
      

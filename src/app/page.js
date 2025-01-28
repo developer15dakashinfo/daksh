@@ -14,6 +14,7 @@ import AchievementSection from "./Home/AchievementSection/AchievementSection";
 import SolutionForAllSection from "./Home/SolutionForAllSection/SolutionForAllSection";
 import ContactSection from "./careerSection/ContactSection/ContactSection";
 import FAQ from "./websiteDesign/FAQ/FAQ";
+import CaseStudySection from "./Home/CaseStudySection/CaseStudySection";
 
 
 export default function Page({ Component, pageProps }) {
@@ -118,16 +119,19 @@ export default function Page({ Component, pageProps }) {
             <Home3 />
             <HomeAbout/> 
             <AchievementSection/>
+            
 
             {/* <Home5 /> */}
             
 
             <Home6 />
             <SolutionForAllSection/>
+            
 
             <Home7 />
+            <CaseStudySection/>
             <ContactSection/>
-            {/* <FAQ/> */}
+            <FAQ/>
             <Footer />
           </div>
         </>
@@ -137,5 +141,7 @@ export default function Page({ Component, pageProps }) {
 
       
     </>
+
+    
   );
 }

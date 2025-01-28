@@ -1,117 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-
-* {
-  box-sizing: border-box;
+.active h3 {
+  color: #ff460c; /* Orange color for active question */
 }
 
-.faq {
-  padding: 80px 20px ;
-  width: 70%;
-  min-width:450px;
-  margin: 20px auto;
-  position: relative;
-  height: auto;
+.transition-all {
+  transition: max-height 0.3s ease-in-out, margin-top 0.3s ease-in-out;
 }
 
-.faq-container {
-  width: 100%;
-  height: 100%;
-
+.max-h-0 {
+  max-height: 0;
+  margin-top: 0;
+  opacity: 0;
 }
 
-.faq-label {
-  cursor: pointer;
-  width: 100%;
-  padding: 18px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-border: #365A5E;
-background: #d0edf0;
-
-}
-
-.faq-label-text {
-  color: #365A5E;
-  font-size: 20px;
-
-}
-
-.faq-label-icon {
-  padding: 2px 3px;
-  background: #d0edf0;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.material-icons {
-  color: #365A5E;
-  transition: 0.3s ease;
-}
-
-.faq-answer {
-  transition: 0.3s ease;
-  margin-top: 15px;
-  height: 0;
-  border-radius: 6px;
-  color: rgba(127, 121, 121, 1);
-  overflow: hidden;
-
-}
-
-.faq-answer-content {
-  padding: 10px 0 10px 15px;
-  
-
-}
-
-.active {
-
-  background: #FFFFFF;
-  border: 1px solid #C7C4C4;
-  
-  height: auto;
-  margin-bottom: 25px;
-
-}
-.rotate{
-  transform: rotate(180deg)
-}
-.global-label{
-  color:#365A5E;
-  width:100%;
-  height:90px;
-  border-bottom: solid 2px #C4C1C1;
-  margin-bottom: 35px;
-}
-.global-label-text{
-  font-size:50px;
-  font-weight:700;
-  color:#365A5E;
-}
-.score{
-  display:none;
-  color:#00ff2a;
-  padding:15px;
-  width:45px;
-  height:25px;
-  margin: 45px auto;
-  text-align:center;
-  padding: 5px;
-  justify-content:center;
-  align-items:center;
-  border-radius:5px;
-  background:white;
-}
-.about-me{
-  border-radius:5px;
-  width:300px;
-  margin:auto;
-  color:white;
-  text-align:center;
-  background:#ffff;
-  padding:7px 18px;
+.max-h-screen {
+  max-height: 100vh;
+  margin-top: 1rem;
+  opacity: 1;
 }
