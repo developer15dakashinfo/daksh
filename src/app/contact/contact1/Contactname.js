@@ -6,11 +6,12 @@ export default function Contactname() {
 
 
   return (
-    <div>
+    <div> 
 
 <div className="hero">
   <div className="diagonal-hero-bg">
      <div className="stars">
+      
       <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-5xl text-white font-bold">Contact Us</h1>
           <h1 className="text-7xl text-white font-bold">DAKSH INFOSFT</h1>
