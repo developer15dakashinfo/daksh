@@ -118,7 +118,7 @@ export default function Page({ Component, pageProps }) {
             <HomeAbout/> 
             <AchievementSection/>
 
-            <Home5 />
+            {/* <Home5 /> */}
             
 
             <Home6 />
