@@ -15,16 +15,19 @@ import SlidingButton from "@/app/SlidingButton/SlidingButton";
 
 const BALL_COUNT = 20;
 const BALL_RADIUS = 135;
-const BLUE_BALL_POSITION = { x: window.innerWidth / 2, y: window.innerHeight / 3 };
+const BLUE_BALL_POSITION =
+  typeof window !== "undefined"
+    ? { x: window.innerWidth / 2, y: window.innerHeight / 3 }
+    : { x: 0, y: 0 }; // Default values for SSR
+
 const BLUE_BALL_RADIUS = 289;
 const REPULSION_FORCE = 0.1; // Control the strength of repulsion
 const GRAVITY = 0.3;
 const FRICTION = 0.95;
-
-
 const ballImages = [ icon1, icon2,icon3,icon4,icon5,icon6,icon7,icon8];
 
 const Home2 = () => {
+  
   const [balls, setBalls] = useState(
     Array.from({ length: BALL_COUNT }, (_, i) => ({
       id: i,
@@ -113,10 +116,7 @@ const Home2 = () => {
   }, [animateLetters]);
 
   const splitDigits = (num, key) => {
-    const formattedNum = Math.floor(num); 
-   
-
-      
+    const formattedNum = Math.floor(num);      
     return { staticPart: null, lastDigit: formattedNum };
   };
 
