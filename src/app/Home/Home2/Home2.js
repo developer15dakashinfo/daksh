@@ -353,87 +353,75 @@ const Home2 = () => {
     </div>
  </div>
 
-   
-   <div
-      className="overflow-hidden relative mt-60"
-      style={{
-       
-        height: "100vh",
-        position: "relative",
-      
-        overflow: "hidden",
-        cursor: "grab",
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-    >
-
-
-
-
-      <div
-        className="shadow-xl relative border-3"
-        style={{
-          width: `${BLUE_BALL_RADIUS * 2}px`,
-          height: `${BLUE_BALL_RADIUS * 2}px`,
-          backgroundColor: "#FFEC89",
-          borderRadius: "50%",
-          position: "absolute",
-          left: `50%`,
-          top: `33%`,
-          transform: "translate(-50%, -50%)",
-        }}
-      >
-  <div className="flex flex-col p-6 text-center border-b mt-40 border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
-                    <dt
-                      className="order-2 mt-2 text-xl  leading-6 text-gray-500 dark:text-gray-400"
-                      id="item-1"
-                    >
-                     Complete Projects, Let's Discuss Your Project
-                    </dt>
-                    <dd
-                      className="order-1 text-7xl font-semibold leading-none text-black dark:text-black"
-                      id="starsCount"
-                    >
-                      0
-                    </dd>
-                  </div>
-
-              <div className="flex justify-center ">
-              <SlidingButton text="Read More" bgColor="bg-black" textcolor="text-white"/>
-              </div>
-      </div>
-
-      {balls.map((ball) => (
+ <div
+  className="overflow-hidden relative mt-60"
+  style={{
+    height: "100vh",
+    position: "relative",
+    overflow: "hidden",
+    cursor: "grab",
+  }}
+  onMouseMove={handleMouseMove}
+  onMouseUp={handleMouseUp}
+  onMouseLeave={handleMouseUp}
+>
   <div
-    key={ball.id}
-    className="shadow-xl lg:flex hidden"
+    className="shadow-xl relative border-3"
     style={{
-      width: `${BALL_RADIUS * 2}px`,
-      height: `${BALL_RADIUS * 2}px`,
+      width: `${BLUE_BALL_RADIUS * 2}px`,
+      height: `${BLUE_BALL_RADIUS * 2}px`,
+      backgroundColor: "#FFEC89",
       borderRadius: "50%",
       position: "absolute",
-      left: `${ball.x}px`,
-      top: `${ball.y}px`,
+      left: "50%",
+      top: "33%",
       transform: "translate(-50%, -50%)",
     }}
-    onMouseDown={(e) => handleMouseDown(ball.id, e)}
   >
-    <Image
-      src={ball.image}
-      alt={`Ball ${ball.id}`}
-      width={BALL_RADIUS * 2}
-      height={BALL_RADIUS * 2}
-      style={{
-        borderRadius: "50%",
-        objectFit: "cover",
-      }}
-      onDragStart={(e) => e.preventDefault()}
-    />
-  </div>
-))}
+    <div className="flex flex-col p-6 text-center border-b mt-40 border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
+      <dt className="order-2 mt-2 text-xl leading-6 text-gray-500 dark:text-gray-400" id="item-1">
+        Complete Projects, Let's Discuss Your Project
+      </dt>
+      <dd className="order-1 text-7xl font-semibold leading-none text-black dark:text-black" id="starsCount">
+        0
+      </dd>
     </div>
+
+    <div className="flex justify-center mt-4">
+      <SlidingButton text="Read More" bgColor="bg-black" textcolor="text-white"/>
+    </div>
+  </div>
+
+  {balls.map((ball) => (
+    <div
+      key={ball.id}
+      className="shadow-xl lg:flex hidden"
+      style={{
+        width: `${BALL_RADIUS * 2}px`,
+        height: `${BALL_RADIUS * 2}px`,
+        borderRadius: "50%",
+        position: "absolute",
+        left: `${ball.x}px`,
+        top: `${ball.y}px`,
+        transform: "translate(-50%, -50%)",
+      }}
+      onMouseDown={(e) => handleMouseDown(ball.id, e)}
+    >
+      <Image
+        src={ball.image}
+        alt={`Ball ${ball.id}`}
+        width={BALL_RADIUS * 2}
+        height={BALL_RADIUS * 2}
+        style={{
+          borderRadius: "50%",
+          objectFit: "cover",
+        }}
+        onDragStart={(e) => e.preventDefault()}
+      />
+    </div>
+  ))}
+</div>
+
     
     <div className="dark:bg-gray-900 hidden">
       <div className="pt-12 bg-gray-50 dark:bg-gray-900 sm:pt-20">

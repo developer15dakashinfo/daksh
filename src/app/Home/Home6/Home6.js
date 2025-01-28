@@ -72,7 +72,7 @@ const Home6 = () => {
   }, []);
 
   return (
-    <div className="mt-40">
+    <div className="">
       
       <section className="animation">
         <div className="plane-wrapper">
@@ -84,7 +84,7 @@ const Home6 = () => {
         </div>
         <div className="content-one">
         <section>
-        <div className="bg- text-white py-20">
+        <div className="bg- text-white py-2">
        <div className="container mx-auto flex flex-col items-center mt-10 justify-center px-8">
        <h1 className="text-xs md:text-xl font-semibold py-2  text-yellow-300 tracking-loose">We are the Experts </h1>
               <h2 className="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">We Go Beyond the Basics
