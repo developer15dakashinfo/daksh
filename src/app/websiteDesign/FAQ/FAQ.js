@@ -71,7 +71,7 @@ const FAQ = () => {
         </div>
       ))}
 
-      <div className="about-me">
+      {/* <div className="about-me">
         <a
           href="https://www.linkedin.com/in/nikola-mrsic-58a4a71b6"
           target="_blank"
@@ -79,7 +79,7 @@ const FAQ = () => {
         >
           Find me on: LinkedIn
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

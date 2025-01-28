@@ -8,6 +8,7 @@ import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import Logoname from "../logo/Logoname.js";
 import Button from "../Button/Button";
 import SlidingButton from "../SlidingButton/SlidingButton";
+import "./Navbar.css"
 
 
 const Navbar = () => {
@@ -55,7 +56,7 @@ const Navbar = () => {
           ],
         },
         {
-          heading: "APP DEVELOPMENT",
+          heading: "MOBILE APP DEVELOPMENT",
           items: [
             { label: "Android App Development", link: "/websiteDesign/android_app_development"},
             { label: "iOS App Development", link: "/websiteDesign/ios_app_development" },
@@ -80,6 +81,7 @@ const Navbar = () => {
 
           ],
         },
+        
       ],
     },
     {
@@ -87,7 +89,7 @@ const Navbar = () => {
       link: "#",
       dropdownItems: [
         {
-          heading: "MOBILE APP Development",
+          heading: "MOBILE APP DEVELOPMENT",
           items: [
             { label: "Android ", link: "/websiteDesign/appdevelopment" },
             { label: "IOS", link: "/websiteDesign/webdevelopment" },
@@ -113,6 +115,16 @@ const Navbar = () => {
             { label: "Angular js", link: "/websiteDesign/emailmarketing" },
           ],
         },
+        {
+          heading: "DIGITAL MARKETING",
+          items: [
+            { label: "SEO (Search Engine Optimization)",link: "/websiteDesign/digitalmarketing" },
+            { label: "SMO (Social Media Optimization)", link: "/websiteDesign/seomarketing" },
+            { label: "Email Marketing", link: "/websiteDesign/smomarketing" },
+            { label: "Official Whatsapp API", link: "/websiteDesign/emailmarketing" },
+            { label: "RCS (Rich Communication Services)", link: "/websiteDesign/emailmarketing" },
+          ],
+        },
         
       ],
     },
@@ -124,8 +136,8 @@ const Navbar = () => {
  
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-        activeDropdown === 1 ? "pb-[300px] transition duration-500" : ""
+      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-20 flex justify-between items-center ${
+        activeDropdown === 1 ? " transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
@@ -154,18 +166,18 @@ const Navbar = () => {
       <ul
         className={`${
           isMobileMenuOpen ? "block" : "hidden"
-        } md:flex space-x-8 md:space-x-12`}
+        } md:flex space-x-8 md:space-x-8 sm:space-x-4`}
       >
         {navItems.map((item, index) => (
           <li
             key={index}
-            className="relative group"
+            className=""
             onMouseEnter={() => setActiveDropdown(index)}
             onMouseLeave={() => setActiveDropdown(null)}
           >
             <a
               href={item.link}
-              className="text-white font-medium text-[16px]  hover:text-gray-400 transition-colors relative flex items-center"
+              className="text-white font-medium text-[16px]  sm:text:12px  hover:text-gray-400 transition-colors relative group flex items-center"
             >
               {item.label}
               {item.dropdownItems && (
@@ -177,21 +189,21 @@ const Navbar = () => {
                   )}
                 </>
               )}
-              <span className="absolute left-0  right-0 bottom-[-2px] h-[2px] bg-white scale-x-0 origin-center transition-transform duration-500 group-hover:scale-x-100"></span>
+              <span className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-white scale-x-0 origin-center transition-transform duration-500 group-hover:scale-x-100"></span>
             </a>
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute w-[98.2vw] ml-2 z-50 transition-opacity duration-500`}
+                className={`absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 `}
                 style={{
-                  marginTop: "25px",
+                  marginTop: "5px",
                   backgroundColor: "black",
                   animation: "sliceDown 1s ease-in-out forwards",
                 }}
               >
-                <div className="container justify-center my-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-40">
+                <div className="container justify-center my-5 rounded-lg mx-auto grid grid-cols-4 gap-8 text-sm px-10 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
-                    <div key={i} className="space-y-4 mt-14 text-center">
+                    <div key={i} className="space-y-4 mt-10 text-start">
                       <h3 className="font-semibold aligin-top text-white ">
                         {dropdownItem.heading}
                       </h3>
@@ -210,12 +222,14 @@ const Navbar = () => {
                 </div>
               </div>
             )}
+            
+
           </li>
         ))}
       </ul>
 
       <div className="hidden md:block">
-        <SlidingButton text="Contact Us"/>
+        <SlidingButton text="Contact Us" bgColor="bg-white" textcolor="text-black"/>
       </div>
     </nav>
   );

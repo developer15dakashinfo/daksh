@@ -112,10 +112,7 @@ const Home6 = () => {
         </div>
       </section>
         </div>
-       
       </section>
-  
-     
     </div>
   );
 };

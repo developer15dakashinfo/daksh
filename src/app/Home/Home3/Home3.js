@@ -1,5 +1,6 @@
 import Button from "@/app/Button/Button";
 import ReadMoreButton from "@/app/readmore/ReadMoreButton";
+import SlidingButton from "@/app/SlidingButton/SlidingButton";
 import React, { useEffect, useState } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 
@@ -245,7 +246,8 @@ const StackingCards = () => {
                             >
                               Explore more
                             </a> */}
-                            <Button text="Explore More"  href="/learn-more" />
+                             <SlidingButton text="Read More" bgColor="bg-black" textcolor="text-white"/>
+                             
 
                           </div>
                         </div>
