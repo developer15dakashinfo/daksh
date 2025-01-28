@@ -12,6 +12,7 @@ import Home7 from "./Home/Home7/Home7";
 import HomeAbout from "./Home/HomeAbout/HomeAbout";
 import AchievementSection from "./Home/AchievementSection/AchievementSection";
 import SolutionForAllSection from "./Home/SolutionForAllSection/SolutionForAllSection";
+import ContactSection from "./careerSection/ContactSection/ContactSection";
 
 
 export default function Page({ Component, pageProps }) {
@@ -124,6 +125,7 @@ export default function Page({ Component, pageProps }) {
             <SolutionForAllSection/>
 
             <Home7 />
+            <ContactSection/>
             <Footer />
           </div>
         </>
