@@ -1,0 +1,24 @@
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%; /* Ensures dropdown slides below the button */
+    left: 0;
+    right: 0;
+    margin-top: 5px;
+    background-color: black;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  

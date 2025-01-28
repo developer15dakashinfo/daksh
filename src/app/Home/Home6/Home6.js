@@ -72,7 +72,7 @@ const Home6 = () => {
   }, []);
 
   return (
-    <div className="mt-40">
+    <div className="m">
       <section className="animation">
         <div className="plane-wrapper">
           <img
@@ -84,7 +84,7 @@ const Home6 = () => {
         <div className="content-one">
           <section>
             <div className="bg- text-white py-20 mt-72 mb-40">
-              <div className="container mx-auto flex flex-col items-center mt-5 justify-center px-8">
+              <div className="container mx-auto flex flex-col items-center mt-20 justify-center px-8">
                 <h1 className="text-xs md:text-xl font-semibold py-10  text-yellow-300 tracking-loose">
                   We are the Experts{" "}
                 </h1>
@@ -92,7 +92,7 @@ const Home6 = () => {
                   We Go Beyond the Basics
                 </h2>
               </div>
-              <div className="container mx-auto flex flex-col md:flex-row items-center  md:my-10">
+              <div className="container mx-auto flex flex-col md:flex-row items-center pb-40  md:my-10">
                 <div className="flex flex-col w-full lg:w-2/3 justify-center text-center p-8">
                   <VerticalTabsWithIcon />
                   <a
