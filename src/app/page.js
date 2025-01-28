@@ -127,7 +127,7 @@ export default function Page({ Component, pageProps }) {
 
             <Home7 />
             <ContactSection/>
-            <FAQ/>
+            {/* <FAQ/> */}
             <Footer />
           </div>
         </>
