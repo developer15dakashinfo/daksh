@@ -125,7 +125,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-6 py-5 md:px-20 flex justify-between items-center ${
-        activeDropdown === 1 ? "pb-[300px] transition duration-500" : ""
+        activeDropdown === 1 ? "transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       } ${
@@ -159,13 +159,13 @@ const Navbar = () => {
         {navItems.map((item, index) => (
           <li
             key={index}
-            className="relative group"
+            className=""
             onMouseEnter={() => setActiveDropdown(index)}
             onMouseLeave={() => setActiveDropdown(null)}
           >
             <a
               href={item.link}
-              className="text-white font-medium text-[16px]  hover:text-gray-400 transition-colors relative flex items-center"
+              className="text-white font-medium text-[16px]  hover:text-gray-400 transition-colors flex items-center"
             >
               {item.label}
               {item.dropdownItems && (
@@ -177,19 +177,19 @@ const Navbar = () => {
                   )}
                 </>
               )}
-              <span className="absolute left-0  right-0 bottom-[-2px] h-[2px] bg-white scale-x-0 origin-center transition-transform duration-500 group-hover:scale-x-100"></span>
+              <span className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-white scale-x-0 origin-center transition-transform duration-500 group-hover:scale-x-100"></span>
             </a>
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute w-[98.2vw] ml-2 z-50 transition-opacity duration-500`}
+                className={`absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500`}
                 style={{
                   marginTop: "25px",
                   backgroundColor: "black",
-                  animation: "sliceDown 1s ease-in-out forwards",
+                  
                 }}
               >
-                <div className="container justify-center my-5 aligin-item-top rounded-lg mx-auto grid grid-cols-4 w-[97.7%] gap-8 text-sm px-10 md:px-40">
+                <div className="container justify-center my-5 aligin-item-top rounded-lg grid grid-cols-4 gap-8 text-sm  md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-14 text-center">
                       <h3 className="font-semibold aligin-top text-white ">
