@@ -32,7 +32,7 @@ export const Home1 = () => {
 
 
 
-const SECTION_HEIGHT = 1500;
+const SECTION_HEIGHT = 1200;
 
 const Hero = () => {
   return (

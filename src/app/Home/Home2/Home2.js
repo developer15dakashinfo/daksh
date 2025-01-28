@@ -14,13 +14,13 @@ import ReadMoreButton from "@/app/readmore/ReadMoreButton";
 import SlidingButton from "@/app/SlidingButton/SlidingButton";
 
 const BALL_COUNT = 20;
-const BALL_RADIUS = 135;
+const BALL_RADIUS = 125;
 const BLUE_BALL_POSITION =
   typeof window !== "undefined"
     ? { x: window.innerWidth / 2, y: window.innerHeight / 3 }
     : { x: 0, y: 0 }; // Default values for SSR
 
-const BLUE_BALL_RADIUS = 289;
+const BLUE_BALL_RADIUS = 250;
 const REPULSION_FORCE = 0.1; // Control the strength of repulsion
 const GRAVITY = 0.3;
 const FRICTION = 0.95;
@@ -378,8 +378,8 @@ const Home2 = () => {
       transform: "translate(-50%, -50%)",
     }}
   >
-    <div className="flex flex-col p-6 text-center border-b mt-40 border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
-      <dt className="order-2 mt-2 text-xl leading-6 text-gray-500 dark:text-gray-400" id="item-1">
+    <div className="flex flex-col p-6 text-center border-b mt-32 border-gray-100 dark:border-gray-700 sm:border-0 sm:border-r">
+      <dt className="order-2 mt-10 text-xl leading-6 text-gray-500 dark:text-gray-400" id="item-1">
         Complete Projects, Let's Discuss Your Project
       </dt>
       <dd className="order-1 text-7xl font-semibold leading-none text-black dark:text-black" id="starsCount">
@@ -387,7 +387,7 @@ const Home2 = () => {
       </dd>
     </div>
 
-    <div className="flex justify-center mt-4">
+    <div className="flex justify-center mt-2">
       <SlidingButton text="Read More" bgColor="bg-black" textcolor="text-white"/>
     </div>
   </div>

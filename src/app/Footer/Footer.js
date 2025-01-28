@@ -42,7 +42,7 @@ const Footer = () => {
           return prevIndex - 1;
         }
       });
-    }, 2000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, [isMovingDown, words.length]);
