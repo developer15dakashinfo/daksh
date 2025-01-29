@@ -1,16 +1,13 @@
-"use client"; 
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
 import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import "./Navbar.css"
+import "./Navbar.css";
 import logo from "../assets/headerlogo.svg";
-
 import SlidingButton from "../SlidingButton/SlidingButton";
-import "./Navbar.css"
-import Image from "next/image";
-
+import "./Navbar.css";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -53,21 +50,32 @@ const Navbar = () => {
           items: [
             { label: "Web Designing ", link: "/websiteDesign/appdevelopment" },
             { label: "Web Development", link: "/websiteDesign/webdevelopment" },
-            
           ],
         },
         {
           heading: "MOBILE APP DEVELOPMENT",
           items: [
-            { label: "Android App Development", link: "/websiteDesign/android_app_development"},
-            { label: "iOS App Development", link: "/websiteDesign/ios_app_development" },
-            { label: "Flutter App Development", link: "/websiteDesign/flutter_app_development" },
+            {
+              label: "Android App Development",
+              link: "/websiteDesign/android_app_development",
+            },
+            {
+              label: "iOS App Development",
+              link: "/websiteDesign/ios_app_development",
+            },
+            {
+              label: "Flutter App Development",
+              link: "/websiteDesign/flutter_app_development",
+            },
           ],
         },
         {
           heading: "DIGITAL MARKETING",
           items: [
-            { label: "Digital Marketing",link: "/websiteDesign/digitalmarketing" },
+            {
+              label: "Digital Marketing",
+              link: "/websiteDesign/digitalmarketing",
+            },
             { label: "SEO Service", link: "/websiteDesign/seomarketing" },
             { label: "SMO Services", link: "/websiteDesign/smomarketing" },
             { label: "Email Marketing", link: "/websiteDesign/emailmarketing" },
@@ -79,10 +87,8 @@ const Navbar = () => {
             { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
             { label: "RCS", link: "/websiteDesign/rcs" },
             { label: "Official Whatsapp API", link: "/websiteDesign/api" },
-
           ],
         },
-        
       ],
     },
     {
@@ -95,22 +101,30 @@ const Navbar = () => {
             { label: "Android ", link: "/websiteDesign/appdevelopment" },
             { label: "IOS", link: "/websiteDesign/webdevelopment" },
             { label: "Flutter", link: "/websiteDesign/webdevelopment" },
-            
           ],
         },
         {
           heading: "WEB DEVELOPMENT",
           items: [
-            { label: "React js", link: "/websiteDesign/android_app_development"},
+            {
+              label: "React js",
+              link: "/websiteDesign/android_app_development",
+            },
             { label: "Wordpress", link: "/websiteDesign/ios_app_development" },
-            { label: "Laravel", link: "/websiteDesign/flutter_app_development" },
-            { label: "Node js", link: "/websiteDesign/flutter_app_development" },
+            {
+              label: "Laravel",
+              link: "/websiteDesign/flutter_app_development",
+            },
+            {
+              label: "Node js",
+              link: "/websiteDesign/flutter_app_development",
+            },
           ],
         },
         {
           heading: "CUSTOM DEVELOPMENTS",
           items: [
-            { label: "Php",link: "/websiteDesign/digitalmarketing" },
+            { label: "Php", link: "/websiteDesign/digitalmarketing" },
             { label: "Java", link: "/websiteDesign/seomarketing" },
             { label: "Figma", link: "/websiteDesign/smomarketing" },
             { label: "Angular js", link: "/websiteDesign/emailmarketing" },
@@ -119,22 +133,33 @@ const Navbar = () => {
         {
           heading: "DIGITAL MARKETING",
           items: [
-            { label: "SEO (Search Engine Optimization)",link: "/websiteDesign/digitalmarketing" },
-            { label: "SMO (Social Media Optimization)", link: "/websiteDesign/seomarketing" },
+            {
+              label: "SEO (Search Engine Optimization)",
+              link: "/websiteDesign/digitalmarketing",
+            },
+            {
+              label: "SMO (Social Media Optimization)",
+              link: "/websiteDesign/seomarketing",
+            },
             { label: "Email Marketing", link: "/websiteDesign/smomarketing" },
-            { label: "Official Whatsapp API", link: "/websiteDesign/emailmarketing" },
-            { label: "RCS (Rich Communication Services)", link: "/websiteDesign/emailmarketing" },
+            {
+              label: "Official Whatsapp API",
+              link: "/websiteDesign/emailmarketing",
+            },
+            {
+              label: "RCS (Rich Communication Services)",
+              link: "/websiteDesign/emailmarketing",
+            },
           ],
         },
-        
       ],
     },
     { label: "About Us", link: "/about" },
     { label: "Career", link: "/careerSection" },
-    { label: "Contact Us", link: "/contact" },
     { label: "Pricing", link: "/pricing" },
+    { label: "Contact Us", link: "/contact" },
   ];
- 
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-20 flex justify-between items-center ${
@@ -147,9 +172,9 @@ const Navbar = () => {
           : "rounded-none"
       }`}
     >
-     <div className="text-2xl font-bold">
+      <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
-          <Image src={logo} alt="Logo" className="h-10" /> 
+          <img src={logo} alt="Logo" className="h-10" />
         </a>
       </div>
 
@@ -158,54 +183,57 @@ const Navbar = () => {
         onClick={toggleMobileMenu}
       >
         {isMobileMenuOpen ? (
-          <IoClose className="text-green-900 text-4xl" />
+          <IoClose className="text-white text-3xl" />
         ) : (
-          <TiThMenu className="text-green-900 text-4xl" />
+          <TiThMenu className="text-white text-3xl" />
         )}
       </button>
 
       <ul
         className={`${
-          isMobileMenuOpen ? "block" : "hidden"
-        } md:flex space-x-8 md:space-x-8 sm:space-x-4`}
+          isMobileMenuOpen
+            ? "block absolute left-0 top-full w-full bg-black px-6 py-4 shadow-lg space-y-[15px] translate-x-0 opacity-100  "
+            : "hidden"
+        } md:flex md:space-x-8 sm:space-x-6 md:space-y-0 transition-transform duration-500`}
+
+       
+        
       >
         {navItems.map((item, index) => (
           <li
             key={index}
-            className=""
             onMouseEnter={() => setActiveDropdown(index)}
             onMouseLeave={() => setActiveDropdown(null)}
+            className="border-b border-gray-900 md:pb-0 pb-5 sm:border-none last:border-none"
           >
             <a
               href={item.link}
-              className="text-white font-[500] text-[17px] sm:text:12px hover:text-gray-400 transition-colors relative group flex items-center"
+              className="text-white font-[500] text-[17px] hover:text-gray-400 transition-colors relative group flex items-center justify-between md:justify-start w-full"
             >
               {item.label}
+
               {item.dropdownItems && (
-                <>
+                <span className="ml-2 md:ml-1 flex items-center">
                   {activeDropdown === index ? (
-                    <MdOutlineKeyboardArrowUp className="ml-1 text-[20px]" />
+                    <MdOutlineKeyboardArrowUp className="text-[20px]" />
                   ) : (
-                    <MdKeyboardArrowDown className="ml-1 text-[20px]" />
+                    <MdKeyboardArrowDown className="text-[20px]" />
                   )}
-                </>
+                </span>
               )}
+
               <span className="absolute left-0 right-0 bottom-[-2px] h-[2px] bg-white scale-x-0 origin-center transition-transform duration-500 group-hover:scale-x-100"></span>
             </a>
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className={`absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 `}
-                style={{
-                  marginTop: "5px",
-                  backgroundColor: "black",
-                  animation: "sliceDown 1s ease-in-out forwards",
-                }}
+                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-1"
+                style={{ animation: "sliceDown 1s ease-in-out forwards" }}
               >
-                <div className="container justify-center my-5 rounded-lg mx-auto grid grid-cols-4 gap-8 text-sm px-10 md:px-40">
+                <div className="container justify-center my-5 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
-                    <div key={i} className="space-y-4 mt-10 text-start">
-                      <h3 className="font-semibold aligin-top text-white ">
+                    <div key={i} className="space-y-4 mt-2 text-start">
+                      <h3 className="font-semibold text-white">
                         {dropdownItem.heading}
                       </h3>
                       <ul>
@@ -223,14 +251,16 @@ const Navbar = () => {
                 </div>
               </div>
             )}
-            
-
           </li>
         ))}
       </ul>
 
       <div className="hidden md:block">
-        <SlidingButton text="Contact Us" bgColor="bg-white" textcolor="text-black"/>
+        <SlidingButton
+          text="Contact Us"
+          bgColor="bg-white"
+          textcolor="text-black"
+        />
       </div>
     </nav>
   );

@@ -91,7 +91,7 @@ const Footer = () => {
       <footer className="bg-[#0a0a0a] py-4 text-gray-400">
         <div className="container mx-auto my-14 flex items-start gap-28">
           <div className="flex justify-center items-center w-4/12">
-            <div className="text-center relative pt-14">
+            <div className="text-start relative pt-14">
               <div className="flex flex-row gap-24">
                 <div className="flex flex-col relative">
                   <div

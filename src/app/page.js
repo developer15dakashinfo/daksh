@@ -132,7 +132,7 @@ export default function Page({ Component, pageProps }) {
             <CaseStudySection/>
             <ContactSection/>
             <FAQ/>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </>
       )}

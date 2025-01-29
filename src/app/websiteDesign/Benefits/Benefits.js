@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import "../Benefits/Benefits.scss";
+import Image from "next/image";
 
 const Benefits = ({title, content}) => {
   const [activeTab, setActiveTab] = useState("all");
@@ -1268,16 +1269,25 @@ const Benefits = ({title, content}) => {
       <div>
     
         <div className="container">
-          <div className="toast info h-40">
+       
+          <div className="toast info h-52 border">
+          <img  className=" px-4 w-80 "
+  src="https://www.antiersolutions.com/wp-content/uploads/2023/04/Mask-Group-68586.png.webp" 
+  alt="Descriptive text for the image" 
+  width={500} 
+  height={300} 
+/>
             <div className="toast-status">
               <i className="bi bi-info-circle-fill" />
             </div>
             <seection className="toast-content">
-              <h3 className="toast-content-title">
+              <h3 className="toast-content-title text-start font-semibold text-7xl mt-2">
                 Did you know?
               </h3>
-              <p className="toast-content-subtitle">
-                There is something that you ming like know.
+              <p className="toast-content-subtitl text-start text-xl font-light mt-4">
+              According to the dApp Industry Report 2022, Web 3 gaming accounts for 
+              almost half of the overall blockchain activity with daily unique active 
+              wallets of 1.15 million and transactions count of 7.4 billion.
               </p>
             </seection>
             <div className="toast-close">
