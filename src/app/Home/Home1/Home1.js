@@ -8,7 +8,7 @@ import {
 import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
-import Logo from "@/app/logo/logo";
+import Logo from "../../logo/Logoname.js";
 
 export const Home1 = () => {
   return (
@@ -32,7 +32,7 @@ export const Home1 = () => {
 
 
 
-const SECTION_HEIGHT = 1500;
+const SECTION_HEIGHT = 1200;
 
 const Hero = () => {
   return (
@@ -113,13 +113,7 @@ const ParallaxImages = () => {
         end={200}
         className="ml-auto w-1/3"
       />
-      <ParallaxImg
-        src="https://images.unsplash.com/photo-1494022299300-899b96e49893?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Orbiting satellite"
-        start={0}
-        end={-500}
-        className="ml-24 w-5/12"
-      />
+     
     </div>
   );
 };

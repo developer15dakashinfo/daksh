@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../CardSection/CardSection.scss";
 
-const CardSection = () => {
+const CardSectionname = () => {
   const elementsCCRef = useRef([]);
   const elementsTLRef = useRef([]);
 
@@ -6046,4 +6046,4 @@ S116.8,40,129.6,40S152.8,50.4,152.8,63.2z"
   );
 };
 
-export default CardSection;
+export default CardSectionname;

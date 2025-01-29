@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
-import Cardsection from "../CardSection/Cardsection";
+import CardSectionname from "../CardSection/CardSectionname.js";
 import HeroVisual from "../HeroVisual";
 // import HeroVisual from "../HeroVisual";
 import OurWebDesign from "../OurWebDesign/OurWebDesign";
@@ -20,7 +20,7 @@ export default function WebsiteDesign({ params }) {
   }, [params]);
 
   const data = {
-    appdevelopment: { title: "App Developement", content: "This is content for Page 1." },
+    appdevelopment: { title: "App ", content: "Developement"  },
     webdevelopement: { title: "Web Developement ", content: "This is content for Page 2." },
     marketing: { title: "Marketing ", content: "This is content for Page 3." },
     android_app_development: { title: "Android App Development", content: "This is content for Page 1." },
@@ -40,10 +40,11 @@ export default function WebsiteDesign({ params }) {
   return (
     <div>
       <Navbar />
-      <HeroVisual title={pageData.title} content={pageData.content} />
+      <Benefits  title={pageData.title} content={pageData.content} />
+      {/* <HeroVisual title={pageData.title} content={pageData.content} /> */}
 
-      <Cardsection/>
-      <Benefits/>
+      <CardSectionname/>
+     
       <Testimonials/>
       <FAQ/>
       {/* <OurWebDesign title={pageData.title} content={pageData.content} /> */}

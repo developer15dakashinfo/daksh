@@ -4,14 +4,14 @@
 
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-import Contact1 from "./contact1/contact1";
+import Contactname from "./contact1/Contactname.js";
 
 
 export default function Contact() {
     return (
       <div>
       <Navbar/>
- <Contact1/>
+ <Contactname/>
   
     <Footer/>
       </div>
