@@ -36,33 +36,17 @@ export default function HomeAbout() {
       <section className="py-10 bg-black text-white">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-12 items-center">
-            {/* <div className="w-full grid sm:grid-cols-2 grid-cols-1 gap-10 justify-center items-center lg:order-first order-last">
-              <div className="pt-12 sm:pt-24 flex justify-center">
-                <img
-                  className="rounded-xl object-cover w-full sm:w-auto max-w-sm"
-                  src="https://pagedone.io/asset/uploads/1717741205.png"
-                  alt="about Us image"
-                />
-              </div>
-              <div className="flex justify-center sm:justify-end">
-                <img
-                  className="rounded-xl object-cover w-full sm:w-auto max-w-sm"
-                  src="https://pagedone.io/asset/uploads/1717741215.png"
-                  alt="about Us image"
-                />
-              </div>
-            </div> */}
             <div className="w-full grid sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center lg:order-first order-last">
               <div className="pt-6 sm:pt-24 flex justify-center">
                 <img
-                  className="rounded-xl object-cover w-[80%] sm:w-[60%] md:w-[50%] lg:w-auto max-w-xs sm:max-w-sm"
+                  className="rounded-xl object-cover w-[80%] sm:w-[60%] md:w-[50%] lg:w-auto max-w-xs sm:max-w-sm h-auto "
                   src="https://pagedone.io/asset/uploads/1717741205.png"
                   alt="about Us image"
                 />
               </div>
               <div className="flex justify-center sm:justify-end">
                 <img
-                  className="rounded-xl object-cover w-[80%] sm:w-[60%] md:w-[50%] lg:w-auto max-w-xs sm:max-w-sm"
+                  className="rounded-xl object-cover w-[80%] sm:w-[60%] md:w-[50%] lg:w-auto max-w-xs sm:max-w-sm h-auto "
                   src="https://pagedone.io/asset/uploads/1717741215.png"
                   alt="about Us image"
                 />

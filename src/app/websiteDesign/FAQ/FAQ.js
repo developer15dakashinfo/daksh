@@ -38,56 +38,53 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative py-20 overflow-hidden bg-gray-50">
-      <div className="relative container px-4 mx-auto">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">
-              FREQUENTLY ASKED QUESTIONS
-            </span>
-            <h1 className="font-heading text-5xl font-bold text-gray-900">
-              <span>You ask? We</span>
-              <span className="font-serif italic"> answer</span>
-            </h1>
-          </div>
-          <div className="bg-white rounded-4xl shadow-lg px-8 sm:px-20 py-14">
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                className={`cursor-pointer mb-8 pb-8 border-b border-gray-200 ${
-                  activeIndex === index ? "active" : ""
+
+    <section className="relative py-20 px-4 sm:px-8 lg:px-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto text-center">
+        <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">
+          FREQUENTLY ASKED QUESTIONS
+        </span>
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+          <span>You ask? We </span>
+          <span className="font-serif italic text-blue-900">answer.</span>
+        </h1>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-lg px-6 sm:px-10 md:px-16 py-10 sm:py-14 mt-10 max-w-5xl mx-auto">
+        {faqData.map((faq, index) => (
+          <div
+            key={index}
+            className="cursor-pointer mb-6 pb-6 border-b border-gray-200 last:border-0"
+            onClick={() => toggleFAQ(index)}
+          >
+            <div className="flex justify-between items-start">
+              <h3
+                className={`text-lg sm:text-lg font-[500] ${
+                  activeIndex === index ? "text-blue-900" : "text-black"
                 }`}
-                onClick={() => toggleFAQ(index)}
               >
-                <div className="flex justify-between items-start">
-                  <h3
-                    className={`text-xl font-semibold ${
-                      activeIndex === index ? "text-blue-900" : "text-black"
-                    }`}
-                  >
-                    {faq.question}
-                  </h3>
-                  <div className="icon">
-                    {activeIndex === index ? (
-                      <IoMdArrowDropup size={24} color="black" />
-                    ) : (
-                      <IoMdArrowDropdown size={24} color="black" />
-                    )}
-                  </div>
-                </div>
-                <div
-                  className={`transition-all duration-300 overflow-hidden ${
-                    activeIndex === index ? "max-h-screen mt-3" : "max-h-0"
-                  }`}
-                >
-                  <p className="text-lg text-gray-500">{faq.answer}</p>
-                </div>
+                {faq.question}
+              </h3>
+              <div className="icon">
+                {activeIndex === index ? (
+                  <IoMdArrowDropup size={24} />
+                ) : (
+                  <IoMdArrowDropdown size={24} />
+                )}
               </div>
-            ))}
+            </div>
+            <div
+              className={`transition-all duration-300 overflow-hidden ${
+                activeIndex === index ? "max-h-[1000px] mt-3" : "max-h-0"
+              }`}
+            >
+              <p className="text-gray-500 text-sm sm:text-lg">{faq.answer}</p>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
+    
   );
 };
 

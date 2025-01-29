@@ -33,15 +33,20 @@ export default function CaseStudies() {
   ];
 
   return (
-    <section className="pt-20 pb-60 bg-gray-100">
+    <section className="pt-20 pb-48 bg-gray-100">
       <div className="text-center mb-10">
-      <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Case</span> Studies</h1>   
+        <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
+            Case
+          </span>{" "}
+          Studies
+        </h1>
         <p className="text-gray-500 text-lg mt-1 tracking-wide">
           SPECIAL FOR YOU
         </p>
       </div>
 
-      <div className="container mx-auto px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-full">
+      <div className="container mx-auto px-5 md:px-20 lg:px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-36 md:gap-8 lg:gap-8 max-w-full">
         {caseStudies.map((caseStudy, index) => (
           <div
             key={index}
@@ -57,22 +62,22 @@ export default function CaseStudies() {
               <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-opacity-20"></div>
             </div>
 
-            <div className="absolute top-[150px] left-1/2 transform transition duration-300 hover:scale-105 -translate-x-1/2 w-full max-w-[92%] h-[250px] bg-white shadow-md rounded-lg text-center p-6 overflow-hidden">
-              <h3 className="text-lg font-semibold text-gray-900">
+            <div className="absolute top-[150px] left-1/2 transform transition duration-300 hover:scale-105 -translate-x-1/2 w-full max-w-[92%] h-[250px] bg-white shadow-md rounded-lg p-6 overflow-hidden">
+              <h3 className="text-lg font-semibold text-gray-900 text-center">
                 {caseStudy.title}
               </h3>
-              <p className="text-gray-600 text-sm mt-2">
+              <p className="text-gray-600 text-sm mt-2 text-left">
                 {caseStudy.description}
               </p>
 
-              <div className=" py-2">
-              <SlidingButton
-                text="Read More"
-                bgColor="bg-black"
-                textcolor="text-white"
-                arrowBgColor="bg-black"
-                arrowTextColor="text-white"
-              />
+              <div className="py-2 flex justify-center">
+                <SlidingButton
+                  text="Read More"
+                  bgColor="bg-black"
+                  textcolor="text-white"
+                  arrowBgColor="bg-black"
+                  arrowTextColor="text-white"
+                />
               </div>
             </div>
           </div>

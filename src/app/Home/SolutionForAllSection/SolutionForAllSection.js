@@ -1,9 +1,9 @@
 import React from "react";
-import { FaFileCode, FaArrowCircleRight } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoCodeSlash } from "react-icons/io5";
 import { RiBuilding2Fill } from "react-icons/ri";
 import { BsRocketTakeoff } from "react-icons/bs";
+import SlidingButton from "@/app/SlidingButton/SlidingButton";
 
 const SolutionForAllSection = () => {
   const cardsData2 = [
@@ -47,55 +47,69 @@ const SolutionForAllSection = () => {
 
   return (
     <div className="w-full bg-white pb-20">
-  <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-    <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600 font-medium text-lg text-center">
-      SOLUTIONS FOR ALL
-    </h1>
-    <h1 className="text-4xl font-bold text-center mt-3 text-black">
-      Leading the Industry with Excellence
-    </h1>
-    <p className="text-lg text-center mt-4 text-black">
-      dakshInfo Soft craft transformative software solutions to empower businesses of all sizes. We equip you with the tools to streamline operations, achieve results, and propel growth.
-    </p>
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-10  sm:px-8 lg:px-40">
-    {cardsData2.map((card, index) => (
-      <div
-        key={index}
-        className="relative h-full overflow-hidden border border-gray-500 rounded-lg hover:shadow-lg transition duration-300"
-      >
-        <div className="px-10 sm:px-8 lg:px-10 py-14 sm:py-10 lg:py-14 ">
-          <div className="flex items-center gap-4">
-            <div className="text-4xl text-blue-500">{card.icon}</div>
-            <h3 className="text-lg sm:text-xl font-bold text-black">{card.title}</h3>
-          </div>
-
-          <p className="text-sm sm:text-base font-medium text-black py-5">{card.description}</p>
-
-          {card.lists && (
-            <ul className="text-gray-600 list-none pb-5 m-0">
-              {Object.values(card.lists).map((listItem, listIndex) => (
-                <li
-                  key={listIndex}
-                  className="flex items-center gap-2 text-[13px] sm:text-sm text-gray-500 py-1 text-justify"
-                >
-                  <IoIosArrowForward className="text-blue-500 text-xl" />
-                  {listItem}
-                </li>
-              ))}
-            </ul>
-          )}
-
-          <div className="bottom-4 font-bold flex items-center gap-2 text-black py-2">
-            Explore more <FaArrowCircleRight />
-          </div>
-        </div>
+      <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+        <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600 font-medium text-lg text-center">
+          SOLUTIONS FOR ALL
+        </h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mt-3 text-black">
+          Leading the Industry with Excellence
+        </h1>
+        <p className="text-base sm:text-lg text-center mt-4 text-black">
+          DakshInfo Soft crafts transformative software solutions to empower
+          businesses of all sizes. We equip you with the tools to streamline
+          operations, achieve results, and propel growth.
+        </p>
       </div>
-    ))}
-  </div>
-</div>
 
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-8 lg:px-40">
+        {cardsData2.map((card, index) => (
+          <div
+            key={index}
+            className="relative h-auto sm:h-full overflow-hidden border border-gray-300 rounded-lg hover:shadow-lg transition duration-300"
+          >
+            <div className="px-6 sm:px-8 lg:px-10 py-10 sm:py-8 lg:py-12">
+              <div className="flex items-center gap-3">
+                <div className="text-3xl sm:text-4xl text-blue-500">
+                  {card.icon}
+                </div>
+                <h3 className="text-base sm:text-lg font-bold text-black">
+                  {card.title}
+                </h3>
+              </div>
+
+              <p className="text-sm sm:text-base font-medium text-black py-3 sm:py-5">
+                {card.description}
+              </p>
+
+              {card.lists && (
+                <ul className="text-gray-600 list-none pb-4 sm:pb-5 m-0">
+                  {Object.values(card.lists).map((listItem, listIndex) => (
+                    <li
+                      key={listIndex}
+                      className="flex items-center gap-2 text-[12px] sm:text-sm text-gray-500 py-1 text-justify"
+                    >
+                      <IoIosArrowForward className="text-blue-500 text-lg sm:text-xl" />
+                      {listItem}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <div className="flex justify-center ">
+                <SlidingButton
+                  text="Explore More"
+                  bgColor="bg-black"
+                  textcolor="text-white"
+                  arrowBgColor="bg-black"
+                  arrowTextColor="text-white"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

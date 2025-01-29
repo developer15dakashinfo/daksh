@@ -142,137 +142,6 @@ const StackingCards = () => {
   }, []);
 
   return (
-    // <div className="bg-black text-white text-center font-sans">
-    //   <main className="w-[95%] mx-auto  pb-20 relative">
-    //     <ul className="relative">
-    //       {cardsData.map((card, index) => (
-    //         <li
-    //           key={index}
-    //           data-index={index}
-    //           className={`card sticky top-3 transition-transform duration-1000 ease-in-out transform ${
-    //             visibleCard === index
-    //               ? "translate-y-0 scale-100"
-    //               : `translate-y-[${index * 60}px] z-${60 - index} scale-90`
-    //           }`}
-    //           style={{
-    //             paddingTop: `${index + 2}em`,
-    //           }}
-    //         >
-    //           <div
-    //             className="shadow-xl text-[#0A0507] rounded-3xl overflow-hidden  "
-    //             style={{
-    //               backgroundColor: card.backgroundColor,
-    //               height: index === 0 ? "300px" : "620px",
-    //             }}
-    //           >
-    //             {index === 0 ? (
-    //               <div className="pt-20 px-14 text-center items-center">
-    //                 {/* <h1 className="text-6xl text-white font-extrabold pb-5">
-    //                   {card.title}
-    //                 </h1> */}
-    //                 <h1 className="text-7xl text-white font-extrabold py-5">
-    //                   {card.title2}
-    //                 </h1>
-    //                 <p className="text-white">{card.text}</p>
-    //               </div>
-    //             ) : (
-    //               <>
-    //                 <div className="py-20 px-20 flex w-full gap-10">
-    //                   <div className="w-4/12 px-5">
-    //                     <figure className="overflow-hidden rounded-lg">
-    //                       <img
-    //                         src={card.image}
-    //                         alt={card.title}
-    //                         className="object-cover h-96 w-full"
-    //                       />
-    //                     </figure>
-    //                   </div>
-
-    //                   <div className=" flex-col w-8/12 px-5">
-    //                     <div className=" grid grid-cols-2 gap-10 border-black">
-    //                       <h2 className="text-5xl font-extrabold text-start">
-    //                         {card.title}
-    //                       </h2>
-    //                       <p className="text-lg leading-relaxed text-left">
-    //                         {card.text}
-    //                       </p>
-    //                     </div>
-    //                     <hr className="border-t-1 border-black my-8"/>
-    //                     <div className="grid grid-cols-2 gap-10 ">
-    //                       <h2 className="text-[15px] font-medium text-start">
-    //                         {card.descreption}
-    //                       </h2>
-    //                       <div>
-    //                         <ul className=" list-none">
-    //                           <li>
-    //                             <div className=" flex items-center gap-2">
-    //                             <FaCircleCheck />
-    //                             <p className=" text-[16px] font-semibold leading-relaxed text-left">
-    //                               {card.list1}
-    //                             </p>
-    //                             </div>
-    //                           </li>
-    //                           <li>
-    //                           <div className=" flex items-center gap-2">
-    //                           <FaCircleCheck />
-    //                             <p className=" text-[16px] font-semibold leading-relaxed text-left">
-    //                               {card.list2}
-    //                             </p>
-    //                             </div>
-    //                           </li>
-    //                           <li>
-    //                           <div className=" flex items-center gap-2">
-    //                           <FaCircleCheck />
-    //                             <p className=" text-[16px] font-semibold leading-relaxed text-left">
-    //                               {card.list3}
-    //                             </p>
-    //                             </div>
-    //                           </li>
-    //                         </ul>
-    //                       </div>
-    //                     </div>
-
-    //                     <div className="grid grid-cols-2 gap-10 py-12">
-    //                       <div className="flex gap-3">
-    //                       <div>
-    //                       <figure className="overflow-hidden rounded-full">
-    //                       <img
-    //                         src={card.image}
-    //                         alt={card.title}
-    //                         className="object-cover h-10 w-10"
-    //                       />
-    //                     </figure>
-    //                       </div>
-    //                         <div>
-    //                         <h2 className="text-[14px] font-extrabold text-start">
-    //                           {card.t1}
-    //                         </h2>
-    //                         <p className="text-[14px] leading-relaxed text-left">
-    //                           {card.t2}
-    //                         </p>
-    //                         </div>
-    //                       </div>
-    //                       <div>
-    //                         {/* <a
-    //                           href="#top"
-    //                           className="inline-block bg-white text-black px-4 py-2 rounded-md"
-    //                         >
-    //                           Explore more
-    //                         </a> */}
-    //                          <SlidingButton text="Read More" bgColor="bg-black" textcolor="text-white"/>
-
-    //                       </div>
-    //                     </div>
-    //                   </div>
-    //                 </div>
-    //               </>
-    //             )}
-    //           </div>
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   </main>
-    // </div>
 
     <div className="bg-black text-white text-center font-sans">
       <main className="w-[95%] mx-auto pb-20 relative">
@@ -292,7 +161,7 @@ const StackingCards = () => {
             >
               <div
                 className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden sm:h-auto ${
-                  index === 0 ? "h-[40vh]" : "h-[75vh]"
+                  index === 0 ? "h-[40vh]" : "h-[80vh]"
                 }`}
                 style={{ backgroundColor: card.backgroundColor }}
               >

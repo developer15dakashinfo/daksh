@@ -16,7 +16,6 @@ import ContactSection from "./careerSection/ContactSection/ContactSection";
 import FAQ from "./websiteDesign/FAQ/FAQ";
 import CaseStudySection from "./Home/CaseStudySection/CaseStudySection";
 
-
 export default function Page({ Component, pageProps }) {
   const [scrollY, setScrollY] = useState(0);
   const [showSplash, setShowSplash] = useState(true); // Splash screen state
@@ -114,34 +113,25 @@ export default function Page({ Component, pageProps }) {
         <>
           <Navbar />
           <div>
-            <Home1 />
-            <Home2 />
+            {/* <Home1 />
+            <Home2 /> */}
             <Home3 />
-            <HomeAbout/> 
-            <AchievementSection/>
-            
+            <HomeAbout />
+            <AchievementSection />
 
             {/* <Home5 /> */}
-            
 
             <Home6 />
-            <SolutionForAllSection/>
-            
+            <SolutionForAllSection />
 
-            <Home7 />
-            <CaseStudySection/>
-            <ContactSection/>
-            <FAQ/>
-            {/* <Footer /> */}
+            {/* <Home7 /> */}
+            <CaseStudySection />
+            <ContactSection />
+            <FAQ />
+            <Footer />
           </div>
         </>
       )}
-
-     
-
-      
     </>
-
-    
   );
 }
