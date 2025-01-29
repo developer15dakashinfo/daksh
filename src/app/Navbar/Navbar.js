@@ -1,14 +1,15 @@
-"use client"; // Ensure this is a client component
+"use client"; 
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import Logoname from "../logo/Logoname.js";
-import Button from "../Button/Button";
+import "./Navbar.css"
+import logo from "../assets/headerlogo.svg";
+
 import SlidingButton from "../SlidingButton/SlidingButton";
 import "./Navbar.css"
+import Image from "next/image";
 
 
 const Navbar = () => {
@@ -146,9 +147,9 @@ const Navbar = () => {
           : "rounded-none"
       }`}
     >
-      <div className="text-2xl font-bold">
+     <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
-          <Logoname />
+          <Image src={logo} alt="Logo" className="h-10" /> 
         </a>
       </div>
 
