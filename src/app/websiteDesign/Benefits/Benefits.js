@@ -1550,9 +1550,7 @@ As a top-tier web 3 game development company, we make use of futuristic tools an
   As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
  to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
   to uncover the true potentia
-  As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
- to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
-  to uncover the true potentia
+ 
 </p>
 </div>
       </section>
