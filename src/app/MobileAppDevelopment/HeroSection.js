@@ -1,52 +1,32 @@
 import React from 'react'
+import SlidingButton from '../SlidingButton/SlidingButton';
 
-const HeroSection = () => {
+const HomeSection1 = () => {
   return (
-    <>
-
-<section
-      className="relative bg-cover bg-center bg-no-repeat h-[480px]"
-      style={{
-        backgroundImage:
-          "url('https://media.istockphoto.com/id/1174690086/photo/software-developer-freelancer-working-at-home.webp?s=1024x1024&w=is&k=20&c=6d1JmwVhkUv6whYZbDHXpGSnYicvS85Uj1o1YTH05h4=')",
-      }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="container mx-auto px-4 lg:px-16 relative z-10 flex flex-col lg:flex-row items-center justify-between h-full">
-        <div className="text-white lg:w-1/2 space-y-6 text-center lg:text-left pt-10">
-          <h1 className="text-4xl font-bold py-1 leading-normal">
-            JOIN OUR AWESOME TEAM AND <br />
-            <span className="bg-gradient-to-r from-sky-400 to-emerald-600 bg-clip-text text-transparent">
-              START TO BUILD UP YOUR CAREER.
-            </span>
-          </h1>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </div>
-
-        <div className="lg:w-1/2 mt-12 lg:mt-14 flex items-center justify-center">
-          <div className="w-80 h-80 rounded-full bg-gradient-to-r from-sky-400 to-emerald-600 p-[2px]">
-            <div className="w-full h-full bg-black rounded-full overflow-hidden">
-              <figure className="overflow-hidden rounded-full">
-                <img
-                  src="https://media.istockphoto.com/id/1451456915/photo/female-freelance-developer-coding-and-programming-coding-on-two-with-screens-with-code.jpg?s=612x612&w=0&k=20&c=BFFIc-xOwzeRyR8ui9VkFKEqqqQFBbISJzr-ADN6hS8="
-                  alt="Team working"
-                  className="object-cover w-80 h-80"
-                />
-              </figure>
-            </div>
-          </div>
+    <section
+    className="bg-cover bg-center bg-no-repeat h-[550px]"
+    style={{ backgroundImage: `url(https://t3.ftcdn.net/jpg/05/00/79/02/360_F_500790266_gaZS8kRQeZsUbD1zKOJJ8bjI0uwNLghi.jpg)` }}
+  >
+    <div className="bg-black"></div>
+    <div className="container mx-auto px-4 lg:px-16 flex flex-col lg:flex-row items-center justify-between h-full">
+      <div className="text-white lg:w-1/2 space-y-6 text-center lg:text-left pt-20">
+        <h1 className="text-4xl font-bold py-1 leading-normal">
+        ANDROID APP DEVELOPMENT <br />
+          <span className="bg-gradient-to-r from-sky-400 to-emerald-600 bg-clip-text text-transparent">
+          START TO BUILD UP YOUR CAREER.
+          </span>
+        </h1>
+        <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div>
+          <SlidingButton text="Contact Us" />
+          
         </div>
       </div>
+    </div>
 
-      
-    </section>
-    </>
+    
+  </section>
   )
 }
 
-export default HeroSection
+export default HomeSection1;
