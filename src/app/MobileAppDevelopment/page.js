@@ -5,6 +5,8 @@ import AppServices from "./AppServices/AppServices";
 import HomeSection1 from "./HeroSection";
 import HomeSection2 from "./Home2";
 import HomeSection3 from "./AppServices/AppServices";
+import Footer from "../Footer/Footer";
+import HomeProcess4 from "./AppProcess/AppProcess";
 
 const page = () => {
   return (
@@ -14,6 +16,8 @@ const page = () => {
       <HomeSection2 />
 
       <HomeSection3 />
+      <HomeProcess4/>
+      <Footer/>
     </>
   );
 };

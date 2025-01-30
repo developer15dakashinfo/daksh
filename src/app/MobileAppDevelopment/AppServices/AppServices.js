@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const HomeSection3 = () => {
@@ -22,7 +21,7 @@ const HomeSection3 = () => {
         "Transform your business operations with powerful enterprise Android applications. We develop secure, scalable, and feature-rich solutions tailored for businesses, enabling automation, real-time data access, and seamless collaboration. Our enterprise apps are designed to improve workflow efficiency, boost productivity.",
     },
     {
-      img: "https://5.imimg.com/data5/SELLER/Default/2024/3/398031164/II/IA/CZ/215886506/mobile-app-development-500x500.jpg",
+      img: "https://4.imimg.com/data4/VT/PT/GLADMIN-11200939/47-500x500.jpg",
       title: "UI/UX Design for Android Apps",
       description:
         "Deliver visually stunning and user-friendly Android applications with our expert UI/UX design services. We focus on intuitive navigation, seamless user interactions, and engaging aesthetics to create designs that enhance user retention and satisfaction. From wireframes to interactive prototypes.",
@@ -39,50 +38,52 @@ const HomeSection3 = () => {
       description:
         "Seamlessly launch your Android app on the Google Play Store with our deployment expertise. We ensure compliance with Google’s policies, optimize app store listings, and implement ASO strategies to boost visibility. From managing app submissions to handling updates and approvals.",
     },
-    {
-      img: "https://4.imimg.com/data4/VT/PT/GLADMIN-11200939/47-500x500.jpg",
-      title: "App Maintenance & Support",
-      description:
-        "Keep your Android app up-to-date and running smoothly with our maintenance and support services. We provide regular updates, bug fixes, security patches, and performance enhancements to ensure long-term stability. Our dedicated support team is available to assist with troubleshooting.",
-    },
   ];
 
   return (
-    <div className="">
-      <div className="mx-auto max-w-full px-5 py-16 md:px-10 md:py-16 bg-gradient-to-b from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div className="mx-auto w-full max-w-3xl text-center">
-          <h2 className="text-4xl font-extrabold text-black dark:text-white md:text-5xl">
-            Android App Development Services
-          </h2>
-          <div className="mx-auto mb-8 mt-4 max-w-8xl md:mb-12 lg:mb-16">
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Innovative, Scalable & High-Performance Android Solutions Build
-              cutting-edge Android applications tailored to your business needs,
-              ensuring seamless performance, intuitive UI/UX, and future-ready
-              scalability.
-            </p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 lg:gap-12 lg:px-28 md:px-20 sm:px-5">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="relative mb-8 flex flex-col rounded-2xl border border-blue-300 bg-white p-8 shadow-lg dark:border-gray-600 dark:bg-gray-800 lg:mb-4"
-            >
-              <div className="absolute -top-8 right-4 flex h-24 w-24 items-center justify-center rounded-full border border-blue-400  shadow-md dark:border-gray-500 dark:bg-gray-700 lg:right-8">
-                <img src={feature.img} alt="img" className=" h-full w-full rounded-full " />
-              </div>
-              <p className="mb-4 mt-8 text-xl font-semibold text-gray-800 dark:text-white">
-                {feature.title}
-              </p>
-              <p className="text-gray-500 dark:text-gray-300">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
+
+    <div>
+  <div className="mx-auto max-w-full px-5 py-16 md:px-10 md:py-16 bg-gradient-to-b from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="mx-auto w-full max-w-3xl text-center">
+      <h2 className="text-4xl font-extrabold text-black dark:text-white md:text-5xl">
+        Android App Development Services
+      </h2>
+      <div className="mx-auto mb-8 mt-4 max-w-8xl md:mb-12 lg:mb-16">
+        <p className="text-lg text-gray-600 dark:text-gray-300">
+          Innovative, Scalable & High-Performance Android Solutions Build
+          cutting-edge Android applications tailored to your business needs,
+          ensuring seamless performance, intuitive UI/UX, and future-ready
+          scalability.
+        </p>
       </div>
     </div>
+
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 lg:gap-12 lg:px-28 md:px-20 sm:px-5">
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          className="group relative mb-8 flex flex-col rounded-2xl border border-blue-300 bg-white p-8 shadow-lg dark:border-gray-600 dark:bg-gray-800 lg:mb-4 transition-transform duration-500 ease-in-out transform hover:-translate-y-3"
+        >
+          
+          <div className="absolute -top-8 right-4 flex h-20 w-20 items-center justify-center rounded-full border border-blue-400 shadow-md dark:border-gray-500 dark:bg-gray-700 lg:right-8 overflow-hidden">
+            <img
+              src={feature.img}
+              alt="img"
+              className="h-full w-full rounded-full transition-transform duration-700 ease-in-out group-hover:rotate-180"
+            />
+          </div>
+
+          
+          <p className="mb-4 mt-8 text-xl font-semibold text-gray-800 dark:text-white">
+            {feature.title}
+          </p>
+          <p className="text-gray-500 dark:text-gray-300">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
   );
 };
 

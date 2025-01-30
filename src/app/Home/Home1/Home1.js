@@ -9,6 +9,11 @@ import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 import Logo from "../../logo/Logoname.js";
+import image1 from "../../assets/home1/home (1).jpg";
+import image2 from "../../assets/home1/home (1).png";
+import image3 from "../../assets/home1/home (1).webp";
+import image4 from "../../assets/home1/home (3).jpg";
+
 
 export const Home1 = () => {
   return (

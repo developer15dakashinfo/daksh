@@ -9,6 +9,7 @@ import logo from "../assets/headerlogo.svg";
 import SlidingButton from "../SlidingButton/SlidingButton";
 import "./Navbar.css";
 import Image from "next/image";
+import ExpandButton from "../Expandbutton/Expandbutton";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -163,7 +164,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 px-6 py-4 md:px-20 flex justify-between items-center ${
+      className={`fixed top-0 left-0 w-full z-50 py-5 px-6 md:px-20 flex justify-between items-center ${
         activeDropdown === 1 ? " transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
@@ -173,7 +174,7 @@ const Navbar = () => {
           : "rounded-none"
       }`}
     >
-      <div className="text-2xl font-bold">
+      <div className="text-2xl font-bold ">
         <a href="/" className="flex items-center">
           <Image src={logo} alt="Logo" className="h-10" />
         </a>
@@ -228,10 +229,10 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-1"
+                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-3"
                 style={{ animation: "sliceDown 1s ease-in-out forwards" }}
               >
-                <div className="container justify-center my-5 pt-20 pb-10 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
+                <div className="container justify-center my-8 pt-10 pb-10 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-2 text-start">
                       <h3 className="font-semibold text-white">
@@ -256,13 +257,19 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <SlidingButton
           text="Contact Us"
           bgColor="bg-white"
           textcolor="text-black"
         />
-      </div>
+      </div> */}
+
+<div className="">
+      <ExpandButton text="Conatct Us" />
+     
+    </div>
+
     </nav>
   );
 };
