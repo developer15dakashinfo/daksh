@@ -26,6 +26,14 @@ const Footer = () => {
     borderRadius: 5,
   };
 
+  const [windowWidth, setWindowWidth] = useState(0);
+
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    setWindowWidth(window.innerWidth);
+  }
+}, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
@@ -97,9 +105,8 @@ const Footer = () => {
                 <div
                   className="absolute transition-all duration-800 transform text-5xl sm:text-5xl md:text-6xl lg:text-[65px] font-bold text-white"
                   style={{
-                    top: `${
-                      currentIndex * (window.innerWidth < 640 ? 59 : 80)
-                    }px`,
+                    top: `${currentIndex * (windowWidth < 640 ? 59 : 80)}px`,
+
                   }}
                 >
                   Be
