@@ -11,6 +11,6 @@
   }
   
   .group-hover:animate-slide {
-    animation: slide 2s infinite ease-in-out;
+    animation: slide 5s infinite ease-in-out;
   }
   

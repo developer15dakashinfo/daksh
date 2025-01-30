@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Benefits/Benefits.scss";
 import Image from "next/image";
+import SlidingButton from "@/app/SlidingButton/SlidingButton";
 
 const Benefits = ({ title, content }) => {
   const [activeTab, setActiveTab] = useState("all");
@@ -1148,7 +1149,7 @@ const Benefits = ({ title, content }) => {
 
 
           <div className="toast info h-52 border">
-          <img  className=" px-4 w-80 ms-40 m-4"
+          <img  className=" px-4 w-80  m-4"
   src="https://www.antiersolutions.com/wp-content/uploads/2023/04/Mask-Group-68586.png.webp" 
   alt="Descriptive text for the image" 
   width={500} 
@@ -1174,7 +1175,45 @@ const Benefits = ({ title, content }) => {
       </div>
       <section className="flex">
      
-        <div className="benifits-images">
+        
+
+        <div className="text-start ms-5 w-1/2 px-20" >
+        <h1 className=" text-4xl  text-start font-bold items-end pt-20">
+          {title} {content} Consultants at Your Service
+        </h1>
+        <p className="text-xl text-start py-5 ">
+          Antier, as one of the top blockchain consulting companies, helps
+          empower businesses by providing futuristic blockchain-based
+          solutions that play a significant role in harnessing the potential
+          of blockchain technology to the fullest in favor of their growth and
+          development.
+          Blockchain is undoubtedly a very powerful network and with its
+          in-built features of trustability, transparency, security, etc. can
+          have far-reaching effects on businesses belonging to different
+          industries by enabling them to translate their business goals into
+          success stories. 
+          success stories. 
+          As one of the prominent blockchain consulting firms, we house a team
+          of top-notch blockchain consultants who dedicatedly researches,
+          develops, and test blockchain ecosystem to propose astounding ideas
+          to integrate blockchain architecture into businesses.
+
+<br/><br/>
+        </p>
+        <div>
+          <SlidingButton
+            text="Free Demo"
+            textcolor="text-white"
+            bgColor="bg-black"
+            arrowBgColor="bg-black"
+            arrowTextColor="text-white"
+            
+          />
+         
+        </div>
+
+</div>
+<div className="benifits-images justify-center w-1/2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -1346,10 +1385,10 @@ const Benefits = ({ title, content }) => {
                     letterSpacing="0.05em"
                   >
                     <tspan x="48.94" y={21}>
-                      ON-DEMAND WEB{" "}
+                      E-COMMERCE{" "}
                     </tspan>
                     <tspan x="92.72" y={49}>
-                      TRAINING
+                      SOLUTIONS
                     </tspan>
                   </text>
                   <text
@@ -1389,8 +1428,11 @@ const Benefits = ({ title, content }) => {
                     fontWeight={600}
                     letterSpacing="0.05em"
                   >
-                    <tspan x="13.302" y={21}>
-                      PRODUCT UPDATES
+                     <tspan x="48.94" y={23}>
+                      CUSTOM WEB{" "}
+                    </tspan>
+                    <tspan x="39.72" y={49}>
+                      DEVELOPMENT
                     </tspan>
                   </text>
                   <text
@@ -1441,11 +1483,11 @@ const Benefits = ({ title, content }) => {
                       fontWeight={600}
                       letterSpacing="0.05em"
                     >
-                      <tspan x="86.67" y={21}>
-                        BRANDING{" "}
+                      <tspan x="116.67" y={21}>
+                        CMS{" "}
                       </tspan>
                       <tspan x="59.4" y={49}>
-                        OPPORTUNITIES
+                       DEVELOPMENT
                       </tspan>
                     </text>
                     <text
@@ -1492,10 +1534,10 @@ const Benefits = ({ title, content }) => {
                       letterSpacing="0.05em"
                     >
                       <tspan x="53.862" y={21}>
-                        SOLUTION AND{" "}
+                        RESPONSIVE{" "}
                       </tspan>
                       <tspan x="80.832" y={49}>
-                        FEATURES
+                        DESIGN
                       </tspan>
                     </text>
                     <text
@@ -1528,41 +1570,19 @@ const Benefits = ({ title, content }) => {
             </g>
           </svg>
         </div>
-
-        <div className="benifits-conten ms-5" >
-
-<h1 className="benifits-heading  pt-20 " style={{ textAlign: "start" }}>
- 
-Web Development  at Its Best
-</h1>
-<p className="benifits-subheading" style={{ textAlign: "start" }} >
-Web 3 gaming, a classic alternative to traditional gaming powered by blockchain technology that introduces 
-the concept of decentralization instead of using localized servers, promotes ownership of digital assets to
- users through NFTs & crypto and provides an unregulated marketplace for trading them.
-</p>
-<br/>
-<p className="benifits-subheading" style={{ textAlign: "start" }} >
-As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
- to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
-  to uncover the true potentia
-  As a top-tier web 3 game development company, we make use of futuristic tools and advanced technologies
- to come up with next-gen games that provide amazingly immersive experiences to every gamer. We make sure
-  to uncover the true potentia
- 
-</p>
-</div>
       </section>
 
       <div className="toast2 info h-60  border">
           
             
-            <section className="toast-content ms-40 p-5">
+            <section className="toast-content  p-5">
               <h3 className="toast-content-titl text-white text-start font-semibold text-3xl mt-2">
                 Did you know?
               </h3>
-              <p className="toast-content-subtitl text-start text-white text-2xl font-light mt-5">
-             It is quite surprising to know that in spite of a rough year for cryptocurrencies, the total number
-of web 3 gaming projects has actually increased by about 31% since January 2022.
+              <p className="toast-content-subtitl text-start text-white text-xl font-light mt-4">
+              According to the dApp Industry Report 2022, Web 3 gaming accounts for 
+              almost half of the overall blockchain activity with daily unique active 
+              wallets of 1.15 million and transactions count of 7.4 billion.
               </p>
             </section>
             <div className="toast-close">
@@ -1586,7 +1606,7 @@ of web 3 gaming projects has actually increased by about 31% since January 2022.
           <div className="container mx-auto px-6 p-6 bg-white">
             <div className="mb-16 text-center">
              
-              <p className="mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900">How we change the game
+              <p className="mt-2 text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">Why Choose Daksh  for {title} {content}
               </p>
             </div>
             <div className="flex flex-wrap my-12">
@@ -1602,7 +1622,7 @@ of web 3 gaming projects has actually increased by about 31% since January 2022.
                   >
                     <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
-                  <div className="ml-4 text-xl">Increase sales</div>
+                  <div className="ml-4 text-xl">Understanding Your Needs</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Consectetur pariatur irure exercitation sit amet id
@@ -1621,7 +1641,7 @@ of web 3 gaming projects has actually increased by about 31% since January 2022.
                   >
                     <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
-                  <div className="ml-4 text-xl">Enterprise-ready</div>
+                  <div className="ml-4 text-xl">Planning & Strategy</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Labore duis pariatur est exercitation laboris cupidatat amet
@@ -1640,7 +1660,7 @@ of web 3 gaming projects has actually increased by about 31% since January 2022.
                   >
                     <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
-                  <div className="ml-4 text-xl">Unlimited growth</div>
+                  <div className="ml-4 text-xl">Desgin & Developement</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Elit deserunt nisi esse duis cupidatat proident sit minim
@@ -1659,7 +1679,7 @@ of web 3 gaming projects has actually increased by about 31% since January 2022.
                   >
                     <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
-                  <div className="ml-4 text-xl">Recommended by experts</div>
+                  <div className="ml-4 text-xl">Testing & Launching</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Velit sit tempor pariatur quis pariatur incididunt culpa dolor
@@ -1678,7 +1698,7 @@ of web 3 gaming projects has actually increased by about 31% since January 2022.
                   >
                     <path d="M16 3C8.8 3 3 8.8 3 16s5.8 13 13 13 13-5.8 13-13c0-1.398-.188-2.793-.688-4.094L26.688 13.5c.2.8.313 1.602.313 2.5 0 6.102-4.898 11-11 11S5 22.102 5 16 9.898 5 16 5c3 0 5.695 1.195 7.594 3.094L25 6.688C22.7 4.386 19.5 3 16 3zm11.281 4.281L16 18.563l-4.281-4.282-1.438 1.438 5 5 .719.687.719-.687 12-12z"></path>
                   </svg>
-                  <div className="ml-4 text-xl">Modern platform</div>
+                  <div className="ml-4 text-xl">Ongoing Support</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Laboris elit consectetur sint nisi eu mollit proident sit

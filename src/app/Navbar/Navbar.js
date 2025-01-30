@@ -257,18 +257,15 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* <div className="hidden md:block">
+      <div className="hidden md:block">
         <SlidingButton
           text="Contact Us"
           bgColor="bg-white"
           textcolor="text-black"
         />
-      </div> */}
+      </div>
 
-<div className="">
-      <ExpandButton text="Conatct Us" />
-     
-    </div>
+
 
     </nav>
   );
