@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const CareerSection = () => {
+const CareerSectionfirst = () => {
   return (
 
 <>
@@ -54,4 +54,4 @@ const CareerSection = () => {
   );
 };
 
-export default CareerSection;
+export default CareerSectionfirst;
