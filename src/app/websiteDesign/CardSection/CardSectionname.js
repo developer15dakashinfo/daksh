@@ -2,15 +2,6 @@ import React, { useEffect, useRef } from "react";
 import "../CardSection/CardSection.scss";
 
 const CardSectionname = () => {
-  const elementsCCRef = useRef([]);
-  const elementsTLRef = useRef([]);
-
-  useEffect(() => {
-    
-
-
-
-
 
 return(
   <>
