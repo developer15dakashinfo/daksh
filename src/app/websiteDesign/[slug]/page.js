@@ -21,7 +21,8 @@ export default function WebsiteDesign({ params }) {
 
   const data = {
     appdevelopment: { title: "App ", content: "Developement"  },
-    webdevelopement: { title: "Web Developement ", content: "This is content for Page 2." },
+    webdevelopement: { title: "Web  ", content: "Developement" },
+    webdesigning: { title: "Web  ", content: "Designing" },
     marketing: { title: "Marketing ", content: "This is content for Page 3." },
     android_app_development: { title: "Android App Development", content: "This is content for Page 1." },
     ios_app_development: { title: "IOS App Development ", content: "This is content for Page 2." },
@@ -35,7 +36,7 @@ export default function WebsiteDesign({ params }) {
     api: { title: "Official Whatsapp API ", content: "This is content for Page 3." },
      };
 
-  const pageData = data[slug] || { title: "404", content: "Page not found." };
+  const pageData = data[slug] || { title: "", content: "" };
 
   return (
     <div>
@@ -46,7 +47,7 @@ export default function WebsiteDesign({ params }) {
       <CardSectionname/>
      
       <Testimonials/>
-      <FAQ/>
+      {/* <FAQ/> */}
       {/* <OurWebDesign title={pageData.title} content={pageData.content} /> */}
       
       

@@ -6049,221 +6049,58 @@ const CardSectionname = () => {
 
 return(
   <>
-  
-  <section id="features" className="px-2 space-y-6 py-8 md:py-12 lg:py-24 mx-40 mx-auto">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-4xl">Top Features of Web Development</h2>
-          <p className="max-w-[55%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-          Web 3 games come with a host of benefits that are briefly discussed below.
-          </p></div>
-        <div className=" grid justify-center gap-4 sm:grid-cols-2  md:grid-cols-3">
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-5">
-            <div className="flex h-[240px] w-[440px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <polygon points="12 2 19 21 12 17 5 21 12 2" />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Custom Brushes</h3>
-                <p className="text-sm text-muted-foreground">Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                
-                </p>
-              </div>
+  <h2 className="text-gray-800 text-5xl font-bold my-10">Top Features of Web Development</h2>
+  <div className="font-sans bg-white p-4">
+        <div className="md:max-w-7xl max-w-xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="text-left">
+              <h2 className="text-gray-800 text-2xl font-bold mb-4">Elevate Your Online Presence</h2>
+              <p className="mb-4 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.</p>
+              <p className="text-sm text-gray-500">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
+              <button type="button" className="mt-6 px-5 py-2.5 rounded-full text-white text-sm tracking-wider font-medium border border-current outline-none bg-blue-700 hover:bg-blue-800 active:bg-blue-700">Get started</button>
+            </div>
+            <div className="max-h-72">
+              <img src="https://readymadeui.com/management-img.webp" alt="Placeholder Image" className="rounded-lg object-contain w-full h-full" />
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <circle cx={12} cy={12} r={10} />
-                <line x1={12} y1={8} x2={12} y2={16} />
-                <line x1={12} y1={16} x2={16} y2={12} />
-                <line x1={12} y1={16} x2={8} y2={12} />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Layer Management</h3>
-                <p className="text-sm text-muted-foreground">Efficiently organize your artwork with layer management
-                  tools.
-                  Efficiently organize your artwork with layer management
-                  tools
-                  Efficiently organize your artwork with layer management
-                  tools
-                  Efficiently organize your artwork with layer management
-                  tools
-                  </p>
-              </div>
+          <hr className="border-gray-300 my-12" />
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="max-h-72 max-md:order-1">
+              <img src="https://readymadeui.com/analtsis.webp" alt="Placeholder Image" className="rounded-lg object-contain w-full h-full" />
+            </div>
+            <div className="text-left">
+              <h2 className="text-gray-800 text-2xl font-bold mb-4">Your Success, Our Commitment</h2>
+              <p className="mb-4 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.</p>
+              <p className="text-sm text-gray-500">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
+              <button type="button" className="mt-6 px-5 py-2.5 rounded-full text-white text-sm tracking-wider font-medium border border-current outline-none bg-blue-700 hover:bg-blue-800 active:bg-blue-700">Get started</button>
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <rect x={3} y={3} width={18} height={18} rx={2} ry={2} />
-                <line x1={3} y1={9} x2={21} y2={9} />
-                <line x1={3} y1={15} x2={21} y2={15} />
-                <line x1={9} y1={3} x2={9} y2={21} />
-                <line x1={15} y1={3} x2={15} y2={21} />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Live Collaboration</h3>
-                <p className="text-sm text-muted-foreground">Work simultaneously with others on the same project in
-                  real-time.
-                  Efficiently organize your artwork with layer management
-                  tools
-                  Efficiently organize your artwork with layer management
-                  tools
-                  Efficiently organize your artwork with layer management
-                  tools</p>
-              </div>
+          <hr className="border-gray-300 my-12" />
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="text-left">
+              <h2 className="text-gray-800 text-2xl font-bold mb-4">Elevate Your Online Presence</h2>
+              <p className="mb-4 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.</p>
+              <p className="text-sm text-gray-500">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
+              <button type="button" className="mt-6 px-5 py-2.5 rounded-full text-white text-sm tracking-wider font-medium border border-current outline-none bg-blue-700 hover:bg-blue-800 active:bg-blue-700">Get started</button>
+            </div>
+            <div className="max-h-72">
+              <img src="https://readymadeui.com/management-img.webp" alt="Placeholder Image" className="rounded-lg object-contain w-full h-full" />
             </div>
           </div>
         </div>
-
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 ] md:grid-cols-3">
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <polygon points="12 2 19 21 12 17 5 21 12 2" />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Custom Brushes</h3>
-                <p className="text-sm text-muted-foreground">Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <circle cx={12} cy={12} r={10} />
-                <line x1={12} y1={8} x2={12} y2={16} />
-                <line x1={12} y1={16} x2={16} y2={12} />
-                <line x1={12} y1={16} x2={8} y2={12} />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Layer Management</h3>
-                <p className="text-sm text-muted-foreground">Efficiently organize your artwork with layer management
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Efficiently organize your artwork with layer management
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                tools
-                  tools.</p>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <rect x={3} y={3} width={18} height={18} rx={2} ry={2} />
-                <line x1={3} y1={9} x2={21} y2={9} />
-                <line x1={3} y1={15} x2={21} y2={15} />
-                <line x1={9} y1={3} x2={9} y2={21} />
-                <line x1={15} y1={3} x2={15} y2={21} />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Live Collaboration</h3>
-                <p className="text-sm text-muted-foreground">Work simultaneously with others on the same project in
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes
-                Efficiently organize your artwork with layer management
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                tools.
-                  real-time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2  md:grid-cols-3">
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <polygon points="12 2 19 21 12 17 5 21 12 2" />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Custom Brushes</h3>
-                <p className="text-sm text-muted-foreground">Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Efficiently organize your artwork with layer management
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                tools
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <circle cx={12} cy={12} r={10} />
-                <line x1={12} y1={8} x2={12} y2={16} />
-                <line x1={12} y1={16} x2={16} y2={12} />
-                <line x1={12} y1={16} x2={8} y2={12} />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Layer Management</h3>
-                <p className="text-sm text-muted-foreground">Efficiently organize your artwork with layer management
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                Efficiently organize your artwork with layer management
-                tools
-                  tools.</p>
-              </div>
-            </div>
-          </div>
-          <div className="relative overflow-hidden rounded-lg border bg-gray-100/50 p-2">
-            <div className="flex h-[240px] flex-col justify-between rounded-md p-6"><svg xmlns="http://www.w3.org/2000/svg" width={48} height={48} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className>
-                <rect x={3} y={3} width={18} height={18} rx={2} ry={2} />
-                <line x1={3} y1={9} x2={21} y2={9} />
-                <line x1={3} y1={15} x2={21} y2={15} />
-                <line x1={9} y1={3} x2={9} y2={21} />
-                <line x1={15} y1={3} x2={15} y2={21} />
-              </svg>
-              <div className="space-y-2">
-                <h3 className="font-bold">Live Collaboration</h3>
-                <p className="text-sm text-muted-foreground">Work simultaneously with others on the same project in
-                Enhance your creativity with a variety of custom brushes.
-                Enhance your creativity with a variety of custom brushes.
-                Efficiently organize your artwork with layer management
-                Efficiently organize your artwork with layer management
-                tools
-                tools
-                  real-time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <div className="text-center">
-      Two of the most-played web 3 games are Alien Worlds and Splinterlands with over 160,000 daily active wallets. <br/>
-      A web 3 trading card game known as Gods Unchained generated more than $18 million with its in-game assets.
       </div>
       
-      <div className="flex flex-col justify-center w-full sm:w-auto sm:flex-row p-4">
-        <a href className="flex flex-row items-center justify-center w-full px-4 py-4 mb-4 text-sm font-bold bg-green-300 leading-6 capitalize duration-100 transform rounded-sm shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-4 md:pl-8 md:pr-6 xl:pl-12 xl:pr-10   hover:shadow-lg hover:-translate-y-1">
+      
+      
+      <div className="flex flex-col justify-center w-full sm:w-auto sm:flex-row p-4 my-10">
+        <a href className="flex flex-row items-center justify-center w-full px-4 py-4 mb-4 text-sm font-bold bg-blue-400 leading-6 capitalize duration-100 transform rounded-sm shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-4 md:pl-8 md:pr-6 xl:pl-12 xl:pr-10   hover:shadow-lg hover:-translate-y-1">
         Connect on Whatsapp
           <span className="ml-4">
             <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" className="w-5 h-5 fill-current"><path fill="currentColor" d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z" />
             </svg>
           </span>
         </a>
-        <a href className="flex items-center justify-center w-full px-4 py-4 text-sm font-bold leading-6 capitalize duration-100 transform border-2 rounded-sm cursor-pointer border-green-300 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:w-auto sm:px-6 border-text  hover:shadow-lg hover:-translate-y-1">
+        <a href className="flex items-center justify-center w-full px-4 py-4 text-sm font-bold leading-6 capitalize duration-100 transform border-2 rounded-sm cursor-pointer border-blue-900 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:w-auto sm:px-6 border-text  hover:shadow-lg hover:-translate-y-1">
         Connect on Telegram
         </a>
       </div>

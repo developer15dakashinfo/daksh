@@ -49,8 +49,8 @@ const Navbar = () => {
         {
           heading: "WEB DEVELOPMENT",
           items: [
-            { label: "Web Designing ", link: "/websiteDesign/appdevelopment" },
-            { label: "Web Development", link: "/websiteDesign/webdevelopment" },
+            { label: "Web Designing ", link: "/websiteDesign/webdesigning" },
+            { label: "Web Development", link: "/websiteDesign/webdevelopement" },
           ],
         },
         {
