@@ -322,7 +322,7 @@ const Home2 = () => {
                 )}
                 <div className="overflow-hidden flex">
                 <div className="me-2 text-white">{data.suffix}</div>
-                  <div className="flex flex-col justify-center items-center h-[59px] w-[40px] relative overflow-hidden">
+                  <div className="flex flex-col justify-center items-center h-[60px] w-[40px] relative overflow-hidden">
                     {[...Array(10).keys()].map((num) => (
                       <span
                         key={num} 
@@ -354,7 +354,7 @@ const Home2 = () => {
  </div>
 
  <div
-  className="overflow-hidden relative mt-44"
+  className="overflow-hidden relative mt-60"
   style={{
     height: "100vh",
     position: "relative",
