@@ -8,6 +8,12 @@ import About2 from "./about2/about2";
 import About3 from "./about3/about3";
 
 export default function About() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensures code runs only on the client
+  }, []);
+  
   return (
     <div>
       <Navbar />
