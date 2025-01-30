@@ -1174,7 +1174,7 @@ const Benefits = ({title, content}) => {
             </div>
           </div>
       </div>
-      <section className="benifits-section">
+      <section className="flex">
      
         <div className="benifits-images">
         <svg
