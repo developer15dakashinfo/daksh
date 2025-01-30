@@ -140,7 +140,94 @@ p {
 
 
 
+.toast2 {
+  display: flex;
+  margin: 1rem;
+  padding: 0.75rem;
 
+  background-color: rgb(40, 40, 78);
+  border-radius: 0.3125rem;
+  box-shadow: 0px 0px 0.625rem 0.0625rem var(--box-shadow-color);
+
+  &-status {
+    position: relative;
+    padding-left: 1.25rem;
+    padding-top: 0.875rem;
+    font-size: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0.3125rem;
+      height: 100%;
+      border-radius: 0.375rem;
+    }
+
+    .info & {
+      color: var(--info);
+    }
+
+    .info &::before {
+      background-color: var(--info);
+    }
+
+    .warning & {
+      color: var(--warning);
+    }
+
+    .warning &::before {
+      background-color: var(--warning);
+    }
+
+    .success & {
+      color: var(--success);
+    }
+
+    .success &::before {
+      background-color: var(--success);
+    }
+
+    .error & {
+      color: var(--danger);
+    }
+
+    .error &::before {
+      background-color: var(--danger);
+    }
+  }
+
+  &-content {
+    flex: 1;
+    padding: 0.5rem 1rem;
+
+    &-title {
+      font-size: 1.25rem;
+      line-height: 1.5;
+    
+    }
+
+    &-subtitle {
+      font-size: 1rem;
+      line-height: 1.5;
+      letter-spacing: 0.03125rem;
+      color: var(--topography-400);
+    }
+  }
+
+  &-close {
+    margin-top: 1rem;
+    font-size: 1.75rem;
+    color: var(--topography-400);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--topography-700);
+    }
+  }
+}
 
 :root {
     --heading-font: "Poppins";
@@ -148,7 +235,7 @@ p {
     --heading-size: 50px;
     --content-size: 20px;
     --heading-line-height: 75px;
-    --heading-color: #494949;
+   
   }
   
   body {
@@ -179,7 +266,7 @@ p {
   .benifits-section {
     background-color: #f7f7f9;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
   }
   

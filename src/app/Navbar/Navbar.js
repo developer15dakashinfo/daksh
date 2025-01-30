@@ -4,15 +4,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
-import "./Navbar.css"
 import "./Navbar.css";
 import logo from "../assets/headerlogo.svg";
-
 import SlidingButton from "../SlidingButton/SlidingButton";
-import "./Navbar.css"
-import Image from "next/image";
-
 import "./Navbar.css";
+import Image from "next/image";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -179,8 +175,7 @@ const Navbar = () => {
     >
       <div className="text-2xl font-bold">
         <a href="/" className="flex items-center">
-          <Image src={logo} alt="Logo" className="h-10" /> 
-          
+          <Image src={logo} alt="Logo" className="h-10" />
         </a>
       </div>
 
