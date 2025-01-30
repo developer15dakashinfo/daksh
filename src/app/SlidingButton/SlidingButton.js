@@ -29,7 +29,7 @@ const SlidingButton = ({
         </div>
 
         {/* Second Sliding Section */}
-        <div className="absolute pb-3 inset-0 flex items-center justify-end transition-transform duration-500 group-hover:translate-x-0 translate-x-full z-0">
+        <div className="absolute inset-0 flex items-center justify-end transition-transform duration-500 group-hover:translate-x-0 translate-x-full z-0">
           <div className={`h-10 w-10 rounded-full border-2 border-white flex items-center justify-center text-black font-bold ${arrowBgColor} ${arrowTextColor}`}>
             →
           </div>
