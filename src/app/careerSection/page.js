@@ -3,7 +3,7 @@
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import CareerSection from "./CareerSection";
-import ContactSection from "./ContactSection/ContactSection";
+import ContactSection from "./ContactSection/ContactSectionname";
 import JoinOurTeam from "./JoinOurTeam/JoinOurTeam";
 import OurTeam from "./ourTeam/ourTeam";
 
