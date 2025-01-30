@@ -1159,7 +1159,7 @@ const Benefits = ({title, content}) => {
             <div className="toast-status">
               <i className="bi bi-info-circle-fill" />
             </div>
-            <seection className="toast-content me-40">
+            <section className="toast-content me-40">
               <h3 className="toast-content-title text-start font-semibold text-7xl mt-2">
                 Did you know?
               </h3>
@@ -1168,7 +1168,7 @@ const Benefits = ({title, content}) => {
               almost half of the overall blockchain activity with daily unique active 
               wallets of 1.15 million and transactions count of 7.4 billion.
               </p>
-            </seection>
+            </section>
             <div className="toast-close">
               <i className="bi bi-x" />
             </div>
@@ -1560,7 +1560,7 @@ As a top-tier web 3 game development company, we make use of futuristic tools an
       <div className="toast2 info h-60  border">
           
             
-            <seection className="toast-content ms-40 p-5">
+            <section className="toast-content ms-40 p-5">
               <h3 className="toast-content-titl text-white text-start font-semibold text-3xl mt-2">
                 Did you know?
               </h3>
@@ -1568,7 +1568,7 @@ As a top-tier web 3 game development company, we make use of futuristic tools an
              It is quite surprising to know that in spite of a rough year for cryptocurrencies, the total number
 of web 3 gaming projects has actually increased by about 31% since January 2022.
               </p>
-            </seection>
+            </section>
             <div className="toast-close">
               <i className="bi bi-x" />
             </div>
