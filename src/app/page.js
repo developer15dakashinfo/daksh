@@ -113,8 +113,8 @@ export default function Page({ Component, pageProps }) {
         <>
           <Navbar />
           <div>
-            {/* <Home1 />
-            <Home2 /> */}
+            <Home1 />
+            <Home2 />
             <Home3 />
             <HomeAbout />
             <AchievementSection />
@@ -124,7 +124,7 @@ export default function Page({ Component, pageProps }) {
             <Home6 />
             <SolutionForAllSection />
 
-            {/* <Home7 /> */}
+            <Home7 />
             <CaseStudySection />
             <ContactSection />
             <FAQ />

@@ -161,7 +161,7 @@ const StackingCards = () => {
             >
               <div
                 className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden sm:h-auto ${
-                  index === 0 ? "h-[40vh]" : "h-[80vh]"
+                  index === 0 ? "h-[40vh]" : "h-[75vh]"
                 }`}
                 style={{ backgroundColor: card.backgroundColor }}
               >
