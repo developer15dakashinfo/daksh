@@ -159,7 +159,7 @@ const Navbar = () => {
     { label: "About Us", link: "/about" },
     { label: "Career", link: "/careerSection" },
     { label: "Pricing", link: "/pricing" },
-    { label: "Contact Us", link: "/contact" },
+    
   ];
 
   return (
