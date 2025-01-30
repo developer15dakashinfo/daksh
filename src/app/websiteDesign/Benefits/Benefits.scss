@@ -230,8 +230,7 @@ p {
 }
 
 :root {
-    --heading-font: "Poppins";
-    --content-font: "Nunito";
+   
     --heading-size: 50px;
     --content-size: 20px;
     --heading-line-height: 75px;
@@ -255,7 +254,7 @@ p {
   }
   
   .orange {
-    color: #95235B;
+    color: #235495;
   }
   
   svg.banner-img {
@@ -275,7 +274,7 @@ p {
     font-family: var(--heading-font);
     font-size: var(--heading-size);
     line-height: var(--heading-line-height);
-    font-weight: 500;
+    font-weight: 700;
     color: var(--heading-color);
     margin: 0px;
   }

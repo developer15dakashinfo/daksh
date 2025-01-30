@@ -4,7 +4,7 @@ import { FaTwitter, FaFacebookF, FaGooglePlusG,FaSkype, FaLinkedinIn } from 'rea
 import { LuInstagram } from "react-icons/lu";
 
 
-const ContactSection = () => {
+const ContactSectionname = () => {
   const iconColors = ["bg-blue-500", "bg-blue-700", "bg-sky-500", "bg-gradient-to-tr from-yellow-400 via-orange-500 via-pink-500 to-violet-600", "bg-blue-600"];
   return (
 <div
@@ -91,4 +91,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ContactSectionname;

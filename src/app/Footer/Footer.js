@@ -17,7 +17,13 @@ const Footer = () => {
   const words = ["Fast", "Smart", "Diligent", "Focused"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMovingDown, setIsMovingDown] = useState(true);
-  const iconColors = ["bg-blue-500", "bg-blue-700", "bg-sky-500", "bg-gradient-to-tr from-yellow-400 via-orange-500 via-pink-500 to-violet-600", "bg-blue-600"];
+  const iconColors = [
+    "bg-blue-500",
+    "bg-blue-700",
+    "bg-sky-500",
+    "bg-gradient-to-tr from-yellow-400 via-orange-500 via-pink-500 to-violet-600",
+    "bg-blue-600",
+  ];
 
   const boxStyle = {
     width: 20,
@@ -25,6 +31,14 @@ const Footer = () => {
     backgroundColor: "#f5f5f5",
     borderRadius: 5,
   };
+
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -97,9 +111,7 @@ const Footer = () => {
                 <div
                   className="absolute transition-all duration-800 transform text-5xl sm:text-5xl md:text-6xl lg:text-[65px] font-bold text-white"
                   style={{
-                    top: `${
-                      currentIndex * (window.innerWidth < 640 ? 59 : 80)
-                    }px`,
+                    top: `${currentIndex * (windowWidth < 640 ? 59 : 80)}px`,
                   }}
                 >
                   Be
@@ -180,23 +192,19 @@ const Footer = () => {
               </address>
 
               <div className="flex justify-center lg:justify-start mt-4 space-x-3">
-               
-               
-
-{[
-  FaTwitter,
-  FaFacebookF,
-  FaSkype,
-  LuInstagram,
-  FaLinkedinIn,
-].map((Icon, idx) => (
-  <a key={idx} href="#" className="p-1 rounded-full">
-    <div className={`p-3 rounded-full ${iconColors[idx]}`}>
-      <Icon className="text-xl text-white" />
-    </div>
-  </a>
-))}
-
+                {[
+                  FaTwitter,
+                  FaFacebookF,
+                  FaSkype,
+                  LuInstagram,
+                  FaLinkedinIn,
+                ].map((Icon, idx) => (
+                  <a key={idx} href="#" className="p-1 rounded-full">
+                    <div className={`p-3 rounded-full ${iconColors[idx]}`}>
+                      <Icon className="text-xl text-white" />
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

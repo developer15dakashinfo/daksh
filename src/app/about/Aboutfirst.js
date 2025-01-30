@@ -1,7 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import "./Pricing.scss";
 
-export default function About1() {
+export default function Aboutfirst() {
     return (
       <div>
   

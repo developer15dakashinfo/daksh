@@ -12,7 +12,7 @@ import Home7 from "./Home/Home7/Home7";
 import HomeAbout from "./Home/HomeAbout/HomeAbout";
 import AchievementSection from "./Home/AchievementSection/AchievementSection";
 import SolutionForAllSection from "./Home/SolutionForAllSection/SolutionForAllSection";
-import ContactSection from "./careerSection/ContactSection/ContactSection";
+import ContactSection from "./careerSection/ContactSection/ContactSectionname";
 import FAQ from "./websiteDesign/FAQ/FAQ";
 import CaseStudySection from "./Home/CaseStudySection/CaseStudySection";
 
