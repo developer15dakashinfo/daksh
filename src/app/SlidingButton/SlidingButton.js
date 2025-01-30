@@ -67,7 +67,7 @@ const SlidingButton = ({
         {/* First Sliding Section - Initially visible */}
         <div className="absolute inset-0 flex items-center transition-transform duration-500 group-hover:-translate-x-full z-10">
           <button
-            className={`h-12 w-36 mr-2 text-black font-medium rounded-full flex items-center justify-center ${bgColor}`}
+            className={`h-12 w-40 mr-2 text-black font-medium rounded-full flex items-center justify-center ${bgColor}`}
             onClick={onClick}
           >
             <p className={`font-bold text-[16px] ${textcolor}`}>{text}</p>
