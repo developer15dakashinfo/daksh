@@ -11,6 +11,7 @@ const ExpandButton = ({ text = "Contact Us", className = "" }) => {
           <span className="btn-text">{text} </span>
           
           <FaArrowRight className="btn-icon" />
+          
         </button>
       </section>
     </main>
