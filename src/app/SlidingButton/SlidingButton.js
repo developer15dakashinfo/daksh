@@ -88,6 +88,7 @@ const SlidingButton = ({
             <FaArrowRight />
           </span>
       </div>
+      
     </div>
   );
 };
