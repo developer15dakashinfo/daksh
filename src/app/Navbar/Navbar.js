@@ -256,14 +256,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* <div className="hidden md:block">
-        <SlidingButton
-          text="Contact Us"
-          bgColor="bg-white"
-          textcolor="text-black"
-        />
-      </div> */}
-
+      <div className="hidden md:block">
       <a
         href="#_"
         class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 border-2 border-white overflow-hidden  font-semibold text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 bg-gray-50 group"
@@ -308,6 +301,9 @@ const Navbar = () => {
           Contact Us
         </span>
       </a>
+      </div>
+
+      
     </nav>
   );
 };
