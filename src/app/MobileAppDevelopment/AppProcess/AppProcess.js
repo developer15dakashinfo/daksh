@@ -38,7 +38,7 @@ const HomeProcess4 = () => {
         {processSteps.map((step, index) => (
           <div key={index} className="text-center px-10">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
-              <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
+              <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
