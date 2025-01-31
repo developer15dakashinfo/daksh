@@ -65,7 +65,7 @@ const HomeSection3 = () => {
           className="group relative mb-8 flex flex-col rounded-2xl border border-blue-300 bg-white p-8 shadow-lg dark:border-gray-600 dark:bg-gray-800 lg:mb-4 transition-transform duration-500 ease-in-out transform hover:-translate-y-3"
         >
           
-          <div className="absolute -top-8 right-4 flex h-20 w-20 items-center justify-center rounded-full border border-blue-400 shadow-md dark:border-gray-500 dark:bg-gray-700 lg:right-8 overflow-hidden">
+          <div className="absolute -top-8 left-40 flex h-20 w-20 items-center justify-center rounded-full border border-blue-400 shadow-md dark:border-gray-500 dark:bg-gray-700 lg:right-8 overflow-hidden">
             <img
               src={feature.img}
               alt="img"
