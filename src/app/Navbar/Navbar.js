@@ -9,7 +9,6 @@ import logo from "../assets/headerlogo.svg";
 import SlidingButton from "../SlidingButton/SlidingButton";
 import "./Navbar.css";
 import Image from "next/image";
-import ExpandButton from "../Expandbutton/Expandbutton";
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
