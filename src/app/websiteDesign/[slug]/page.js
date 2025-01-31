@@ -9,6 +9,7 @@ import OurWebDesign from "../OurWebDesign/OurWebDesign";
 import Benefits from "../Benefits/Benefits";
 import Testimonials from "../testimonials/Testimonials";
 import FAQ from "../FAQ/FAQ";
+import HomeProcess4 from "@/app/MobileAppDevelopment/AppProcess/AppProcess";
 
 export default function WebsiteDesign({ params }) {
   const [slug, setSlug] = useState("");
@@ -45,6 +46,7 @@ export default function WebsiteDesign({ params }) {
       {/* <HeroVisual title={pageData.title} content={pageData.content} /> */}
 
       <CardSectionname/>
+      <HomeProcess4/>
      
       <Testimonials/>
       {/* <FAQ/> */}
