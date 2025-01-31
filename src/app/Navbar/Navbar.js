@@ -210,7 +210,7 @@ const Navbar = () => {
           >
             <a
               href={item.link}
-              className="text-white font-[500] text-[17px] hover:text-gray-400 transition-colors relative group flex items-center justify-between md:justify-start w-full"
+              className="text-white font-[500] text-[18px] hover:text-gray-400 transition-colors relative group flex items-center justify-between md:justify-start w-full"
             >
               {item.label}
 
@@ -235,14 +235,14 @@ const Navbar = () => {
                 <div className="container justify-center my-8 pt-10 pb-10 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-2 text-start">
-                      <h3 className="font-semibold text-white">
+                      <h3 className="font-semibold text-[17px] text-white">
                         {dropdownItem.heading}
                       </h3>
                       <ul>
                         {dropdownItem.items.map((subItem, j) => (
                           <li
                             key={j}
-                            className="hover:text-gray-300 py-2 font-semibold"
+                            className="hover:text-gray-300 text-[17px] py-2 font-[400]"
                           >
                             <a href={subItem.link}>{subItem.label}</a>
                           </li>
