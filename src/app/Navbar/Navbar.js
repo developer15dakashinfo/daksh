@@ -259,13 +259,13 @@ const Navbar = () => {
       <div className="hidden md:block">
       <a
         href="#_"
-        class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 border-2 border-white overflow-hidden  font-semibold text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 bg-gray-50 group"
+        className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 border-2 border-white overflow-hidden  font-semibold text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 bg-gray-50 group"
       >
-        <span class="absolute bottom-0 left-0 w-full  transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
+        <span className="absolute bottom-0 left-0 w-full  transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
 
-        <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+        <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
           {/* <svg
-            class="w-5 h-5 text-black font-bold"
+            className="w-5 h-5 text-black font-bold"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -280,9 +280,9 @@ const Navbar = () => {
           </svg> */}
            <FaCircleArrowRight className="w-6 h-6 text-black font-bold" />
         </span>
-        <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+        <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
           {/* <svg
-            class="w-5 h-5 text-white font-bold"
+            className="w-5 h-5 text-white font-bold"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -297,7 +297,7 @@ const Navbar = () => {
           </svg> */}
           <FaCircleArrowRight className="w-6 h-6 text-white font-bold" />
         </span>
-        <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white font-semibold">
+        <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white font-semibold">
           Contact Us
         </span>
       </a>

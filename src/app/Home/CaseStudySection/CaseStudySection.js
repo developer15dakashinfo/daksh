@@ -33,7 +33,7 @@ export default function CaseStudies() {
   ];
 
   return (
-    <section className="pt-20 pb-48 bg-gray-100">
+    <section className="pt-20 pb-48 bg-gray-200">
       <div className="text-center mb-10">
         <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">

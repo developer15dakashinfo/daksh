@@ -15,7 +15,8 @@ import SolutionForAllSection from "./Home/SolutionForAllSection/SolutionForAllSe
 import ContactSection from "./careerSection/ContactSection/ContactSectionname";
 import FAQ from "./websiteDesign/FAQ/FAQ";
 import CaseStudySection from "./Home/CaseStudySection/CaseStudySection";
-import TestimonialSection from "./Home/Testimonial/Testimonial";
+import TestimonialSection from "./Home/testimonial/Testimonial_section";
+import Featuredsection from "./Home/featured/Featuredsection";
 
 export default function Page({ Component, pageProps }) {
   const [scrollY, setScrollY] = useState(0);
@@ -125,10 +126,13 @@ export default function Page({ Component, pageProps }) {
             <Home6 />
             <SolutionForAllSection />
 
-            <Home7 />
+            
             <CaseStudySection />
+            <Featuredsection/>
+            <Home7 />
             <ContactSection />
             <TestimonialSection/>
+           
             <FAQ />
             <Footer />
           </div>
