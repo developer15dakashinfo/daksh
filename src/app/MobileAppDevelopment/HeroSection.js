@@ -1,6 +1,6 @@
 import React from 'react'
 import SlidingButton from '../SlidingButton/SlidingButton';
-import './HeroSection.scss';
+import './HeroSectionname.scss';
 const HomeSection1 = () => {
   return (
     <section className="banner-section">
