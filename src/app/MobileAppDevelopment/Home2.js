@@ -105,16 +105,7 @@ const HomeSection2 = () => {
     
     <div className="grid grid-cols-1 md:grid-cols-2 px-5 md:px-20 py-8 md:py-16 lg:py-20 gap-10">
       
-      <div className="flex justify-center">
-        <img
-          className="object-cover rounded-lg h-[350px] md:h-[450px] w-full md:w-auto"
-          src="https://aresourcepool.com/wp-content/uploads/2022/03/Android-1.png"
-          alt="Lightbulb"
-        />
-      </div>
-
-      
-      <div className="text-center md:text-left">
+    <div className="text-center md:text-left">
         <h1 className="text-2xl md:text-4xl font-bold">
           Experienced Android App Development Consultants at Your Service
         </h1>
@@ -135,6 +126,17 @@ const HomeSection2 = () => {
           />
         </div>
       </div>
+      
+      <div className="flex justify-center">
+        <img
+          className="object-cover rounded-lg h-[350px] md:h-[450px] w-full md:w-auto"
+          src="https://aresourcepool.com/wp-content/uploads/2022/03/Android-1.png"
+          alt="Lightbulb"
+        />
+      </div>
+
+      
+
     </div>
   </div>
 

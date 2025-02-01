@@ -87,7 +87,7 @@ const CenterImage = () => {
       backgroundRepeat: "no-repeat",
     }}
   >
-    <Logo />
+
   </motion.div>
 </>
 

@@ -5,86 +5,81 @@ import "./FAQ.scss";
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const faqData = [
-    {
-      question: "How to do something?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et eros in sapien malesuada sodales nec eu purus.",
-    },
-    {
-      question: "What are the benefits of using this service?",
-      answer:
-        "Aliquam venenatis aliquet nisi, dictum tristique lectus faucibus vitae. Ut sit amet arcu fermentum orci.",
-    },
-    {
-      question: "Is there a free trial available?",
-      answer:
-        "Yes, we offer a 7-day free trial for new users to explore the features of our service.",
-    },
-    {
-      question: "How can I reset my password?",
-      answer:
-        "Go to the account settings, click on 'Forgot Password', and follow the instructions sent to your email.",
-    },
-    {
-      question: "Can I cancel my subscription at any time?",
-      answer:
-        "Yes, you can cancel your subscription at any time. Your access will remain until the end of the billing cycle.",
-    },
-  ];
-
   const toggleFAQ = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
+  const faqData = [
+    {
+      question: "How secure is my insurance information?",
+      answer:
+        "We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential. We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.",
+    },
+    {
+      question: "How can I customize my insurance coverage?",
+      answer:
+        "Our insurance plans are customizable. You can tailor your coverage to meet your specific needs and budget. Our insurance plans are customizable. You can tailor your coverage to meet your specific needs and budget.",
+    },
+    {
+      question: "Is there a waiting period for insurance claims?",
+      answer:
+        "There may be a waiting period for certain insurance claims, depending on the policy terms and conditions. Please refer to your policy documents for details. We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.",
+    },
+    {
+      question: "Is there a waiting period for insurance claims?",
+      answer:
+        "There may be a waiting period for certain insurance claims, depending on the policy terms and conditions. Please refer to your policy documents for details. We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.",
+    },
+    {
+      question: "Is there a waiting period for insurance claims?",
+      answer:
+        "There may be a waiting period for certain insurance claims, depending on the policy terms and conditions. Please refer to your policy documents for details. We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.",
+    },
+    {
+      question: "Is there a waiting period for insurance claims?",
+      answer:
+        "There may be a waiting period for certain insurance claims, depending on the policy terms and conditions. Please refer to your policy documents for details. We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.",
+    },
+  ];
+
   return (
-
-    <section className="relative py-20 px-4 sm:px-8 lg:px-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto text-center">
-        <span className="inline-block py-1 px-3 mb-4 text-xs font-semibold text-orange-900 bg-orange-50 rounded-full">
-          FREQUENTLY ASKED QUESTIONS
-        </span>
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-          <span>You ask? We </span>
-          <span className="font-serif italic text-blue-900">answer.</span>
-        </h1>
+    <div className="py-24 px-8 max-w-5xl mx-auto flex flex-col md:flex-row gap-12">
+      <div className="flex flex-col text-left basis-1/2">
+        <p className="inline-block font-semibold text-primary mb-4">
+          Insurance FAQ
+        </p>
+        <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
+          Frequently Asked Questions
+        </p>
       </div>
-
-      <div className="bg-white rounded-2xl shadow-lg px-6 sm:px-10 md:px-16 py-10 sm:py-14 mt-10 max-w-5xl mx-auto">
-        {faqData.map((faq, index) => (
-          <div
-            key={index}
-            className="cursor-pointer mb-6 pb-6 border-b border-gray-200 last:border-0"
-            onClick={() => toggleFAQ(index)}
-          >
-            <div className="flex justify-between items-start">
-              <h3
-                className={`text-lg sm:text-lg font-[500] ${
-                  activeIndex === index ? "text-blue-900" : "text-black"
-                }`}
-              >
-                {faq.question}
-              </h3>
-              <div className="icon">
-                {activeIndex === index ? (
-                  <IoMdArrowDropup size={24} />
-                ) : (
-                  <IoMdArrowDropdown size={24} />
-                )}
-              </div>
-            </div>
-            <div
-              className={`transition-all duration-300 overflow-hidden ${
-                activeIndex === index ? "max-h-[1000px] mt-3" : "max-h-0"
-              }`}
+      <ul className="basis-1/2">
+        {faqData.map((item, index) => (
+          <li key={index}>
+            <button
+              className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+              onClick={() => toggleFAQ(index)}
+              aria-expanded={activeIndex === index}
             >
-              <p className="text-gray-500 text-sm sm:text-lg">{faq.answer}</p>
+              <span className="flex-1 text-base-content">{item.question}</span>
+              {activeIndex === index ? (
+                <IoMdArrowDropup className="w-5 h-5 text-primary" />
+              ) : (
+                <IoMdArrowDropdown className="w-5 h-5 text-primary" />
+              )}
+            </button>
+            <div
+              className="transition-all duration-300 ease-in-out overflow-hidden"
+              style={{
+                maxHeight: activeIndex === index ? "200px" : "0",
+                opacity: activeIndex === index ? 1 : 0,
+              }}
+            >
+              <div className="pb-5 leading-relaxed">{item.answer}</div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
-    </section>
-    
+      </ul>
+    </div>
   );
 };
 
