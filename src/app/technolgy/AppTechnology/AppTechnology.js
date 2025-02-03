@@ -1,6 +1,7 @@
 import React from "react";
 import { BiMobileAlt } from "react-icons/bi";
-import { FaArrowRightToBracket } from "react-icons/fa6";
+import { BiArrowToRight } from "react-icons/bi";
+import { MdOutlineHeadphones } from "react-icons/md";
 
 const AndroidAppServices = () => {
   return (
@@ -20,7 +21,7 @@ const AndroidAppServices = () => {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
             <div className="flex items-center space-x-3">
-              <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
+              <span className="bg-gradient-to-r from-black to-gray-700 p-2 rounded-full text-white">
                 <BiMobileAlt className="text-2xl" />
               </span>
 
@@ -28,13 +29,13 @@ const AndroidAppServices = () => {
             </div>
             <div className="flex items-center space-x-3">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                <BiMobileAlt className="text-2xl" />
+                <MdOutlineHeadphones  className="text-2xl" />
               </span>
               <span className="text-lg">Long-term Support & Maintenance</span>
             </div>
             <div className="flex items-center space-x-3">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                <FaArrowRightToBracket className="text-2xl" />
+                <BiArrowToRight className="text-2xl" />
               </span>
               <span className="text-lg">Expertise in Kotlin and Java</span>
             </div>
