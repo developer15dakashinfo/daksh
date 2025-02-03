@@ -103,7 +103,7 @@ const Navbar = () => {
         {
           heading: "MOBILE APP DEVELOPMENT",
           items: [
-            { label: "Android ", link: "/websiteDesign/appdevelopment" },
+            { label: "Android", link: "/technolgy/android" },
             { label: "IOS", link: "/websiteDesign/webdevelopment" },
             { label: "Flutter", link: "/websiteDesign/webdevelopment" },
           ],
