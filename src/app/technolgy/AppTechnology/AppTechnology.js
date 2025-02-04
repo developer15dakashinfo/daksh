@@ -33,9 +33,9 @@ const AndroidAppServices = ({ title, content }) => {
 
             <div className="relative text-white pt-28 px-10 lg:px-40 gap-20 flex flex-col lg:flex-row justify-between items-center">
               <div className="lg:w-1/2 space-y-6">
-                <h3 className="text-blue-800 text-lg font-semibold">{title}</h3>
+                <h3 className="text-blue-800 text-lg font-semibold">Technology</h3>
                 <h1 className="text-5xl font-bold">
-                  {content} App Development Services
+                {title} Development Services
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
                   <div className="flex items-center space-x-3">

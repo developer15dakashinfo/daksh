@@ -45,7 +45,7 @@ const Navbar = () => {
           items: [
             { label: "Web Designing ", link: "/websiteDesign/webdesigning" },
             {
-              label: "Web Development",
+              label: "Website Development",
               link: "/websiteDesign/webdevelopement",
             },
           ],
@@ -55,15 +55,15 @@ const Navbar = () => {
           items: [
             {
               label: "Android App Development",
-              link: "/MobileAppDevelopment",
+              link: "/MobileAppDevelopment/android_app_development",
             },
             {
               label: "iOS App Development",
-              link: "/MobileAppDevelopment",
+              link: "/MobileAppDevelopment/ios_app_development",
             },
             {
               label: "Flutter App Development",
-              link: "/MobileAppDevelopment",
+              link: "/MobileAppDevelopment/flutter_app_development",
             },
           ],
         },
@@ -106,16 +106,16 @@ const Navbar = () => {
           items: [
             {
               label: "React js",
-              link: "/websiteDesign/android_app_development",
+              link: "/technolgy/reactjs",
             },
-            { label: "Wordpress", link: "/websiteDesign/ios_app_development" },
+            { label: "Wordpress", link: "/technolgy/wordpress" },
             {
               label: "Laravel",
-              link: "/websiteDesign/flutter_app_development",
+              link: "/technolgy/laravel",
             },
             {
               label: "Node js",
-              link: "/websiteDesign/flutter_app_development",
+              link: "/technolgy/nodejs",
             },
           ],
         },
@@ -227,7 +227,7 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-4"
+                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-[16px]"
                 style={{ animation: "sliceDown 1s ease-in-out forwards" }}
               >
                 <div className="container justify-center my-8 pt-10 pb-10 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
