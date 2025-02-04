@@ -19,7 +19,8 @@ export default function technolgy({ params }) {
   const data = {
     AppTechnology: { title: "App Technology", content: "Learn about apps" },
     android: { title: "Technology", content: "Android" },
-    ios: { title: "iOS", content: "Development" },
+    ios: { title: "Technology", content: "iOS" },
+    flutter: { title: "Technology", content: "Flutter" },
   };
 
 

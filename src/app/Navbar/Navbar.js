@@ -5,8 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import "./Navbar.css";
-import logo from "../assets/headerlogo.svg";
-import SlidingButton from "../SlidingButton/SlidingButton";
+import dakshlogo from "../assets/headerlogo.svg";
 import "./Navbar.css";
 import Image from "next/image";
 import { FaCircleArrowRight } from "react-icons/fa6";
@@ -22,18 +21,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    let lastScrollY = 0;
+    let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-        setIsScrolled(currentScrollY > 10);
-      }
-
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50);
+      setIsScrolled(currentScrollY > 10);
       lastScrollY = currentScrollY;
     };
 
@@ -104,8 +97,8 @@ const Navbar = () => {
           heading: "MOBILE APP DEVELOPMENT",
           items: [
             { label: "Android", link: "/technolgy/android" },
-            { label: "IOS", link: "/websiteDesign/webdevelopment" },
-            { label: "Flutter", link: "/websiteDesign/webdevelopment" },
+            { label: "IOS", link: "/technolgy/ios" },
+            { label: "Flutter", link: "/websiteDesign/flutter" },
           ],
         },
         {
@@ -178,7 +171,13 @@ const Navbar = () => {
     >
       <div className="text-2xl font-bold ">
         <a href="/" className="flex items-center">
-          <Image src={logo} alt="Logo" className="h-10" />
+          {/* <Image src={dakshlogo} alt="Logo" height={40} width={120} /> */}
+
+          <img
+            src="https://www.dakshinfo.com/images/headerlogo.svg"
+            alt="About Us Image"
+            class="object-cover h-[60px]"
+          ></img>
         </a>
       </div>
 
@@ -228,7 +227,7 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-3"
+                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-4"
                 style={{ animation: "sliceDown 1s ease-in-out forwards" }}
               >
                 <div className="container justify-center my-8 pt-10 pb-10 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
@@ -257,53 +256,23 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden md:block">
-      <a
-        href="#_"
-        className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 border-2 border-white overflow-hidden  font-semibold text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 bg-gray-50 group"
-      >
-        <span className="absolute bottom-0 left-0 w-full  transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
+        <a
+          href="#_"
+          className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 border-2 border-white overflow-hidden  font-semibold text-black transition-all duration-150 ease-in-out rounded-full hover:pl-10 hover:pr-6 bg-gray-50 group"
+        >
+          <span className="absolute bottom-0 left-0 w-full  transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
 
-        <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-          {/* <svg
-            className="w-5 h-5 text-black font-bold"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            ></path>
-          </svg> */}
-           <FaCircleArrowRight className="w-6 h-6 text-black font-bold" />
-        </span>
-        <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-          {/* <svg
-            className="w-5 h-5 text-white font-bold"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            ></path>
-          </svg> */}
-          <FaCircleArrowRight className="w-6 h-6 text-white font-bold" />
-        </span>
-        <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white font-semibold">
-          Contact Us
-        </span>
-      </a>
+          <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+            <FaCircleArrowRight className="w-6 h-6 text-black font-bold" />
+          </span>
+          <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+            <FaCircleArrowRight className="w-6 h-6 text-white font-bold" />
+          </span>
+          <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white font-semibold">
+            Contact Us
+          </span>
+        </a>
       </div>
-
-      
     </nav>
   );
 };
