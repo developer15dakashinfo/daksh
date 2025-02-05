@@ -22,7 +22,7 @@ const AndroidAppServices = ({ title, content }) => {
       {/* first div */}
 
       <div
-        class="  pt-12 sm:pt-16 relative bg-cover bg-center"
+        class="  pt-12 sm:pt-16 relative bg-cover s bg-center"
         style={{
           backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
         }}
