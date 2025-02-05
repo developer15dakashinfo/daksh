@@ -72,7 +72,7 @@ import HomeSection3 from "../AppServices/AppServices";
 import FAQ from "@/app/websiteDesign/FAQ/FAQ";
 
 export default function MobileAppDevelopment({ params }) {
-  const { slug } = params; // Correctly access the slug
+  const { slug } = params; 
 
   const data = {
     android_app_development: { title: "Android", content: "App Development" },

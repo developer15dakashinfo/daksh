@@ -23,7 +23,7 @@ const HomeSection1 = ({title,content}) => {
               SERVICES
             </h3>
             <h1 className="text-5xl font-bold text-blue-500 text-left">
-              {title} <span className="text-white">Services</span>
+              {title}  <span className="text-white"> {content} Services</span>
             </h1>
             <p className="text-xl pt-5 text-left text-white">
               We offer professional website development services to help
