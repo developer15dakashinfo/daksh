@@ -21,10 +21,14 @@ export default function technolgy({ params }) {
     android: { title: "Android App", content: "" },
     ios: { title: "iOS App", content: "" },
     flutter: { title: "Flutter App", content: "" },
-    reactjs: { title: "React js", content: "" },
+    reactjs: { title: "Custom React js", content: "" },
     wordpress: { title: "WordPress", content: "" },
-    laravel: { title: "Laravel", content: "" },
-    nodejs: { title: "Node js", content: "" },
+    laravel: { title: "Laravel Web", content: "" },
+    nodejs: { title: "Custom Node js", content: "" },
+    php: { title: "Custom PHP", content: "" },
+    java: { title: "Java", content: "" },
+    figma: { title: "Figma", content: "" },
+    anjular_js: { title: "Angular js", content: "" },
   };
 
 

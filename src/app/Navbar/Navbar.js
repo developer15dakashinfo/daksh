@@ -122,10 +122,10 @@ const Navbar = () => {
         {
           heading: "CUSTOM DEVELOPMENTS",
           items: [
-            { label: "Php", link: "/websiteDesign/digitalmarketing" },
-            { label: "Java", link: "/websiteDesign/seomarketing" },
-            { label: "Figma", link: "/websiteDesign/smomarketing" },
-            { label: "Angular js", link: "/websiteDesign/emailmarketing" },
+            { label: "Php", link: "/technolgy/php" },
+            { label: "Java", link: "/technolgy/java" },
+            { label: "Figma", link: "/technolgy/figma" },
+            { label: "Angular js", link: "/technolgy/angular_js" },
           ],
         },
         {

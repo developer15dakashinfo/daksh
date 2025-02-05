@@ -16,13 +16,14 @@ import TechnologyWeUseSection from "./TechnologyWeUse/TechnologyWeUse";
 import FAQ from "@/app/websiteDesign/FAQ/FAQ";
 
 
+
 const AndroidAppServices = ({ title, content }) => {
   return (
     <>
       {/* first div */}
 
       <div
-        class="  pt-12 sm:pt-16 relative bg-cover bg-center"
+        class="  pt-20 sm:py-16 relative bg-cover bg-center"
         style={{
           backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
         }}
@@ -31,11 +32,11 @@ const AndroidAppServices = ({ title, content }) => {
           <section className="">
             <div className="absolute inset-0 bg-black opacity-60"></div>
 
-            <div className="relative text-white pt-28 px-10 lg:px-40 gap-20 flex flex-col lg:flex-row justify-between items-center">
+            <div className="relative text-white py-28    px-10 lg:px-40 gap-20 flex flex-col lg:flex-row justify-between items-center">
               <div className="lg:w-1/2 space-y-6">
                 <h3 className="text-blue-800 text-lg font-semibold">Technology</h3>
                 <h1 className="text-5xl font-bold">
-                {title} Development Services
+                <span className="text-blue-500">{title}</span> Development Services
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
                   <div className="flex items-center space-x-3">
@@ -147,44 +148,47 @@ const AndroidAppServices = ({ title, content }) => {
         </div>
 
         {/* second div */}
-        <div class="mt-20 ">
-          <div class="relative">
-            <div class="absolute inset-0 h-1/2 "></div>
-            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div class="mx-auto max-w-7xl">
-                <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                  <div class="flex flex-col border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-r">
-                    <dt class="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-                      Data Sources, including APIs and databases
-                    </dt>
-                    <dd class="order-1 text-5xl font-bold tracking-tight text-green-600 dark:text-green-400">
-                      <span>30</span>+
-                    </dd>
-                  </div>
-                  <div class="flex flex-col border-t border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-                    <dt class="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-                      Analytic Tools and Machine Learning Models
-                    </dt>
-                    <dd class="order-1 text-5xl font-bold tracking-tight text-green-600 dark:text-green-400">
-                      <span>100</span>+
-                    </dd>
-                  </div>
-                  <div class="flex flex-col border-t border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l">
-                    <dt class="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-                      Real-time Data Streams and Dashboards
-                    </dt>
-                    <dd class="order-1 text-5xl font-bold tracking-tight text-green-600 dark:text-green-400">
-                      <span>10</span>+
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
+        
+<div className="absolute left-0 right-0 top-[800px] -translate-y-1/2 z-50">
+  <div className="relative">
+    <div className="absolute inset-0 h-1/2"></div>
+    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+          <div className="flex flex-col border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-r">
+            <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
+              Data Sources, including APIs and databases
+            </dt>
+            <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
+              <span>30</span>+
+            </dd>
           </div>
-        </div>
+          <div className="flex flex-col border-t border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+            <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
+              Analytic Tools and Machine Learning Models
+            </dt>
+            <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
+              <span>100</span>+
+            </dd>
+          </div>
+          <div className="flex flex-col border-t border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l">
+            <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
+              Real-time Data Streams and Dashboards
+            </dt>
+            <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
+              <span>10</span>+
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
 
-      <div className="py-20 bg-white">
+{/* third div */}
+      <div className="pt-40 pb-20 bg-white">
         <div>
           <h2 className="text-3xl font-bold text-center sm:text-5xl">
             Our Partners
