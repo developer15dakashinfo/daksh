@@ -40,164 +40,131 @@ const Benefits = ({ title, content }) => {
 
   return (
     <>
-      <section
-        style={{
-          backgroundImage: `url('https://au-media.apjonlinecdn.com/magefan_blog/1000x500px_Best_hp_laptops_for_programming.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "90vh",
-          position: "relative",
-        }}
-      >
-        <div className="grid grid-cols-2 pt-24 px-20">
-          <div className="absolute inset-0 bg-black opacity-60"></div>
+      
 
-          <div className="text-left pt-28 pr-10 relative z-10">
-            <h3 className="text-white text-xl font-[500] py-3 text-left">
-              SERVICES
-            </h3>
-            <h1 className="text-5xl font-bold text-blue-500 text-left">
-              {title} <span className="text-white">Services</span>
-            </h1>
-            <p className="text-xl pt-5 text-left text-white">
-              We offer professional website development services to help
-              businesses establish a strong online presence. Our expertise spans
-              custom website design, responsive development, and performance
-              optimization, ensuring a seamless user experience across all
-              devices.
-            </p>
-          </div>
-          <div>
-            <section className="main-container">
-              <div className="main">
-                <div className="big-circle">
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/web-dev-icon.png"
-                      alt="web design icon"
-                    />
-                  </div>
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/game-design-icon.png"
-                      alt="game design icon"
-                    />
-                  </div>
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/game-dev-icon.png"
-                      alt="game dev icon"
-                    />
-                  </div>
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/ui-ux-icon.png"
-                      alt="ui-ux icon"
-                    />
-                  </div>
+<section
+      style={{
+        backgroundImage: `url('https://au-media.apjonlinecdn.com/magefan_blog/1000x500px_Best_hp_laptops_for_programming.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        position: "relative",
+      }}
+      className="flex items-center justify-center px-5 sm:px-10 md:px-20 md:h-[90vh] lg:h-[90vh] h-[50vh]"
+    >
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 pt-24">
+        {/* Left Content */}
+        <div className="text-left  md:pt-28 lg:pt-28  pr-5 md:pr-10">
+          <h3 className="text-white text-lg md:text-xl font-medium py-3 text-start">SERVICES</h3>
+          <h1 className="text-3xl md:text-5xl font-bold text-blue-500 text-start">
+          {title} <span className="text-white text-start">Services</span>
+          </h1>
+          <p className="text-md md:text-lg pt-5 text-white text-start">
+            We offer professional website development services to help businesses establish a strong online presence. Our expertise spans custom website design, responsive development, and performance optimization, ensuring a seamless user experience across all devices.
+          </p>
+        </div>
+
+        {/* Right Content - Animated Icons */}
+        <div className="flex justify-center items-center">
+          <section className="main-container">
+            <div className="main">
+              <div className="big-circle">
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/web-dev-icon.png" alt="web design icon" />
                 </div>
-                <div className="circle">
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/app-icon.png"
-                      alt="app icon"
-                    />
-                  </div>
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/blockchain-icon.png"
-                      alt="blockchain icon"
-                    />
-                  </div>
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/arvr-icon.png"
-                      alt="ar-vr icon"
-                    />
-                  </div>
-                  <div className="icon-block">
-                    <img
-                      src="https://www.yudiz.com/codepen/animated-portfolio/artificial-intelligence-icon.png"
-                      alt="artificial intelligence icon"
-                    />
-                  </div>
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/game-design-icon.png" alt="game design icon" />
                 </div>
-                <div className="center-logo">
-                <img
-            src="https://www.dakshinfo.com/images/headerlogo.svg"
-            alt="About Us Image"
-            class="object-cover h-[50px]"
-          ></img>
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/game-dev-icon.png" alt="game dev icon" />
+                </div>
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/ui-ux-icon.png" alt="ui-ux icon" />
                 </div>
               </div>
-            </section>
-          </div>
+              <div className="circle">
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/app-icon.png" alt="app icon" />
+                </div>
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/blockchain-icon.png" alt="blockchain icon" />
+                </div>
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/arvr-icon.png" alt="ar-vr icon" />
+                </div>
+                <div className="icon-block">
+                  <img src="https://www.yudiz.com/codepen/animated-portfolio/artificial-intelligence-icon.png" alt="AI icon" />
+                </div>
+              </div>
+              <div className="center-logo">
+                <img src="https://www.dakshinfo.com/images/headerlogo.svg" alt="About Us" className="object-cover h-10 md:h-[50px]" />
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <div>
-        <div className="toast info h-52 border">
+
+    <div className="text-black flex flex-col md:flex-row items-center py-8 mx-5 shadow-lg border my-14 rounded-lg max-w-8xl">
+        <div className="w-full md:w-3/12 flex justify-center md:justify-end py-5">
           <img
-            className=" px-4 w-80  m-4"
+            className="w-64 object-cover rounded-lg h-40"
             src="https://www.antiersolutions.com/wp-content/uploads/2023/04/Mask-Group-68586.png.webp"
-            alt="Descriptive text for the image"
-            width={500}
-            height={300}
+            alt="Lightbulb"
           />
-          <div className="toast-status">
-            <i className="bi bi-info-circle-fill" />
-          </div>
-          <section className="toast-content me-40">
-            <h3 className="toast-content-title text-start font-semibold text-7xl mt-2">
-              Did you know?
-            </h3>
-            <p className="toast-content-subtitl text-start text-xl font-light mt-4">
-              According to the dApp Industry Report 2022, Web 3 gaming accounts
-              for almost half of the overall blockchain activity with daily
-              unique active wallets of 1.15 million and transactions count of
+        </div>
+
+        <div className="w-[80%] h-[4px] bg-blue-600 my-4 md:hidden"></div>
+        <div className="hidden md:block w-[5px] bg-blue-600 h-48 mx-6"></div>
+
+        <div className="w-full md:w-8/12 h-auto py-5 font-nunito text-center md:text-left">
+          <div className="space-y-3 px-5">
+            <h3 className="text-2xl font-bold text-start">DID YOU KNOW!</h3>
+            <p className="text-xl font-light mt-4 text-start">
+              According to the App Industry Report 2022, Web 3 gaming accounts
+              for almost half of the overall blockchain activity, with daily
+              unique active wallets of 1.15 million and a transaction count of
               7.4 billion.
             </p>
-          </section>
-          <div className="toast-close">
-            <i className="bi bi-x" />
           </div>
         </div>
       </div>
-      <section className="flex">
-        <div className="text-start ms-5 w-1/2 px-20">
-          <h1 className=" text-4xl  text-start font-bold items-end pt-20">
-            {title} {content} Consultants at Your Service
-          </h1>
-          <p className="text-xl text-start py-5 ">
-            Antier, as one of the top blockchain consulting companies, helps
-            empower businesses by providing futuristic blockchain-based
-            solutions that play a significant role in harnessing the potential
-            of blockchain technology to the fullest in favor of their growth and
-            development. Blockchain is undoubtedly a very powerful network and
-            with its in-built features of trustability, transparency, security,
-            etc. can have far-reaching effects on businesses belonging to
-            different industries by enabling them to translate their business
-            goals into success stories. success stories. As one of the prominent
-            blockchain consulting firms, we house a team of top-notch blockchain
-            consultants who dedicatedly researches, develops, and test
-            blockchain ecosystem to propose astounding ideas to integrate
-            blockchain architecture into businesses.
-            <br />
-            <br />
-          </p>
-          <div>
-            <SlidingButton
-              text="Free Demo"
-              textcolor="text-white"
-              bgColor="bg-black"
-              arrowBgColor="bg-black"
-              arrowTextColor="text-white"
-            />
-          </div>
-        </div>
-        <div className="benifits-images justify-center w-1/2">
-          <svg
+
+      
+
+<section className="grid grid-cols-1 md:grid-cols-2 items-start">
+  <div className="text-start px-5 md:px-20">
+    <h1 className="text-3xl md:text-4xl font-bold pt-10 md:pt-20 text-start">
+      {title} {content} Consultants at Your Service
+    </h1>
+    <p className="text-lg md:text-xl py-5 text-start">
+      Antier, as one of the top blockchain consulting companies, helps empower 
+      businesses by providing futuristic blockchain-based solutions that play a 
+      significant role in harnessing the potential of blockchain technology to 
+      the fullest in favor of their growth and development. Blockchain is 
+      undoubtedly a very powerful network and with its in-built features of 
+      trustability, transparency, security, etc., it can have far-reaching effects 
+      on businesses belonging to different industries by enabling them to translate 
+      their business goals into success stories. As one of the prominent blockchain 
+      consulting firms, we house a team of top-notch blockchain consultants who 
+      dedicatedly research, develop, and test blockchain ecosystems to propose 
+      astounding ideas to integrate blockchain architecture into businesses.
+    </p>
+    <div className="mt-5">
+      <SlidingButton
+        text="Free Demo"
+        textcolor="text-white"
+        bgColor="bg-black"
+        arrowBgColor="bg-black"
+        arrowTextColor="text-white"
+      />
+    </div>
+  </div>
+  <div className="flex justify-center md:justify-end items-center">
+   <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 875 699"
@@ -551,35 +518,34 @@ const Benefits = ({ title, content }) => {
                 </g>
               </g>
             </g>
-          </svg>
-        </div>
-      </section>
+          </svg> 
+  </div>
+</section>
 
-      <div className="toast2 info h-60 mt-40 border">
-        <section className="toast-content p-5">
-          <h3 className="toast-content-titl text-white text-start font-semibold text-3xl mt-2">
-            Did you know?
-          </h3>
-          <p className="toast-content-subtitl text-start text-white text-xl font-light mt-4">
-            According to the dApp Industry Report 2022, Web 3 gaming accounts
-            for almost half of the overall blockchain activity with daily unique
-            active wallets of 1.15 million and transactions count of 7.4
-            billion.
-          </p>
-        </section>
-        <div className="toast-close">
-          <i className="bi bi-x" />
+
+      <div className="text-white bg-blue-950 flex flex-col md:flex-row items-center py-5 mx-5 shadow-lg border my-14 rounded-lg max-w-8xl">
+        <div className="w-full md:w-8/12 flex justify-center md:justify-end py-5">
+          <div className="space-y-3 md:pl-28 lg:28 px-5">
+            <h3 className="text-2xl font-bold text-start">DID YOU KNOW!</h3>
+            <p className="text-xl font-light mt-4 text-start">
+              According to the App Industry Report 2022, Web 3 gaming accounts
+              for almost half of the overall blockchain activity, with daily
+              unique active wallets of 1.15 million and a transaction count of
+              7.4 billion.
+            </p>
+          </div>
         </div>
-        <div className="toast-status">
-          <i className="bi bi-info-circle-fill" />
+
+        <div className="w-[80%] h-[4px] bg-blue-600 my-4 md:hidden"></div>
+        <div className="hidden md:block w-[5px] bg-blue-600 h-48 mx-6"></div>
+
+        <div className="w-full md:w-3/12 px-8 md:px-0 lg:px-0 h-auto py-5 font-nunito text-center md:text-left">
+          <img
+            className="w-72 object-cover rounded-lg h-44"
+            src="https://www.antiersolutions.com/wp-content/uploads/2023/04/Mask-Group-68586.png.webp"
+            alt="Lightbulb"
+          />
         </div>
-        <img
-          className=" px-4 w-80 m-4 me-40"
-          src="https://www.antiersolutions.com/wp-content/uploads/2023/04/Mask-Group-68586.png.webp"
-          alt="Descriptive text for the image"
-          width={500}
-          height={300}
-        />
       </div>
 
       <section className="bg-white pb-6">
@@ -709,6 +675,10 @@ const Benefits = ({ title, content }) => {
           </div>
         </div>
       </section>
+
+     
+
+      
     </>
   );
 };

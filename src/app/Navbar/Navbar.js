@@ -182,7 +182,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className="md:hidden text-2xl focus:outline-none"
+        className="md:hidden text-2xl focus:outline-none transform-none"
         onClick={toggleMobileMenu}
       >
         {isMobileMenuOpen ? (
