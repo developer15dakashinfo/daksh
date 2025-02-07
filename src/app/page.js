@@ -124,7 +124,7 @@ export default function Page({ Component, pageProps }) {
 
             {/* <Home5 /> */}
 
-            <Home6 />
+            {/* <Home6 /> */}
             <SolutionForAllSection />
 
             

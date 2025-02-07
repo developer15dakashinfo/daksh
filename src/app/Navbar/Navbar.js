@@ -176,7 +176,7 @@ const Navbar = () => {
           <img
             src="https://www.dakshinfo.com/images/headerlogo.svg"
             alt="logo"
-            class="object-cover h-[60px]"
+            className="object-cover h-[60px]"
           ></img>
         </a>
       </div>
