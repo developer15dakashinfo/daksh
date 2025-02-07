@@ -9,10 +9,8 @@ import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 import Logo from "../../logo/Logoname.js";
-import image1 from "../../assets/home1/home (1).jpg";
-import image2 from "../../assets/home1/home (1).png";
-import image3 from "../../assets/home1/home (1).webp";
-import image4 from "../../assets/home1/home (3).jpg";
+import img1 from "../../assets/Home/seo.jpg";
+
 
 
 export const Home1 = () => {
@@ -82,7 +80,7 @@ const CenterImage = () => {
       backgroundSize,
       opacity,
       backgroundImage:
-        "url(https://assets.newatlas.com/dims4/default/a9d3814/2147483647/strip/true/crop/3600x2700+0+0/resize/2880x2160!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fneuromorphic_chips.jpg)",
+        "url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/201909/team-3373638_960_720.jpeg?size=690:388)",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
     }}
@@ -98,21 +96,21 @@ const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://miro.medium.com/v2/resize:fit:1200/0*M4bxiCIjcTK-2Xr6.jpeg"
         alt="And example of a space launch"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1446776709462-d6b525c57bd3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://www.benchmarkemail.com/wp-content/uploads/2023/01/seo-tips-1.jpg"
         alt="An example of a space launch"
         start={200}
         end={-250}
-        className="mx-auto w-2/3"
+        className="mx-auto w-2/3 h-2/3 object-cover "
       />
       <ParallaxImg
-        src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://www.digitalauthority.me/wp-content/uploads/2019/04/shutterstock_572886535.jpg"
         alt="Orbiting satellite"
         start={-200}
         end={200}
@@ -163,6 +161,10 @@ const Schedule = () => {
       HOW WE FORMULATE SUCCESSFUL STRATEGIES
 
       </motion.h1>
+
+      <div>
+        <div></div>
+      </div>
     
     </section>
   );

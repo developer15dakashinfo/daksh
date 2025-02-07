@@ -71,25 +71,31 @@ const Footer = () => {
     "Privacy Policy",
     "Refund Policy",
   ];
-  const webDevelopmentLinks = [
-    "E-Commerce Website Design",
-    "WordPress Development Services",
-    "Graphic Design Services",
-  ];
+  
 
   const digitalMarketing = [
     "Digital Marketing",
     "SEO Service",
     "SMO Service",
     "Email Marketing",
+    "PCC Services",
+    "Social Media Marketing",
   ];
 
-  const mobileMarketing = ["Voice Call", "IVR", "Short/Long Code"];
+  const mobileMarketing = [
+    "Bulk SMS",
+    "IVR",
+    "RCS",
+    "Official Whatsapp API",
+    "Voice Call",
+    "Calling Agent",
+  ];
   const appDevelopmentLinks = [
     "Android App Development",
     "Hybrid App Development",
     "iOS App Development",
   ];
+  const webDevelopmentLinks = ["Website Designing", "Website Development"];
 
   const renderLinks = (links) =>
     links.map((link, index) => (
@@ -145,7 +151,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:w-8/12 md:w-8/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:pl-20 lg:pl-20">
+          <div className="lg:w-8/12 md:w-8/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:pl-20 lg:pl-5">
             {[
               { title: "Useful Links", links: usefulLinks },
               { title: "Web Development", links: webDevelopmentLinks },
@@ -153,8 +159,8 @@ const Footer = () => {
               { title: "App Development", links: appDevelopmentLinks },
               { title: "Mobile Marketing", links: mobileMarketing },
             ].map((section, idx) => (
-              <div key={idx} className="px-4">
-                <h2 className="text-lg font-semibold text-gray-300 relative pb-1 mb-2 inline-block before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:block">
+              <div key={idx} className="px-4 lg:px-0 xl:px-0">
+                <h2 className="text-lg sm:text-[16px] font-semibold text-gray-300 relative pb-1 mb-2 inline-block before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:block">
                   {section.title}
                 </h2>
 
@@ -164,7 +170,7 @@ const Footer = () => {
               </div>
             ))}
 
-            <div className="px-4 lg:col-span-2">
+            <div className="px-4 lg:col-span-3">
               <h2 className="text-lg font-semibold text-gray-300 relative pb-1 mb-2 inline-block before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-sky-400 before:to-emerald-600 before:block">
                 Connect With Us
               </h2>

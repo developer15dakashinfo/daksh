@@ -77,14 +77,19 @@ const Navbar = () => {
             { label: "SEO Service", link: "/websiteDesign/seomarketing" },
             { label: "SMO Services", link: "/websiteDesign/smomarketing" },
             { label: "Email Marketing", link: "/websiteDesign/emailmarketing" },
+            { label: "PCC Services", link: "/websiteDesign/ppc_services" },
+            { label: "Social Media Marketing", link: "/websiteDesign/social_media_marketing" },
           ],
         },
         {
-          heading: "MOBILE",
+          heading: "MOBILE MARKETING",
           items: [
             { label: "Bulk SMS", link: "/websiteDesign/bulksms" },
             { label: "RCS", link: "/websiteDesign/rcs" },
+            { label: "IVR", link: "/websiteDesign/api" },
             { label: "Official Whatsapp API", link: "/websiteDesign/api" },
+            { label: "Voice Call", link: "/websiteDesign/api" },
+            { label: "Calling Agent", link: "/websiteDesign/api" },
           ],
         },
       ],
@@ -117,6 +122,10 @@ const Navbar = () => {
               label: "Node js",
               link: "/technolgy/nodejs",
             },
+            {
+              label: "HTML5",
+              link: "/technolgy/html5",
+            },
           ],
         },
         {
@@ -128,28 +137,6 @@ const Navbar = () => {
             { label: "Angular js", link: "/technolgy/angular_js" },
           ],
         },
-        {
-          heading: "DIGITAL MARKETING",
-          items: [
-            {
-              label: "SEO (Search Engine Optimization)",
-              link: "/websiteDesign/digitalmarketing",
-            },
-            {
-              label: "SMO (Social Media Optimization)",
-              link: "/websiteDesign/seomarketing",
-            },
-            { label: "Email Marketing", link: "/websiteDesign/smomarketing" },
-            {
-              label: "Official Whatsapp API",
-              link: "/websiteDesign/emailmarketing",
-            },
-            {
-              label: "RCS (Rich Communication Services)",
-              link: "/websiteDesign/emailmarketing",
-            },
-          ],
-        },
       ],
     },
     { label: "About Us", link: "/about" },
@@ -159,7 +146,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 py-5 px-6 md:px-20 flex justify-between items-center ${
+      className={`fixed top-0 left-0 w-full z-50 py-5 px-6 md:px-20 lg:px-16 flex justify-between items-center ${
         activeDropdown === 1 ? " transition duration-500" : ""
       } bg-black text-white shadow-md transition-transform duration-500 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
@@ -208,7 +195,7 @@ const Navbar = () => {
           >
             <a
               href={item.link}
-              className="text-white font-[500] text-[18px] hover:text-gray-400 transition-colors relative group flex items-center justify-between md:justify-start w-full"
+              className="text-white font-[500] sm:text-[17px] lg:text[18px] md:text[18px] hover:text-gray-400 transition-colors relative group flex items-center justify-between md:justify-start w-full"
             >
               {item.label}
 
@@ -227,20 +214,26 @@ const Navbar = () => {
 
             {item.dropdownItems && activeDropdown === index && (
               <div
-                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-[16px]"
+                className="absolute z-50 left-0 rounded-lg right-0 transition-opacity duration-500 bg-black mt-[14px]"
                 style={{ animation: "sliceDown 1s ease-in-out forwards" }}
               >
-                <div className="container justify-center my-8 pt-10 pb-10 rounded-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm px-6 md:px-40">
+                <div
+                  className={`container justify-center my-8 pt-10 pb-10 rounded-lg mx-auto grid ${
+                    item.label === "Technologies"
+                      ? "grid-cols-3"
+                      : "grid-cols-4"
+                  } text-sm px-6 md:px-40 lg:px-20 gap-4`}
+                >
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-4 mt-2 text-start">
-                      <h3 className="font-semibold text-[17px] text-white">
+                      <h3 className="font-semibold text-[17px] text-white text-center">
                         {dropdownItem.heading}
                       </h3>
                       <ul>
                         {dropdownItem.items.map((subItem, j) => (
                           <li
                             key={j}
-                            className="hover:text-gray-300 text-[17px] py-2 font-[400]"
+                            className="hover:text-gray-300 text-[17px] py-2 font-[400] text-center"
                           >
                             <a href={subItem.link}>{subItem.label}</a>
                           </li>

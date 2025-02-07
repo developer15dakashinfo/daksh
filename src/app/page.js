@@ -123,11 +123,12 @@ export default function Page({ Component, pageProps }) {
 
             {/* <Home5 /> */}
 
-            <Home6 />
+            {/* <Home6 /> */}
+            <CaseStudySection />
             <SolutionForAllSection />
 
             
-            <CaseStudySection />
+            
             <Featuredsection/>
             <Home7 />
             <ContactSection />

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import SlidingButton from "@/app/SlidingButton/SlidingButton";
 import React from "react";
 import {
@@ -25,7 +25,7 @@ const ContactSectionname = () => {
         className="relative w-full min-h-[500px] md:min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 md:px-6 lg:px-12 py-12"
         style={{
           backgroundImage:
-            "url('https://explore.zoom.us/media/hero-developer2x.png')",
+            "url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29udGFjdCUyMHVzfGVufDB8fDB8fHww')",
         }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl w-full">
@@ -59,43 +59,58 @@ const ContactSectionname = () => {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg">
-            <form className="space-y-4 md:space-y-6">
+            <form className="space-y-3 md:space-y-3">
               <input
                 type="text"
-                placeholder="Name"
-                className="w-full p-3 md:p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Name*"
+                className="w-full p-3 md:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-900"
               />
               <input
                 type="email"
-                placeholder="Email"
-                className="w-full p-3 md:p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Email*"
+                className="w-full p-3 md:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-900"
               />
+              <input
+                type="Phone No.*"
+                placeholder="Phone No"
+                className="w-full p-3 md:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-900"
+              />
+              <select className="w-full p-3 md:p-4 border bg-white border-gray-300 rounded-lg text-xlfocus:outline-none focus:ring-1 focus:ring-blue-900 text-gray-400">
+                <option value="" disabled selected className="text-gray-400 ">
+                  Select Services
+                </option>
+                <hr></hr>
+                <option value="general" className="text-black">
+                  Web Development
+                </option>
+                <hr></hr>
+                <option value="support" className="text-black">
+                  Mobile App Development
+                </option>
+                <hr></hr>
+                <option value="feedback" className="text-black">
+                  Digital Marketing
+                </option>
+                <hr></hr>
+                <option value="feedback" className="text-black">
+                  Mobile Marketing
+                </option>
+              </select>
+
               <textarea
                 placeholder="Message"
                 rows="4"
-                className="w-full p-3 md:p-4 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full p-3 md:p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-blue-900"
               ></textarea>
-              {/* <button
-          type="submit"
-          className="w-full bg-emerald-600 text-white text-lg font-bold py-3 rounded-full hover:bg-yellow-600 transition"
-        >
-          SEND MESSAGE
-        </button> */}
+
               <div className="flex justify-center mt-8 mb-10">
-                {/* <SlidingButton
-                  text="Explore More"
+                <SlidingButton
+                  text="Contact Us"
                   bgColor="bg-black"
                   textcolor="text-white"
                   arrowBgColor="bg-black"
                   arrowTextColor="text-white"
-                /> */}
-
-                <SlidingButton 
-                text="Explore More"
-                bgColor="bg-black"
-                textcolor="text-white"
-                arrowBgColor="bg-black"
-                arrowTextColor="text-white"/>
+                />
               </div>
             </form>
           </div>

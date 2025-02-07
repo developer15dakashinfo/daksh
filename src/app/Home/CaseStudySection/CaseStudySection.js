@@ -46,13 +46,13 @@ export default function CaseStudies() {
         </p>
       </div>
 
-      <div className="container mx-auto px-5 md:px-20 lg:px-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-36 md:gap-8 lg:gap-8 max-w-full">
+      <div className="container mx-auto px-5 md:px-16 lg:px-16 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-36 md:gap-5 lg:gap-5 max-w-full">
         {caseStudies.map((caseStudy, index) => (
           <div
             key={index}
             className="relative bg-white shadow-lg rounded-lg overflow-visible transition-transform transform hover:-translate-y-2"
           >
-            <div className="h-[300px] w-full overflow-hidden rounded-t-lg relative">
+            <div className="md:h-[300px] lg:h-[300px] xl:h-[300px] w-full overflow-hidden rounded-t-lg relative">
               <img
                 src={caseStudy.image}
                 alt={caseStudy.title}
@@ -62,13 +62,14 @@ export default function CaseStudies() {
               <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-opacity-20"></div>
             </div>
 
-            <div className="absolute top-[150px] left-1/2 transform transition duration-300 hover:scale-105 -translate-x-1/2 w-full max-w-[92%] h-[250px] bg-white shadow-md rounded-lg p-6 overflow-hidden">
+            <div className="absolute top-[140px] left-1/2 transform transition duration-300 hover:scale-105 -translate-x-1/2 w-full max-w-[92%] lg:h-[250px] md:h-[250px] xl:h-[270px] bg-white shadow-md rounded-lg px-4 py-5 overflow-hidden">
               <h3 className="text-lg font-semibold text-gray-900 text-center">
                 {caseStudy.title}
               </h3>
-              <p className="text-gray-600 text-sm mt-2 text-left">
-                {caseStudy.description}
-              </p>
+              <p className="text-gray-600 text-sm mt-2 text-left line-clamp-3 md:line-clamp-4 lg:line-clamp-5 xl:line-clamp-6 overflow-hidden">
+  {caseStudy.description}
+</p>
+
 
               <div className="py-2 flex justify-center">
                 <SlidingButton
