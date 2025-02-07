@@ -351,18 +351,18 @@ const Navbar = () => {
                     item.label === "Technologies"
                       ? "grid-cols-2 sm:grid-cols-3"
                       : "grid-cols-2 sm:grid-cols-4"
-                  } text-sm px-4 sm:px-10 md:px-20 lg:px-24 xl:px-32 gap-4`}
+                  } text-sm sm:px-10 lg:px-24 md:px-0 xl:px-32 gap-4`}
                 >
                   {item.dropdownItems.map((dropdownItem, i) => (
                     <div key={i} className="space-y-3 text-start">
-                      <h3 className="font-semibold text-[16px] md:text-[17px] text-white text-center">
+                      <h3 className="font-semibold xl:text[18px] lg:text-[16px] md:text-[14px] sm:text[12px] text-white text-center">
                         {dropdownItem.heading}
                       </h3>
                       <ul>
                         {dropdownItem.items.map((subItem, j) => (
                           <li
                             key={j}
-                            className="hover:text-gray-300 text-[15px] md:text-[17px] py-2 font-normal text-center"
+                            className="hover:text-gray-300 xl:text[18px] lg:text-[16px] md:text-[14px] sm:text[12px] py-2 font-normal text-center"
                           >
                             <a href={subItem.link}>{subItem.label}</a>
                           </li>

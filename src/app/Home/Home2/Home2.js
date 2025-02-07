@@ -324,7 +324,7 @@ const Home2 = () => {
       <div className="relative ">
         <div
           ref={sectionRef}
-          className="grid grid-cols-1 md:grid-cols-4 gap-10 px-8 pt-4 absolute -top-36 w-full "
+          className="grid grid-cols-1 md:grid-cols-4 xl:gap-10 lg:gap:8 sm:gap-4 md:gap-3 px-8 md:px-4 pt-4 absolute -top-36 w-full "
         >
           {counters.map((data, idx) => {
             const { staticPart, lastDigit } = splitDigits(
@@ -335,20 +335,20 @@ const Home2 = () => {
             return (
               <div
                 key={idx}
-                className={`col-span-1 px-8 py-5  rounded-2xl ${data.bgColor}`}
+                className={`col-span-1 sm:px-3 md:px-4 lg:px-8 xl:px-8 py-6  rounded-2xl ${data.bgColor}`}
               >
                 <h1 className="text-3xl text-black font-extrabold">
                   <div className="flex">
                     {staticPart !== null && (
                       <span className="text-black">{staticPart}</span>
                     )}
-                    <div className="overflow-hidden flex">
-                      <div className="me-2 text-black">{data.suffix}</div>
+                    <div className="overflow-hidden flex h-10">
+                      <div className="me-2 text-black xl:text-3xl lg:text-3xl md:text-xl">{data.suffix}</div>
                       <div className="flex flex-col justify-center items-center h-[60px] w-[40px] relative overflow-hidden">
                         {[...Array(10).keys()].map((num) => (
                           <span
                             key={num}
-                            className="absolute text-center text-black font-extrabold"
+                            className="absolute text-center xl:text-3xl lg:text-3xl md:text-xl text-black font-extrabold"
                             style={{
                               top: `${num * 54}px`,
                               transform: `translateY(${
@@ -364,10 +364,10 @@ const Home2 = () => {
                     </div>
                   </div>
                 </h1>
-                <h2 className="text-xl lg:text-2xl md:text-xl sm:text-lg xl:text-xl text-black font-bold">
+                <h2 className="lg:text-2xl md:text-[14px] sm:text-lg xl:text-xl text-black font-bold">
                   {data.heading}
                 </h2>
-                <p className="xl:text-[18pxpx] lg:[16px] md:lg sm:lg text-black font-[500] pt-4">
+                <p className="xl:text-[18px] lg:text:[16px] md:text-lg xl:text-xl sm:lg text-black font-[500] lg:pt-4 xl:pt-4 md:pt-0">
                   {data.paragraph}
                 </p>
               </div>
@@ -377,7 +377,7 @@ const Home2 = () => {
       </div>
 
       <div
-        className="overflow-hidden relative mt-40 lg:mt-28 xl:mt-32 md:mt-32 sm:mt-40"
+        className="overflow-hidden relative lg:mt-44 xl:mt-36 md:mt-32 sm:mt-40"
         style={{
           height: "100vh",
           position: "relative",
