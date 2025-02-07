@@ -117,6 +117,7 @@ export default function Page({ Component, pageProps }) {
           <div>
             <Home1 />
             <Home2 />
+            
             <Home3 />
             <HomeAbout />
             <AchievementSection />
