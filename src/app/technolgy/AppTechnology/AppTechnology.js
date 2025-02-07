@@ -23,12 +23,12 @@ const AndroidAppServices = ({ title, content }) => {
       {/* first div */}
 
       <div
-        class="  pt-20 sm:py-16 relative bg-cover bg-center"
+        className="  pt-20 sm:py-16 relative bg-cover bg-center"
         style={{
           backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
         }}
       >
-        <div class="">
+        <div className="">
           <section className="">
             <div className="absolute inset-0 bg-black opacity-60"></div>
 

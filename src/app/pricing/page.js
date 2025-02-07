@@ -1,5 +1,6 @@
 "use client";
 
+import Head from "next/head";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./Pricing.css";
@@ -7,11 +8,20 @@ import "./Pricing.scss";
 
 import Pricing1 from "./pricing1/Pricing1";
 
+
 export default function Pricing() {
     return (
        <div className="bg-gray">
          <Navbar/>
          <br/><br/><br/>
+         <Head>
+        <title>My Page | Next.js SEO</title>
+        <meta
+          name="description"
+          content="This is the meta description for My Page"
+        />
+        {/* Additional meta tags */}
+      </Head>
 
          <div>
   
