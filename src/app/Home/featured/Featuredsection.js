@@ -9,7 +9,7 @@ const Featuredsection = () => {
 
   return (
   <>
-  <div className="max-w-7xl mx-auto my-8 px-2 py-20 ">
+  <div className="max-w-7xl mx-auto my-8 px-2 py-10 ">
   <div className="flex justify-center text-2xl md:text-3xl font-bold mb-10">
   <h2 className="text-gray-800 text-5xl  font-bold">Featured Blog</h2>
   </div>

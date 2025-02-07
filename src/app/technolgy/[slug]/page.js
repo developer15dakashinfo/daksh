@@ -23,6 +23,7 @@ export default function technolgy({ params }) {
     flutter: { title: "Flutter App", content: "" },
     reactjs: { title: "Custom React js", content: "" },
     wordpress: { title: "WordPress", content: "" },
+    html5: { title: "HTML5", content: "" },
     laravel: { title: "Laravel Web", content: "" },
     nodejs: { title: "Custom Node js", content: "" },
     php: { title: "Custom PHP", content: "" },

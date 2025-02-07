@@ -48,10 +48,11 @@ const Benefits = ({ title, content }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "relative",
+        
       }}
-      className="flex items-center justify-center px-5 sm:px-10 md:px-20 md:h-[90vh] lg:h-[90vh] h-[50vh]"
+      className="flex items-center justify-center px-5 sm:px-10 md:px-20 md:h-[100vh] lg:h-[100vh] h-[50vh]"
     >
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="absolute inset-0 bg-black opacity-60 h-[100vh]"></div>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 pt-24">
         {/* Left Content */}

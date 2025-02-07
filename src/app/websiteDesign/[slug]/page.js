@@ -15,8 +15,8 @@ export default function WebsiteDesign({ params }) {
   const [slug, setSlug] = useState("");
   useEffect(() => {
     (async () => {
-      const resolvedParams = await params; // Resolve the params Promise
-      setSlug(resolvedParams.slug); // Extract the slug value
+      const resolvedParams = await params; 
+      setSlug(resolvedParams.slug); 
     })();
   }, [params]);
 
@@ -25,9 +25,8 @@ export default function WebsiteDesign({ params }) {
     webdevelopement: { title: "Web  ", content: "Developement" },
     webdesigning: { title: "Web Designing ", content: "Services" },
     marketing: { title: "Marketing ", content: "" },
-    // android_app_development: { title: "Android ", content: "App Development" },
-    // ios_app_development: { title: "IOS  ", content: "App Development" },
-    // flutter_app_development: { title: "Flutter App Development ", content: "App Development." },
+    ppc_services: { title: "PPC Services", content: "Join our trusted community of Atlassian partners. Our program provides exclusive benefits and updates which help you to serve your clients to grow their business." },
+    social_media_marketing: { title: "Social Media Marketing", content: "Join our trusted community of Atlassian partners. Our program provides exclusive benefits and updates which help you to serve your clients to grow their business." },
     seomarketing: { title: "SEO Marketing", content: "Join our trusted community of Atlassian partners. Our program provides exclusive benefits and updates which help you to serve your clients to grow their business." },
     smomarketing: { title: "SMO Marketing ", content: "Join our trusted community of Atlassian partners. Our program provides exclusive benefits and updates which help you to serve your clients to grow their business." },
     digitalmarketing: { title: "digital Marketing ", content: "This is content for Page 3." },

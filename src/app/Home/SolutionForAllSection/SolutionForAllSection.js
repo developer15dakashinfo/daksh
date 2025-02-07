@@ -16,7 +16,7 @@ const SolutionForAllSection = () => {
         li1: "Get to market fast and cost-effectively with our MVP and SaaS development services.",
         li2: "Align technology with business goals with our CTO-as-a-service offering.",
         li3: "Make informed choices using our Data Analytics and DevOps services.",
-        li4: "Avoid costly mistakes with our Technology Consulting, ensuring long-term success.",
+        
       },
     },
     {
@@ -28,7 +28,7 @@ const SolutionForAllSection = () => {
         li1: "Get to market fast and cost-effectively with our MVP and SaaS development services.",
         li2: "Align technology with business goals with our CTO-as-a-service offering.",
         li3: "Make informed choices using our Data Analytics and DevOps services.",
-        li4: "Avoid costly mistakes with our Technology Consulting, ensuring long-term success.",
+        
       },
     },
     {
@@ -40,7 +40,7 @@ const SolutionForAllSection = () => {
         li1: "Get to market fast and cost-effectively with our MVP and SaaS development services.",
         li2: "Align technology with business goals with our CTO-as-a-service offering.",
         li3: "Make informed choices using our Data Analytics and DevOps services.",
-        li4: "Avoid costly mistakes with our Technology Consulting, ensuring long-term success.",
+       
       },
     },
   ];
@@ -68,7 +68,7 @@ const SolutionForAllSection = () => {
             key={index}
             className="relative h-auto sm:h-full overflow-hidden border border-gray-300 rounded-lg hover:shadow-lg transition duration-300"
           >
-            <div className="px-6 sm:px-8 lg:px-10 py-10 sm:py-8 lg:py-12">
+            <div className="px-6 sm:px-8 lg:px-10 py-10 sm:py-8 lg:py-10">
               <div className="flex items-center gap-3">
                 <div className="text-3xl sm:text-4xl text-blue-500">
                   {card.icon}

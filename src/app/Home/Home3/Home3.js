@@ -187,9 +187,9 @@ const StackingCards = () => {
                         </figure>
                       </div>
 
-                      <div className="flex flex-col w-full md:w-8/12 px-5 md:px-10">
+                      <div className="flex flex-col w-full md:w-8/12 px-5 md:px-5 lg:px-5">
                         <div className="grid gap-5 md:grid-cols-2">
-                          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-left md:text-left">
+                          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[45px] font-extrabold text-left md:text-left">
                             {card.title}
                           </h2>
                           <p className="text-base sm:text-sm md:text-[14px] lg:text-[16px] leading-relaxed text-left md:text-left">
