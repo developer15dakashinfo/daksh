@@ -321,10 +321,11 @@ const Home2 = () => {
 
   return (
     <>
+    <div className="max-w-[1600px]  mx-auto ">
       <div className="relative ">
         <div
           ref={sectionRef}
-          className="grid grid-cols-1 md:grid-cols-4 xl:gap-10 lg:gap:8 sm:gap-4 md:gap-3 px-8 md:px-4 pt-4 absolute -top-36 w-full "
+          className="grid grid-cols-1 gap-5 md:grid-cols-4 xl:gap-10 lg:gap:8 sm:gap-4 md:gap-3 sm:px-5 px-8 md:px-4 pt-4 absolute -top-72 w-full "
         >
           {counters.map((data, idx) => {
             const { staticPart, lastDigit } = splitDigits(
@@ -335,7 +336,7 @@ const Home2 = () => {
             return (
               <div
                 key={idx}
-                className={`col-span-1 sm:px-3 md:px-4 lg:px-8 xl:px-8 py-6  rounded-2xl ${data.bgColor}`}
+                className={`col-span-1 sm:px-5 md:px-4 lg:px-8 xl:px-8 py-6 px-5 rounded-2xl ${data.bgColor}`}
               >
                 <h1 className="text-3xl text-black font-extrabold">
                   <div className="flex">
@@ -367,7 +368,7 @@ const Home2 = () => {
                 <h2 className="lg:text-2xl md:text-[14px] sm:text-lg xl:text-xl text-black font-bold">
                   {data.heading}
                 </h2>
-                <p className="xl:text-[18px] lg:text:[16px] md:text-lg xl:text-xl sm:lg text-black font-[500] lg:pt-4 xl:pt-4 md:pt-0">
+                <p className="xl:text-[18px] lg:text:[16px] md:text-[15px] xl:text-xl sm:lg text-black font-[500] lg:pt-4 xl:pt-4 md:pt-0">
                   {data.paragraph}
                 </p>
               </div>
@@ -377,7 +378,7 @@ const Home2 = () => {
       </div>
 
       <div
-        className="overflow-hidden relative lg:mt-44 xl:mt-36 md:mt-32 sm:mt-40"
+        className="overflow-hidden relative lg:mt-44 xl:mt-36 md:mt-32 sm:mt-60 mt-20"
         style={{
           height: "100vh",
           position: "relative",
@@ -516,6 +517,7 @@ const Home2 = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

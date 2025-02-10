@@ -36,7 +36,7 @@ export default function technolgy({ params }) {
   const pageData = data[slug] || { title: "", content: "" };
 
   return (
-    <div>
+    <div className="max-w-[1600px]  mx-auto ">
 
       <Navbar/>
       <AppTechnologyPage title={pageData.title} content={pageData.content}/>

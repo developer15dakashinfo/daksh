@@ -68,6 +68,7 @@ const processSteps = [
 
 const HomeProcess4 = () => {
   return (
+    <div className=" max-w-8xl  mx-auto ">
     <div className="py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-extrabold text-black dark:text-white md:text-5xl">
@@ -79,7 +80,7 @@ const HomeProcess4 = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 sm:mt-16 px-2 md:px-28 lg:px-28">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-10 sm:mt-16 px-2 md:px-28 lg:px-28">
         {processSteps.map((step, index) => (
           <div
             key={index}
@@ -119,6 +120,7 @@ const HomeProcess4 = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

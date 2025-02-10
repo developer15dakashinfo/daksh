@@ -3,7 +3,7 @@ import Slider from "react-infinite-logo-slider";
 
 const Testimonials = ({ title, content }) => {
   return (
-    <div className="">
+    <div className=" max-w-8xl  mx-auto ">
       <section className="bg-blue-950 py-20 my-20">
         <div className="container  p-6 mx-auto space-y-12 lg:px-8 l text-white">
           <div>
