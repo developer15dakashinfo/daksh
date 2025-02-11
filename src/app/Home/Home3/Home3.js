@@ -144,7 +144,7 @@ const StackingCards = () => {
   return (
 
     <div className="max-w-[1600px] mx-auto ">
-      <div className="bg-black text-white text-center font-sans">
+      <div className="bg-black text-white text-center font-sans mt-96 xl:mt-0 lg:mt-0 md:mt-0">
       <main className="w-[95%] mx-auto pb-20 relative">
         <ul className="relative">
           {cardsData.map((card, index) => (
@@ -162,7 +162,7 @@ const StackingCards = () => {
             >
               <div
                 className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden sm:h-auto ${
-                  index === 0 ? "h-[40vh]" : "h-[90vh]"
+                  index === 0 ? "h-[35vh]" : "h-[90vh]"
                 }`}
                 style={{ backgroundColor: card.backgroundColor }}
               >

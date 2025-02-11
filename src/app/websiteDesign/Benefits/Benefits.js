@@ -165,8 +165,8 @@ const Benefits = ({ title, content }) => {
         </div>
 
         <section className="grid grid-cols-1 md:grid-cols-2 items-start">
-          <div className="text-start px-10 py-5 md:px-20 lg:px-20 xl:px-20 ">
-            <h1 className="text-3xl md:text-4xl font-bold pt-10 md:pt-20 text-start">
+          <div className="text-start px-10 py-5 md:px-10 lg:px-20 xl:px-20 ">
+            <h1 className="text-3xl md:text-4xl font-bold pt-10 md:pt-10 text-start">
               {title} {content} Consultants at Your Service
             </h1>
             <p className="text-lg md:text-xl py-5 text-start">
@@ -194,7 +194,7 @@ const Benefits = ({ title, content }) => {
               />
             </div>
           </div>
-          <div className="flex justify-center md:justify-end items-center">
+          <div className="flex justify-center md:justify-end  md:py-48 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"

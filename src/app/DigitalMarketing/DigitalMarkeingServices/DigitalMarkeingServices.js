@@ -44,7 +44,7 @@ const DigitalMarketingServices = ({ title, content }) => {
           </h2>
           <p className="text-lg text-gray-600 mx-auto max-w-4xl">{content}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-8">
           {services.map((service) => (
             <div
               key={service.id}

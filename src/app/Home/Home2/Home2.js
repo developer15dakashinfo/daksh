@@ -325,7 +325,7 @@ const Home2 = () => {
       <div className="relative ">
         <div
           ref={sectionRef}
-          className="grid grid-cols-1 gap-5 md:grid-cols-4 xl:gap-10 lg:gap:8 sm:gap-4 md:gap-3 sm:px-5 px-8 md:px-4 pt-4 absolute -top-72 w-full "
+          className="grid grid-cols-1 gap-5 md:grid-cols-4 lg:grid-cols-4 sm:md:grid-cols-2 xl:gap-10 lg:gap:8 sm:gap-2 md:gap-3 sm:px-5 px-8 md:px-4 pt-4 absolute -top-72 w-full "
         >
           {counters.map((data, idx) => {
             const { staticPart, lastDigit } = splitDigits(
@@ -336,7 +336,7 @@ const Home2 = () => {
             return (
               <div
                 key={idx}
-                className={`col-span-1 sm:px-5 md:px-4 lg:px-8 xl:px-8 py-6 px-5 rounded-2xl ${data.bgColor}`}
+                className={`col-span-1 sm:px-5 md:px-4 lg:px-8 xl:px-8 py-5 px-5 rounded-2xl ${data.bgColor}`}
               >
                 <h1 className="text-3xl text-black font-extrabold">
                   <div className="flex">
@@ -378,9 +378,9 @@ const Home2 = () => {
       </div>
 
       <div
-        className="overflow-hidden relative lg:mt-44 xl:mt-36 md:mt-32 sm:mt-60 mt-20"
+        className="overflow-hidden relative lg:mt-28 xl:mt-36 md:mt-32 sm:mt-60 mt-20 xl:h-[100vh] lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
         style={{
-          height: "100vh",
+          
           position: "relative",
           overflow: "hidden",
           cursor: "grab",
@@ -390,7 +390,7 @@ const Home2 = () => {
         onMouseLeave={handleMouseUp}
       >
         <div
-          className="shadow-xl relative border-3"
+          className="shadow-xl relative border-3 top-[50%]"
           style={{
             width: `${BLUE_BALL_RADIUS * 2}px`,
             height: `${BLUE_BALL_RADIUS * 2}px`,
@@ -398,7 +398,7 @@ const Home2 = () => {
             borderRadius: "50%",
             position: "absolute",
             left: "50%",
-            top: "33%",
+            
             transform: "translate(-50%, -50%)",
           }}
         >

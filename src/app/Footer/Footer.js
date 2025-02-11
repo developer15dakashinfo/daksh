@@ -157,9 +157,10 @@ const Footer = () => {
             <div className="lg:w-8/12 md:w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8 md:pl-5 lg:pl-5">
               {[
                 { title: "Useful Links", links: usefulLinks },
-                { title: "Web Development", links: webDevelopmentLinks },
+               
                 { title: "Digital Marketing", links: digitalMarketing },
                 { title: "App Development", links: appDevelopmentLinks },
+                { title: "Web Development", links: webDevelopmentLinks },
                 { title: "Mobile Marketing", links: mobileMarketing },
               ].map((section, idx) => (
                 <div key={idx} className="px-4 lg:px-0 xl:px-0">

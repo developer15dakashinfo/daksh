@@ -10,24 +10,25 @@ import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import "./Home1.css";
+import ChatBox from "../ChatBox/ChatBox";
 
 export const Home1 = () => {
   return (
     <div className="max-w-[1600px]  mx-auto ">
-    <div className="bg-zinc-950">
-      <ReactLenis
-        root
-        options={{
-          // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
-          lerp: 0.05,
-          //   infinite: true,
-          //   syncTouch: true,
-        }}
-      >
-        <Hero />
-        <Schedule />
-      </ReactLenis>
-    </div>
+      <div className="bg-zinc-950">
+        <ReactLenis
+          root
+          options={{
+            // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
+            lerp: 0.05,
+            //   infinite: true,
+            //   syncTouch: true,
+          }}
+        >
+          <Hero />
+          <Schedule />
+        </ReactLenis>
+      </div>
     </div>
   );
 };
@@ -155,19 +156,6 @@ const Schedule = () => {
       </motion.h1>
 
       <div>
-        {/* <div>
-          <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-          ></link>
-          <a
-            href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
-            class="float"
-            target="_blank"
-          >
-            <i class="fa fa-whatsapp my-float"></i>
-          </a>
-        </div> */}
 
         <div>
           <a
@@ -179,6 +167,11 @@ const Schedule = () => {
             <FaWhatsapp className="my-float" size={40} color="#ffff" />
           </a>
         </div>
+        {/* <ChatBox/> */}
+
+       <div>
+       
+       </div>
       </div>
     </section>
   );

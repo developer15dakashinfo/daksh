@@ -80,7 +80,7 @@ const HomeProcess4 = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-10 sm:mt-16 px-2 md:px-28 lg:px-28">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mt-10 sm:mt-16 px-2 md:px-10 lg:px-28">
         {processSteps.map((step, index) => (
           <div
             key={index}

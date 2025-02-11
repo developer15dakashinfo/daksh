@@ -21,11 +21,10 @@ const OurTeam = () => {
           </p>
         </div>
 
-
-        <div className="min-h-[550px] flex justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* <div className="min-h-[500px] flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-10">
             {cards.map((card, index) => (
-              <div key={index} className="group relative w-80 h-48 ">
+              <div key={index} className="group relative w-72 h-48 ">
                 <div
                   className="absolute inset-0 rounded-b-lg flex justify-center items-center  transform translate-y-24 transition-transform duration-700 group-hover:translate-y-0 z-10"
                   style={{
@@ -53,7 +52,82 @@ const OurTeam = () => {
               </div>
             ))}
           </div>
+        </div> */}
+        <div className="font-sans">
+          <div className="max-w-6xl mx-auto px-10">
+            <div className="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 max-sm:justify-center mt-12 max-sm:max-w-xs mx-auto">
+              <div className="bg-gray-800 p-4 border rounded-lg">
+                <img
+                  src="https://readymadeui.com/team-1.webp"
+                  className="w-full object-contain object-top rounded-lg"
+                />
+                <div className="text-center mt-4">
+                  <h4 className="text-base font-semibold text-white">
+                    Software Engineer
+                  </h4>
+                  <p className="text-xs mt-2 text-white">John Doe</p>
+                </div>
+              </div>
+              <div className="bg-gray-800 p-4 border rounded-lg">
+                <img
+                  src="https://readymadeui.com/team-2.webp"
+                  className="w-full object-contain object-top rounded-lg"
+                />
+                <div className="text-center mt-4">
+                  <h4 className="text-base font-semibold text-white">
+                    Web Developer
+                  </h4>
+                  <p className="text-xs mt-2 text-white">Mark Adair</p>
+                </div>
+              </div>
+              <div className="bg-gray-800 p-4 border rounded-lg">
+                <img
+                  src="https://readymadeui.com/team-3.webp"
+                  className="w-full object-contain object-top rounded-lg"
+                />
+                <div className="text-center mt-4">
+                  <h4 className="text-base font-semibold text-white">
+                    Web Designer
+                  </h4>
+                  <p className="text-xs mt-2 text-white">Simon Konecki</p>
+                </div>
+              </div>
+              <div className="bg-gray-800 p-4 border rounded-lg">
+                <img
+                  src="https://readymadeui.com/team-1.webp"
+                  className="w-full object-contain object-top rounded-lg"
+                />
+                <div className="text-center mt-4">
+                  <h4 className="text-base font-semibold text-white">
+                    Software Engineer
+                  </h4>
+                  <p className="text-xs mt-2 text-white">John Doe</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <br/><br/>
+
+        <div className="font-sans bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-y-8 lg:divide-x-2 lg:divide-gray-300">
+      <div className="px-8">
+        <h6 className="text-gray-800 text-base font-extrabold mb-2">Welcome to Our Website</h6>
+        <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
+      </div>
+      <div className="px-8">
+        <h6 className="text-gray-800 text-base font-extrabold mb-2">Welcome to Our Website</h6>
+        <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
+      </div>
+      <div className="px-8">
+        <h6 className="text-gray-800 text-base font-extrabold mb-2">Welcome to Our Website</h6>
+        <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br/><br/>
       </div>
     </>
   );

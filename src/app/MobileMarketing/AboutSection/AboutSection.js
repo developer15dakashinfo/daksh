@@ -136,7 +136,7 @@ const MobileAboutSection = ({ title, content }) => {
           <p className="text-xl text-black mx-auto max-w-5xl">{content}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-3 xl:grid-cols-4 my-10 mx-auto w-fit justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 my-10 mx-auto w-fit justify-center">
           {services.map((service, index) => (
             <div
               key={index}
