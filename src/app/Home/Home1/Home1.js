@@ -8,32 +8,30 @@ import {
 import { SiSpacex } from "react-icons/si";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
 import { useRef } from "react";
-import Logo from "../../logo/Logoname.js";
-import img1 from "../../assets/Home/seo.jpg";
-
-
+import { FaWhatsapp } from "react-icons/fa";
+import "./Home1.css";
+import ChatBox from "../ChatBox/ChatBox";
 
 export const Home1 = () => {
   return (
-    <div className="bg-zinc-950">
-      <ReactLenis
-        root
-        options={{
-          // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
-          lerp: 0.05,
-          //   infinite: true,
-          //   syncTouch: true,
-        }}
-      >
-   
-        <Hero />
-        <Schedule />
-      </ReactLenis>
+    <div className="max-w-[1600px]  mx-auto ">
+      <div className="bg-zinc-950">
+        <ReactLenis
+          root
+          options={{
+            // Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
+            lerp: 0.05,
+            //   infinite: true,
+            //   syncTouch: true,
+          }}
+        >
+          <Hero />
+          <Schedule />
+        </ReactLenis>
+      </div>
     </div>
   );
 };
-
-
 
 const SECTION_HEIGHT = 1200;
 
@@ -72,23 +70,20 @@ const CenterImage = () => {
   );
 
   return (
-<>
-  <motion.div
-    className="sticky top-0 h-screen w-full flex items-center justify-center"
-    style={{
-      clipPath,
-      backgroundSize,
-      opacity,
-      backgroundImage:
-        "url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/201909/team-3373638_960_720.jpeg?size=690:388)",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }}
-  >
-
-  </motion.div>
-</>
-
+    <>
+      <motion.div
+        className="sticky top-0 h-screen w-full flex items-center justify-center"
+        style={{
+          clipPath,
+          backgroundSize,
+          opacity,
+          backgroundImage:
+            "url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/201909/team-3373638_960_720.jpeg?size=690:388)",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></motion.div>
+    </>
   );
 };
 
@@ -116,7 +111,6 @@ const ParallaxImages = () => {
         end={200}
         className="ml-auto w-1/3"
       />
-     
     </div>
   );
 };
@@ -158,15 +152,27 @@ const Schedule = () => {
         transition={{ ease: "easeInOut", duration: 0.75 }}
         className="mb-20 text-5xl font-black uppercase text-zinc-50"
       >
-      HOW WE FORMULATE SUCCESSFUL STRATEGIES
-
+        HOW WE FORMULATE SUCCESSFUL STRATEGIES
       </motion.h1>
 
       <div>
-        <div></div>
+
+        <div>
+          <a
+            href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+            className="float"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="my-float" size={40} color="#ffff" />
+          </a>
+        </div>
+        {/* <ChatBox/> */}
+
+       <div>
+       
+       </div>
       </div>
-    
     </section>
   );
 };
-

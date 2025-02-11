@@ -21,6 +21,7 @@ const ContactSectionname = () => {
 
   return (
     <>
+    <div className="max-w-[1600px]  mx-auto ">
       <div
         className="relative w-full min-h-[500px] md:min-h-[600px] bg-cover bg-center bg-no-repeat flex items-center justify-center px-4 md:px-6 lg:px-12 py-12"
         style={{
@@ -115,6 +116,7 @@ const ContactSectionname = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

@@ -143,7 +143,8 @@ const StackingCards = () => {
 
   return (
 
-    <div className="bg-black text-white text-center font-sans">
+    <div className="max-w-[1600px] mx-auto ">
+      <div className="bg-black text-white text-center font-sans mt-96 xl:mt-0 lg:mt-0 md:mt-0">
       <main className="w-[95%] mx-auto pb-20 relative">
         <ul className="relative">
           {cardsData.map((card, index) => (
@@ -161,13 +162,13 @@ const StackingCards = () => {
             >
               <div
                 className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden sm:h-auto ${
-                  index === 0 ? "h-[40vh]" : "h-[75vh]"
+                  index === 0 ? "h-[35vh]" : "h-[90vh]"
                 }`}
                 style={{ backgroundColor: card.backgroundColor }}
               >
                 {index === 0 ? (
                   <div className="pt-24 px-10 sm:px-5 text-center flex flex-col items-center">
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl text-white font-extrabold py-5">
+                    <h1 className="sm:text-4xl md:text-5xl lg:text-7xl text-white font-extrabold py-5">
                       {card.title2}
                     </h1>
                     <p className="text-lg md:px-40 lg:px-60 md:text-[18px] lg:text-[18px] sm:text-base text-white leading-relaxed">
@@ -176,8 +177,8 @@ const StackingCards = () => {
                   </div>
                 ) : (
                   <>
-                    <div className="py-10 px-5 md:py-20 md:px-20 flex flex-col md:flex-row w-full gap-10 items-center">
-                      <div className="w-full md:w-4/12 flex justify-center">
+                    <div className="py-10 px-5 lg:py-20 lg:px-10 md:py-10 md:px-10 flex flex-col lg:flex-row xl:flex-row md:flex-col w-full gap-10 items-center">
+                      <div className="w-full lg:w-4/12 flex justify-center">
                         <figure className="overflow-hidden rounded-lg w-full sm:w-8/12 md:w-full">
                           <img
                             src={card.image}
@@ -187,9 +188,9 @@ const StackingCards = () => {
                         </figure>
                       </div>
 
-                      <div className="flex flex-col w-full md:w-8/12 px-5 md:px-5 lg:px-5">
+                      <div className="flex flex-col w-full lg:w-8/12 sm:px-5 md:px-5 lg:px-2">
                         <div className="grid gap-5 md:grid-cols-2">
-                          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[45px] font-extrabold text-left md:text-left">
+                          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-[45px] font-extrabold text-left md:text-left">
                             {card.title}
                           </h2>
                           <p className="text-base sm:text-sm md:text-[14px] lg:text-[16px] leading-relaxed text-left md:text-left">
@@ -260,6 +261,8 @@ const StackingCards = () => {
         </ul>
       </main>
     </div>
+    </div>
+    
   );
 };
 

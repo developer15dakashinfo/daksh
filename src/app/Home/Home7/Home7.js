@@ -4,7 +4,7 @@ function Home7() {
     <>
       <section className="">
         <div className="pb-28">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1600px] mx-auto xl:px-20 lg:px-20 md:px-10 sm:px-5">
             <div className="lg:text-center">
               <h2 className="font-heading mb-4 bg-orange-100 text-orange-800 px-4 py-2 rounded-lg md:w-64 md:mx-auto text-lg font-semibold tracking-widest uppercase title-font">
                 Why choose us?

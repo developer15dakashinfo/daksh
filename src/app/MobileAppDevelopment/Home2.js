@@ -33,7 +33,7 @@ const HomeSection2 = () => {
     </div>
 
     
-    <div className="grid grid-cols-1 md:grid-cols-2 px-5 md:px-20 py-8 md:py-16 lg:py-20 gap-10">
+    <div className="grid lg:grid-cols-2 xl:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 px-5 md:px-10 py-8 md:py-16 lg:py-20 gap-10">
       
     <div className="text-center md:text-left">
         <h1 className="text-2xl md:text-4xl font-bold">

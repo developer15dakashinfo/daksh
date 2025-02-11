@@ -15,14 +15,12 @@ import WhyChooesSection from "./WhyChooes/WhyChooes";
 import TechnologyWeUseSection from "./TechnologyWeUse/TechnologyWeUse";
 import FAQ from "@/app/websiteDesign/FAQ/FAQ";
 
-
-
 const AndroidAppServices = ({ title, content }) => {
   return (
     <>
       {/* first div */}
 
-      <div
+      {/* <div
         className="  pt-20 sm:py-16 relative bg-cover bg-center"
         style={{
           backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
@@ -34,9 +32,12 @@ const AndroidAppServices = ({ title, content }) => {
 
             <div className="relative text-white py-28    px-10 lg:px-40 gap-20 flex flex-col lg:flex-row justify-between items-center">
               <div className="lg:w-1/2 space-y-6">
-                <h3 className="text-blue-800 text-lg font-semibold">Technology</h3>
+                <h3 className="text-blue-800 text-lg font-semibold">
+                  Technology
+                </h3>
                 <h1 className="text-5xl font-bold">
-                <span className="text-blue-500">{title}</span> Development Services
+                  <span className="text-blue-500">{title}</span> Development
+                  Services
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
                   <div className="flex items-center space-x-3">
@@ -99,7 +100,7 @@ const AndroidAppServices = ({ title, content }) => {
                 </div>
               </div>
 
-              <div className="lg:w-2/4 mt-20 lg:mt-0">
+              <div className="lg:w-2/4 md:mt-20 lg:mt-16 sm:mt-10">
                 <div className="bg-gray-100 p-8 rounded-xl">
                   <h2 className="text-blue-800 text-xl font-semibold text-center">
                     Book Free Consultation
@@ -147,47 +148,154 @@ const AndroidAppServices = ({ title, content }) => {
           </section>
         </div>
 
-        {/* second div */}
-        
-<div className="absolute left-0 right-0 top-[800px] -translate-y-1/2 z-50">
-  <div className="relative">
-    <div className="absolute inset-0 h-1/2"></div>
-    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-          <div className="flex flex-col border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-r">
-            <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-              Data Sources, including APIs and databases
-            </dt>
-            <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
-              <span>30</span>+
-            </dd>
+        <div className="absolute left-0 right-0 top-[800px] md:display -translate-y-1/2 z-50">
+          <div className="relative">
+            <div className="absolute inset-0 h-1/2"></div>
+            <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl">
+                <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                  <div className="flex flex-col border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-r">
+                    <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
+                      Data Sources, including APIs and databases
+                    </dt>
+                    <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
+                      <span>30</span>+
+                    </dd>
+                  </div>
+                  <div className="flex flex-col border-t border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                    <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
+                      Analytic Tools and Machine Learning Models
+                    </dt>
+                    <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
+                      <span>100</span>+
+                    </dd>
+                  </div>
+                  <div className="flex flex-col border-t border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l">
+                    <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
+                      Real-time Data Streams and Dashboards
+                    </dt>
+                    <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
+                      <span>10</span>+
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col border-t border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-            <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-              Analytic Tools and Machine Learning Models
-            </dt>
-            <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
-              <span>100</span>+
-            </dd>
+        </div>
+      </div> */}
+
+
+<div
+      className="pt-20 relative bg-cover bg-center"
+      style={{
+        backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
+      }}
+    >
+      <div className="relative">
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+
+        <div className="relative text-white py-16 px-6 md:px-12 lg:px-40 flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2 space-y-6">
+            <h3 className="text-blue-800 text-lg font-semibold">Technology</h3>
+            <h1 className="text-4xl md:text-5xl font-bold">
+              <span className="text-blue-500">{title}</span> Development Services
+            </h1>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
+              {[
+                { icon: <BiMobileAlt />, text: "Dynamic Mobile Applications" },
+                { icon: <MdOutlineHeadphones />, text: "Long-term Support & Maintenance" },
+                { icon: <BiArrowToRight />, text: "Expertise in Kotlin and Java" },
+                { icon: <BiSolidComponent />, text: "Component-Based Architecture" },
+                { icon: <FiSettings />, text: "Upgrade & Migration Services" },
+                { icon: <RiCodeBoxLine />, text: "Custom Widgets and Services" },
+                { icon: <GrDocumentPerformance />, text: "Performance Optimization" },
+                { icon: <BiTask />, text: "User Experience (UX) Design" },
+              ].map(({ icon, text }, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white text-2xl">
+                    {icon}
+                  </span>
+                  <span className="text-lg">{text}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col border-t border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l">
-            <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-              Real-time Data Streams and Dashboards
-            </dt>
-            <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
-              <span>10</span>+
-            </dd>
+
+          <div className="lg:w-2/4 w-full">
+            <div className="bg-gray-100 p-8 rounded-xl">
+              <h2 className="text-blue-800 text-xl font-semibold text-center">
+                Book Free Consultation
+              </h2>
+              <p className="text-gray-900 text-sm text-center">
+                Fill Out The Form And Our Experts Will Contact You Within 24hrs.
+              </p>
+              <form className="space-y-4 mt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="Full Name*"
+                    className="p-3 w-full bg-gray-200 text-gray-900 rounded-md"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    className="p-3 w-full bg-gray-200 text-gray-900 rounded-md"
+                  />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="Phone Number*"
+                    className="p-3 w-full bg-gray-200 text-gray-900 rounded-md"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Company Name"
+                    className="p-3 w-full bg-gray-200 text-gray-900 rounded-md"
+                  />
+                </div>
+                <textarea
+                  placeholder="Your Requirement*"
+                  className="p-3 w-full bg-gray-200 text-gray-900 rounded-md h-28"
+                ></textarea>
+                <button className="w-full bg-blue-800 py-3 text-white font-semibold rounded-md hover:bg-blue-600 transition">
+                  Submit Your Requirement!
+                </button>
+              </form>
+            </div>
           </div>
-        </dl>
+        </div>
+      </div>
+
+      
+      <div className="absolute left-0 right-0 xl:top-[750px] lg:top-[980px] md:block -translate-y-1/2 z-50">
+        <div className="relative">
+          <div className="absolute inset-0 h-1/2"></div>
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl">
+              <dl className="rounded-lg bg-white shadow-lg grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3">
+                {[
+                  { value: "30+", text: "Data Sources, including APIs and databases" },
+                  { value: "100+", text: "Analytic Tools and Machine Learning Models" },
+                  { value: "10+", text: "Real-time Data Streams and Dashboards" },
+                ].map(({ value, text }, index) => (
+                  <div key={index} className="flex flex-col border border-gray-200 lg:p-6 xl:p-6 p-4  text-center">
+                    <dd className="xl:text-5xl lg:text-5xl md:text-4xl font-bold tracking-tight text-blue-800">
+                      {value}
+                    </dd>
+                    <dt className="mt-2 xl:text-lg lg:text:lg md:text-[14px] text-[10px] font-normal text-gray-500">{text}</dt>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-      </div>
-
-{/* third div */}
+      {/* third div */}
       <div className="pt-40 pb-20 bg-white">
         <div>
           <h2 className="text-3xl font-bold text-center sm:text-5xl">
@@ -289,9 +397,9 @@ const AndroidAppServices = ({ title, content }) => {
       </div>
       <TechnologyServices />
       <FrameWorkSection />
-      <WhyChooesSection/>
-      <TechnologyWeUseSection/>
-      <FAQ/>
+      <WhyChooesSection />
+      <TechnologyWeUseSection />
+      <FAQ />
     </>
   );
 };
