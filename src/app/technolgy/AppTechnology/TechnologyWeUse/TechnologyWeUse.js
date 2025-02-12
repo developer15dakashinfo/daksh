@@ -213,7 +213,7 @@ const TechnologyWeUseSection = () => {
     //   </div>
     // </div>
 
-    <div className="max-w-6xl mx-auto py-20">
+    <div className="max-w-6xl mx-auto py-20 px-5">
       <h3 className="text-blue-900 text-xl py-2 text-center uppercase">
         Other Technologies We Work On
       </h3>

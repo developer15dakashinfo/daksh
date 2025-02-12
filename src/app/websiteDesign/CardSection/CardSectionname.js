@@ -4,8 +4,8 @@ import "../CardSection/CardSection.scss";
 const CardSectionname = () => {
   return (
     <>
-      <div className="px-20">
-        <h2 className="text-gray-800 text-5xl font-bold my-10 pb-5">
+      <div className="lg:px-20 xl:px-20 md:px-20 sm:px-20  px-10">
+        <h2 className="text-gray-800 lg:text-5xl xl:text-5xl md:text-4xl sm:text-4xl text-3xl font-bold xl:my-10 lg:my-10 md:my-10 my-3 pb-5">
           Let's Build Your Digital Success Together!
         </h2>
         <div className="font-sans bg-white p-4">

@@ -68,7 +68,7 @@ const HeroDigitalMarketingSection = ({ title, content }) => {
     //     </div>
     //   </section>
 
-    <main className="pt-16">
+    <main className="lg:pt-16 xl:pt-16 md:pt-16 pt-10">
       <section className="relative bg-gradient-to-br from-blue-900 to-indigo-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
 

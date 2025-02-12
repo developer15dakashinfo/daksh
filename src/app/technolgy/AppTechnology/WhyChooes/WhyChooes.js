@@ -46,7 +46,7 @@ const WhyChooseSection = () => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center xl:max-w-5xl">
           <h1 className="text-xl text-blue-300 py-2">UNMATCHED SERVICES</h1>
-          <h2 className="text-5xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6">
+          <h2 className="lg:text-5xl text-3xl md:text-5xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6">
             The Advantages of Working with Daksh InfoSoft for Development
           </h2>
           <p className="mb-4">

@@ -19,13 +19,14 @@ export default function About() {
     <div>
       <Navbar />
 
-      <Aboutfirst />
+      <div className="max-w-[1800px]  mx-auto ">
+        <Aboutfirst />
 
-      <About3 />
+        <About3 />
 
-  
-      {/* <ContainerScroll /> */}
-      <Footer />
+        {/* <ContainerScroll /> */}
+        <Footer />
+      </div>
     </div>
   );
 }

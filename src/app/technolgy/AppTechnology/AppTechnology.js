@@ -20,174 +20,11 @@ const AndroidAppServices = ({ title, content }) => {
     <>
       {/* first div */}
 
-      {/* <div
-        className="  pt-20 sm:py-16 relative bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
-        }}
-      >
-        <div className="">
-          <section className="">
-            <div className="absolute inset-0 bg-black opacity-60"></div>
-
-            <div className="relative text-white py-28    px-10 lg:px-40 gap-20 flex flex-col lg:flex-row justify-between items-center">
-              <div className="lg:w-1/2 space-y-6">
-                <h3 className="text-blue-800 text-lg font-semibold">
-                  Technology
-                </h3>
-                <h1 className="text-5xl font-bold">
-                  <span className="text-blue-500">{title}</span> Development
-                  Services
-                </h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-black to-gray-700 p-2 rounded-full text-white">
-                      <BiMobileAlt className="text-2xl" />
-                    </span>
-
-                    <span className="text-lg">Dynamic Mobile Applications</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <MdOutlineHeadphones className="text-2xl" />
-                    </span>
-                    <span className="text-lg">
-                      Long-term Support & Maintenance
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <BiArrowToRight className="text-2xl" />
-                    </span>
-                    <span className="text-lg">
-                      Expertise in Kotlin and Java
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <BiSolidComponent className="text-2xl" />
-                    </span>
-                    <span className="text-lg">
-                      Component-Based Architecture
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <FiSettings className="text-2xl" />
-                    </span>
-                    <span className="text-lg">
-                      Upgrade & Migration Services
-                    </span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <RiCodeBoxLine className="text-2xl" />
-                    </span>
-                    <span className="text-lg">Custom Widgets and Services</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <GrDocumentPerformance className="text-2xl" />
-                    </span>
-                    <span className="text-lg">Performance Optimization</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white">
-                      <BiTask className="text-2xl" />
-                    </span>
-                    <span className="text-lg">User Experience (UX) Design</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:w-2/4 md:mt-20 lg:mt-16 sm:mt-10">
-                <div className="bg-gray-100 p-8 rounded-xl">
-                  <h2 className="text-blue-800 text-xl font-semibold text-center">
-                    Book Free Consultation
-                  </h2>
-                  <p className="text-gray-900 text-sm text-center">
-                    Fill Out The Form And Our Experts Will Contact You Within
-                    24hrs.
-                  </p>
-                  <form className="space-y-4 mt-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <input
-                        type="text"
-                        placeholder="Full Name*"
-                        className="p-3 w-full bg-gray-200 text-white rounded-md"
-                      />
-                      <input
-                        type="email"
-                        placeholder="Email*"
-                        className="p-3 w-full bg-gray-200 text-white rounded-md"
-                      />
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <input
-                        type="text"
-                        placeholder="Phone Number*"
-                        className="p-3 w-full bg-gray-200 text-white rounded-md"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Company Name"
-                        className="p-3 w-full bg-gray-200 text-white rounded-md"
-                      />
-                    </div>
-                    <textarea
-                      placeholder="Your Requirement*"
-                      className="p-3 w-full bg-gray-200 text-white rounded-md h-28"
-                    ></textarea>
-                    <button className="w-full bg-blue-800 py-3 text-white font-semibold rounded-md hover:bg-blue-600">
-                      Submit Your Requirement!
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div className="absolute left-0 right-0 top-[800px] md:display -translate-y-1/2 z-50">
-          <div className="relative">
-            <div className="absolute inset-0 h-1/2"></div>
-            <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="mx-auto max-w-7xl">
-                <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
-                  <div className="flex flex-col border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-r">
-                    <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-                      Data Sources, including APIs and databases
-                    </dt>
-                    <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
-                      <span>30</span>+
-                    </dd>
-                  </div>
-                  <div className="flex flex-col border-t border-b border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l sm:border-r">
-                    <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-                      Analytic Tools and Machine Learning Models
-                    </dt>
-                    <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
-                      <span>100</span>+
-                    </dd>
-                  </div>
-                  <div className="flex flex-col border-t border-gray-100 dark:border-gray-700 p-6 text-center sm:border-0 sm:border-l">
-                    <dt className="order-2 mt-2 text-lg font-normal leading-6 text-gray-500 dark:text-gray-300">
-                      Real-time Data Streams and Dashboards
-                    </dt>
-                    <dd className="order-1 text-5xl font-bold tracking-tight text-blue-800 dark:text-blue-800">
-                      <span>10</span>+
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      
 
 
 <div
-      className="pt-20 relative bg-cover bg-center"
+      className="lg:pt-20 xl:pt-20 md:pt-20 sm:pt-20 pt-10   relative bg-cover bg-center"
       style={{
         backgroundImage: `url('https://images.prismic.io/turing/652ec8bafbd9a45bcec81a77_Android_app_e29f427ffa.webp?auto=format,compress')`,
       }}
@@ -198,7 +35,7 @@ const AndroidAppServices = ({ title, content }) => {
         <div className="relative text-white py-16 px-6 md:px-12 lg:px-40 flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2 space-y-6">
             <h3 className="text-blue-800 text-lg font-semibold">Technology</h3>
-            <h1 className="text-4xl md:text-5xl font-bold">
+            <h1 className="lg:text-5xl md:text-5xl xl:text-5xl text-3xl font-bold">
               <span className="text-blue-500">{title}</span> Development Services
             </h1>
 
@@ -217,7 +54,7 @@ const AndroidAppServices = ({ title, content }) => {
                   <span className="bg-gradient-to-r from-gray-900 to-gray-700 p-2 rounded-full text-white text-2xl">
                     {icon}
                   </span>
-                  <span className="text-lg">{text}</span>
+                  <span className="xl:text-lg lg:text-lg md:text-lg text-[15px]">{text}</span>
                 </div>
               ))}
             </div>

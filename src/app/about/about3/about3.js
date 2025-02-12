@@ -3,21 +3,21 @@
 export default function About3() {
   return (
     <>
-    <div className="font-sans p-4">
-    <div className="md:max-w-5xl max-w-lg mx-auto">
+    <div className="font-sans p-8">
+    <div className="md:max-w-6xl max-w-lg mx-auto">
       <div className="grid md:grid-cols-2 gap-6">
         <div className="max-w-sm">
           <h2 className="text-gray-600 text-3xl font-semibold mb-4 leading-10">Innovative Solutions for Modern Challenges, <br /> Your Success, Our Commitment</h2>
         </div>
         <div className="text-left">
-          <p className="mb-4 text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.</p>
-          <p className="text-sm text-gray-500">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
+          <p className="mb-4 text-lg text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam, ipsum vel iaculis bibendum, justo turpis ullamcorper mauris, non aliquam nisi purus vel nisl. Integer efficitur turpis in bibendum tincidunt.</p>
+          <p className="text-lg text-gray-500">Nulla facilisi. Vestibulum fringilla leo et purus consectetur, vel tincidunt dolor rhoncus. In hac habitasse platea dictumst. Fusce vel sodales elit. Suspendisse potenti. Sed eget consequat nisi.</p>
           <button type="button" className="mt-6 px-5 py-2.5 rounded-md text-white text-sm tracking-wider font-medium border border-current outline-none bg-blue-700 hover:bg-blue-800 active:bg-blue-700">WHAT WE DO</button>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 512 512">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-10" viewBox="0 0 512 512">
             <g fillRule="evenodd" clipRule="evenodd">
               <path fill="#ff405c" d="M255.997.007c-141.156 0-256 114.844-256 256 0 141.16 114.844 256 256 256 141.16 0 256.004-114.84 256.004-256C512 114.851 397.157.007 255.997.007z" data-original="#ff405c" />
               <path fill="#d01273" d="M269.845 511.629c110.122-5.9 201.974-81.716 231.869-183.747l-99.461-99.461a12.002 12.002 0 0 0-1.223-1.135l-137.504-110.9a11.994 11.994 0 0 0-15.061 0l-137.5 110.9a12.01 12.01 0 0 0-3.788 13.337 12.008 12.008 0 0 0 3.109 4.757l39.179 39.186v101.722a11.97 11.97 0 0 0 3.796 8.758z" data-original="#d01273" />
@@ -25,12 +25,12 @@ export default function About3() {
             </g>
           </svg>
           <div className="mt-4">
-            <h3 className="text-lg font-bold text-gray-600 mb-2">Fresh Insights</h3>
-            <p className="text-gray-500 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...</p>
+            <h3 className="text-xl font-bold text-gray-600 mb-2">Fresh Insights</h3>
+            <p className="text-gray-500 text-lg">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...</p>
           </div>
         </div>
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-10" viewBox="0 0 24 24">
             <g data-name="Layer 2">
               <path fill="#54d6c0" d="M23 5.675h-3.3a.825.825 0 0 0-.825.825v14.85a2.475 2.475 0 0 0 4.95 0V6.5A.825.825 0 0 0 23 5.675z" data-original="#54d6c0" />
               <path fill="#1f95f8" d="M21.735 23.726a.744.744 0 0 1-.385.099H4.3A4.126 4.126 0 0 1 .175 19.7V2.1A1.934 1.934 0 0 1 2.1.175h16.5A1.934 1.934 0 0 1 20.525 2.1v19.943a1.771 1.771 0 0 0 1.21 1.683z" data-original="#1f95f8" />
@@ -41,12 +41,12 @@ export default function About3() {
             </g>
           </svg>
           <div className="mt-4">
-            <h3 className="text-lg font-bold text-gray-600 mb-2">Trending Now</h3>
-            <p className="text-gray-500 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...</p>
+            <h3 className="text-xl font-bold text-gray-600 mb-2">Trending Now</h3>
+            <p className="text-gray-500 text-lg">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...</p>
           </div>
         </div>
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 512 512">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-10" viewBox="0 0 512 512">
             <path fill="#64b5f6" d="m0 192 246.528 156.896c2.816 2.08 6.144 3.104 9.472 3.104s6.656-1.024 9.472-3.104L512 192 265.6 3.2a16.032 16.032 0 0 0-19.2 0L0 192z" data-original="#64b5f6" />
             <path fill="#eceff1" d="M416 0H96C78.368 0 64 14.368 64 32v352c0 8.832 7.168 16 16 16h352c8.832 0 16-7.168 16-16V32c0-17.632-14.336-32-32-32z" data-original="#eceff1" />
             <path fill="#90a4ae" d="M144 96h224c8.832 0 16-7.168 16-16s-7.168-16-16-16H144c-8.832 0-16 7.168-16 16s7.168 16 16 16zm224 32H144c-8.832 0-16 7.168-16 16s7.168 16 16 16h224c8.832 0 16-7.168 16-16s-7.168-16-16-16zm-96 64H144c-8.832 0-16 7.168-16 16s7.168 16 16 16h128c8.832 0 16-7.168 16-16s-7.168-16-16-16z" data-original="#90a4ae" />
@@ -54,8 +54,8 @@ export default function About3() {
             <path fill="#2196f3" d="M480 512H32c-17.952 0-32-14.048-32-32a16.02 16.02 0 0 1 6.528-12.896l240-160c2.816-2.08 6.144-3.104 9.472-3.104s6.656 1.024 9.472 3.104l240 160A16.02 16.02 0 0 1 512 480c0 17.952-14.048 32-32 32z" data-original="#2196f3" />
           </svg>
           <div className="mt-4">
-            <h3 className="text-lg font-bold text-gray-600 mb-2">Daily Highlights</h3>
-            <p className="text-gray-500 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...</p>
+            <h3 className="text-xl font-bold text-gray-600 mb-2">Daily Highlights</h3>
+            <p className="text-gray-500 text-lg">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum reprehenderit in voluptate velit esse cillum dolore...</p>
           </div>
         </div>
       </div>
@@ -96,11 +96,11 @@ export default function About3() {
 
 
 <div className="font-sans">
-  <div className="max-w-4xl mx-auto">
+  <div className="max-w-7xl mx-auto">
     <div className="text-center">
       <h2 className="text-gray-800 text-4xl font-extrabold">Meet our team</h2>
     </div>
-    <div className="grid sm:grid-cols-3 gap-8 max-sm:justify-center mt-12 max-sm:max-w-xs mx-auto">
+    <div className="grid sm:grid-cols-3 xl:grid-cols-4 md:grid-cols-3 gap-8 max-sm:justify-center mt-12 max-sm:max-w-xs mx-auto">
       <div className="bg-gray-800 p-4 border rounded-lg">
         <img src="https://readymadeui.com/team-1.webp" className="w-full object-contain object-top rounded-lg" />
         <div className="text-center mt-4">
@@ -122,26 +122,33 @@ export default function About3() {
           <p className="text-xs mt-2 text-white">Simon Konecki</p>
         </div>
       </div>
+      <div className="bg-gray-800 p-4 border rounded-lg">
+        <img src="https://readymadeui.com/team-1.webp" className="w-full object-contain object-top rounded-lg" />
+        <div className="text-center mt-4">
+          <h4 className="text-base font-semibold text-white">Software Engineer</h4>
+          <p className="text-xs mt-2 text-white">John Doe</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <br/><br/>
 
 
-<div className="font-sans bg-white">
+<div className="font-sans bg-white py-10">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-y-8 lg:divide-x-2 lg:divide-gray-300">
       <div className="px-8">
-        <h6 className="text-gray-800 text-base font-extrabold mb-2">Welcome to Our Website</h6>
-        <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
+        <h6 className="text-gray-800 text-xl font-extrabold mb-2">Welcome to Our Website</h6>
+        <p className="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
       </div>
       <div className="px-8">
-        <h6 className="text-gray-800 text-base font-extrabold mb-2">Welcome to Our Website</h6>
-        <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
+        <h6 className="text-gray-800 text-xl font-extrabold mb-2">Welcome to Our Website</h6>
+        <p className="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
       </div>
       <div className="px-8">
-        <h6 className="text-gray-800 text-base font-extrabold mb-2">Welcome to Our Website</h6>
-        <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
+        <h6 className="text-gray-800 text-xl font-extrabold mb-2">Welcome to Our Website</h6>
+        <p className="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac enim velit. Donec iaculis, dui sed auctor ultricies, eros enim faucibus nisl, ac semper eros eros vitae nulla. Donec non quam in enim semper dignissim.</p>
       </div>
     </div>
   </div>
@@ -150,10 +157,10 @@ export default function About3() {
 
 
 
-<div className="bg-white font-[sans-serif] flex max-lg:flex-col px-4 my-8 gap-12 max-w-[1400px] mx-auto">
+<div className="bg-white font-[sans-serif] flex max-lg:flex-col px-8 my-8 gap-12 max-w-[1400px] mx-auto">
   <div>
     <h2 className="text-gray-800 text-4xl font-extrabold mb-6">Our Values</h2>
-    <p className="text-gray-600 text-sm leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit. Eu eu quis anim aute.</p>
+    <p className="text-gray-600 text-lg leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit. Eu eu quis anim aute.</p>
   </div>
   <div className="grid md:grid-cols-2 gap-8 max-md:max-w-lg mx-auto">
     <div className="text-left bg-blue-50 rounded-lg shadow p-6">
@@ -162,7 +169,7 @@ export default function About3() {
         <path d="M16 9a7 7 0 1 0 7 7 7.008 7.008 0 0 0-7-7Zm0 12a5 5 0 1 1 5-5 5.006 5.006 0 0 1-5 5Z" data-original="#000000" />
       </svg>
       <h3 className="text-gray-800 text-xl font-semibold mt-6 mb-3">Customization</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
+      <p className="text-gray-600 text-lg leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
       <button type="button" className="text-gray-800 border border-gray-300 px-4 py-2 rounded-lg font-bold flex items-center text-sm mt-6 hover:bg-white">
         Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={16} className="rotate-90 ml-1.5"><path fill="#333" d="M12.006 1a1 1 0 0 1 .838.463l7 11a1 1 0 0 1-.985 1.527l-3.364-.48a.434.434 0 0 0-.495.43V20c0 1.645-1.355 3-3 3s-3-1.355-3-3v-6.06a.434.434 0 0 0-.495-.43l-3.364.48a1 1 0 0 1-.985-1.527l7-11a1 1 0 0 1 .85-.463z" data-original="#000000" paintOrder="fill markers stroke" /></svg>
       </button>
@@ -180,7 +187,7 @@ export default function About3() {
         </g>
       </svg>
       <h3 className="text-gray-800 text-xl font-semibold mt-6 mb-3">Security</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
+      <p className="text-gray-600 text-lg leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
       <button type="button" className="text-gray-800 border border-gray-300 px-4 py-2 rounded-lg font-bold flex items-center text-sm mt-6 hover:bg-white">
         Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={16} className="rotate-90 ml-1.5"><path fill="#333" d="M12.006 1a1 1 0 0 1 .838.463l7 11a1 1 0 0 1-.985 1.527l-3.364-.48a.434.434 0 0 0-.495.43V20c0 1.645-1.355 3-3 3s-3-1.355-3-3v-6.06a.434.434 0 0 0-.495-.43l-3.364.48a1 1 0 0 1-.985-1.527l7-11a1 1 0 0 1 .85-.463z" data-original="#000000" paintOrder="fill markers stroke" /></svg>
       </button>
@@ -190,7 +197,7 @@ export default function About3() {
         <path d="M271.029 0c-33.091 0-61 27.909-61 61s27.909 61 61 61 60-27.909 60-61-26.909-61-60-61zm66.592 122c-16.485 18.279-40.096 30-66.592 30-26.496 0-51.107-11.721-67.592-30-14.392 15.959-23.408 36.866-23.408 60v15c0 8.291 6.709 15 15 15h151c8.291 0 15-6.709 15-15v-15c0-23.134-9.016-44.041-23.408-60zM144.946 460.404 68.505 307.149c-7.381-14.799-25.345-20.834-40.162-13.493l-19.979 9.897c-7.439 3.689-10.466 12.73-6.753 20.156l90 180c3.701 7.423 12.704 10.377 20.083 6.738l19.722-9.771c14.875-7.368 20.938-25.417 13.53-40.272zM499.73 247.7c-12.301-9-29.401-7.2-39.6 3.9l-82 100.8c-5.7 6-16.5 9.6-22.2 9.6h-69.901c-8.401 0-15-6.599-15-15s6.599-15 15-15h60c16.5 0 30-13.5 30-30s-13.5-30-30-30h-78.6c-7.476 0-11.204-4.741-17.1-9.901-23.209-20.885-57.949-30.947-93.119-22.795-19.528 4.526-32.697 12.415-46.053 22.993l-.445-.361-21.696 19.094L174.28 452h171.749c28.2 0 55.201-13.5 72.001-36l87.999-126c9.9-13.201 7.2-32.399-6.299-42.3z" data-original="#000000" />
       </svg>
       <h3 className="text-gray-800 text-xl font-semibold mt-6 mb-3">Support</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
+      <p className="text-gray-600 text-lg leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
       <button type="button" className="text-gray-800 border border-gray-300 px-4 py-2 rounded-lg font-bold flex items-center text-sm mt-6 hover:bg-white">
         Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={16} className="rotate-90 ml-1.5"><path fill="#333" d="M12.006 1a1 1 0 0 1 .838.463l7 11a1 1 0 0 1-.985 1.527l-3.364-.48a.434.434 0 0 0-.495.43V20c0 1.645-1.355 3-3 3s-3-1.355-3-3v-6.06a.434.434 0 0 0-.495-.43l-3.364.48a1 1 0 0 1-.985-1.527l7-11a1 1 0 0 1 .85-.463z" data-original="#000000" paintOrder="fill markers stroke" /></svg>
       </button>
@@ -204,7 +211,7 @@ export default function About3() {
         </g>
       </svg>
       <h3 className="text-gray-800 text-xl font-semibold mt-6 mb-3">Performance</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
+      <p className="text-gray-600 text-lg leading-relaxed">Laboris qui Lorem ad tempor ut reprehenderit. Nostrud anim nulla officia ea sit deserunt. Eu eu quis anim aute Laboris qui Lorem ad tempor ut reprehenderit.</p>
       <button type="button" className="text-gray-800 border border-gray-300 px-4 py-2 rounded-lg font-bold flex items-center text-sm mt-6 hover:bg-white">
         Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={16} className="rotate-90 ml-1.5"><path fill="#333" d="M12.006 1a1 1 0 0 1 .838.463l7 11a1 1 0 0 1-.985 1.527l-3.364-.48a.434.434 0 0 0-.495.43V20c0 1.645-1.355 3-3 3s-3-1.355-3-3v-6.06a.434.434 0 0 0-.495-.43l-3.364.48a1 1 0 0 1-.985-1.527l7-11a1 1 0 0 1 .85-.463z" data-original="#000000" paintOrder="fill markers stroke" /></svg>
       </button>

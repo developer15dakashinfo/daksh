@@ -90,8 +90,8 @@ const services = [
 const MobileAboutSection = ({ title, content }) => {
   return (
     <div>
-      <div className="px-2 py-20 w-full flex justify-center">
-        <div className="bg-white lg:mx-8 lg:flex lg:max-w-7xl lg:shadow-lg rounded-lg">
+      <div className=" xl:py-20 lg:py-20 md:py-20 py-10  w-full flex justify-center">
+        <div className="bg-white lg:mx-8 lg:flex lg:max-w-7xl lg:shadow-lg rounded-lg lg:px-2 xl:px-2 md:px-2 px-8">
           <div className="lg:w-1/2">
             {" "}
             <div
@@ -133,7 +133,7 @@ const MobileAboutSection = ({ title, content }) => {
           <h3 className="mx-auto mb-8 capitalize text-2xl md:text-5xl font-bold text-blue-950">
             {title} Services
           </h3>
-          <p className="text-xl text-black mx-auto max-w-5xl">{content}</p>
+          <p className="xl:text-xl lg:text-xl md:text-xl text-lg text-black mx-auto max-w-5xl">{content}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 my-10 mx-auto w-fit justify-center">

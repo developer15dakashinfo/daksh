@@ -7,19 +7,20 @@ import ContactSectionname from "./ContactSection/ContactSectionname";
 import JoinOurTeam from "./JoinOurTeam/JoinOurTeam";
 import OurTeam from "./ourTeam/ourTeam";
 
-
 export default function Career() {
   return (
     <div>
       <Navbar />
-      <CareerSectionfirst />
+      <div className="max-w-[1600px]  mx-auto ">
+        <CareerSectionfirst />
 
-      <JoinOurTeam />
+        <JoinOurTeam />
 
-      <OurTeam/>
+        <OurTeam />
 
-      <ContactSectionname/>
-      <Footer />
+        <ContactSectionname />
+        <Footer />
+      </div>
     </div>
   );
 }

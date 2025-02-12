@@ -48,11 +48,11 @@ const Benefits = ({ title, content }) => {
             backgroundPosition: "center",
             position: "relative",
           }}
-          className="flex items-center justify-center px-5 sm:px-10 md:px-20 xl:h-[100vh] lg:h-[100vh] md:h-[70vh] h-[65vh]"
+          className="flex items-center justify-center px-5 sm:px-10 md:px-20 xl:h-[100vh] lg:h-[100vh] md:h-[70vh] sm:h-[70vh] h-100vh]"
         >
-          <div className="absolute inset-0 bg-black opacity-60 xl:h-[100vh] lg:h-[100vh] md:h-[70vh] h-[65vh]"></div>
+          <div className="absolute inset-0 bg-black opacity-60 xl:h-[100vh] lg:h-[100vh] md:h-[70vh] sm:h-[70vh] h-100vh]"></div>
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 pt-24">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:pt-24 xl:pt-24 md:pt-24 pt-16">
             {/* Left Content */}
             <div className="text-left  md:pt-28 lg:pt-28  pr-5 md:pr-10">
               <h3 className="text-white text-lg md:text-xl font-medium py-3 text-start">
@@ -61,7 +61,7 @@ const Benefits = ({ title, content }) => {
               <h1 className="text-3xl md:text-5xl font-bold text-blue-500 text-start">
                 {title} <span className="text-white text-start">Services</span>
               </h1>
-              <p className="text-md md:text-lg pt-5 text-white text-start">
+              <p className="xl:text-md lg:text-md text-[14px] md:text-lg pt-5 text-white text-start">
                 We offer professional website development services to help
                 businesses establish a strong online presence. Our expertise
                 spans custom website design, responsive development, and
@@ -71,7 +71,7 @@ const Benefits = ({ title, content }) => {
             </div>
 
             {/* Right Content - Animated Icons */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center py-10">
               <section className="main-container">
                 <div className="main">
                   <div className="big-circle">
@@ -169,7 +169,7 @@ const Benefits = ({ title, content }) => {
             <h1 className="text-3xl md:text-4xl font-bold pt-10 md:pt-10 text-start">
               {title} {content} Consultants at Your Service
             </h1>
-            <p className="text-lg md:text-xl py-5 text-start">
+            <p className="lg:text-lg xl:text-lg md:text-xl text-[14px] py-5 text-start">
               Antier, as one of the top blockchain consulting companies, helps
               empower businesses by providing futuristic blockchain-based
               solutions that play a significant role in harnessing the potential

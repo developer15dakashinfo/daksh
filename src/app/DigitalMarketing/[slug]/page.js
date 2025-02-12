@@ -35,7 +35,7 @@ export default function DigitalMarketingPage() {
   const pageData = slug ? data[slug] || { title: "Not Found", content: "Page not found" } : { title: "Loading...", content: "Please wait..." };
 
   return (
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
       <Navbar />
       <HeroDigitalMarketingSection title={pageData.title} content={pageData.content} />
       <OurSourcesSection/>

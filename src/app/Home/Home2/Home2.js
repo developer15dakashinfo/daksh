@@ -321,7 +321,7 @@ const Home2 = () => {
 
   return (
     <>
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
       <div className="relative ">
         <div
           ref={sectionRef}

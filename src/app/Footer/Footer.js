@@ -108,7 +108,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="max-w-[1600px]  mx-auto ">
+      <div className="max-w-[1800px]  mx-auto ">
         <footer className="bg-[#0a0a0a] py-4 text-gray-400">
           <div className="container mx-auto px-6 py-14 flex flex-col lg:flex-row gap-20">
             <div className="text-start relative pt-14">

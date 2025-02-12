@@ -38,7 +38,7 @@ export default function MobileMarketingPage() {
   const pageData = slug ? data[slug] || { title: "Not Found", content: "Page not found" } : { title: "Loading...", content: "Please wait..." };
 
   return (
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
       <Navbar />
       <Herosection title={pageData.title} content={pageData.content} />
       <MobileAboutSection title={pageData.title} content={pageData.content}/>
@@ -46,6 +46,7 @@ export default function MobileMarketingPage() {
       
       <SliderSectionHome7/>
       <ContactSectionname/>
+      
       <FAQ/>
       <Footer />
     </div>

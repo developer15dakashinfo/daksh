@@ -46,7 +46,7 @@ const SolutionForAllSection = () => {
   ];
 
   return (
-    <div className="max-w-[1600px] mx-auto ">
+    <div className="max-w-[1800px] mx-auto ">
     <div className="w-full bg-white pb-20">
       <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
         <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-emerald-600 font-medium text-lg text-center">
