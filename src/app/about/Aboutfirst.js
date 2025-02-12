@@ -2,25 +2,29 @@ import Navbar from "../Navbar/Navbar";
 import "./Pricing.scss";
 
 export default function Aboutfirst() {
-    return (
-      <div>
-  
-  <div className="hero">
-  <div className="diagonal-hero-bg">
-     <div className="stars">
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-      <h1 className="text-7xl text-white font-bold">WE ARE</h1>
-      <h1 className="text-7xl text-white font-bold">DAKSH INFOSFT</h1>
-          <div style={{backgroundColor:"#FFEC89"}} className="absolute right-96 rotate-160 me-20 top-40 w-40 h-40  text-center  font-bold align-center rounded-full uppercase text-black text-xl pt-10">this is <br/>
-who we <br/>
-are!</div>
+  return (
+    <div>
+      <div className="hero">
+        <div className="diagonal-hero-bg">
+          <div className="stars">
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              <h1 className="xl:text-7xl lg:text-6xl md:text-7xl text-5xl  text-white font-bold">WE ARE</h1>
+              <h1 className="xl:text-7xl lg:text-6xl md:text-7xl text-5xl text-white font-bold">DAKSH INFOSFT</h1>
+              <div
+                style={{ backgroundColor: "#FFEC89" }}
+                className="absolute xl:right-72 2xl:right-96 lg:right-72 md:right-60 right-2 rotate-160 me-20 xl:top-40 lg:top-40 md:top-40 top-72 xl:w-40 xl:h-40 lg:w-40 lg:h-40 md:w-32 md:h-32 w-32 h-32  text-center font-bold align-center rounded-full uppercase text-black xl:text-xl lg:text-xl md:text-xl text-[14px] xl:pt-10 lg:pt-10 md:pt-10 pt-8"
+              >
+                this is <br />
+                who we <br />
+                are!
+              </div>
+            </div>
+            <div className="small"></div>
+            <div className="medium"></div>
+            <div className="big"></div>
+          </div>
         </div>
-        <div className="small"></div>
-        <div className="medium"></div>
-        <div className="big"></div>
       </div>
-   </div>
-</div>
       {/* <div className="bg-white dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
@@ -59,7 +63,6 @@ are!</div>
           </div>
         </div>
       </div> */}
-      </div>
-    );
-  }
-  
+    </div>
+  );
+}

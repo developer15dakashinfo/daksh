@@ -33,7 +33,7 @@ export default function CaseStudies() {
   ];
 
   return (
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
     <section className="pt-20 pb-48 bg-gray-200">
       <div className="text-center mb-10">
         <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center">
@@ -47,7 +47,7 @@ export default function CaseStudies() {
         </p>
       </div>
 
-      <div className="container mx-auto px-5 sm:px-20 md:px-16 lg:px-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 md:gap-14 lg:gap-12 max-w-full">
+      <div className="container mx-auto px-5 sm:px-20 md:px-16 lg:px-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-12 gap-32 md:gap-14 lg:gap-12 max-w-full">
         {caseStudies.map((caseStudy, index) => (
           <div
             key={index}
@@ -63,7 +63,7 @@ export default function CaseStudies() {
               <div className="absolute inset-0 bg-black bg-opacity-30 backdrop-opacity-20"></div>
             </div>
 
-            <div className="absolute top-[140px] lg:top-[100px] sm:top-[80px] left-1/2 transform transition duration-300 hover:scale-105 -translate-x-1/2 w-full max-w-[92%] sm:h-[180px] lg:h-[220px] md:h-[200px] xl:h-[250px] bg-white shadow-md rounded-lg px-4 py-5 overflow-hidden">
+            <div className="absolute top-[90px] sm:top-[120px] lg:top-[100px] md:top-[100px] xl:top-[100px] left-1/2 transform transition duration-300 hover:scale-105 -translate-x-1/2 w-full max-w-[92%] sm:h-[180px] lg:h-[220px] md:h-[200px] xl:h-[250px] bg-white shadow-md rounded-lg px-4 py-5 overflow-hidden">
               <h3 className="text-lg font-semibold text-gray-900 text-center">
                 {caseStudy.title}
               </h3>

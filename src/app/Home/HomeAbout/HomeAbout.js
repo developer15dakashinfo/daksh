@@ -34,7 +34,7 @@ export default function HomeAbout() {
   return (
     <>
 
-<div className="max-w-[1600px] mx-auto ">
+<div className="max-w-[1800px] mx-auto ">
       <section className="py-10 bg-black text-white">
         <div className="w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 mx-auto">
           <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-12 items-center">

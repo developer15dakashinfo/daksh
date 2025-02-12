@@ -7,7 +7,7 @@ const MobileFeatureSection = () => {
         <div className="w-full md:w-8/12 flex justify-center md:justify-end py-5">
           <div className="space-y-3 md:pl-28 lg:28 px-5">
             <h3 className="text-2xl font-bold text-start">DID YOU KNOW!</h3>
-            <p className="text-xl font-light mt-4 text-start">
+            <p className="xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg font-light mt-4 text-start">
               According to the App Industry Report 2022, Web 3 gaming accounts
               for almost half of the overall blockchain activity, with daily
               unique active wallets of 1.15 million and a transaction count of
@@ -34,13 +34,16 @@ const MobileFeatureSection = () => {
       />
 
       <section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="px-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="text-center">
             <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
               Features{" "}
             </h2>
             <p class="mt-4 text-lg leading-7 text-gray-600 sm:mt-8">
-            Mobile marketing enables businesses to send personalized messages based on user behavior and preferences, enhancing engagement.With location-based targeting, companies can send offers and promotions to users when they are near a specific store or area.
+              Mobile marketing enables businesses to send personalized messages
+              based on user behavior and preferences, enhancing engagement.With
+              location-based targeting, companies can send offers and promotions
+              to users when they are near a specific store or area.
             </p>
           </div>
           <div class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
@@ -125,7 +128,7 @@ const MobileFeatureSection = () => {
         </div>
       </section>
 
-      <section class="text-white bg-blue-950  body-font">
+      <section class="text-white bg-blue-950  body-font px-5">
         <div class="flex justify-center pt-20 text-5xl font-bold">Why Us?</div>
         <p className="text-lg text-center text-gray-200 pt-4 mx-auto max-w-4xl">
           At Dakshinfosoft, we offer tailored digital marketing strategies that
@@ -151,18 +154,17 @@ const MobileFeatureSection = () => {
             </div>
 
             <div class="p-4 md:w-1/4 sm:w-1/2">
-            <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg hover:scale-110">
-  <div class="flex justify-center">
-    <img
-      src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
-      class="w-32 mb-3"
-    />
-  </div>
-  <h2 class="title-font font-regular text-xl text-gray-200">
-    Reasonable Rates
-  </h2>
-</div>
-
+              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg hover:scale-110">
+                <div class="flex justify-center">
+                  <img
+                    src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
+                    class="w-32 mb-3"
+                  />
+                </div>
+                <h2 class="title-font font-regular text-xl text-gray-200">
+                  Reasonable Rates
+                </h2>
+              </div>
             </div>
 
             <div class="p-4 md:w-1/4 sm:w-1/2">

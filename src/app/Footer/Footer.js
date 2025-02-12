@@ -62,45 +62,51 @@ const Footer = () => {
     return () => clearInterval(interval);
   }, [isMovingDown, words.length]);
 
+
   const usefulLinks = [
-    "About Us",
-    "Blogs",
-    "Careers",
-    "Contact Us",
-    "Terms & Conditions",
-    "Privacy Policy",
-    "Refund Policy",
+    { name: "About Us", path: "/about" },
+   
+    { name: "Careers", path: "/careerSection" },
+    { name: "Contact Us", path: "/contact" },
+    { name: "Technology", path: "/technolgy/android" },
+    
   ];
-
+  
   const digitalMarketing = [
-    "Digital Marketing",
-    "SEO Service",
-    "SMO Service",
-    "Email Marketing",
-    "PCC Services",
-    "Social Media Marketing",
+    
+    { name: "SEO Service", path: "/DigitalMarketing/seo" },
+    { name: "SMO Service", path: "/DigitalMarketing/smo" },
+    { name: "Email Marketing", path: "/DigitalMarketing/emailMarketing" },
+    { name: "PCC Services", path: "/DigitalMarketing/ppcservices" },
+    { name: "Social Media Marketing", path: "/DigitalMarketing/smm" },
   ];
-
+  
   const mobileMarketing = [
-    "Bulk SMS",
-    "IVR",
-    "RCS",
-    "Official Whatsapp API",
-    "Voice Call",
-    "Calling Agent",
+    { name: "Bulk SMS", path: "/MobileMarketing/bulksms" },
+    { name: "IVR", path: "/MobileMarketing/ivr" },
+    { name: "RCS", path: "/MobileMarketing/rcs" },
+    { name: "Official Whatsapp API", path: "/MobileMarketing/official_whatsaap_api" },
+    { name: "Voice Call", path: "/MobileMarketing/voice_call" },
+    { name: "Calling Agent", path: "/MobileMarketing/Calling_agent" },
   ];
+  
   const appDevelopmentLinks = [
-    "Android App Development",
-    "Hybrid App Development",
-    "iOS App Development",
+    { name: "Android App Development", path: "/MobileAppDevelopment/android_app_development" },
+    { name: "Hybrid App Development", path: "/MobileAppDevelopment/ios_app_development" },
+    { name: "iOS App Development", path: "/MobileAppDevelopment/flutter_app_development" },
   ];
-  const webDevelopmentLinks = ["Website Designing", "Website Development"];
+  
+  const webDevelopmentLinks = [
+    { name: "Website Designing", path: "/websiteDesign/webdesigning" },
+    { name: "Website Development", path: "/websiteDesign/webdevelopement" },
+  ];
 
+  
   const renderLinks = (links) =>
     links.map((link, index) => (
       <li key={index} className="group relative">
-        <a href="#" className="relative inline-block">
-          {link}
+        <a href={link.path} className="relative inline-block">
+        {link.name}
           <span className="absolute left-0 right-0 bottom-0 h-[1px] bg-white scale-x-0 origin-center transition-transform duration-500 group-hover:scale-x-100"></span>
         </a>
       </li>
@@ -108,7 +114,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="max-w-[1600px]  mx-auto ">
+      <div className="max-w-[1800px]  mx-auto ">
         <footer className="bg-[#0a0a0a] py-4 text-gray-400">
           <div className="container mx-auto px-6 py-14 flex flex-col lg:flex-row gap-20">
             <div className="text-start relative pt-14">

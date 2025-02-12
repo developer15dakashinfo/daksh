@@ -143,7 +143,7 @@ const StackingCards = () => {
 
   return (
 
-    <div className="max-w-[1600px] mx-auto ">
+    <div className="max-w-[1800px] mx-auto ">
       <div className="bg-black text-white text-center font-sans mt-96 xl:mt-0 lg:mt-0 md:mt-0">
       <main className="w-[95%] mx-auto pb-20 relative">
         <ul className="relative">
@@ -161,8 +161,8 @@ const StackingCards = () => {
               }}
             >
               <div
-                className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden sm:h-auto ${
-                  index === 0 ? "h-[35vh]" : "h-[90vh]"
+                className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden ${
+                  index === 0 ? "h-[40vh]" : "h-[100vh]"
                 }`}
                 style={{ backgroundColor: card.backgroundColor }}
               >
@@ -177,32 +177,32 @@ const StackingCards = () => {
                   </div>
                 ) : (
                   <>
-                    <div className="py-10 px-5 lg:py-20 lg:px-10 md:py-10 md:px-10 flex flex-col lg:flex-row xl:flex-row md:flex-col w-full gap-10 items-center">
+                    <div className="py-5 px-5 lg:py-20 lg:px-10 md:py-10 md:px-10 flex flex-col lg:flex-row xl:flex-row md:flex-col w-full gap-6 sm:gap-8 lg:gap-10 md:gap-10 xl:gap-10 items-center">
                       <div className="w-full lg:w-4/12 flex justify-center">
                         <figure className="overflow-hidden rounded-lg w-full sm:w-8/12 md:w-full">
                           <img
                             src={card.image}
                             alt={card.title}
-                            className="object-cover h-40 sm:h-48 md:h-64 lg:h-96 w-full"
+                            className="object-cover h-36 sm:h-48 md:h-64 lg:h-96 w-full"
                           />
                         </figure>
                       </div>
 
                       <div className="flex flex-col w-full lg:w-8/12 sm:px-5 md:px-5 lg:px-2">
                         <div className="grid gap-5 md:grid-cols-2">
-                          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-[45px] font-extrabold text-left md:text-left">
+                          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-[45px] font-extrabold text-left md:text-left">
                             {card.title}
                           </h2>
-                          <p className="text-base sm:text-sm md:text-[14px] lg:text-[16px] leading-relaxed text-left md:text-left">
+                          <p className="text-[12px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[16px] leading-relaxed text-left md:text-left">
                             {card.text}
                           </p>
                         </div>
 
-                        <hr className="border-t-1 border-black my-6 md:my-8" />
+                        <hr className="border-t-1 border-black my-4 md:my-6" />
 
                         {/* List Section */}
-                        <div className="grid gap-5 md:grid-cols-2">
-                          <h2 className="text-sm md:text-[15px] lg:text-[15px] font-medium text-left md:text-left">
+                        <div className="grid lg:gap-5 xl:gap-5 md:gap-5 gap-2 md:grid-cols-2">
+                          <h2 className="text-[13px] sm:text-[14px]  md:text-[15px] lg:text-[15px] xl:text-[15px] font-medium text-left md:text-left">
                             {card.descreption}
                           </h2>
                           <ul className="list-none">
@@ -214,7 +214,7 @@ const StackingCards = () => {
                                 >
                                   <div className=" flex items-center gap-2">
                                     <FaCircleCheck />
-                                    <p className="text-[14px] sm:text-[16px] font-semibold leading-relaxed">
+                                    <p className="text-[13px] sm:text-[15px] font-semibold leading-relaxed">
                                       {item}
                                     </p>
                                   </div>
@@ -225,24 +225,8 @@ const StackingCards = () => {
                         </div>
 
                         {/* Footer Section */}
-                        <div className="grid gap-5 md:grid-cols-2 py-6 items-center">
-                          <div className="flex gap-3 items-center justify-center md:justify-start">
-                            <figure className="overflow-hidden rounded-full">
-                              <img
-                                src={card.image}
-                                alt={card.title}
-                                className="object-cover h-10 w-10"
-                              />
-                            </figure>
-                            <div className="text-center md:text-left">
-                              <h2 className="text-[14px] font-extrabold">
-                                {card.t1}
-                              </h2>
-                              <p className="text-[14px] leading-relaxed">
-                                {card.t2}
-                              </p>
-                            </div>
-                          </div>
+                        <div className="grid gap-5 md:grid-cols-2 lg:py-5 xl:py-5 md:py-5 py-4 items-center">
+                          
                           <div className="text-center md:text-right">
                             <SlidingButton
                               text="Read More"

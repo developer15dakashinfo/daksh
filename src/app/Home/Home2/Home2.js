@@ -321,7 +321,7 @@ const Home2 = () => {
 
   return (
     <>
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
       <div className="relative ">
         <div
           ref={sectionRef}
@@ -378,7 +378,7 @@ const Home2 = () => {
       </div>
 
       <div
-        className="overflow-hidden relative lg:mt-28 xl:mt-36 md:mt-32 sm:mt-60 mt-20 xl:h-[100vh] lg:h-[80vh] md:h-[60vh] sm:h-[50vh]"
+        className="overflow-hidden relative lg:mt-28 xl:mt-36 md:mt-32 sm:mt-40 mt-20 xl:h-[100vh] lg:h-[90vh] md:h-[60vh] sm:h-[50vh]"
         style={{
           
           position: "relative",
@@ -390,13 +390,12 @@ const Home2 = () => {
         onMouseLeave={handleMouseUp}
       >
         <div
-          className="shadow-xl relative border-3 top-[50%]"
+          className="shadow-xl relative border-3 top-[50%] rounded-[50%]"
           style={{
             width: `${BLUE_BALL_RADIUS * 2}px`,
             height: `${BLUE_BALL_RADIUS * 2}px`,
             backgroundColor: "#FFEC89",
-            borderRadius: "50%",
-            position: "absolute",
+           position: "absolute",
             left: "50%",
             
             transform: "translate(-50%, -50%)",
@@ -429,7 +428,7 @@ const Home2 = () => {
         {balls.map((ball) => (
           <div
             key={ball.id}
-            className="shadow-xl lg:flex hidden"
+            className="lg:flex"
             style={{
               width: `${BALL_RADIUS * 2}px`,
               height: `${BALL_RADIUS * 2}px`,

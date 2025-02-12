@@ -27,16 +27,16 @@ export default function technolgy({ params }) {
     laravel: { title: "Laravel Web", content: "" },
     nodejs: { title: "Custom Node js", content: "" },
     php: { title: "Custom PHP", content: "" },
-    java: { title: "Java", content: "" },
-    figma: { title: "Figma", content: "" },
-    anjular_js: { title: "Angular js", content: "" },
+    java: { title: "Custom Java", content: "" },
+    figma: { title: "Custom Figma", content: "" },
+    anjular_js: { title: "Custom Angular js", content: "" },
   };
 
 
   const pageData = data[slug] || { title: "", content: "" };
 
   return (
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
 
       <Navbar/>
       <AppTechnologyPage title={pageData.title} content={pageData.content}/>

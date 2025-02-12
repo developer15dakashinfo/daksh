@@ -42,7 +42,7 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <div className="max-w-[1600px] mx-auto ">
+    <div className="max-w-[1800px] mx-auto ">
       <section className="bg-gray-50 ">
         <div className=" px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-20">
           <div className=" items-end justify-between sm:flex sm:pe-6 lg:pe-8">

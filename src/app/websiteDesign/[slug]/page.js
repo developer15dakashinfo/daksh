@@ -39,7 +39,7 @@ export default function WebsiteDesign({ params }) {
   const pageData = data[slug] || { title: "", content: "" };
 
   return (
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
       <Navbar />
       <Benefits  title={pageData.title} content={pageData.content} />
       {/* <HeroVisual title={pageData.title} content={pageData.content} /> */}

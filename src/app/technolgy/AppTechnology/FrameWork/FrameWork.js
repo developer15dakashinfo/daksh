@@ -6,7 +6,7 @@ const FrameWorkSection = () => {
   return (
     <div>
       <section className="bg-white">
-        <div className="container mx-auto py-14 px-20 sm:px-6 lg:px-40">
+        <div className="container mx-auto py-14 px-10 md:px-20 sm:px-10 xl:px-40 lg:px-40">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="max-w-lg">
               <h1 className="text-xl text-blue-900 py-2">FRAMEWORK</h1>

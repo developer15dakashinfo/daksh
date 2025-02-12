@@ -5,12 +5,12 @@ const Herosection = ({ title, content }) => {
   return (
     <>
       <div className="absolute top-40">
-        <div className=" justify-start items-start text-start max-w-4xl px-20">
+        <div className=" justify-start items-start text-start max-w-4xl lg:px-20 xl:px-20 md:px-20 sm:px-16 px-10">
           <h3 className="text-white py-1 text-lg font-semibold">Services</h3>
           <h1 className="text-5xl text-white md:text-6xl font-bold mb-6 leading-tight">
             <span className="block">{title} </span>
           </h1>
-          <p className="text-xl mb-8 text-white pr-20 ">{content}</p>
+          <p className="xl:text-xl lg:text-xl md:text-xl text-[17px] mb-8 text-white  xl:pr-20 lg:pr-20 md:pr-10 pr-0 ">{content}</p>
         </div>
       </div>
       <div className="area">

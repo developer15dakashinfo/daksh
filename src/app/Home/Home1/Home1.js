@@ -14,7 +14,7 @@ import ChatBox from "../ChatBox/ChatBox";
 
 export const Home1 = () => {
   return (
-    <div className="max-w-[1600px]  mx-auto ">
+    <div className="max-w-[1800px]  mx-auto ">
       <div className="bg-zinc-950">
         <ReactLenis
           root
