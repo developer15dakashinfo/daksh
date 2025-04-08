@@ -13,17 +13,15 @@ const HomeSection1 = ({title,content}) => {
             backgroundPosition: "center",
             position: "relative",
           }}
-          className="flex items-center justify-center px-5 sm:px-10 md:px-20 xl:h-[100vh] lg:h-[100vh] md:h-[70vh] sm:h-[70vh] h-100vh]"
+          className="flex items-center justify-center px-5 sm:px-10 md:px-20 "
         >
-          <div className="absolute inset-0 bg-black opacity-60 xl:h-[100vh] lg:h-[100vh] md:h-[70vh] sm:h-[70vh] h-100vh]"></div>
+          <div className="absolute inset-0 bg-black opacity-60 "></div>
 
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:pt-24 xl:pt-24 md:pt-24 pt-16">
             {/* Left Content */}
             <div className="text-left  md:pt-28 lg:pt-28  pr-5 md:pr-10">
-              <h3 className="text-white text-lg md:text-xl font-medium py-3 text-start">
-                SERVICES
-              </h3>
-              <h1 className="text-3xl md:text-5xl font-bold text-blue-500 text-start">
+             
+              <h1 className="text-3xl md:text-5xl mt-7 font-bold text-blue-500 text-start">
                 {title} <span className="text-white text-start">Services</span>
               </h1>
               <p className="xl:text-md lg:text-md text-[14px] md:text-lg pt-5 text-white text-start">
@@ -91,13 +89,13 @@ const HomeSection1 = ({title,content}) => {
                       />
                     </div>
                   </div>
-                  <div className="center-logo">
-                    <img
-                      src="https://www.dakshinfo.com/images/headerlogo.svg"
-                      alt="About Us"
-                      className="object-cover h-10 md:h-[50px]"
-                    />
-                  </div>
+                  <div className="absolute inset-0 flex justify-center items-center">
+      <img
+        src="https://www.dakshinfo.com/images/headerlogo.svg"
+        alt="Center Logo"
+        className="h-8 md:h-[50px]"
+      />
+    </div>
                 </div>
               </section>
             </div>

@@ -9,7 +9,7 @@ const CardSectionname = () => {
           Let's Build Your Digital Success Together!
         </h2>
         <div className="font-sans bg-white p-4">
-          <div className="md:max-w-7xl max-w-xl mx-auto">
+          <div className="">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="text-left">
                 <h2 className="text-gray-800 text-2xl font-bold mb-4">
@@ -128,9 +128,7 @@ const CardSectionname = () => {
               </svg>
             </span>
           </a>
-          <a className="flex items-center justify-center w-full px-4 py-4 text-sm font-bold leading-6 capitalize duration-100 transform border-2 rounded-sm cursor-pointer border-blue-900 focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:w-auto sm:px-6 border-text  hover:shadow-lg hover:-translate-y-1">
-            Connect on Telegram
-          </a>
+         
         </div>
       </div>
     </>

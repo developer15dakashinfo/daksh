@@ -8,7 +8,7 @@ const HomeSection2 = () => {
 
 <div className="bg-white px-5">
    
-    <div className="text-black flex flex-col md:flex-row items-center py-8 mx-auto shadow-lg border my-14 rounded-lg max-w-8xl">
+    <div className="text-black flex flex-col md:flex-row items-center py-8 mx-auto shadow-lg border my-4 rounded-lg max-w-8xl">
       <div className="w-full md:w-3/12 flex justify-center md:justify-end py-5">
         <img
           className="w-64 object-cover rounded-lg h-40"

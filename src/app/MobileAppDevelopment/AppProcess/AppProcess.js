@@ -68,9 +68,9 @@ const processSteps = [
 
 const HomeProcess4 = () => {
   return (
-    <div className=" max-w-8xl  mx-auto ">
+    <div className=" o ">
     <div className="py-14 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className=" text-center">
         <h2 className="text-3xl font-extrabold text-black dark:text-white md:text-5xl">
           Our Android Development Consulting Process
         </h2>

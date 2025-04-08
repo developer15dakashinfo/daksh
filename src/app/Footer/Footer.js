@@ -64,8 +64,7 @@ const Footer = () => {
 
 
   const usefulLinks = [
-    { name: "About Us", path: "/about" },
-   
+    { name: "About Us", path: "/about" },  
     { name: "Careers", path: "/careerSection" },
     { name: "Contact Us", path: "/contact" },
     { name: "Technology", path: "/technolgy/android" },
@@ -93,7 +92,7 @@ const Footer = () => {
   const appDevelopmentLinks = [
     { name: "Android App Development", path: "/MobileAppDevelopment/android_app_development" },
     { name: "Hybrid App Development", path: "/MobileAppDevelopment/ios_app_development" },
-    { name: "iOS App Development", path: "/MobileAppDevelopment/flutter_app_development" },
+    { name: "IOS App Development", path: "/MobileAppDevelopment/flutter_app_development" },
   ];
   
   const webDevelopmentLinks = [
@@ -114,9 +113,9 @@ const Footer = () => {
 
   return (
     <>
-      <div className="max-w-[1800px]  mx-auto ">
-        <footer className="bg-[#0a0a0a] py-4 text-gray-400">
-          <div className="container mx-auto px-6 py-14 flex flex-col lg:flex-row gap-20">
+      <div className="  mx-auto ">
+        <footer className="bg-[#0a0a0a]  text-gray-400">
+          <div className=" p-4 flex flex-col lg:flex-row gap-20">
             <div className="text-start relative pt-14">
               <div className="flex flex-row gap-20 sm:gap-20 md:gap-24 lg:gap-24 xl:gap-28">
                 <div className="flex flex-col relative">
@@ -125,7 +124,7 @@ const Footer = () => {
                     style={{
                       top: `${
                         currentIndex *
-                        (windowWidth < 640 ? 75 : windowWidth < 1024 ? 40 : 78)
+                        (windowWidth < 940 ? 75 : windowWidth < 1024 ? 40 : 78)
                       }px`,
                     }}
                   >
@@ -148,7 +147,7 @@ const Footer = () => {
                     return (
                       <span
                         key={index}
-                        className={`text-6xl sm:text-6xl md:text-6xl lg:text-[65px] xl:text-[65px] font-bold transition-all duration-800 sm:mb-3 mb-2 md:mb-4 lg:mb-3 xl:mb-3 ${
+                        className={`text-5xl sm:text-6xl md:text-6xl lg:text-[65px] xl:text-[65px] font-bold transition-all duration-800 sm:mb-3 mb-2 md:mb-4 lg:mb-3 xl:mb-3 ${
                           index === currentIndex ? colorClass : "text-gray-500"
                         }`}
                       >
@@ -227,7 +226,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="px-8">
+          <div className="">
             <hr className="h-[1px] bg-gray-500 border-0" />
 
             <div className="grid grid-cols-12 gap-4 items-center bg-black text-white">

@@ -65,16 +65,16 @@ const HomeSection3 = () => {
           className="group relative mb-8 flex flex-col rounded-2xl border border-blue-300 bg-white xl:p-8 lg:px-5 md:px-5 px-10 py-10 shadow-lg dark:border-gray-600 dark:bg-gray-800 lg:mb-4 transition-transform duration-500 ease-in-out transform hover:-translate-y-3"
         >
           
-          <div className="absolute -top-8 left-40 md:left-36 lg:left-28 xl:left-40 flex h-20 w-20 items-center justify-center rounded-full border border-blue-400 shadow-md dark:border-gray-500 dark:bg-gray-700 lg:right-8 overflow-hidden">
+          <div className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex h-20 w-20 items-center justify-center rounded-full border border-blue-400 shadow-md dark:border-gray-500 dark:bg-gray-700  overflow-hidden">
             <img
               src={feature.img}
               alt="img"
-              className="h-full w-full rounded-full transition-transform duration-700 ease-in-out group-hover:rotate-180"
+              className="h-full w-full bg-white rounded-full transition-transform duration-700 ease-in-out group-hover:rotate-180"
             />
           </div>
 
           
-          <p className="mb-4 xl:mt-10 lg:top-14 md:mt-16 mt-10 text-xl text-center font-semibold text-gray-800 dark:text-white">
+          <p className="my-4 xl:mt-10 lg:top-14 md:mt-16 mt-10 text-xl text-center font-semibold text-gray-800 dark:text-white">
             {feature.title}
           </p>
           <p className="text-gray-500 dark:text-gray-300">{feature.description}</p>

@@ -365,7 +365,7 @@ const Home2 = () => {
                     </div>
                   </div>
                 </h1>
-                <h2 className="lg:text-2xl md:text-[14px] sm:text-lg xl:text-xl text-black font-bold">
+                <h2 className="lg:text-xl md:text-[14px] sm:text-lg xl:text-lg text-black font-bold">
                   {data.heading}
                 </h2>
                 <p className="xl:text-[18px] lg:text:[16px] md:text-[15px] xl:text-xl sm:lg text-black font-[500] lg:pt-4 xl:pt-4 md:pt-0">

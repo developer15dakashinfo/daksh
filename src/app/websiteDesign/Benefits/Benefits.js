@@ -55,10 +55,8 @@ const Benefits = ({ title, content }) => {
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:pt-24 xl:pt-24 md:pt-24 pt-16">
             {/* Left Content */}
             <div className="text-left  md:pt-28 lg:pt-28  pr-5 md:pr-10">
-              <h3 className="text-white text-lg md:text-xl font-medium py-3 text-start">
-                SERVICES
-              </h3>
-              <h1 className="text-3xl md:text-5xl font-bold text-blue-500 text-start">
+             
+              <h1 className="text-3xl md:text-5xl font-bold text-blue-500 mt-5 text-start">
                 {title} <span className="text-white text-start">Services</span>
               </h1>
               <p className="xl:text-md lg:text-md text-[14px] md:text-lg pt-5 text-white text-start">
@@ -126,20 +124,20 @@ const Benefits = ({ title, content }) => {
                       />
                     </div>
                   </div>
-                  <div className="center-logo">
-                    <img
-                      src="https://www.dakshinfo.com/images/headerlogo.svg"
-                      alt="About Us"
-                      className="object-cover h-10 md:h-[50px]"
-                    />
-                  </div>
+                  <div className="absolute inset-0 flex justify-center items-center">
+      <img
+        src="https://www.dakshinfo.com/images/headerlogo.svg"
+        alt="Center Logo"
+        className="h-8 md:h-[50px]"
+      />
+    </div>
                 </div>
               </section>
             </div>
           </div>
         </section>
 
-        <div className="text-black flex flex-col md:flex-row items-center py-8 mx-5 shadow-lg border my-14 rounded-lg max-w-8xl">
+        <div className="text-black flex flex-col md:flex-row items-center py-8 mx-5 shadow-lg border my-5 rounded-lg max-w-8xl">
           <div className="w-full md:w-3/12 flex justify-center md:justify-end py-5">
             <img
               className="w-64 object-cover rounded-lg h-40"
@@ -151,7 +149,7 @@ const Benefits = ({ title, content }) => {
           <div className="w-[80%] h-[4px] bg-blue-600 my-4 md:hidden"></div>
           <div className="hidden md:block w-[5px] bg-blue-600 h-48 mx-6"></div>
 
-          <div className="w-full md:w-8/12 h-auto py-5 font-nunito text-center md:text-left">
+          <div className="w-full md:w-8/12 h-auto  font-nunito text-center md:text-left">
             <div className="space-y-3 px-5">
               <h3 className="text-2xl font-bold text-start">DID YOU KNOW!</h3>
               <p className="text-xl font-light mt-4 text-start">
@@ -164,8 +162,8 @@ const Benefits = ({ title, content }) => {
           </div>
         </div>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 items-start">
-          <div className="text-start px-10 py-5 md:px-10 lg:px-20 xl:px-20 ">
+        <section className="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div className="text-start px-10   ">
             <h1 className="text-3xl md:text-4xl font-bold pt-10 md:pt-10 text-start">
               {title} {content} Consultants at Your Service
             </h1>
@@ -194,7 +192,7 @@ const Benefits = ({ title, content }) => {
               />
             </div>
           </div>
-          <div className="flex justify-center md:justify-end  md:py-48 items-center">
+          <div className="flex justify-center md:justify-end my-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -553,7 +551,7 @@ const Benefits = ({ title, content }) => {
           </div>
         </section>
 
-        <div className="text-white bg-blue-950 flex flex-col md:flex-row items-center py-5 mx-5 shadow-lg border my-14 rounded-lg max-w-8xl">
+        <div className="text-white bg-blue-950 flex flex-col md:flex-row items-center py-5 mx-5 shadow-lg border my-4 rounded-lg max-w-8xl">
           <div className="w-full md:w-8/12 flex justify-center md:justify-end py-5">
             <div className="space-y-3 md:pl-28 lg:28 px-5">
               <h3 className="text-2xl font-bold text-start">DID YOU KNOW!</h3>
@@ -578,9 +576,9 @@ const Benefits = ({ title, content }) => {
           </div>
         </div>
 
-        <section className="bg-white pb-6">
-          <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-            <div className="container mx-auto px-6 p-6 bg-white">
+        <section className="bg-white ">
+          <div className="p-4 sm:p-6 lg:p-8">
+            <div className="px-6 p-6 bg-white">
               <div className="mb-16 text-center">
                 <p className="mt-2 text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
                   Why Choose Daksh for {title} {content}
