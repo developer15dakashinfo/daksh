@@ -32,7 +32,7 @@ const SliderSectionHome7 = () => {
           </div>
         </div>
       </div>
-      <div className="py-20">
+      <div className="py-10">
         <div>
           <h2 className="text-3xl font-bold text-center sm:text-5xl">
             Our Partners

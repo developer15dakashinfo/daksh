@@ -5,15 +5,15 @@ const Herosection = ({ title, content }) => {
   return (
     <>
       <div className="absolute top-40">
-        <div className=" justify-start items-start text-start max-w-4xl lg:px-20 xl:px-20 md:px-20 sm:px-16 px-10">
-          <h3 className="text-white py-1 text-lg font-semibold">Services</h3>
-          <h1 className="text-5xl text-white md:text-6xl font-bold mb-6 leading-tight">
+        <div className=" justify-start items-start text-start max-w-4xl px-3 lg:px-10">
+        
+          <h1 className="text-4xl text-white md:text-5xl font-bold mb-6 leading-tight">
             <span className="block">{title} </span>
           </h1>
           <p className="xl:text-xl lg:text-xl md:text-xl text-[17px] mb-8 text-white  xl:pr-20 lg:pr-20 md:pr-10 pr-0 ">{content}</p>
         </div>
       </div>
-      <div className="area">
+      <div className="area h-full">
         <ul className="circles">
           <li />
           <li />
@@ -29,7 +29,7 @@ const Herosection = ({ title, content }) => {
       </div>
 
       <div className="mx-5">
-        <div className="text-black flex flex-col md:flex-row items-center py-8 mx-auto shadow-lg border my-14 rounded-lg max-w-8xl">
+        <div className="text-black flex flex-col md:flex-row items-center py-8 mx-auto shadow-lg border my-4 rounded-lg max-w-8xl">
           <div className="w-full md:w-3/12 flex justify-center md:justify-end py-5">
             <img
               className="w-64 object-cover rounded-lg h-40"

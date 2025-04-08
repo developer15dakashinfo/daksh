@@ -4,7 +4,7 @@ import React from 'react';
 const ContentSectionHome5 = () => {
   return (
     <>
-      <section className="overflow-hidden bg-white pb-10 pt-20">
+      <section className="overflow-hidden bg-white py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
@@ -82,14 +82,12 @@ const ContentSectionHome5 = () => {
               </div>
               <div className="mt-10 flex items-center gap-x-6">
                 <a
-                  href="#"
+                  href="/contact"
                   className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Start for free
+                  Contact Us
                 </a>
-                <a href="#" className="text-sm font-semibold leading-6 text-gray-700">
-                  Schedule a demo <span aria-hidden="true">→</span>
-                </a>
+               
               </div>
             </div>
             <img
@@ -103,7 +101,7 @@ const ContentSectionHome5 = () => {
         </div>
       </section>
 
-      <div class="flex py-20 justify-center items-center dark:bg-gray-800">
+      <div class="flex py-10 justify-center items-center dark:bg-gray-800">
     <div class="text-center max-w-6xl mx-10">
         <p class="my-3 text-sm tracking-widest text-indigo-500 uppercase">Fast &amp; SEO friendly</p>
         <h1 class="my-3 text-3xl font-bold tracking-tight text-gray-800 md:text-5xl dark:text-gray-100">

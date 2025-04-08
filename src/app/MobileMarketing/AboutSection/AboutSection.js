@@ -103,7 +103,7 @@ const MobileAboutSection = ({ title, content }) => {
             ></div>
           </div>
 
-          <div className="py-12 px-6 lg:px-16 max-w-xl lg:max-w-7xl lg:w-2/3 rounded-t-none lg:rounded-lg">
+          <div className="py-8  lg:px-16 max-w-xl lg:max-w-7xl lg:w-2/3 rounded-t-none lg:rounded-lg">
             <h2 className="text-3xl text-gray-800 font-bold">
               Promoting Sustainable Lifestyle{" "}
               <span className="text-indigo-600">Choices</span>
@@ -129,42 +129,45 @@ const MobileAboutSection = ({ title, content }) => {
       </div>
 
       <div className="w-full mx-auto px-6 py-10 bg-slate-200 dark:bg-slate-800 flex flex-col items-center justify-center">
-        <div className="mt-10 mb-20 max-w-6xl text-center">
+        <div className=" mb-10 max-w-6xl text-center">
           <h3 className="mx-auto mb-8 capitalize text-2xl md:text-5xl font-bold text-blue-950">
             {title} Services
           </h3>
           <p className="xl:text-xl lg:text-xl md:text-xl text-lg text-black mx-auto max-w-5xl">{content}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 my-10 mx-auto w-fit justify-center">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group xl:w-72 lg:w-64 md:w-64 sm:w-64 w-72 h-96 bg-white dark:bg-blue-900 shadow-md rounded-lg m-4 hover:ring hover:ring-blue-900 transform duration-500 hover:scale-105 hover:shadow-xl relative"
-            >
-              <div className="bg-blue-900 flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto left-0 right-0 -top-14 border-4 border-slate-200 dark:border-slate-800 group-hover:bg-white group-hover:shadow-md transform duration-300">
-                <span className="text-3xl md:text-5xl text-white group-hover:text-blue-900 transform duration-300">
-                  {service.icon}
-                </span>
-              </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 space-y-6 gap-8 my-10 px-4 lg:px-8">
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="relative bg-white dark:bg-blue-900 shadow-md rounded-xl p-6  hover:ring hover:ring-blue-900 transform duration-500 hover:scale-105 hover:shadow-xl w-full"
+    >
+      {/* Icon Bubble */}
+      <div className="bg-blue-900 flex justify-center items-center w-20 h-20 md:w-24 md:h-24 rounded-full absolute -top-10 left-1/2 -translate-x-1/2 border-4 border-slate-200 dark:border-slate-800">
+        <span className="text-2xl md:text-3xl lg:text-4xl text-white">
+          {service.icon}
+        </span>
+      </div>
 
-              <div className="flex flex-col items-center justify-center absolute inset-0 p-4 text-center">
-                <h2 className="text-xl capitalize font-bold text-blue-900 mt-10 mb-4">
-                  {service.title}
-                </h2>
-                <p className="text-base dark:text-white">
-                  {service.description}
-                </p>
-                <a
-                  className="flex mt-5 border-2 bottom-0 border-blue-900 dark:border-slate-800 p-2 px-6 capitalize font-semibold text-blue-900 rounded-md group-hover:bg-blue-900 group-hover:text-white transform ease-in-out delay-75 opacity-85 hover:opacity-100"
-                  href="#"
-                >
-                  View Details
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* Content */}
+      <div className="flex flex-col items-center text-center mt-4">
+        <h2 className="text-lg md:text-xl font-bold text-blue-900 dark:text-white capitalize mt-4 mb-2">
+          {service.title}
+        </h2>
+        <p className="text-sm md:text-base dark:text-slate-200 text-gray-700">
+          {service.description}
+        </p>
+        <a
+          className="mt-4 border-2 border-blue-900 dark:border-white px-5 py-2 text-sm md:text-base capitalize font-semibold text-blue-900 dark:text-white rounded-md hover:bg-blue-900 hover:text-white transition"
+          href="#"
+        >
+          View Details
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
   );

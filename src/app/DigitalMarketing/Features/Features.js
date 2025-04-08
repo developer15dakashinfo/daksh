@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeatureSection = () => {
   return (
-    <div class="bg-white py-12">
+    <div class="bg-white py-5">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-5xl lg:text-center flex flex-col justify-center items-center">
       <h2 class="text-base font-semibold leading-7 text-blue-100 bg-blue-800 px-3 rounded-lg uppercase mb-4 lg:mb-8">

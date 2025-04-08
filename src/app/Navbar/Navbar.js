@@ -226,12 +226,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        
-
          {/* Contact Button */}
          <div className=" flex items-center gap-3">
           <a
-            href="#_"
+            href="contact"
             className="relative inline-flex items-center justify-start py-2 gap-2  pl-4 pr-10 sm:pr-12 border-2 border-white overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded-full hover:pl-8 hover:pr-6 bg-gray-50 group"
           >
             <span className="absolute bottom-0 left-0 w-full transition-all duration-150 ease-in-out bg-black group-hover:h-full"></span>
@@ -242,7 +240,7 @@ const Navbar = () => {
             <span className="absolute left-0 pl-2 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
               <FaCircleArrowRight className="w-5 sm:w-6 h-5 sm:h-6 text-white font-bold" />
             </span>
-            <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white font-semibold sm:text-[12px] md:text-[12px] lg:text-[17px] xl:text-[17px]">
+            <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white font-semibold sm:text-[10px] md:text-[10px] lg:text-[15px] xl:text-[15px]">
               Contact Us
             </span>
           </a>

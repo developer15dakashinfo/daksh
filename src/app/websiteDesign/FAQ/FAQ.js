@@ -54,7 +54,7 @@ const FAQ = () => {
                 className="flex items-center justify-between w-full px-4 py-5 sm:p-6"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-lg font-semibold text-black">{faq.question}</span>
+                <span className="text-lg font-semibold text-black text-start">{faq.question}</span>
                 {activeIndex === index ? (
                   <IoMdArrowDropup className="w-6 h-6 text-gray-400" />
                 ) : (

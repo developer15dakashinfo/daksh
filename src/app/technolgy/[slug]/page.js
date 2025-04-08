@@ -18,18 +18,18 @@ export default function technolgy({ params }) {
 
   const data = {
     AppTechnology: { title: "App Technology", content: "Learn about apps" },
-    android: { title: "Android App", content: "" },
-    ios: { title: "iOS App", content: "" },
-    flutter: { title: "Flutter App", content: "" },
-    reactjs: { title: "Custom React js", content: "" },
-    wordpress: { title: "WordPress", content: "" },
+    android: { title: "Hire Android Developer", content: "" },
+    ios: { title: "Hire IOS Developer", content: "" },
+    flutter: { title: "Hire Flutter Developer", content: "" },
+    reactjs: { title: "Hire React js Developer", content: "" },
+    wordpress: { title: "Hire WordPress Developer", content: "" },
     html5: { title: "HTML5", content: "" },
-    laravel: { title: "Laravel Web", content: "" },
-    nodejs: { title: "Custom Node js", content: "" },
-    php: { title: "Custom PHP", content: "" },
-    java: { title: "Custom Java", content: "" },
-    figma: { title: "Custom Figma", content: "" },
-    anjular_js: { title: "Custom Angular js", content: "" },
+    laravel: { title: "Hire Laravel Web Developer", content: "" },
+    nodejs: { title: "Hire Custom Node js", content: "" },
+    php: { title: "Hire Custom PHP", content: "" },
+    java: { title: "Hire Custom Java", content: "" },
+    figma: { title: " Hire Custom Figma", content: "" },
+    anjular_js: { title: "Hire Custom Angular js", content: "" },
   };
 
 

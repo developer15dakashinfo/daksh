@@ -44,18 +44,21 @@ const ContactSectionname = () => {
               <p>254 Walt Whitman Road Brooklyn, NY 11219</p>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex justify-center md:justify-start space-x-4 mt-6">
-              {[FaTwitter, FaFacebookF, FaSkype, LuInstagram, FaLinkedinIn].map(
-                (Icon, idx) => (
-                  <a key={idx} href="#" className="p-1 rounded-full">
-                    <div className={`p-3 rounded-full ${iconColors[idx]}`}>
-                      <Icon className="text-xl text-white" />
-                    </div>
-                  </a>
-                )
-              )}
-            </div>
+          {/* Social Icons */}
+<div className="flex flex-wrap justify-center sm:justify-center md:justify-start gap-4 mt-6">
+  {[FaTwitter, FaFacebookF, FaSkype, LuInstagram, FaLinkedinIn].map(
+    (Icon, idx) => (
+      <a key={idx} href="#" className="rounded-full">
+        <div
+          className={`p-2 sm:p-2.5 md:p-3 lg:p-4 rounded-full ${iconColors[idx]} hover:scale-105 transition-transform`}
+        >
+          <Icon className="text-base sm:text-lg md:text-xl lg:text-2xl text-white" />
+        </div>
+      </a>
+    )
+  )}
+</div>
+
           </div>
 
           {/* Contact Form */}

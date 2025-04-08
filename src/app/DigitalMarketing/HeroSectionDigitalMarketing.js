@@ -3,71 +3,7 @@ import "../DigitalMarketing/HeroSectionDigitalMarketing.css";
 
 const HeroDigitalMarketingSection = ({ title, content }) => {
   return (
-    //     <section
-    //     style={{
-    //       backgroundImage: `url('https://au-media.apjonlinecdn.com/magefan_blog/1000x500px_Best_hp_laptops_for_programming.jpg')`,
-    //       backgroundSize: "cover",
-    //       backgroundPosition: "center",
-    //       position: "relative",
-
-    //     }}
-    //     className="flex items-center justify-center px-5 sm:px-10 md:px-20 md:h-[100vh] lg:h-[100vh] h-[50vh]"
-    //   >
-    //     <div className="absolute inset-0 bg-black opacity-60 h-[100vh]"></div>
-
-    //     <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 pt-24">
-    //       {/* Left Content */}
-    //       <div className="text-left  md:pt-28 lg:pt-28  pr-5 md:pr-10">
-    //         <h3 className="text-white text-lg md:text-xl font-medium py-3 text-start">SERVICES</h3>
-    //         <h1 className="text-3xl md:text-5xl font-bold text-blue-500 text-start">
-    //         {title} <span className="text-white text-start">Services</span>
-    //         </h1>
-    //         <p className="text-md md:text-lg pt-5 text-white text-start">
-    //           We offer professional website development services to help businesses establish a strong online presence. Our expertise spans custom website design, responsive development, and performance optimization, ensuring a seamless user experience across all devices.
-    //         </p>
-    //       </div>
-
-    //       {/* Right Content - Animated Icons */}
-    //       <div className="flex justify-center items-center">
-    //         <section className="main-container">
-    //           <div className="main">
-    //             <div className="big-circle">
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/web-dev-icon.png" alt="web design icon" />
-    //               </div>
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/game-design-icon.png" alt="game design icon" />
-    //               </div>
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/game-dev-icon.png" alt="game dev icon" />
-    //               </div>
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/ui-ux-icon.png" alt="ui-ux icon" />
-    //               </div>
-    //             </div>
-    //             <div className="circle">
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/app-icon.png" alt="app icon" />
-    //               </div>
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/blockchain-icon.png" alt="blockchain icon" />
-    //               </div>
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/arvr-icon.png" alt="ar-vr icon" />
-    //               </div>
-    //               <div className="icon-block">
-    //                 <img src="https://www.yudiz.com/codepen/animated-portfolio/artificial-intelligence-icon.png" alt="AI icon" />
-    //               </div>
-    //             </div>
-    //             <div className="center-logo">
-    //               <img src="https://www.dakshinfo.com/images/headerlogo.svg" alt="About Us" className="object-cover h-10 md:h-[50px]" />
-    //             </div>
-    //           </div>
-    //         </section>
-    //       </div>
-    //     </div>
-    //   </section>
-
+   
     <main className="lg:pt-16 xl:pt-16 md:pt-16 pt-10">
       <section className="relative bg-gradient-to-br from-blue-900 to-indigo-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -80,26 +16,24 @@ const HeroDigitalMarketingSection = ({ title, content }) => {
           }}
         ></div>
 
-        <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
+        <div className="container mx-auto px-4 py-14 md:py-32 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2 mb-12 md:mb-0">
-              <h3 className="text-gray-300 py-1 text-lg font-semibold">
-                Services
-              </h3>
+             
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 <span className="block">{title} </span>
               </h1>
-              <p className="text-lg mb-8 text-gray-300 pr-20">{content}</p>
+              <p className="text-lg mb-8 text-white pr-20">{content}</p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <a
                   href="#"
-                  className="bg-white text-blue-900 font-semibold px-8 py-3 rounded-full hover:bg-blue-100 transition duration-300 text-center"
+                  className="bg-white text-blue-900 font-semibold px-8 py-2 rounded-full hover:bg-blue-100 transition duration-300 text-center"
                 >
                   Get Started
                 </a>
                 <a
                   href="#"
-                  className="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-blue-900 transition duration-300 text-center"
+                  className="border-2 border-white text-white font-semibold px-8 py-2 rounded-full hover:bg-white hover:text-blue-900 transition duration-300 text-center"
                 >
                   Learn More
                 </a>
@@ -107,7 +41,7 @@ const HeroDigitalMarketingSection = ({ title, content }) => {
             </div>
 
             <div className="w-full md:w-1/2 md:pl-12">
-              <div className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl">
+              <div className="bg-black bg-opacity-75 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl">
                 <h2 className="text-2xl font-semibold mb-6">Why MyCompany?</h2>
                 <ul className="space-y-4">
                   <li className="flex items-center">

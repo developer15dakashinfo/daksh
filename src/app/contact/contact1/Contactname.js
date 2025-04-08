@@ -17,15 +17,8 @@ export default function Contactname() {
           <div className="stars">
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <h1 className="xl:text-6xl lg:text-5xl md:text-5xl text-4xl uppercase text-white font-bold mb-2">Contact Us</h1>
-              <h1 className="xl:text-6xl lg:text-5xl md:text-5xl text-4xl text-white font-bold">DAKSH INFOSFT</h1>
-              <div
-                style={{ backgroundColor: "#FFEC89" }}
-                className="absolute xl:right-60 2xl:right-96 lg:right-72 md:right-60 right-2 rotate-160 me-20 xl:top-40 lg:top-40 md:top-40 top-60 xl:w-36 xl:h-36 lg:w-40 lg:h-40 md:w-32 md:h-32 w-28 h-28  text-center font-bold align-center rounded-full uppercase text-black xl:text-xl lg:text-xl md:text-xl text-[14px] xl:pt-10 lg:pt-10 md:pt-10 pt-6"
-              >
-                this is <br />
-                who we <br />
-                are!
-              </div>
+          
+             
             </div>
             <div className="small"></div>
             <div className="medium"></div>

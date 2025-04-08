@@ -3,7 +3,7 @@ import React from "react";
 const MobileFeatureSection = () => {
   return (
     <div>
-      <div className="text-white bg-blue-950 flex flex-col md:flex-row items-center py-5 mx-5 shadow-lg border my-14 rounded-lg max-w-8xl">
+      <div className="text-white bg-blue-950 flex flex-col md:flex-row items-center py-5 mx-5 shadow-lg border my-4 rounded-lg max-w-8xl">
         <div className="w-full md:w-8/12 flex justify-center md:justify-end py-5">
           <div className="space-y-3 md:pl-28 lg:28 px-5">
             <h3 className="text-2xl font-bold text-start">DID YOU KNOW!</h3>
@@ -33,7 +33,7 @@ const MobileFeatureSection = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       />
 
-      <section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
+      <section id="new-features" class="py-8 bg-white sm:py-10 lg:py-10">
         <div class="px-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="text-center">
             <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
@@ -137,65 +137,52 @@ const MobileFeatureSection = () => {
           presence. Partner with us for innovative solutions that help your
           business thrive in the digital world.
         </p>
-        <div class="container px-5 py-12 mx-auto">
-          <div class="flex flex-wrap text-center justify-center">
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg  hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
-                    class="w-32 mb-3"
-                  ></img>
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Latest Milling Machinery
-                </h2>
-              </div>
-            </div>
+        <div class="container px-4 py-12 mx-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    
+   
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Latest Milling Machinery"
+      />
+      <h2 class="text-xl font-semibold text-white">Latest Milling Machinery</h2>
+    </div>
 
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
-                    class="w-32 mb-3"
-                  />
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Reasonable Rates
-                </h2>
-              </div>
-            </div>
+    
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Reasonable Rates"
+      />
+      <h2 class="text-xl font-semibold text-white">Reasonable Rates</h2>
+    </div>
 
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg  hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
-                    class="w-32 mb-3"
-                  ></img>
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Time Efficiency
-                </h2>
-              </div>
-            </div>
+  
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Time Efficiency"
+      />
+      <h2 class="text-xl font-semibold text-white">Time Efficiency</h2>
+    </div>
 
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg  hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
-                    class="w-32 mb-3"
-                  ></img>
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Expertise in Industry
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+   
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Expertise in Industry"
+      />
+      <h2 class="text-xl font-semibold text-white">Expertise in Industry</h2>
+    </div>
+
+  </div>
+</div>
+
       </section>
     </div>
   );

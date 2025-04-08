@@ -36,7 +36,7 @@ const AndroidAppServices = ({ title, content }) => {
           <div className="lg:w-1/2 space-y-6">
             <h3 className="text-blue-800 text-lg font-semibold">Technology</h3>
             <h1 className="lg:text-5xl md:text-5xl xl:text-5xl text-3xl font-bold">
-              <span className="text-blue-500">{title}</span> Development Services
+              <span className="text-white">{title}</span> 
             </h1>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
@@ -133,7 +133,7 @@ const AndroidAppServices = ({ title, content }) => {
     </div>
 
       {/* third div */}
-      <div className="pt-40 pb-20 bg-white">
+      <div className="pt-40 mt-10 pb-20 bg-white">
         <div>
           <h2 className="text-3xl font-bold text-center sm:text-5xl">
             Our Partners

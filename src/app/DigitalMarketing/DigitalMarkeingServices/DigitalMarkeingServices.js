@@ -37,7 +37,7 @@ const DigitalMarketingServices = ({ title, content }) => {
 
   return (
     <>
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-5 transition-transform duration-500 transform hover:scale-105">
             Our {title}
@@ -85,73 +85,59 @@ const DigitalMarketingServices = ({ title, content }) => {
 
       <section class="text-white bg-blue-950  body-font">
         <div class="flex justify-center pt-20 text-5xl font-bold">Why Us?</div>
-        <p className="text-lg text-center text-gray-200 pt-4 mx-auto max-w-4xl">
+        <p className="text-lg text-center text-gray-200 p-4 mx-auto max-w-4xl">
           At Dakshinfosoft, we offer tailored digital marketing strategies that
           drive measurable results. Our team combines creativity, data-driven
           insights, and industry expertise to elevate your brand’s online
           presence. Partner with us for innovative solutions that help your
           business thrive in the digital world.
         </p>
-        <div class="container px-5 py-12 mx-auto">
-          <div class="flex flex-wrap text-center justify-center">
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg  hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
-                    class="w-32 mb-3"
-                  ></img>
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Latest Milling Machinery
-                </h2>
-              </div>
-            </div>
+        <div class="container px-4 py-12 mx-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    
+   
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Latest Milling Machinery"
+      />
+      <h2 class="text-xl font-semibold text-white">Latest Milling Machinery</h2>
+    </div>
 
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-            <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg hover:scale-110">
-  <div class="flex justify-center">
-    <img
-      src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
-      class="w-32 mb-3"
-    />
+  
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Reasonable Rates"
+      />
+      <h2 class="text-xl font-semibold text-white">Reasonable Rates</h2>
+    </div>
+
+    
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Time Efficiency"
+      />
+      <h2 class="text-xl font-semibold text-white">Time Efficiency</h2>
+    </div>
+
+
+    <div class="bg-white/5 backdrop-blur-md border border-[#F5DEB3] shadow-lg rounded-xl px-6 py-8 text-center transition-transform duration-300 hover:scale-105">
+      <img
+        src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
+        class="w-24 sm:w-28 mb-4 mx-auto"
+        alt="Expertise in Industry"
+      />
+      <h2 class="text-xl font-semibold text-white">Expertise in Industry</h2>
+    </div>
+
   </div>
-  <h2 class="title-font font-regular text-xl text-gray-200">
-    Reasonable Rates
-  </h2>
 </div>
 
-            </div>
-
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg  hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp"
-                    class="w-32 mb-3"
-                  ></img>
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Time Efficiency
-                </h2>
-              </div>
-            </div>
-
-            <div class="p-4 md:w-1/4 sm:w-1/2">
-              <div class="px-4 py-6 transform transition duration-500 border-2 border-[#F5DEB3] rounded-lg  hover:scale-110">
-                <div class="flex justify-center">
-                  <img
-                    src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp"
-                    class="w-32 mb-3"
-                  ></img>
-                </div>
-                <h2 class="title-font font-regular text-xl text-gray-200">
-                  Expertise in Industry
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </>
   );
