@@ -33,12 +33,8 @@ const StackingCards = () => {
       text: "Website development involves building, designing, and maintaining websites to ensure optimal functionality, user experience, and performance.Technologies involved: React, Next.js, Tailwind CSS, Laravel, and MongoDB.",
       descreption:
         "Daksh Infosoft Pvt. Ltd. is a top-tier software development company, established under the Companies Act. With a team of skilled professionals, we specialize in providing innovative website development solutions. Our expertise ensures that every website we build offers exceptional functionality, an intuitive user experience, and outstanding performance, helping businesses establish a strong online presence.",
-      list1:
-        "Expertise in building modern, responsive websites with React and Next.js.",
-      list2:
-        "Proficiency in designing visually appealing interfaces using Figma and Illustrator.",
-      list3:
-        "Experience with the MERN stack to create full-stack applications.",
+        list1: "Cross-Platform Development",
+      list2: "AI and ML Integration",
       t1: "Website Development",
       t2: "Use AI for chatbots, content personalization, and analytics.",
       image:
@@ -51,12 +47,8 @@ const StackingCards = () => {
       text: "Website development involves building, designing, and maintaining websites to ensure optimal functionality, user experience, and performance.Technologies involved: React, Next.js, Tailwind CSS, Laravel, and MongoDB.",
       descreption:
         "Daksh Infosoft Pvt. Ltd. is a top-tier software development company, established under the Companies Act. With a team of skilled professionals, we specialize in providing innovative website development solutions. Our expertise ensures that every website we build offers exceptional functionality, an intuitive user experience, and outstanding performance, helping businesses establish a strong online presence.",
-      list1:
-        "Expertise in building modern, responsive websites with React and Next.js.",
-      list2:
-        "Proficiency in designing visually appealing interfaces using Figma and Illustrator.",
-      list3:
-        "Experience with the MERN stack to create full-stack applications.",
+        list1: "Cross-Platform Development",
+      list2: "AI and ML Integration",
       t1: "Website Development",
       t2: "Use AI for chatbots, content personalization, and analytics.",
       image:
@@ -69,10 +61,8 @@ const StackingCards = () => {
       text: "Website development involves building, designing, and maintaining websites to ensure optimal functionality, user experience, and performance.Technologies involved: React, Next.js, Tailwind CSS, Laravel, and MongoDB.",
       descreption:
         "Daksh Infosoft Pvt. Ltd. is a top-tier software development company, established under the Companies Act. With a team of skilled professionals, we specialize in providing innovative website development solutions. Our expertise ensures that every website we build offers exceptional functionality, an intuitive user experience, and outstanding performance, helping businesses establish a strong online presence.",
-      list1:
-        "Expertise in building modern, responsive websites with React and Next.js.",
-      list2:
-        "Proficiency in designing visually appealing interfaces using Figma and Illustrator.",
+        list1: "Cross-Platform Development",
+        list2: "AI and ML Integration",
       list3:
         "Experience with the MERN stack to create full-stack applications.",
       t1: "Website Development",
@@ -87,10 +77,8 @@ const StackingCards = () => {
       text: "Website development involves building, designing, and maintaining websites to ensure optimal functionality, user experience, and performance.Technologies involved: React, Next.js, Tailwind CSS, Laravel, and MongoDB.",
       descreption:
         "Daksh Infosoft Pvt. Ltd. is a top-tier software development company, established under the Companies Act. With a team of skilled professionals, we specialize in providing innovative website development solutions. Our expertise ensures that every website we build offers exceptional functionality, an intuitive user experience, and outstanding performance, helping businesses establish a strong online presence.",
-      list1:
-        "Expertise in building modern, responsive websites with React and Next.js.",
-      list2:
-        "Proficiency in designing visually appealing interfaces using Figma and Illustrator.",
+        list1: "Cross-Platform Development",
+        list2: "AI and ML Integration",
       list3:
         "Experience with the MERN stack to create full-stack applications.",
       t1: "Website Development",
@@ -105,10 +93,8 @@ const StackingCards = () => {
       text: "Website development involves building, designing, and maintaining websites to ensure optimal functionality, user experience, and performance.Technologies involved: React, Next.js, Tailwind CSS, Laravel, and MongoDB.",
       descreption:
         "Daksh Infosoft Pvt. Ltd. is a top-tier software development company, established under the Companies Act. With a team of skilled professionals, we specialize in providing innovative website development solutions. Our expertise ensures that every website we build offers exceptional functionality, an intuitive user experience, and outstanding performance, helping businesses establish a strong online presence.",
-      list1:
-        "Expertise in building modern, responsive websites with React and Next.js.",
-      list2:
-        "Proficiency in designing visually appealing interfaces using Figma and Illustrator.",
+        list1: "Cross-Platform Development",
+        list2: "AI and ML Integration",
       list3:
         "Experience with the MERN stack to create full-stack applications.",
       t1: "Website Development",
@@ -162,7 +148,7 @@ const StackingCards = () => {
             >
               <div
                 className={`shadow-xl text-[#0A0507] rounded-3xl overflow-hidden ${
-                  index === 0 ? "h-[40vh]" : "h-[100vh]"
+                  index === 0 ? "" : ""
                 }`}
                 style={{ backgroundColor: card.backgroundColor }}
               >
@@ -202,11 +188,9 @@ const StackingCards = () => {
 
                         {/* List Section */}
                         <div className="grid lg:gap-5 xl:gap-5 md:gap-5 gap-2 md:grid-cols-2">
-                          <h2 className="text-[13px] sm:text-[14px]  md:text-[15px] lg:text-[15px] xl:text-[15px] font-medium text-left md:text-left">
-                            {card.descreption}
-                          </h2>
+                          
                           <ul className="list-none">
-                            {[card.list1, card.list2, card.list3].map(
+                            {[card.list1, card.list2].map(
                               (item, idx) => (
                                 <li
                                   key={idx}
